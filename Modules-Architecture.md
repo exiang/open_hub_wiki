@@ -17,12 +17,7 @@ The following are features in Yii that is supported by Central:
 
 ## Boilerplate Module
 Please refer to protected\modules\boilerplateStart that serve as a starting base for your new created module.
-
-## Central Functions
-
-Refer to protected\modules\boilerplateStartModule\BoilerplateStartModule.php. All functions are equipped with self describe comment.
-
-These functions allow your module to inject code or interface into existing model, layout base on pre define design. 
+Its core file is at protected\modules\boilerplateStartModule\BoilerplateStartModule.php. All functions are equipped with self describe comment. These functions allow your module to inject code or interface into existing model, layout base on pre defined design. 
 
 ## Todo
 Modularization to the underlying system are done phase by phase. The following features are not supported by module yet:
