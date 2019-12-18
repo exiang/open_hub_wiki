@@ -1,11 +1,11 @@
 # Modules Architecture
-Module is the basic building block in Central. To achieve greater modularization, all your changes should be contained within your module. In order to do this, you need to understand Central modules architecture.
+Module is the basic building block in OpenHub. To achieve greater modularization, all your changes should be contained within your module. In order to do this, you need to understand Central modules architecture.
 
 ## Module vs Service
 All services are module, but not all modules are services.
 
 ## Supported Features
-The following are features in Yii that is supported by Central:
+The following are features in Yii that is supported by OpenHub:
 
 * Commands - protected\yiic.php has been modified to read all commands action from modules\YOUR_MODULE\commands folder
 * Config - protected\config\main.php has been modified to include protected\config\module.php that read all configuration from modules\YOUR_MODULE\config folder. Same goes to the  protected\config\console.php
