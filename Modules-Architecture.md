@@ -56,6 +56,22 @@ The following are features in Yii that is supported by OpenHub:
   * Views
   * API - Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition as well as `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
 
+## Main functions
+
+#### getOrganizationActions
+#### getOrganizationActFeed
+#### getIndividualViewTabs
+#### getIndividuaActions
+#### getIndividualActFeed
+#### getUserActFeed
+#### getNavItems
+#### getAsService
+#### getSharedAssets
+#### install
+#### installDb
+#### getBackendAdvanceSearch
+#### doOrganizationsMerge
+#### doIndividualsMerge
 
 
 ## Todo
