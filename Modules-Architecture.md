@@ -18,6 +18,32 @@ Any module:
 ## Modules folder
 OpenHub modules are found in the `protected/modules` folder. This is true for both default modules (provided with OpenHub) and 3rd-party modules that are subsequently installed.
 
+## Quick start
+Modules must follow some guidelines to work on OpenHub.
+If you want to get started quickly, with a standard module templates, you can use the Boilerplate Module.
+
+### Boilerplate Module
+Please refer to `protected/modules/boilerplateStart` that serve as a starting base for your new created module.
+Its core file is at `protected/modules/boilerplateStartModule/BoilerplateStartModule.php`. All functions are equipped with self describe comment. These functions allow your module to inject code or interface into existing model, layout base on predefined design. 
+
+### My first module
+Let’s start; this will enable us to better describe its structure. We will name it “My module”.
+
+First, copy the `boilerplateStart` folder located in the module's folder at `/protected/modules` and rename it to your new module. It should have the same name as the module, with no space, no hyphen and underscore, only alphanumerical characters, all in lower camel case format: `myPlugin`.
+
+This folder must contain the main file, a PHP file of the same name with postfix of Module as the folder, which will handle most of the processing: MyPluginModule.php. Rename it from `BoilerplateStartModule.php`. Notice the file name is in upper camel case format.
+
+Next, you need to rename everything of `boilerplateStart` to `myPlugin`, and `BoilerplateStart` to `MyPlugin` (in case sensitive manner). This including the filename as well as content in those files.
+
+Once completed, that is enough for a basic module but obviously more files and folders can be added later. Your new module is now ready to be install. 
+
+## Install a module
+  * Login to backend
+  * Click Site -> System -> Module
+  * Click `New Module` tab, your new module is in the list
+  * Click the `initialize` button
+  * Once installation completed, your module is now moved to `Module` tab
+
 ## Supported Features
 The following are features in Yii that is supported by OpenHub:
 
@@ -29,9 +55,7 @@ The following are features in Yii that is supported by OpenHub:
 * Views
 * API - Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition as well as `protected/modules/wapi/V1Controller.php` has been modified to auto load `modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
 
-## Boilerplate Module
-Please refer to `protected/modules/boilerplateStart` that serve as a starting base for your new created module.
-Its core file is at `protected/modules/boilerplateStartModule/BoilerplateStartModule.php`. All functions are equipped with self describe comment. These functions allow your module to inject code or interface into existing model, layout base on predefined design. 
+
 
 ## Todo
 Modularization to the underlying system are done phase by phase. The following features are not supported by module yet:
