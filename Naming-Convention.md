@@ -21,14 +21,30 @@ OpenHub enforce column naming to generated CRUD code in backend using Yee module
 ##### Foreign Key
 ##### Different type of data column
 ###### image
+Image data column are name in convention of `image_xyz`. Use `varchar(255)` format.
 ###### file
+File data column are name in convention of `file_xyz`. Use `tinyint(255)` format.
 ###### boolean
-###### image
-###### text
+True/False data column are name in convention of `is_xyz`. Use `tinyint(1)` format.
+###### text 
+Plain text data column are name in convention of `text_xyz`. Use either `varchar(255)` or `longtext` format.
 ###### html
+Rich text (HTML) data column are name in convention of `html_xyz`. Use `longtext` format.
 ###### csv
+CSV (Comma separated Value) data column are name in convention of `csv_xyz`. Use `longtext` format.
 ###### date
+Date time data column are name in convention of `date_xyz(ed)` (e.g. date_posted). Use `int(11)` format to store this unix timestamp value.
 ###### json
+Json data column are name in convention of `json_xyz` (e.g. `json_extra`, `json_original_copy`). Use `longtext` format. This is a special method to allow unstructured value store for a specific records for developer flexibility. 
+
+###### multilingual (i18n)
+OpenHub store multilingual value in the same table at different columns (e.g. `title_en`, `title_ms`, `title_zh`). There are pro and cons for this method compared to storing at a different table like some of the other system does. 
+  * Pro: SQL are much simpler to build, no complicated join
+  * Cons: Enabling extra languages required modification to table structure in database
+
+Multilingual data column are name in convention of `xyz_(en|ms|zh_cn|...)` (e.g. `xyz_en`, `xyz_zh`, `image_xyz_en`, `text_xyz_ms`). Language code are added as postfix to the column name.
+
+###### meta data
 
 ### Controllers & actions
 OpenHub controllers follow these naming conventions:
