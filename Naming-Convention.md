@@ -29,6 +29,8 @@ OpenHub enforce column naming to generated CRUD code in backend using Yee module
   * `date_modified` - When is the record last modified? Use `int(11)` unixtimestamp format.
   * `ordering` - When this is sortable table. Use `double` format
 #### Foreign Key
+Columns link to foreign table are name in convention of `xyz_id` or `xyz_code`.
+
 #### Different type of data column
 ##### image
 Image data column are name in convention of `image_xyz`. Use `varchar(255)` format.
