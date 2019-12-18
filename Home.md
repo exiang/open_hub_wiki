@@ -19,6 +19,7 @@ These are the modules bundle with the package.
   * [Comment](Comment)
   * [Currency](Currency)
   * [esLog](esLog) (application log using Elastic Search)
+  * [Wapi](WAPI) Web API
   * [Registry](Registry)
   * [Request](Request)
   * [Cache](Cache)
