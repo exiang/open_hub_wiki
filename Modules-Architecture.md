@@ -33,10 +33,10 @@ Let’s start; this will enable us to better describe its structure. We will nam
 1. This folder must contain the main file, a PHP file of the same name with postfix of Module as the folder, which will handle most of the processing: MyPluginModule.php. Rename it from `BoilerplateStartModule.php`. Notice the filename is in upper camel case format.
 1. Next, you need to rename everything of `boilerplateStart` to `myPlugin`, and `BoilerplateStart` to `MyPlugin` (in case sensitive manner). This including the filename as well as content in those files.
 1. Modify `/protected/modules/boiletplateStart/config/about.yaml`:
-  * change code from `boilerplatStart` to `myPlugin`
-  * change title to 'My Plugin'
-  * change oneliner to 'My first plugin module for OpenHub'
-1. Once completed, that is enough for a basic module but obviously more files and folders can be added later. Your new module is now ready to be install. 
+    * change code from `boilerplatStart` to `myPlugin`
+    * change title to 'My Plugin'
+    * change oneliner to 'My first plugin module for OpenHub'
+5. Once completed, that is enough for a basic module but obviously more files and folders can be added later. Your new module is now ready to be install. 
 
 ### Install a module
   * Login to backend
@@ -48,13 +48,13 @@ Let’s start; this will enable us to better describe its structure. We will nam
 ## Supported Features
 The following are features in Yii that is supported by OpenHub:
 
-* Commands - protected\yiic.php has been modified to read all commands action from `protected/modules/YOUR_MODULE/commands` folder
-* Config - protected\config\main.php has been modified to include `protected/config/module.php` that read all configuration from `protected/modules/YOUR_MODULE/config` folder. Same goes to the  `protected/config/console.php`
-* Components
-* Controllers
-* Models
-* Views
-* API - Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition as well as `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
+  * Commands - protected\yiic.php has been modified to read all commands action from `protected/modules/YOUR_MODULE/commands` folder
+  * Config - protected\config\main.php has been modified to include `protected/config/module.php` that read all configuration from `protected/modules/YOUR_MODULE/config` folder. Same goes to the  `protected/config/console.php`
+  * Components
+  * Controllers
+  * Models
+  * Views
+  * API - Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition as well as `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
 
 
 
