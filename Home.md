@@ -12,16 +12,16 @@ Following are the common building blocks of Central. Central keep track of:
   * [Individual](Individual) - think founder, participant, point of contact...
   * [Event](Event) - think workshop, sharing, talks, classes, gathering...
 
-## Core Modules
+## Default Modules
+These are the modules bundle with the package.
+  * [Journey] Journey
   * [F7] F7 Form
-
-
-## Other Modules
-
-  * Registry
-  * Request
+  * [Comment] Comment
+  * [esLog] esLog (application log using Elastic Search)
+  * [Registry] Registry
+  * [Request] Request
   * [Cache](Cache)
-  * Junk
+  * [Junk] Junk
 
 ## Master Data
 
