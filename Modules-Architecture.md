@@ -48,8 +48,8 @@ Let’s start; this will enable us to better describe its structure. We will nam
 ## Supported Features
 The following are features in Yii that is supported by OpenHub:
 
-  * Commands - protected\yiic.php has been modified to read all commands action from `protected/modules/YOUR_MODULE/commands` folder
-  * Config - protected\config\main.php has been modified to include `protected/config/module.php` that read all configuration from `protected/modules/YOUR_MODULE/config` folder. Same goes to the  `protected/config/console.php`
+  * Commands - `protected/yiic.php` has been modified to read all commands action from `protected/modules/YOUR_MODULE/commands` folder
+  * Config - `protected/config/main.php` has been modified to include `protected/config/module.php` that read all configuration from `protected/modules/YOUR_MODULE/config` folder. Same goes to the  `protected/config/console.php`
   * Components
   * Controllers
   * Models
