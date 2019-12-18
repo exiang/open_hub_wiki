@@ -1,4 +1,4 @@
-Welcome to the open_hub wiki!
+Welcome to the open_hub developer documentation.
 
 ## GitFlow
 This project used GitFlow [methodology](https://datasift.github.io/gitflow/IntroducingGitFlow.html). All developers final commit is to develop branch. Master branch is lock to team lead only. From there, team lead deploy to production environment.
@@ -11,6 +11,10 @@ Following are the common building blocks of Central. Central keep track of:
   * [Product](Product)
   * [Individual](Individual) - think founder, participant, point of contact...
   * [Event](Event) - think workshop, sharing, talks, classes, gathering...
+
+## Core Modules
+  * [F7] F7 Form
+
 
 ## Other Modules
 
