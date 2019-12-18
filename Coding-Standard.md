@@ -13,9 +13,20 @@ All files containing code MUST:
 ## PHP code conventions
 PHP files MUST follow the PSR-2 standard. 
 
-PHP CS Fixer has been configured for the OpenHub project to help developers to comply with these conventions.
+PHP CS Fixer has been configured for the OpenHub project to help developers to comply with these conventions. As long as you are using visual studio code, it will auto run upon files save.
 
-You can run it using the following command:
+You may also manually run it using the following command:
+
+<code></code>
 
 ## Javascript code conventions
 Javascript files MUST follow the [Airbnb Javascript style guide](https://github.com/airbnb/javascript).
+
+## HTML, CSS (Sass) code conventions
+HTML, CSS (Sass) files MUST follow the [Mark Otto’s coding standards](http://codeguide.co/). Mark is the creator of the Bootstrap framework.
+
+## License information
+All OpenHub files MUST start with the OpenHub license block:
+
+### Core Files
+### Module files
