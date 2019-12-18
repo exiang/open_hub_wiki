@@ -43,6 +43,6 @@ These are the modules bundle with the package.
 ## Topics
 
 * [API for Developers](API4Developers)
-* [Modules Architecture](ModulesArchitecture)
-* [Multi Domains](MultiDomains)
+* [Modules Architecture](Modules Architecture)
+* [Multi Domains](Multi Domains)
 * [Multi Lingual i18n](i18n)
