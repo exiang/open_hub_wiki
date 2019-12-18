@@ -44,5 +44,5 @@ These are the modules bundle with the package.
 
 * [API for Developers](API4Developers)
 * [Modules Architecture](Modules%20Architecture)
-* [Multi Domains](Multi Domains)
+* [Multi Domains](Multi%20Domains)
 * [Multi Lingual i18n](i18n)
