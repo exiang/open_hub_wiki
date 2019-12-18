@@ -1,5 +1,4 @@
-# Modules Architecture
-Module is the basic building block in OpenHub. To achieve greater modularization, all your changes should be contained within your module. In order to do this, you need to understand Central modules architecture.
+Module is the basic building block in OpenHub. To achieve greater modularization, all your changes should be contained within a module. In order to do this, you need to understand its modules architecture.
 
 ## Module vs Service
 All services are module, but not all modules are services.
