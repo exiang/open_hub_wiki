@@ -45,6 +45,10 @@ OpenHub store multilingual value in the same table at different columns (e.g. `t
 Multilingual data column are name in convention of `xyz_(en|ms|zh_cn|...)` (e.g. `xyz_en`, `xyz_zh`, `image_xyz_en`, `text_xyz_ms`). Language code are added as postfix to the column name.
 
 ###### meta data
+Developer can easily add 'virtual column' to any table in the database without changing the table structure. It is especially useful for module developer to extend the function of existing common block table (e.g. organization, individual, event). Think of it likes Wordpress database meta structure.
+
+####### meta_structure
+####### meta_item
 
 ### Controllers & actions
 OpenHub controllers follow these naming conventions:
