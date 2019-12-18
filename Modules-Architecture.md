@@ -37,7 +37,7 @@ Next, you need to rename everything of `boilerplateStart` to `myPlugin`, and `Bo
 
 Once completed, that is enough for a basic module but obviously more files and folders can be added later. Your new module is now ready to be install. 
 
-## Install a module
+### Install a module
   * Login to backend
   * Click Site -> System -> Module
   * Click `New Module` tab, your new module is in the list
