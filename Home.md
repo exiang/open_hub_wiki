@@ -1,4 +1,4 @@
-Welcome to the open_hub developer documentation.
+Welcome to the OpenHub developer documentation.
 
 ## GitFlow
 This project used GitFlow [methodology](https://datasift.github.io/gitflow/IntroducingGitFlow.html). All developers final commit is to develop branch. Master branch is lock to team lead only. From there, team lead deploy to production environment.
@@ -25,6 +25,14 @@ These are the modules bundle with the package.
   * [Cache](Cache)
   * [Junk](Junk)
 
+## Topics
+
+* [API for Developers](API4Developers)
+* [Modules Architecture](Modules%20Architecture)
+* [Multi Domains](Multi%20Domains)
+* [Multi Lingual i18n](i18n)
+
+
 ## Master Data
 
   * Product Category
@@ -38,11 +46,3 @@ These are the modules bundle with the package.
   * Country
   * State
   * City
-
-
-## Topics
-
-* [API for Developers](API4Developers)
-* [Modules Architecture](Modules%20Architecture)
-* [Multi Domains](Multi%20Domains)
-* [Multi Lingual i18n](i18n)
