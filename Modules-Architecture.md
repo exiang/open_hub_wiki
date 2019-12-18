@@ -36,7 +36,7 @@ Let’s start; this will enable us to better describe its structure. We will nam
     * change code from `boilerplatStart` to `myPlugin`
     * change title to 'My Plugin'
     * change oneliner to 'My first plugin module for OpenHub'
-5. Once completed, that is enough for a basic module but obviously more files and folders can be added later. Your new module is now ready to be install. 
+5. Once completed, your new module is now ready to be install. That is enough for a basic module but obviously more files and folders can be added later.
 
 ### Install a module
   * Login to backend
