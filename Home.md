@@ -38,5 +38,5 @@ Following are the common building blocks of Central. Central keep track of:
 
 * [API for Developers](API for developers)
 * [Modules Architecture](Modules Architecture)
-* [Multi Domains](Multi Domains)
+* [Multi Domains](MultiDomains)
 * [Multi Lingual i18n](i18n)
