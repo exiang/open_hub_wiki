@@ -15,7 +15,7 @@ Following are the common building blocks of Central. Central keep track of:
 ## Default Modules
 These are the modules bundle with the package.
   * [Journey](Journey)
-  * [F7](F7 Form)
+  * [F7](F7) Form
   * [Comment](Comment)
   * [Currency](Currency)
   * [esLog](esLog) (application log using Elastic Search)
