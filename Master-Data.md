@@ -1,0 +1,12 @@
+
+  * [Product Category](Product-Category)
+  * [Cluster](Cluster)
+  * [Persona](Persona)
+  * [Industry](Industry)
+  * [Impact](Impact)
+  * [SDG](SDG)
+  * [Startup Stages](Startup-Stages)
+  * [Legal Form](Legal-Form)
+  * [Country](Country)
+  * [State](State)
+  * [City](City)
