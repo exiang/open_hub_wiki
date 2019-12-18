@@ -47,24 +47,43 @@ Date time data column are name in convention of `date_xyz(ed)` (e.g. date_posted
 ##### json
 Json data column are name in convention of `json_xyz` (e.g. `json_extra`, `json_original_copy`). Use `longtext` format. This is a special method to allow unstructured value store for a specific records for developer flexibility. 
 
-##### multilingual (i18n)
+#### multilingual (i18n)
 OpenHub store multilingual value in the same table at different columns (e.g. `title_en`, `title_ms`, `title_zh`). There are pro and cons for this method compared to storing at a different table like some of the other system does. 
   * Pro: SQL are much simpler to build, no complicated join
   * Cons: Enabling extra languages required modification to table structure in database
 
 Multilingual data column are name in convention of `xyz_(en|ms|zh_cn|...)` (e.g. `xyz_en`, `xyz_zh`, `image_xyz_en`, `text_xyz_ms`). Language code are added as postfix to the column name.
 
-##### meta data
-Developer can easily add 'virtual column' to any table in the database without changing the table structure. It is especially useful for module developer to extend the function of existing common block table (e.g. organization, individual, event). Think of it likes Wordpress database meta structure.
+#### meta data
+Developer can easily add 'virtual column' from PHP code to any table in the database without changing the table structure. It is especially useful for module developer to extend the function of existing common block table (e.g. organization, individual, event). Think of it likes Wordpress database meta structure.
 
-###### meta_structure
-For example, my module `sample` would like to add a virtual column called `extraColumn1` to table `organization`.
+##### meta_structure
+In this example, module `sample` would like to add a virtual column called `extraColumn1` to table `organization`.
 
   * code: `varchar(64)` column. Naming convention for the value is `[OriginalTableName]-[moduleName]-[attributeName]`. (e.g. `Organization-sample-extraColumn1`)
   * datatype: Data type of this virtual column is: 'boolean','integer','float','string','text','html','date','array','enum','timestamp','image','json'
   * ref_table: Reference table.
 
-###### meta_item
+##### meta_item
   * meta_struture_id:
   * ref_id:
   * value: `longtext`
+
+##### Query a meta structure
+SQL join is required to query value from meta data.
+
+```sql
+SELECT o.id FROM organization as `o` 
+
+INNER JOIN `meta_structure` as ms1 on ms1.ref_table='organization'
+INNER JOIN `meta_item` as mi1 on mi1.meta_structure_id=ms1.id
+
+INNER JOIN `meta_structure` as ms2 on ms2.ref_table='organization'
+INNER JOIN `meta_item` as mi2 on mi2.meta_structure_id=ms2.id
+
+WHERE  
+(ms1.code='Organization-idea-membershipType'  AND mi1.ref_id=o.id) AND 
+(ms2.code='Organization-idea-isEnterprise' AND mi2.value='1' AND mi2.ref_id=o.id) 
+
+GROUP BY o.id ORDER BY o.title ASC
+```
