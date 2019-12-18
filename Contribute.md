@@ -1,5 +1,5 @@
-
 ## Contribution Guidelines
+Sorry, we are still new on this, sorting many things out right now. 
 
 ## Submit Code Changes
 ### GitFlow
