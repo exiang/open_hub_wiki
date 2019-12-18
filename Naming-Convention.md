@@ -58,4 +58,13 @@ Multilingual data column are name in convention of `xyz_(en|ms|zh_cn|...)` (e.g.
 Developer can easily add 'virtual column' to any table in the database without changing the table structure. It is especially useful for module developer to extend the function of existing common block table (e.g. organization, individual, event). Think of it likes Wordpress database meta structure.
 
 ###### meta_structure
+For example, my module `sample` would like to add a virtual column called `extraColumn1` to table `organization`.
+
+  * code: `varchar(64)` column. Naming convention for the value is `[OriginalTableName]-[moduleName]-[attributeName]`. (e.g. `Organization-sample-extraColumn1`)
+  * datatype: Data type of this virtual column is: 'boolean','integer','float','string','text','html','date','array','enum','timestamp','image','json'
+  * ref_table: Reference table.
+
 ###### meta_item
+  * meta_struture_id:
+  * ref_id:
+  * value: `longtext`
