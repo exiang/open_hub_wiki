@@ -48,12 +48,12 @@ Once completed, that is enough for a basic module but obviously more files and f
 The following are features in Yii that is supported by OpenHub:
 
 * Commands - protected\yiic.php has been modified to read all commands action from `protected/modules/YOUR_MODULE/commands` folder
-* Config - protected\config\main.php has been modified to include `protected/config/module.php` that read all configuration from modules\YOUR_MODULE\config folder. Same goes to the  `protected/config/console.php`
+* Config - protected\config\main.php has been modified to include `protected/config/module.php` that read all configuration from `protected/modules/YOUR_MODULE/config` folder. Same goes to the  `protected/config/console.php`
 * Components
 * Controllers
 * Models
 * Views
-* API - Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition as well as `protected/modules/wapi/V1Controller.php` has been modified to auto load `modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
+* API - Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition as well as `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
 
 
 
