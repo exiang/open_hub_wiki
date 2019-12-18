@@ -4,5 +4,5 @@ Think organization as startup, social enterprise, investment firm, government ag
 
   * User can create their organization record thru cpanel. 
   * Organization owner can assign additional email to access this record.
-  * Organization is use in module like F7
+  * Organization is use in most of the core module like F7, Resource
 
