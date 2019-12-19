@@ -13,7 +13,7 @@ Here is how the files are organized:
   * `index.php`: entry point to the entire application. It is modified from the default Yii framework version.
 
 #### /protected
-  * `/commands`: each of the files is an executable command in CLI, which can be use by cron to perform scheduling task
+  * `/commands`: contains all console application, each of the files is an executable command in CLI, which can be use by cron to perform scheduling task
   * `/components`: contains components (e.g. helpers, widgets) that are only used by this application. One important file here is `Controller.php`
   * `/config`: contains all of OpenHub configuration files. Unless asked to, you should never edit them, as they are directly handled by OpenHub's installer and back office (#TODO).
   * `/controllers`: contains all the application level controller, as in Model-View-**Controller** (or MVC), the software architecture used by OpenHub. Each file controls a specific part of OpenHub.
