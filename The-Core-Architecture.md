@@ -7,7 +7,7 @@ Here is how the files are organized:
   * `/images`: contains all of OpenHub default images, icons and picture files – that is, those that do not belong to the theme. This is where you can find the country flags (`/flags`), languages (`/languages`) sub folders.
   * `/javascript`: contains all application level JavaScript files that are not attached to themes
   * `/static`: this is where you store your static media file like HTML, Video, etc.
-  * `/uploads`: this is where the user uploaded files will be store at. Even you are using AWS S3 for storage (`/protected/config/params.php` parameter `storageMode`), this folder is use to generate temporary thumbnails of images before uploads to cloud. _Notes:_ It is distributed in `/uploads.dist` format and should be rename to `/uploads`.
+  * `/uploads`: this is where the user uploaded files will be store at. Even you are using AWS S3 for storage (`/protected/config/params.php` parameter `storageMode`), this folder is use to generate temporary thumbnails of images before uploads to cloud. _Notes:_ It is distributed as `/uploads.dist` and should be rename to `/uploads`.
   * `/vendor`: contains all application level's vendor package, each in its own folder where inside are mostly are a mix of javascript, css, images.
   * `/themes`: contains all the currently-installed themes, each in its own folder.
   * `index.php`: entry point to the entire application. It is modified from the default Yii framework version.
