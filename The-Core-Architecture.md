@@ -14,20 +14,20 @@ Here is how the files are organized:
 
 #### /protected
   * `/commands`: each of the files is an executable command in CLI, which can be use by cron to perform scheduling task
-  * `/components`: 
+  * `/components`: contains components (e.g. helpers, widgets) that are only used by this application. One important file here is `Controller.php`
   * `/config`: contains all of OpenHub configuration files. Unless asked to, you should never edit them, as they are directly handled by OpenHub's installer and back office (#TODO).
-  * `/controllers`: contains all the application level controller, as in Model-View-Controller (or MVC), the software architecture used by OpenHub. Each file controls a specific part of OpenHub.
+  * `/controllers`: contains all the application level controller, as in Model-View-**Controller** (or MVC), the software architecture used by OpenHub. Each file controls a specific part of OpenHub.
   * `/data`: contains none code meta data files, likes web API definition in YAML file format and instructruction for Yee code generator in `table_name.build.php` format.
-  * `/extensions`:
-  * `/i18n`:
+  * `/extensions`: contains third-party libraries that are only used by this application
+  * `/i18n`: 
   * `/messages`: contains translation files
   * `/migrations`:
-  * `/models`:
-  * `/modules`:
-  * `/runtime`:
+  * `/models`: contains model classes that are specific for the application, as in **Model**-View-Controller (or MVC)
+  * `/modules`: 
+  * `/runtime`: stores dynamically generated files, likes cache and log
   * `/tests`:
   * `/vendor`:
-  * `/views`:
+  * `/views`: stores controller actions view scripts, as in Model-**View**-Controller (or MVC)
   * `/yeebase`:
   * `composer.json`:
   * `yiic`:
