@@ -25,14 +25,10 @@ Here is how the files are organized:
   * `/models`: contains model classes that are specific for the application, as in **Model**-View-Controller (or MVC)
   * `/modules`: a module is a self-contained mini program that consists of models, views, controllers and other supporting components. In many aspects, a module resembles to an application who extends the functionality of OpenHub.
   * `/runtime`: stores dynamically generated files, likes cache and log
-  * `/tests`:
-  * `/vendor`:
+  * `/tests`: contains all test related code 
+  * `/vendor`: composer installed package are stored here
   * `/views`: stores controller actions view scripts, as in Model-**View**-Controller (or MVC)
-  * `/yeebase`:
-  * `composer.json`:
-  * `yiic`:
-  * `yiic.bat`:
-  * `yiic.php`:
+  * `/yeebase`: OpenHub sit on top of an extended version of Yii Framework version 1. This is where the extended code sit in and shared across other applications.
 
 #### /framework
 #### /.vscode
