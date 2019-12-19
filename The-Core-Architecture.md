@@ -3,29 +3,35 @@ As OpenHub is built on top of Yii Framework version 1, our developers have done 
 Here is how the files are organized:
 
 #### /public_html
-  * /css
-  * /images
-  * /javascript
-  * /static
-  * /uploads
-  * /vendor
+  * `/css`
+  * `/images`
+  * `/javascript`
+  * `/static`
+  * `/uploads`
+  * `/vendor`
+  * `index.php`
+  * `index-test.php`
 
 #### /protected
-  * /commands
-  * /components
-  * /config
-  * /controllers
-  * /data
-  * /extensions
-  * /i18n
-  * /messages
-  * /migrations
-  * /models
-  * /modules
-  * /runtime
-  * /tests
-  * /vendor
-  * /views
+  * `/commands`
+  * `/components`
+  * `/config`
+  * `/controllers`
+  * `/data`
+  * `/extensions`
+  * `/i18n`
+  * `/messages`
+  * `/migrations`
+  * `/models`
+  * `/modules`
+  * `/runtime`
+  * `/tests`
+  * `/vendor`
+  * `/views`
+  * `composer.json`
+  * `yiic`
+  * `yiic.bat`
+  * `yiic.php`
 
-#### framework
-#### .vscode
+#### /framework
+#### /.vscode
