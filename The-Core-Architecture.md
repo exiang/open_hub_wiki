@@ -18,12 +18,12 @@ Here is how the files are organized:
   * `/config`: contains all of OpenHub configuration files. Unless asked to, you should never edit them, as they are directly handled by OpenHub's installer and back office (#TODO).
   * `/controllers`: contains all the application level controller, as in Model-View-**Controller** (or MVC), the software architecture used by OpenHub. Each file controls a specific part of OpenHub.
   * `/data`: contains none code meta data files, likes web API definition in YAML file format and instructruction for Yee code generator in `table_name.build.php` format.
-  * `/extensions`: contains third-party libraries that are only used by this application
-  * `/i18n`: 
-  * `/messages`: contains translation files
-  * `/migrations`:
+  * `/extensions`: contains third-party libraries that are only used by this application. Extensions is one of the way to extend Yii Framework functionality.
+  * `/i18n`: contains the customized locale data which is not the translation message
+  * `/messages`: contains translation message files
+  * `/migrations`: contains database migration instructions created thru `yiic migrate create migration_instruction_name`
   * `/models`: contains model classes that are specific for the application, as in **Model**-View-Controller (or MVC)
-  * `/modules`: 
+  * `/modules`: a module is a self-contained mini program that consists of models, views, controllers and other supporting components. In many aspects, a module resembles to an application who extends the functionality of OpenHub.
   * `/runtime`: stores dynamically generated files, likes cache and log
   * `/tests`:
   * `/vendor`:
