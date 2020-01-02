@@ -120,6 +120,24 @@ if ($realm == 'backend') {
         'url' => Yii::app()->controller->createUrl('/boilerplatStart/frontend/action1', array('id' => $model->id)),
     );
 }
+
+return $actions;
+```
+
+Next, not to forget you will also has to implement the rendering part of these action buttons in your view.
+
+```php
+<?php if(!empty($actions['boilerplatStart'])): ?>
+<div class="row">
+    <div class="col col-md-12">
+    <div class="well text-center">
+    <?php foreach($actions['boilerplatStart'] as $action): ?>
+        <a class="margin-bottom-sm btn btn-<?php echo $action['visual']?>" href="<?php echo $action[url] ?>" title="<?php echo $action['title'] ?>"><?php echo $action[label] ?></a>
+    <?php endforeach; ?>
+    </div>
+    </div>
+</div>
+<?php endif; ?>
 ```
 
 #### getOrganizationActFeed
