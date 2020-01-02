@@ -32,3 +32,7 @@ Here is how the files are organized:
 
 #### /framework
 #### /.vscode
+
+
+## Architecture Diagram ##
+https://docs.google.com/presentation/d/1q5nNMcLXClJKMh83GxFYLndU607rpJ64FEtylspjM5M/edit?usp=sharing
