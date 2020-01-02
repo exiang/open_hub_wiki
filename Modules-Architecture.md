@@ -164,6 +164,23 @@ public function getSharedAssets($forInterface = '*')
 }
 ```
 #### getBackendAdvanceSearch
+You may like to list module records in backend search when admin search for a keyword. 
+
+```php
+public function getBackendAdvanceSearch($controller, $searchFormModel)
+{
+    $searchModel = new BoilerplateModel('search');
+    $result['boilerplateStart'] = $searchModel->searchAdvance($searchFormModel->keyword);
+
+    return array(
+        'boilerplateStart' => array(
+            'tabLabel' => Yii::t('backend', 'Boilerplate'),
+            'itemViewPath' => 'application.modules.boilerplateStart.views.backend._view-boilerplateStart-advanceSearch',
+            'result' => $result['boilerplateStart'],
+        ),
+    );
+}
+```
 
 #### doOrganizationsMerge
 Organization feature allows admin to merge duplicate from source to target records in backend. When this happens, module' records associate with the source organization needs to be transfer to the target organization. You will need to code the merging logic here. 
