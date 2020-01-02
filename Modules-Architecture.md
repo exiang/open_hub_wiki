@@ -84,17 +84,33 @@ Next, not to forget you will also has to implement the rendering part of these a
 ```
 
 #### getOrganizationActFeed
+```php
+public function getOrganizationActFeed($organization, $year){}
+```
+
 Pass in Organization object and year (e.g. `getOrganizationActFeed($organization, '2020')`), this function is called by activity feed to list module records that associate with this organization for this year.
 
 #### getIndividualViewTabs
+```php
+public function getIndividualViewTabs($model, $realm = 'backend'){}
+```
 
 #### getIndividuaActions
+```php
+public function getIndividuaActions($model, $realm = 'backend'){}
+```
 Called by core Individual feature to list out action buttons at both cpanel and backend view. 
 
 #### getIndividualActFeed
+```php
+public function getIndividualActFeed($individual, $year){}
+```
 Pass in Individual object and year (e.g. `getIndividualActFeed($individual, '2020')`), this function is called by activity feed to list module records that associate with this individual for this year.
 
 #### getUserActFeed
+```php
+public function getUserActFeed($user, $year){}
+```
 Pass in User object and year (e.g. `getUserActFeed($user, '2020')`), this function is called by activity feed to list module records that associate with this user for this year.
 
 #### getNavItems
@@ -102,7 +118,6 @@ Pass in User object and year (e.g. `getUserActFeed($user, '2020')`), this functi
 function getNavItems($controller, $forInterface){}
 ```
 This function is called to all modules by initBackendMenu() in `protected/components/Controller.php`, to acquired navigation items. 
-
 
 Available `$forInterface` code:
   * Backend
@@ -143,8 +158,17 @@ public function getNavItems($controller, $forInterface)
     }
 }
 ```
+
 #### getAsService
+```php
+public function getAsService($interface){}
+```
+
 #### getSharedAssets
+```php
+public function getSharedAssets($forInterface = '*'){}
+```
+
 Sometimes, a module needs to inject `CSS` or `Javascript` files across the OpenHub application. This function allow this to be done by passing in the interface layout code. 
 
 ```php
@@ -170,6 +194,9 @@ public function getSharedAssets($forInterface = '*')
 }
 ```
 #### getBackendAdvanceSearch
+```php
+public function getBackendAdvanceSearch($controller, $searchFormModel){}
+```
 You may like to list module records in backend search when admin search for a keyword. 
 
 ```php
@@ -189,6 +216,10 @@ public function getBackendAdvanceSearch($controller, $searchFormModel)
 ```
 
 #### doOrganizationsMerge
+```php
+public function doOrganizationsMerge($source, $target){}
+```
+
 Organization feature allows admin to merge duplicate from source to target records in backend. When this happens, module' records associate with the source organization needs to be transfer to the target organization. You will need to code the merging logic here. 
 
 Examples:
@@ -208,11 +239,21 @@ public function doOrganizationsMerge($source, $target)
 ```
 
 #### doIndividualsMerge
+```php
+public function doIndividualsMerge($source, $target){}
+```
 Individual feature allows admin to merge duplicate from source to target records in backend. When this happens, module' records associate with the source individual needs to be transfer to the target individual. You will need to code the merging logic here. 
 
 ## Dealing with Database
 #### install
+```php
+public function install($forceReset = false){}
+```
+
 #### installDb
+```php
+public function installDb($forceReset = false){}
+```
 
 ## Web API
 Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition. `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
