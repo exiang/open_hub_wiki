@@ -156,6 +156,19 @@ Pass in Individual object and year (e.g. `getIndividualActFeed($individual, '202
 Pass in User object and year (e.g. `getUserActFeed($user, '2020')`), this function is called by activity feed to list module records that associate with this user for this year.
 
 #### getNavItems
+This function is called to all modules by initBackendMenu() in `protected/components/Controller.php`, to acquired navigation items. 
+
+Available forInterface code:
+  * Backend
+    * backendNavService
+  * Event
+    * eventAdminSideNav
+  * Cpanel
+    * cpanelNavDashboard 
+    * cpanelNavSetting
+    * cpanelNavCompany
+    * cpanelNavCompanyInformation
+
 #### getAsService
 #### getSharedAssets
 Sometimes, a module needs to inject `CSS` or `Javascript` files across the OpenHub application. This function allow this to be done by passing in the interface layout code. 
