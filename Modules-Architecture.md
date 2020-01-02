@@ -102,24 +102,24 @@ Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php`
 Called by core Organization feature to list out action buttons at both cpanel and backend view. 
 ```php
 if ($realm == 'backend') {
-			if (!Yii::app()->user->accessBackend) {
-				return;
-			}
+    if (!Yii::app()->user->accessBackend) {
+        return;
+    }
 
-			$actions['boilerplatStart'][] = array(
-				'visual' => 'primary',
-				'label' => 'Backend Action 1',
-				'title' => 'Backend Action 1 short description',
-				'url' => Yii::app()->controller->createUrl('/boilerplatStart/backend/action1', array('id' => $model->id)),
-			);
-		} elseif ($realm == 'cpanel') {
-			$actions['boilerplatStart'][] = array(
-				'visual' => 'primary',
-				'label' => 'Frontend Action 1',
-				'title' => 'Frontend Action 1 short description',
-				'url' => Yii::app()->controller->createUrl('/boilerplatStart/frontend/action1', array('id' => $model->id)),
-			);
-		}
+    $actions['boilerplatStart'][] = array(
+        'visual' => 'primary',
+        'label' => 'Backend Action 1',
+        'title' => 'Backend Action 1 short description',
+        'url' => Yii::app()->controller->createUrl('/boilerplatStart/backend/action1', array('id' => $model->id)),
+    );
+} elseif ($realm == 'cpanel') {
+    $actions['boilerplatStart'][] = array(
+        'visual' => 'primary',
+        'label' => 'Frontend Action 1',
+        'title' => 'Frontend Action 1 short description',
+        'url' => Yii::app()->controller->createUrl('/boilerplatStart/frontend/action1', array('id' => $model->id)),
+    );
+}
 ```
 
 #### getOrganizationActFeed
