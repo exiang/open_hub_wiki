@@ -141,6 +141,10 @@ public function getSharedAssets($forInterface = '*'){}
 
 Sometimes, a module needs to inject `CSS` or `Javascript` files across the OpenHub application. This function allow this to be done by passing in the interface layout code. 
 
+Available layout codes are:
+* layout-backend
+* layout-frontend
+
 ```php
 public function getSharedAssets($forInterface = '*')
 {
