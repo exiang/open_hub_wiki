@@ -1,7 +1,15 @@
 Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php` to change how OpenHub core code works.
 
 #### getOrganizationViewTabs
+```php
+public function getOrganizationViewTabs($model, $realm = 'backend'){}
+```
+
 #### getOrganizationActions
+```php
+public function getOrganizationActions($model, $realm = 'backend'){}
+```
+
 Called by core Organization feature to list out action buttons at both cpanel and backend view. 
 ```php
 if ($realm == 'backend') {
