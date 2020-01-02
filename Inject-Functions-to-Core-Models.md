@@ -1,4 +1,4 @@
-Behavior allow developer to inject custom functions into existing core model (e.g. Organization, Individual, Event, etc) without modify the code code (e.g. `protected/model/Organization.php`), all within the context of module.
+Model Behavior allows developer to inject custom functions into existing core model (e.g. Organization, Individual, Event, etc) without modify the code code (e.g. `protected/model/Organization.php`), all within the context of module.
 
 For example, `protected/modules/boilerplateStart/components/BoilerplateStartOrganizationBehavior.php` add customize functions to `Organization` model:
 
@@ -29,6 +29,25 @@ class BoilerplateStartOrganizationBehavior extends Behavior
 
 This allow me to call `$organization->getActiveBoilerplateStartItems()` in my module controller.
 
+### Remember to define in configuration
+Your model behaviors will works only if you define them in `YOUR_MODULE/config/main.php` and `YOUR_MODULE/config/console.php`
+
+```php
+'modelBehaviors' => array(
+    'Organization' => array(
+        'class' => 'application.modules.boilerplateStart.components.BoilerplateStartOrganizationBehavior',
+    ),
+    'Individual'=>array(
+        'class'=>'application.modules.boilerplateStart.components.BoilerplateStartIndividualBehavior',
+    ),
+    'Event'=>array(
+        'class'=>'application.modules.boilerplateStart.components.BoilerplateStartEventBehavior',
+    ),
+    'Resource'=>array(
+        'class'=>'application.modules.boilerplateStart.components.BoilerplateStartResourceBehavior',
+    ),
+),
+```
 ### Conflicting behavior
 According to Yii documentation:
 
