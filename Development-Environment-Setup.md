@@ -1,9 +1,10 @@
-## System Requirement
+## Requirements
+### System
   * PHP version: 7.2
   * MySql 5.5 (support json query)
   * AWS S3
  
-## Others Development Tools
+### Others Development Tools
   * Docker
   * IDE - We recommend Visual Studio Code
 
