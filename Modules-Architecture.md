@@ -74,26 +74,26 @@ class BoilerplateStartOrganizationBehavior extends Behavior
 
 	//
 	// items
-	public function countBoilerplateStartAllItems()
+	public function countAllBoilerplateStartItems()
 	{
 		return HubBoilerplateStart::countAllOrganizationBoilerplateStarts($this->model);
 	}
 
-	public function getBoilerplateStartActiveItems($limit = 100)
+	public function getActiveBoilerplateStartItems($limit = 100)
 	{
 		return HubBoilerplateStart::getActiveOrganizationBoilerplateStarts($this->model, $limit);
 	}
 }
 ```
 
-This allow me to call `$organization->getBoilerplateStartActiveItems()` in my module controller.
+This allow me to call `$organization->getActiveBoilerplateStartItems()` in my module controller.
 
 ### Conflicting behavior
 According to Yii documentation:
 
 > When there can be name conflicts among different behaviors attached to the same component, the conflicts are automatically resolved by prioritizing the behavior attached to the component first. Name conflicts caused by different traits requires manual resolution by renaming the affected properties or methods.
 
-Hence, it's important to name your behavior function uniquely to prevent conflict with other modules. Follow the naming convention of `[verb][ModuleName][Subject]()`.
+Hence, it's important to name your behavior function uniquely to prevent conflict with other modules. Follow the naming convention of `[verb][Adjective][ModuleName][Subject]()`.
 
 ## Main function hooks
 
