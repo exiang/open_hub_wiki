@@ -75,19 +75,19 @@ class BoilerplateStartOrganizationBehavior extends Behavior
 
 	//
 	// items
-	public function countAllBoilerplateStartItems()
+	public function countBoilerplateStartAllItems()
 	{
 		return HubBoilerplateStart::countAllOrganizationBoilerplateStarts($this->model);
 	}
 
-	public function getActiveBoilerplateStartItems($limit = 100)
+	public function getBoilerplateStartActiveItems($limit = 100)
 	{
 		return HubBoilerplateStart::getActiveOrganizationBoilerplateStarts($this->model, $limit);
 	}
 }
 ```
 
-This allow me to call `$organization->getActiveBoilerplateStartItems()` in my module controller.
+This allow me to call `$organization->getBoilerplateStartActiveItems()` in my module controller.
 
 ### Conflicting behavior
 According to Yii documentation:
