@@ -158,9 +158,15 @@ Pass in User object and year (e.g. `getUserActFeed($user, '2020')`), this functi
 #### getNavItems
 This function is called to all modules by initBackendMenu() in `protected/components/Controller.php`, to acquired navigation items. 
 
+```php
+function getNavItems($controller, $forInterface)
+```
+
 Available forInterface code:
   * Backend
     * backendNavService
+    * backendNavDev
+    * backendNavUserService
   * Event
     * eventAdminSideNav
   * Cpanel
@@ -168,7 +174,33 @@ Available forInterface code:
     * cpanelNavSetting
     * cpanelNavCompany
     * cpanelNavCompanyInformation
+  * External modules
+    * MdecMSC
+      * mdecMscAdminSideNav
 
+``` php
+public function getNavItems($controller, $forInterface)
+{
+    switch ($forInterface) {
+        case 'backendNavService':
+
+            return array(
+                array(
+                    'label' => Yii::t('backend', 'Open Innovation Challenge'), 'url' => '#',
+                    'visible' => Yii::app()->user->getState('accessBackend') == true,
+                    'active' => $controller->activeMenuMain == 'challenge' ? true : false,
+                    'itemOptions' => array('class' => 'dropdown-submenu'), 'submenuOptions' => array('class' => 'dropdown-menu'),
+                    'linkOptions' => array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+                    'items' => array(
+                        array('label' => Yii::t('app', 'Challenge Overview'), 'url' => array('/challenge/backend'), 'visible' => Yii::app()->user->getState('accessBackend') == true),
+                    ),
+                ),
+            );
+
+            break;
+    }
+}
+```
 #### getAsService
 #### getSharedAssets
 Sometimes, a module needs to inject `CSS` or `Javascript` files across the OpenHub application. This function allow this to be done by passing in the interface layout code. 
