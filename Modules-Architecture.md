@@ -46,8 +46,8 @@ Let’s start; this will enable us to better describe its structure. We will nam
   * Click the `initialize` button
   * Once installation completed, your module is now moved to `Module` tab
 
-## Supported Features
-The following are features in Yii that is supported by OpenHub:
+## Directory Structure
+Here is how the files are organized in module:
 
   * Commands - `protected/yiic.php` has been modified to read all commands action from `protected/modules/YOUR_MODULE/commands` folder
   * Config - `protected/config/main.php` has been modified to include `protected/config/module.php` that read all configuration from `protected/modules/YOUR_MODULE/config` folder. Same goes to the  `protected/config/console.php`
@@ -96,21 +96,52 @@ According to Yii documentation:
 Hence, it's important to name your behavior function uniquely to prevent conflict with other modules. Follow the naming convention of `[verb][Adjective][ModuleName][Subject]()`.
 
 ## Main function hooks
+Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php` to change how OpenHub core code works.
 
 #### getOrganizationActions
+Called by core Organization feature to list out action buttons at both cpanel and backend view. 
+```php
+if ($realm == 'backend') {
+			if (!Yii::app()->user->accessBackend) {
+				return;
+			}
+
+			$actions['boilerplatStart'][] = array(
+				'visual' => 'primary',
+				'label' => 'Backend Action 1',
+				'title' => 'Backend Action 1 short description',
+				'url' => Yii::app()->controller->createUrl('/boilerplatStart/backend/action1', array('id' => $model->id)),
+			);
+		} elseif ($realm == 'cpanel') {
+			$actions['boilerplatStart'][] = array(
+				'visual' => 'primary',
+				'label' => 'Frontend Action 1',
+				'title' => 'Frontend Action 1 short description',
+				'url' => Yii::app()->controller->createUrl('/boilerplatStart/frontend/action1', array('id' => $model->id)),
+			);
+		}
+```
+
 #### getOrganizationActFeed
+Pass in organization object and year (e.g. `getOrganizationActFeed($organization, '2020')`), this function is called by activity feed to list module records that associate with this organization in this year.
+
 #### getIndividualViewTabs
+
 #### getIndividuaActions
+Called by core Individual feature to list out action buttons at both cpanel and backend view. 
+
 #### getIndividualActFeed
 #### getUserActFeed
 #### getNavItems
 #### getAsService
 #### getSharedAssets
-#### install
-#### installDb
 #### getBackendAdvanceSearch
 #### doOrganizationsMerge
 #### doIndividualsMerge
+
+## Dealing with Database
+#### install
+#### installDb
 
 ## Web API
 Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition. `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
