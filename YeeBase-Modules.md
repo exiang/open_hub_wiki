@@ -2,5 +2,5 @@ Here are modules ship with YeeBase, providing general functions for any type of 
 
 * [Egg](Yeebase-Egg-Module)
 * [Inspinia](Yeebase-Inspinia-Module)
-* [Language]((Yeebase-Language-Module)
+* [Language](Yeebase-Language-Module)
 * [SYS (System)](Yeebase-Sys-Module)
