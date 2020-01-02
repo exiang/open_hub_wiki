@@ -3,7 +3,9 @@ OpenHub’s extensibility revolves around modules, which are small programs that
 ## Introduction
 A OpenHub module consists of a main PHP file with as many other PHP files as needed, as well as the necessary assets (images, JavaScript, CSS, etc.) to display the module’s interface, whether to the user (on the front office) or to the provider (on the back office).
 
-Any OpenHub module, once installed on an online system, can interact with one or more “hooks”. Hooks enable you to hook/attach your code to the current View at the time of the code parsing (i.e., when displaying the an organization etc). Specifically, a hook is a shortcut to the various methods available from the Module object, as assigned to that hook.
+Any OpenHub module, once installed on an online system, can interact with one or more "hooks". Hooks enable you to hook/attach your code to the current View at the time of the code parsing (i.e., when displaying the an organization etc). Specifically, a hook is a shortcut to the various methods available from the Module object, as assigned to that hook.
+
+As a module developer, you make changes within the context of module. You must not modify the core files. 
 
 ## Modules’ operating principles
 Modules are the ideal way to let your talent and imagination as a developer express themselves, as the creative possibilities are many and you can do pretty much anything with OpenHub’s module API.
@@ -19,8 +21,7 @@ Any module:
 OpenHub modules are found in the `protected/modules` folder. This is true for both default modules (provided with OpenHub) and 3rd-party modules that are subsequently installed.
 
 ## Quick start
-Modules must follow some guidelines to work on OpenHub.
-If you want to get started quickly, with a standard module templates, you can use the `Boilerplate` Module.
+Modules must follow some guidelines to work on OpenHub. If you want to get started quickly, with a standard module templates, you can use the `Boilerplate` Module.
 
 ### Boilerplate Module
 Please refer to `protected/modules/boilerplateStart` that serve as a starting base for your new created module.
@@ -56,7 +57,39 @@ The following are features in Yii that is supported by OpenHub:
   * Views
   * API - Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition as well as `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
 
-## Main functions
+## Understanding Behavior
+Behavior allow developer to inject custom functions into existing core model (e.g. Organization, Individual, Event, etc) without modify the code code (e.g. `protected/model/Organization.php`), all within the context of module.
+
+For example, `protected/modules/boilerplateStart/components/BoilerplateStartOrganizationBehavior.php` add customize functions to `Organization` model:
+
+```
+<?php
+
+Yii::import('modules.boilerplateStart.models.*');
+
+// this allow you to inject method into organization object
+class BoilerplateStartOrganizationBehavior extends Behavior
+{
+	// the organization model
+	public $model;
+
+	//
+	// items
+	public function countAllItems()
+	{
+		return HubBoilerplateStart::countAllOrganizationBoilerplateStarts($this->model);
+	}
+
+	public function getActiveItems($limit = 100)
+	{
+		return HubBoilerplateStart::getActiveOrganizationBoilerplateStarts($this->model, $limit);
+	}
+}
+```
+
+This allow me to call `$organization->getActiveItems()` in my module controller.
+
+## Main function hooks
 
 #### getOrganizationActions
 #### getOrganizationActFeed
