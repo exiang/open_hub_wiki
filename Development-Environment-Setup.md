@@ -5,7 +5,8 @@ To get started with OpenHub, you will need to setup a local development environm
   * PHP version: 7.2
   * MySql 5.5 (support json query)
   * AWS S3
-  * AWS Elastic Search
+  * Elasticsearch 
+  * Noe4j
   * Google API
   * PHP Composer
 
