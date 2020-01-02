@@ -4,13 +4,14 @@ Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php`
 ```php
 public function getOrganizationViewTabs($model, $realm = 'backend'){}
 ```
+This function hook allows you to inject an interface block to view Organization page in both cpanel and backend for your module.
 
 #### getOrganizationActions
 ```php
 public function getOrganizationActions($model, $realm = 'backend'){}
 ```
+This function hook allows you to define list of action buttons in injected interface block to view organization page in both cpanel and backend for your module (thru `getOrganizationViewTabs()`).
 
-Called by core Organization feature to list out action buttons at both cpanel and backend view. 
 ```php
 if ($realm == 'backend') {
     if (!Yii::app()->user->accessBackend) {
@@ -62,12 +63,13 @@ Pass in Organization object and year (e.g. `getOrganizationActFeed($organization
 ```php
 public function getIndividualViewTabs($model, $realm = 'backend'){}
 ```
+This function hook allows you to inject an interface block to view Individual page in both cpanel and backend for your module.
 
 #### getIndividuaActions
 ```php
 public function getIndividuaActions($model, $realm = 'backend'){}
 ```
-Called by core Individual feature to list out action buttons at both cpanel and backend view. 
+This function hook allows you to define list of action buttons in injected interface block to view Individual page in both cpanel and backend for your module (thru `getIndividualViewTabs()`).
 
 #### getIndividualActFeed
 ```php
