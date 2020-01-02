@@ -14,11 +14,10 @@
   * GIT Client - [Fork](https://git-fork.com/)
   * API Gateway - [TYK.io](https://tyk.io/)
 
-## Setup (docker)
-This is the highly recommended setup method compared to the manual way
+## Environment
+  * Dev - your local machine will be use for the development (e.g. https://hubd.mymagic.my)
+  * Staging - this is the staging site for beta testing (e.g. https://hub.mymagic.my)
+  * Production - this is your live site (e.g. https://central.mymagic.my)
 
-map /etc/hosts, add entries:
-127.0.0.1       hubd.mymagic.my
-127.0.0.1       api-hubd.mymagic.my
-
-use docker from repo: magic_docker7. Refer to the setup documents there
+## Local Dev Setup (docker)
+This is the highly recommended setup method compared to the manual way. use docker from repo: magic_docker7. Refer to the setup documents there
