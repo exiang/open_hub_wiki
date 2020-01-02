@@ -123,7 +123,7 @@ if ($realm == 'backend') {
 ```
 
 #### getOrganizationActFeed
-Pass in organization object and year (e.g. `getOrganizationActFeed($organization, '2020')`), this function is called by activity feed to list module records that associate with this organization in this year.
+Pass in Organization object and year (e.g. `getOrganizationActFeed($organization, '2020')`), this function is called by activity feed to list module records that associate with this organization for this year.
 
 #### getIndividualViewTabs
 
@@ -131,10 +131,38 @@ Pass in organization object and year (e.g. `getOrganizationActFeed($organization
 Called by core Individual feature to list out action buttons at both cpanel and backend view. 
 
 #### getIndividualActFeed
+Pass in Individual object and year (e.g. `getIndividualActFeed($individual, '2020')`), this function is called by activity feed to list module records that associate with this individual for this year.
+
 #### getUserActFeed
+Pass in User object and year (e.g. `getUserActFeed($user, '2020')`), this function is called by activity feed to list module records that associate with this user for this year.
+
 #### getNavItems
 #### getAsService
 #### getSharedAssets
+Sometimes, a module needs to inject `CSS` or `Javascript` files across the OpenHub application. This function allow this to be done by passing in the interface layout code. 
+
+```php
+public function getSharedAssets($forInterface = '*')
+{
+    switch ($forInterface) {
+        case 'layout-backend': {
+                $return['css'][] = array('src' => self::getAssetsUrl() . '/css/backend.shared.css');
+                $return['js'][] = array('src' => self::getAssetsUrl() . '/javascript/backend.shared.js', 'position' => CClientScript::POS_END);
+                break;
+            }
+        case 'layout-frontend': {
+                $return['css'][] = array('src' => self::getAssetsUrl() . '/css/frontend.shared.css');
+                $return['js'][] = array('src' => self::getAssetsUrl() . '/javascript/frontend.shared.js', 'position' => CClientScript::POS_END);
+                break;
+            }
+        default: {
+                break;
+            }
+    }
+
+    return $return;
+}
+```
 #### getBackendAdvanceSearch
 #### doOrganizationsMerge
 #### doIndividualsMerge
