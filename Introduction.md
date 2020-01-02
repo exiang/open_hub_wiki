@@ -1,4 +1,4 @@
-OpenHub was conceived so that third-party modules could easily build upon its foundations, making it an extremely customizable Startup ecosystem management software.
+OpenHub was conceived so that third-party modules could easily build upon its foundations, making it an extremely customizable startup ecosystem management software.
 
 ## Concepts
 You should be familiar with PHP and Object-Oriented Programming before attempting to write your own module.
