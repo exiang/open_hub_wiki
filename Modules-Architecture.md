@@ -156,13 +156,13 @@ Pass in Individual object and year (e.g. `getIndividualActFeed($individual, '202
 Pass in User object and year (e.g. `getUserActFeed($user, '2020')`), this function is called by activity feed to list module records that associate with this user for this year.
 
 #### getNavItems
+```php
+function getNavItems($controller, $forInterface){}
+```
 This function is called to all modules by initBackendMenu() in `protected/components/Controller.php`, to acquired navigation items. 
 
-```php
-function getNavItems($controller, $forInterface)
-```
 
-Available forInterface code:
+Available `$forInterface` code:
   * Backend
     * backendNavService
     * backendNavDev
