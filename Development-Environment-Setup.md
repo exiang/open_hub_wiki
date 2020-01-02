@@ -1,3 +1,5 @@
+To get started with OpenHub, you will need to setup a local development environment where you can modify code and test it live on browser.
+
 ## Requirements
 ### System
   * PHP version: 7.2
@@ -19,5 +21,5 @@
   * Staging - this is the staging site for beta testing (e.g. https://hub.mymagic.my)
   * Production - this is your live site (e.g. https://central.mymagic.my)
 
-## Local Dev Setup (docker)
-This is the highly recommended setup method compared to the manual way. use docker from repo: magic_docker7. Refer to the setup documents there
+## Setup with Docker
+To setup Docker on local development server, we highly recommend using docker than the manual way. Use docker from repo: magic_docker7. Refer to the setup documents there
