@@ -3,10 +3,16 @@
   * PHP version: 7.2
   * MySql 5.5 (support json query)
   * AWS S3
- 
+  * AWS Elastic Search
+  * Google API
+  * PHP Composer
+
 ### Others Development Tools
   * Docker
-  * IDE - We recommend Visual Studio Code
+  * OS - Apple Mac
+  * IDE - [Visual Studio Code](https://code.visualstudio.com/)
+  * GIT Client - [Fork](https://git-fork.com/)
+  * API Gateway - [TYK.io](https://tyk.io/)
 
 ## Setup (docker)
 This is the highly recommended setup method compared to the manual way
