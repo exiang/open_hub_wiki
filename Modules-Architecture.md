@@ -1,4 +1,4 @@
 ## Different type of modules
-* External Module
+* 3rd-party Module
 * Default Module
 * YeeBase Module
