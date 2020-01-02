@@ -5,6 +5,6 @@ OpenHub’s extensibility revolves around modules, which are small programs that
 * [Modules Architecture](Modules-Architecture)
 * [Inject Functions to Core Models](Inject-Functions-to-Core-Models)
 * [Function Hooks](Module-Function-Hooks)
-* [Module Install & Upgrade](Module-Install-Upgrade)
+* [Module Install & Upgrade](Module-Install-&-Upgrade)
 * [Module Configuration](Module-Config)
 * [Module To do](Module-todo)
