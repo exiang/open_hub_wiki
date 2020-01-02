@@ -55,9 +55,8 @@ The following are features in Yii that is supported by OpenHub:
   * Controllers
   * Models
   * Views
-  * API - Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition as well as `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
 
-## Understanding Behavior
+## Inject functions to core Model
 Behavior allow developer to inject custom functions into existing core model (e.g. Organization, Individual, Event, etc) without modify the code code (e.g. `protected/model/Organization.php`), all within the context of module.
 
 For example, `protected/modules/boilerplateStart/components/BoilerplateStartOrganizationBehavior.php` add customize functions to `Organization` model:
@@ -113,6 +112,8 @@ Hence, it's important to name your behavior function uniquely to prevent conflic
 #### doOrganizationsMerge
 #### doIndividualsMerge
 
+## Web API
+Wapi support modularization architecture and able to read `protected/modules/YOUR_MODULE/data/api/*.yaml` for swagger definition. `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/YOUR_MODULE/actions/wapi/V1Controller/*.php` for api action
 
 ## Todo
 Modularization to the underlying system are done phase by phase. The following features are not supported by module yet:
