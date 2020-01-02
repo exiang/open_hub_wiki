@@ -1,4 +1,4 @@
-Welcome to the OpenHub developer documentation.
+Welcome to the OpenHub **developer documentation**.
 
 ## Topics
 * [Basics](Basics)
