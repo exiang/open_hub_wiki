@@ -1,13 +1,3 @@
-## Directory Structure
-Here is how the files are organized in module:
-
-  * Commands - `protected/yiic.php` has been modified to read all commands action from `protected/modules/YOUR_MODULE/commands` folder
-  * Config - `protected/config/main.php` has been modified to include `protected/config/module.php` that read all configuration from `protected/modules/YOUR_MODULE/config` folder. Same goes to the  `protected/config/console.php`
-  * Components
-  * Controllers
-  * Models
-  * Views
-
 ## Inject functions to core Model
 Behavior allow developer to inject custom functions into existing core model (e.g. Organization, Individual, Event, etc) without modify the code code (e.g. `protected/model/Organization.php`), all within the context of module.
 
