@@ -8,10 +8,10 @@ When persona is link to different core models:
 
 ## List of recommended Persona
 
-  * Aspiring Entrepreneurs (e.g. students)
-  * Existing Entrepreneurs (e.g. startup)
-  * Social Enterprise
-  * Corporate
-  * Government Ministry/Agencies
-  * Venture Capital
-  * Ecosystem Builder 
+  * **Aspiring Entrepreneurs** - e.g. students
+  * **Existing Entrepreneurs** - e.g. startup
+  * **Social Enterprise**
+  * **Corporate**
+  * **Government Ministry/Agencies**
+  * **Venture Capital**
+  * **Ecosystem Builder** 
