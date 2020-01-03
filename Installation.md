@@ -18,3 +18,5 @@
     * `public_html/assets`
     * `public_html/uploads`
 6. Setup crons
+7. Login to Backend
+    * Update Settings
