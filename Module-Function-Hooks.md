@@ -1,6 +1,6 @@
 Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php` to change how OpenHub core code works.
 
-#### getOrganizationViewTabs
+### getOrganizationViewTabs
 
 ```php
 public function getOrganizationViewTabs($model, $realm = 'backend'){}
