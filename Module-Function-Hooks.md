@@ -91,9 +91,10 @@ This function is called to all modules by initBackendMenu() in `protected/compon
 
 Available `$forInterface` code:
   * Backend
-    * backendNavService
-    * backendNavDev
-    * backendNavUserService
+    * backendNavService![image](https://user-images.githubusercontent.com/5336690/71714577-63330600-2e49-11ea-921f-673471b66050.png)
+    * backendNavDev![image](https://user-images.githubusercontent.com/5336690/71714606-8067d480-2e49-11ea-971d-9680ea2b2f27.png)
+    * backendNavUserService![image](https://user-images.githubusercontent.com/5336690/71714621-8b226980-2e49-11ea-85ee-3c84f4719248.png)
+
   * Event
     * eventAdminSideNav
   * Cpanel
