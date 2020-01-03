@@ -1,9 +1,11 @@
 When industry is link to different core models:
 
-Individual: is this person an Ecosystem Builder? or related to Government?
-Organization: is this company a Startup? or is this company a VC?
-Event: is this program targeting aspiring or existing startup?
-Resource: is this resource for Social Enterprise?
+  * Individual: this individual is interested in which industries?
+  * Organization: this startup company is in which industries?
+  * Event: this program targeting which industries?
+  * Resource: this resource is for which industries?
+
+
 ### List of recommended Industry
 and its mapping keywords
   * **Aerospace** - Aerospace
