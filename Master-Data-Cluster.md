@@ -4,7 +4,7 @@ Unlike [industry](Master-Data-Industry), cluster can be a grouping of multiple i
   * Biotech
   * Creative
   * Education
-  * Finance
+  * Fintech
   * Health
   * Lifestyle
   * Smart Cities
