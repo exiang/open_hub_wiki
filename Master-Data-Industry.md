@@ -17,7 +17,7 @@ and its mapping keywords
   * **Finance** - Accounting, Banking, Insurance & Capital Market, Capital Market, Finance, Financial, Financial Services, Financial Services & Payments, FinTech, Hedge Funds, Insurance, Payments, Virtual Currency
   * **Food & Beverages** - Food & Beverages, Food And beverages, Food Tech
   * **Gaming** - Games, Gaming
-  * **Information & Communication ** - Communication, Computer Networking / Security, Hardware and IOT, Information & Communication , Information Technology, Internet & Software, Messaging, Software
+  * **Information & Communication** - Communication, Computer Networking / Security, Hardware and IOT, Information & Communication , Information Technology, Internet & Software, Messaging, Software
   * **Jobs & HR** - Jobs, Jobs & HR
   * **Legal and Law** - Legal and Law, Legal Tech
   * **Lifestyle & Fashion** - Beauty & Fashion, Fashion, Lifestyle & Fashion
