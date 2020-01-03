@@ -8,9 +8,9 @@ Use in Malaysia. Refer to [http://bit.ly/magic-startup-stages](http://bit.ly/mag
 Use in Europe. Refer to [https://www.startupcommons.org/startup-development-phases.html](https://www.startupcommons.org/startup-development-phases.html)
 
 ## List of recommended Startup Stages
-  - Discover
-  - Validate
-  - Product Development
-  - Efficiency
-  - Growth
-  - Mature
+  1. Discover - At Discovery Stage, you learn about ideating your startup. You mostly spent time educating about startup and attending related events.
+  2. Validate - At Validation Stage, you learn about Minimum Viable Product & Prototype. You also learn about early customers & iteration.
+  3. Product Development - At Product Development Stage, you works on developing the product and acquiring early user.
+  4. Efficiency - At Efficiency Stage, you would achieve Product / Market Fit and monetization. You focus on product marketing and user acquisition.
+  5. Growth - At Growth Stage, you are expanding your market or introducing new product lines. You also focus in achieving exponential user growth.
+  6. Mature - At Mature Stage, you achieve significant revenue and scale to global markets. You also plan for exit strategy and future growth.
