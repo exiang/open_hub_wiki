@@ -11,7 +11,7 @@ _Screenshot of how your module injected content will display in view organizatio
 
 ![image](https://user-images.githubusercontent.com/5336690/71715430-42b87b00-2e4c-11ea-8308-4ca243d41984.png)
 
-#### getOrganizationActions
+### getOrganizationActions
 ```php
 public function getOrganizationActions($model, $realm = 'backend'){}
 ```
@@ -56,39 +56,42 @@ Next, not to forget you will also has to implement the rendering part of these a
 </div>
 <?php endif; ?>
 ```
+_Screenshot of how your module injected action buttons will display in view organization page_:
 
-#### getOrganizationActFeed
+![image](https://user-images.githubusercontent.com/5336690/71715673-3254d000-2e4d-11ea-947d-7c9975e3e7a8.png)
+
+### getOrganizationActFeed
 ```php
 public function getOrganizationActFeed($organization, $year){}
 ```
 
 Pass in Organization object and year (e.g. `getOrganizationActFeed($organization, '2020')`), this function is called by activity feed to list module records that associate with this organization for this year.
 
-#### getIndividualViewTabs
+### getIndividualViewTabs
 ```php
 public function getIndividualViewTabs($model, $realm = 'backend'){}
 ```
 This function hook allows you to inject an interface block to view Individual page in both cpanel and backend for your module.
 
-#### getIndividuaActions
+### getIndividuaActions
 ```php
 public function getIndividuaActions($model, $realm = 'backend'){}
 ```
 This function hook allows you to define list of action buttons in injected interface block to view Individual page in both cpanel and backend for your module (thru `getIndividualViewTabs()`).
 
-#### getIndividualActFeed
+### getIndividualActFeed
 ```php
 public function getIndividualActFeed($individual, $year){}
 ```
 Pass in Individual object and year (e.g. `getIndividualActFeed($individual, '2020')`), this function is called by activity feed to list module records that associate with this individual for this year.
 
-#### getUserActFeed
+### getUserActFeed
 ```php
 public function getUserActFeed($user, $year){}
 ```
 Pass in User object and year (e.g. `getUserActFeed($user, '2020')`), this function is called by activity feed to list module records that associate with this user for this year.
 
-#### getNavItems
+### getNavItems
 ```php
 function getNavItems($controller, $forInterface){}
 ```
@@ -135,12 +138,12 @@ public function getNavItems($controller, $forInterface)
 }
 ```
 
-#### getAsService
+### getAsService
 ```php
 public function getAsService($interface){}
 ```
 
-#### getSharedAssets
+### getSharedAssets
 ```php
 public function getSharedAssets($forInterface = '*'){}
 ```
@@ -173,7 +176,7 @@ public function getSharedAssets($forInterface = '*')
     return $return;
 }
 ```
-#### getBackendAdvanceSearch
+### getBackendAdvanceSearch
 ```php
 public function getBackendAdvanceSearch($controller, $searchFormModel){}
 ```
@@ -195,7 +198,7 @@ public function getBackendAdvanceSearch($controller, $searchFormModel)
 }
 ```
 
-#### doOrganizationsMerge
+### doOrganizationsMerge
 ```php
 public function doOrganizationsMerge($source, $target){}
 ```
@@ -218,7 +221,7 @@ public function doOrganizationsMerge($source, $target)
 }
 ```
 
-#### doIndividualsMerge
+### doIndividualsMerge
 ```php
 public function doIndividualsMerge($source, $target){}
 ```
