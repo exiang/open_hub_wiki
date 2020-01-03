@@ -1,3 +1,5 @@
+Members can update their startups' industry in Cpanel
+
 When industry is link to different core models:
 
   * Individual: this individual is interested in which industries?
