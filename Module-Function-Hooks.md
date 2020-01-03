@@ -99,12 +99,21 @@ This function is called to all modules by initBackendMenu() in `protected/compon
 
 Available `$forInterface` code:
   * Backend
-    * **backendNavService** - add link under service menu
-![image](https://user-images.githubusercontent.com/5336690/71714577-63330600-2e49-11ea-921f-673471b66050.png)
-    * **backendNavDev**- add link under Dev (development) menu, only visible to developer role
-![image](https://user-images.githubusercontent.com/5336690/71714606-8067d480-2e49-11ea-971d-9680ea2b2f27.png)
-    * **backendNavUserService** - add link under user avatar menu
-![image](https://user-images.githubusercontent.com/5336690/71714621-8b226980-2e49-11ea-85ee-3c84f4719248.png)
+    * **backendNavService**
+
+      add link under service menu
+
+      ![image](https://user-images.githubusercontent.com/5336690/71714577-63330600-2e49-11ea-921f-673471b66050.png)
+    * **backendNavDev**
+
+      add link under Dev (development) menu, only visible to developer role
+
+      ![image](https://user-images.githubusercontent.com/5336690/71714606-8067d480-2e49-11ea-971d-9680ea2b2f27.png)
+    * **backendNavUserService**
+
+      add link under user avatar menu
+
+      ![image](https://user-images.githubusercontent.com/5336690/71714621-8b226980-2e49-11ea-85ee-3c84f4719248.png)
 
   * Event
     * eventAdminSideNav
