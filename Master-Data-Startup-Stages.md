@@ -1,12 +1,12 @@
 ## Different Startup Stages
 Every ecosystem developer has their own version of startup stages. Here are two examples:
 
-### MaGIC Startup Stages
+### Startup Stages by MaGIC
 Use in Malaysia. Refer to [http://bit.ly/magic-startup-stages](http://bit.ly/magic-startup-stages)
 
 ![image](https://user-images.githubusercontent.com/5336690/71714323-5c57c380-2e48-11ea-8d8a-0b161c9de7a2.png)
 
-### StartupCommons Startup Development Phases
+### Startup Development Phases by StartupCommons
 Use in Europe. Refer to [https://www.startupcommons.org/startup-development-phases.html](https://www.startupcommons.org/startup-development-phases.html)
 
 ![image](https://user-images.githubusercontent.com/5336690/71714355-7c878280-2e48-11ea-8cf0-7ba6bee7aee3.png)
