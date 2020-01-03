@@ -8,8 +8,8 @@ When industry is link to different core models:
   * Resource: this resource is for which industries?
 
 
-### List of recommended Industry
-and its mapping keywords
+## List of recommended Industry
+and its mapping keywords. Keywords are alternative names for a specific industry.
   * **Aerospace** - Aerospace
   * **Agriculture** - Agriculture, Agrotechnology
   * **Art & Craft** - Art & Craft, Creative & Arts, Design
