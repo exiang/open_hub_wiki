@@ -11,10 +11,14 @@
     * Acquire Google API key
     * Setup SMTP mail server. We recommend using transaction mail services from Mailchimp
     * Setup Redis server for faster caching (optional) or use default file cache
+    * Setup Cloudflare (optional) to use its HTTPS service
 3. Upload to web server and unzip
 4. Modify configuration files under `protected/config`, all `*.dist.php` need to copy to `*.php` and has variable in it modified according to your environment
-5. Make sure the following directory are writable by server
+5. Make sure the following directory and all files in it are writable by server
     * `protected/runtime`
+    * `protected/messages`
+    * `protected/data`
+    * `protected/modules`
     * `public_html/assets`
     * `public_html/uploads`
 6. Setup crons
