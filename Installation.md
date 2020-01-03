@@ -17,3 +17,4 @@
     * `protected/runtime`
     * `public_html/assets`
     * `public_html/uploads`
+6. Setup crons
