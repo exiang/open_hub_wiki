@@ -1,4 +1,4 @@
-`protected/overrides` directory allow you to override the core code without touching the original files. This is handy where changes you need to make is beyond a module capability.
+`protected/overrides` directory allows you to override the core code to make changes without touching the original files. This is handy where changes you needs to make are beyond module capability. Having all your customization code in one place in overrides directory enable OpenHub original code to be easily upgrade in future too. 
 
 ## File base Overriding
 Please note that this is not an object oriented overriding concept, but a file base overriding. 
