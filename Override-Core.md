@@ -1,7 +1,24 @@
 `protected/overrides` directory allow you to override the core code without touching the original files. This is handy where changes you need to make is beyond a module capability.
 
+Please note that this is not an object oriented overriding concept, but a file base overriding. 
+
+As example, if you like to extend `protected/models/HUB.php` to add extra function called `myCustomFunction()`, you can not just create a `HUB.php` file in the overrides directory with one function only and hopping all the other existing functions of original files will be included automatically.
+
+```
+<?php
+class HUB
+{
+	public static function myCustomFunction()
+	{
+		return 'Hello World';
+	}
+}
+```
+
+Instead, you should copy the entire original `HUB.php` file and place it in the overrides directory, and make modification to add in this extra function.
+
 Files that can be overridden are those located in:
-* `protected/models*` and `protected/models/hub`
+* `protected/models` and `protected/models/hub`
 * `protected/components`
 * `protected/extensions`
 * `protected/helpers`
