@@ -24,6 +24,7 @@ Files that can be overridden are those located in:
 * `protected/commands`
 * `protected/models` and `protected/models/hub`
 * `protected/components`
+* `protected/components/widgets`
 * `protected/extensions`
 * `protected/helpers`
 
