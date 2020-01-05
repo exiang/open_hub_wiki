@@ -61,7 +61,7 @@ public function actionIndex()
 2. Create a new file `index.php` under `protected/overrides/views/override`
 3. Fill in with content:
 ```
-I am a new overridden controller render with view
+<p>I am a new overridden controller render with view</p>
 ```
 
 ## Override Command (Console)
