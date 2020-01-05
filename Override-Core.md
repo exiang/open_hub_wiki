@@ -33,8 +33,7 @@ To understand why you not allowed to import files recursively including all the 
 You can override web controller.
 
 ### To create a new controller:
-1. Create new file `OverrideController.php` under directory in `protected/overrides/controllers`.
-2. Fill in with content:
+1. Create new file in `protected/overrides/controllers/OverrideController.php`:
 ```php
 <?php
 
@@ -48,7 +47,7 @@ class OverrideController extends Controller
     }
 }
 ```
-3. You may access this controller thru URL 'https://yourdomain.com/override`
+2. You may access this controller thru URL 'https://yourdomain.com/override`
 
 ### To create new controller render with view
 1. Modify `actionIndex()` above to:
@@ -58,8 +57,7 @@ public function actionIndex()
     $this->render('index');
 }
 ```
-2. Create a new file `index.php` under `protected/overrides/views/override`
-3. Fill in with content:
+2. Create new file `protected/overrides/views/override/index.php`:
 ```html
 <p>I am a new overridden controller render with view</p>
 ```
