@@ -28,6 +28,28 @@ Files that can be overridden are those located in:
 
 To understand why you not allowed to import files recursively including all the subdirectory, please refer to issue: [https://code.google.com/archive/p/yii/issues/1568](https://code.google.com/archive/p/yii/issues/1568) 
 
+## Override Controller
+You can override web controller. 
+Reference: https://forum.yiiframework.com/t/controller-override/48217
+
+To create a new controller:
+1. Create new file `OverrideController.php` under directory in `protected/overrides/controllers`.
+2. Copy paste the content:
+```
+<?php
+
+class OverrideController extends Controller
+{
+    public $layout = '//layouts/frontend';
+    
+    public function actionIndex()
+    {
+		echo 'I am a new override controller';
+    }
+}
+```
+3. You may access this controller thru URL 'https://yourdomain.com/override`
+
 ## Override Command (Console)
 Command is like web controller, except they are for console interface. You can override an existing command or create new command file here in `protected/overrides/commands`.
 
@@ -42,5 +64,3 @@ To override an existing command (e.g. we are modifying existing `TestCommmand`):
 ),
 ```
 
-## Todo
-However, you can't override a modules, controllers and commands (cli) now. We are working on this base on https://forum.yiiframework.com/t/controller-override/48217
