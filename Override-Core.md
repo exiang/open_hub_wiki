@@ -91,10 +91,31 @@ Reference: https://forum.yiiframework.com/t/controller-override/48217
 ## Override Command (Console)
 Command is like web controller, except they are for console interface. You can override an existing command or create new command file here in `protected/overrides/commands`.
 
+### To create new command:
+1. Create new file `protected/overrides/commands/OverrideCommand.php`
+```php
+<?php
+
+class OverrideCommand extends ConsoleCommand
+{
+    public $verbose = false;
+
+    public function actionIndex()
+    {
+        echo 'Congratulation, you has successfully created a new override command';
+    }
+
+}
+2. Execute it thru CLI:
+```
+php yiic override
+```
+
+```
 ### To override an existing command:
 For example, we are modifying existing `TestCommmand`
 
-1. Copy the existing command file from `protected/commands/TestCommmand.php` to `protected/overrides/commands/TestCommmand.php`
+1. Copy the existing command file from `protected/commands/TestCommmand.php` to `protected/overrides/commands/TestCommmand.php` and modify the `actionIndex()` to output something different than the original.
 2. Modify `protected/config/console.php` to point to the overridden file:
 ```php
 'commandMap' => array(
@@ -103,4 +124,8 @@ For example, we are modifying existing `TestCommmand`
     ),
 ),
 ```
-
+Notes: This is an extra step required to override existing command
+3. Execute it thru CLI:
+```
+php yiic test
+```
