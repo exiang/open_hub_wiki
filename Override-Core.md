@@ -84,7 +84,7 @@ Yii framework `CwebApplication` is extended by `protected/components/WebApplicat
 require_once(dirname(__FILE__).'/../protected/components/WebApplication.php');
 $app = new WebApplication($config);
 ```
-In `WebApplication`, when `createController` is called, OpenHub will first check for controller with exact name found in `protected/overrides/controllers` folder or not. If found, the overridden version will be use. 
+In `WebApplication`, when `createController` is called, OpenHub will first check for controller with exact name found in `protected/overrides/controllers` folder. If found, the overridden version will be use. 
 Reference: https://forum.yiiframework.com/t/controller-override/48217
 
 
