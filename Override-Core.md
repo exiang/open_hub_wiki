@@ -28,7 +28,43 @@ Files that can be overridden are those located in:
 * `protected/extensions`
 * `protected/helpers`
 
-To understand why you not allowed to import files recursively including all the subdirectory, please refer to issue: [https://code.google.com/archive/p/yii/issues/1568](https://code.google.com/archive/p/yii/issues/1568) 
+If you have sub directories to override, you will need to explicitly define them in `protected/config/main.php` and  `protected/config/console.php`.
+```php
+'import' => array(
+
+    'application.vendor.*',
+    'application.helpers.*',
+    'application.models.*',
+    'application.models.hub.*',
+    'application.components.*',
+    'system.collections.*',
+
+    // yeebase
+    'application.yeebase.models.*',
+    'application.yeebase.components.*',
+    'application.yeebase.components.FirePHPCore.*',
+    'application.yeebase.extensions.*',
+    'application.yeebase.extensions.ECSVExport.*',
+    'application.yeebase.extensions.taggable-behavior.*',
+    'application.yeebase.extensions.ysUtil.*',
+    'application.yeebase.extensions.feed.*',
+    //'application.yeebase.extensions.widgets.hybridAuth.*',
+    'application.yeebase.extensions.image.Image',
+
+    // app
+
+
+    // overrides
+    'application.overrides.helpers.*',
+    'application.overrides.models.*',
+    'application.overrides.models.hub.*',
+    'application.overrides.components.*',
+    'application.overrides.components.widgets.*',
+    'application.overrides.extensions.*',
+),
+```
+
+The reason is you not allowed to import files recursively to include all sub directories, you may refer this link to understand why: [https://code.google.com/archive/p/yii/issues/1568](https://code.google.com/archive/p/yii/issues/1568) 
 
 ## Override Controller
 You can override web controller.
