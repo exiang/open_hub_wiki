@@ -33,7 +33,7 @@ To understand why you not allowed to import files recursively including all the 
 You can override web controller.
 
 ### To create a new controller:
-1. Create new file in `protected/overrides/controllers/OverrideController.php`:
+1. Create new file `protected/overrides/controllers/OverrideController.php`:
 ```php
 <?php
 
