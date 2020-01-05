@@ -108,8 +108,9 @@ class OverrideCommand extends ConsoleCommand
 }
 2. Execute it thru CLI:
 ```
-php yiic override
+
 ```
+php yiic override
 
 ```
 ### To override an existing command:
