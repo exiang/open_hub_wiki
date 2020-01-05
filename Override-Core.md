@@ -32,9 +32,9 @@ To understand why you not allowed to import files recursively including all the 
 You can override web controller. 
 Reference: https://forum.yiiframework.com/t/controller-override/48217
 
-To create a new controller:
+### To create a new controller:
 1. Create new file `OverrideController.php` under directory in `protected/overrides/controllers`.
-2. Copy paste the content:
+2. Fill in with content:
 ```
 <?php
 
@@ -50,10 +50,24 @@ class OverrideController extends Controller
 ```
 3. You may access this controller thru URL 'https://yourdomain.com/override`
 
+### To create new controller render with view
+1. Modify `actionIndex()` above to:
+```
+public function actionIndex()
+{
+    $this->render('index');
+}
+```
+2. Create a new file `index.php` under `protected/overrides/views/override`
+3. Fill in with content:
+```
+I am a new overridden controller render with view
+```
+
 ## Override Command (Console)
 Command is like web controller, except they are for console interface. You can override an existing command or create new command file here in `protected/overrides/commands`.
 
-To override an existing command (e.g. we are modifying existing `TestCommmand`):
+### To override an existing command (e.g. we are modifying existing `TestCommmand`):
 1. Copy the existing command file from `protected/commands/TestCommmand.php` to `protected/overrides/commands/TestCommmand.php`
 2. Modify `protected/config/console.php` to point to the overridden file:
 ```
