@@ -76,7 +76,9 @@ Reference: https://forum.yiiframework.com/t/controller-override/48217
 ## Override Command (Console)
 Command is like web controller, except they are for console interface. You can override an existing command or create new command file here in `protected/overrides/commands`.
 
-### To override an existing command (e.g. we are modifying existing `TestCommmand`):
+### To override an existing command:
+e.g. we are modifying existing `TestCommmand`
+
 1. Copy the existing command file from `protected/commands/TestCommmand.php` to `protected/overrides/commands/TestCommmand.php`
 2. Modify `protected/config/console.php` to point to the overridden file:
 ```php
