@@ -29,8 +29,7 @@ Files that can be overridden are those located in:
 To understand why you not allowed to import files recursively including all the subdirectory, please refer to issue: [https://code.google.com/archive/p/yii/issues/1568](https://code.google.com/archive/p/yii/issues/1568) 
 
 ## Override Controller
-You can override web controller. 
-Reference: https://forum.yiiframework.com/t/controller-override/48217
+You can override web controller.
 
 ### To create a new controller:
 1. Create new file `OverrideController.php` under directory in `protected/overrides/controllers`.
@@ -63,6 +62,16 @@ public function actionIndex()
 ```
 <p>I am a new overridden controller render with view</p>
 ```
+
+### How it works
+Yii framework `CwebApplication` is extended by `protected/components/WebApplication.php` and call in `public_html/index.php`:
+```
+require_once(dirname(__FILE__).'/../protected/components/WebApplication.php');
+$app = new WebApplication($config);
+```
+In `WebApplication`, when `createController` is called, OpenHub will first check for controller with exact name found in `protected/overrides/controllers` folder or not. If found, the overridden version will be use. 
+Reference: https://forum.yiiframework.com/t/controller-override/48217
+
 
 ## Override Command (Console)
 Command is like web controller, except they are for console interface. You can override an existing command or create new command file here in `protected/overrides/commands`.
