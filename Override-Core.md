@@ -60,6 +60,7 @@ If you have sub directories to override, you will need to explicitly define them
     'application.overrides.models.hub.*',
     'application.overrides.components.*',
     'application.overrides.components.widgets.*',
+    'application.overrides.components.subDirectory1.*',
     'application.overrides.extensions.*',
 ),
 ```
