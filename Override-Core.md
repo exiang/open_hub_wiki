@@ -20,6 +20,7 @@ Instead, you should copy the entire original `HUB.php` file and place it in the 
 
 ## Files you can override now
 Files that can be overridden are those located in:
+* `protected/controllers`
 * `protected/commands`
 * `protected/models` and `protected/models/hub`
 * `protected/components`
