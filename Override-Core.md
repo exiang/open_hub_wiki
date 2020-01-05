@@ -44,7 +44,7 @@ class OverrideController extends Controller
     
     public function actionIndex()
     {
-		echo 'I am a new override controller';
+	echo 'I am a new overridden controller';
     }
 }
 ```
