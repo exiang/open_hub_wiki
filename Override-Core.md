@@ -31,29 +31,6 @@ Files that can be overridden are those located in:
 If you have sub directories to override, you will need to explicitly define them in `protected/config/main.php` and  `protected/config/console.php`.
 ```php
 'import' => array(
-
-    'application.vendor.*',
-    'application.helpers.*',
-    'application.models.*',
-    'application.models.hub.*',
-    'application.components.*',
-    'system.collections.*',
-
-    // yeebase
-    'application.yeebase.models.*',
-    'application.yeebase.components.*',
-    'application.yeebase.components.FirePHPCore.*',
-    'application.yeebase.extensions.*',
-    'application.yeebase.extensions.ECSVExport.*',
-    'application.yeebase.extensions.taggable-behavior.*',
-    'application.yeebase.extensions.ysUtil.*',
-    'application.yeebase.extensions.feed.*',
-    //'application.yeebase.extensions.widgets.hybridAuth.*',
-    'application.yeebase.extensions.image.Image',
-
-    // app
-
-
     // overrides
     'application.overrides.helpers.*',
     'application.overrides.models.*',
