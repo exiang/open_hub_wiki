@@ -5,7 +5,7 @@ Please note that this is not an object oriented overriding concept, but a file b
 
 As example, if you like to extend `protected/models/HUB.php` to add extra function called `myCustomFunction()`, you can not just create a `HUB.php` file in the overrides directory with one function only and hopping all the other existing functions of original files will be included automatically.
 
-```
+```php
 <?php
 class HUB
 {
@@ -34,7 +34,7 @@ You can override web controller.
 ### To create a new controller:
 1. Create new file `OverrideController.php` under directory in `protected/overrides/controllers`.
 2. Fill in with content:
-```
+```php
 <?php
 
 class OverrideController extends Controller
@@ -51,7 +51,7 @@ class OverrideController extends Controller
 
 ### To create new controller render with view
 1. Modify `actionIndex()` above to:
-```
+```php
 public function actionIndex()
 {
     $this->render('index');
@@ -59,13 +59,13 @@ public function actionIndex()
 ```
 2. Create a new file `index.php` under `protected/overrides/views/override`
 3. Fill in with content:
-```
+```html
 <p>I am a new overridden controller render with view</p>
 ```
 
 ### How it works
 Yii framework `CwebApplication` is extended by `protected/components/WebApplication.php` and call in `public_html/index.php`:
-```
+```php
 require_once(dirname(__FILE__).'/../protected/components/WebApplication.php');
 $app = new WebApplication($config);
 ```
@@ -79,7 +79,7 @@ Command is like web controller, except they are for console interface. You can o
 ### To override an existing command (e.g. we are modifying existing `TestCommmand`):
 1. Copy the existing command file from `protected/commands/TestCommmand.php` to `protected/overrides/commands/TestCommmand.php`
 2. Modify `protected/config/console.php` to point to the overridden file:
-```
+```php
 'commandMap' => array(
     'test'=>array(
         'class'=>'application.overrides.commands.TestCommand',
