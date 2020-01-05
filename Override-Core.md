@@ -40,7 +40,7 @@ Reference: https://forum.yiiframework.com/t/controller-override/48217
 
 class OverrideController extends Controller
 {
-    public $layout = '//layouts/frontend';
+    public $layout = 'application.views.layouts.frontend';
     
     public function actionIndex()
     {
