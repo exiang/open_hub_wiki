@@ -87,6 +87,8 @@ $app = new WebApplication($config);
 In `WebApplication`, when `createController` is called, OpenHub will first check for controller with exact name found in `protected/overrides/controllers` folder. If found, the overridden version will be use. 
 Reference: https://forum.yiiframework.com/t/controller-override/48217
 
+## Override Layout
+You can override layout, giving your site an entire fresh looks. Just copy the original `/protected/views/layouts` to `/protected/overrides/views/layouts` and modify from there.
 
 ## Override Command (Console)
 Command is like web controller, except they are for console interface. You can override an existing command or create new command file here in `protected/overrides/commands`.
