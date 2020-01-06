@@ -31,7 +31,7 @@ Layout is a special view that is used to decorate views. It usually contains par
 ```
 where `$content` stores the rendering result of the view.
 
-Layout is automatically applied when calling render(). By default, layouts sits at `protected/views/layouts` but can be overridden at `protected/overrides/views/layouts`.
+Layout is automatically applied when calling render(). By default, layouts sit at `protected/views/layouts` but can be overridden by custom code in `protected/overrides/views/layouts`.
 
 OpenHub layout system make use of theme. Theme is a superset of layout in OpenHub architecture.
 
