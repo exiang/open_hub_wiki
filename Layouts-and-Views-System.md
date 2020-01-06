@@ -47,6 +47,7 @@ This is how a view layout can point to theme layout:
 <?php $this->beginContent(sprintf('webroot.themes.%s.views.layouts._backend', Yii::app()->theme->name)); ?>
     <?php echo $content; ?>
 <?php $this->endContent(); ?>
+```
 
 OpenHub used a modified inspinia theme, located in `public_html/themes/inspinia`. Inspinia is a commercial Bootstrap theme, you will need to purchase its license at https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S. 
 
