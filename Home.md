@@ -1,8 +1,8 @@
 Welcome to the OpenHub **developer documentation**. This developer documentation is for people like you:
-* a ecosystem developer and thinking of using OpenHub for your local ecosystem
+* an ecosystem developer and thinking of using OpenHub for your local ecosystem
 * a vendor hired to build new module for the system
 * one of the MaGIC internal tech team developers
-* interested in digital tool development for startup ecosystem
+* interested in startup ecosystem digital tools' development
 
 ## Get your hand dirty
 * [Basics](Basics)
