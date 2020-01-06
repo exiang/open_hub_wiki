@@ -17,6 +17,9 @@ To get started with OpenHub, you will need to setup a local development environm
   * GIT Client - [Fork](https://git-fork.com/)
   * API Gateway - [TYK.io](https://tyk.io/)
 
+### Licenses
+  * [Inspinia](https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S) - You will need to purchase Inspinia (single license at USD44) if you are using the default theme shipped with OpenHub
+
 ## Environment
   * Dev - your local machine will be use for the development (e.g. https://hubd.mymagic.my)
   * Staging - this is the staging site for beta testing (e.g. https://hub.mymagic.my)
