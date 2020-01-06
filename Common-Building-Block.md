@@ -7,6 +7,7 @@ Companies in the startup ecosystem are volatile. They formed over a weekend and 
   * [Industry](Master-Data-Industry) - which industry is this company involved in, most companies are across multiple industries
   * [SDG](Master-Data-SDG) - which SDG this company try to solve, multiple allowed
   * [Startup Stages](Master-Data-Startup-Stages) - which stages this company is in if it is a startup, only one stage at a time.
+  * [Legal Form](Master-Data-Legal-Form)
 
 ## Individual
 Individuals are person, they can founders of tech startups, or student aspiring to be an entrepreneurs. 
