@@ -24,6 +24,7 @@ Here is how the files are organized:
   * `/migrations`: contains database migration instructions created thru `yiic migrate create migration_instruction_name`
   * `/models`: contains model classes that are specific for the application, as in **Model**-View-Controller (or MVC)
   * `/modules`: a module is a self-contained mini program that consists of models, views, controllers and other supporting components. In many aspects, a module resembles to an application who extends the functionality of OpenHub.
+  * `/overrides`: store all your customization code here so you can upgrade original OpenHub code base easily in future.
   * `/runtime`: stores dynamically generated files, likes cache and log
   * `/tests`: contains all test related code 
   * `/vendor`: composer installed package are stored here
