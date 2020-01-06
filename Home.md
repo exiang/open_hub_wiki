@@ -4,7 +4,7 @@ Welcome to the OpenHub **developer documentation**. This developer documentation
 * one of the MaGIC internal tech team developers
 * interested in digital tool development for startup ecosystem
 
-## Topics
+## Let's get your hand dirty
 * [Basics](Basics)
 * [Core Development](Core-Development)
 * [Build a Module](Build-Module)
