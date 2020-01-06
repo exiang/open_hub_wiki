@@ -42,6 +42,8 @@ Theming is a systematic way of customizing the outlook of pages in a Web applica
 
 In Yii, each theme is represented as a directory consisting of view files, layout files, and relevant resource files such as images, CSS files, JavaScript files, etc. The name of a theme is its directory name. All themes reside under the same directory `public_html/themes`. At any time, only one theme can be active.
 
-OpenHub used a modified inspinia theme, located in `public_html/themes/inspinia`. Inspinia is a commercial Bootstrap theme, you will need to purchase its license at https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S. Demo of inspinia integration to YeeBase is available thru URL `https://yourdomain.com/inspinia`.
+OpenHub used a modified inspinia theme, located in `public_html/themes/inspinia`. Inspinia is a commercial Bootstrap theme, you will need to purchase its license at https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S. 
+
+Demo of inspinia integration to YeeBase is available thru URL `https://yourdomain.com/inspinia`.
 
 For more information on Yii framework theme system, please visit https://www.yiiframework.com/doc/guide/1.1/en/topics.theming
