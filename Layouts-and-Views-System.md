@@ -12,7 +12,7 @@ class SiteController extends Controller
         $this->render('about', array('greeting'=>'Hello World'))
     }
 }
-```
+```php
 The view file will be located at `/protected/views/site/about.php`:
 ```
 <p><?php echo $greeting ?>
