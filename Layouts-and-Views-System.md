@@ -21,7 +21,7 @@ Open the page in browser, you will not seeing a plain one line Hello World text 
 
 There's also another type of view where its whole purpose is to be included into other view file. The naming convention for this private view file is to have an underscore prefix (e.g.: `_viewProductItem.php`).
 
-## Layouts
+## Layout
 Layout is a special view that is used to decorate views. It usually contains parts of a user interface that are common among several views, you may also think of it as a master template for all your views. For example, a layout may contain a header and a footer, and embed the view in between, like this:
 
 ```php
@@ -41,6 +41,12 @@ For more information on Yii framework views and layouts system, please visit htt
 Theming is a systematic way of customizing the outlook of pages in a Web application. By applying a new theme, the overall appearance of a Web application can be changed instantly and dramatically.
 
 In Yii, each theme is represented as a directory consisting of view files, layout files, and relevant resource files such as images, CSS files, JavaScript files, etc. The name of a theme is its directory name. All themes reside under the same directory `public_html/themes`. At any time, only one theme can be active.
+
+This is how a view layout can point to theme layout:
+```php
+<?php $this->beginContent(sprintf('webroot.themes.%s.views.layouts._backend', Yii::app()->theme->name)); ?>
+    <?php echo $content; ?>
+<?php $this->endContent(); ?>
 
 OpenHub used a modified inspinia theme, located in `public_html/themes/inspinia`. Inspinia is a commercial Bootstrap theme, you will need to purchase its license at https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S. 
 
