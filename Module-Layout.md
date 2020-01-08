@@ -1,11 +1,13 @@
 ## Which layout to use
 
-In controller:
+You can define which layout to use in OpenHub's module controller in one of the following methods:
+
 ```php
-public $layout = 'layouts.backend';
+public $layout = 'backend';
 ```
 
 Or
+
 ```php
 public function init()
 {
@@ -14,6 +16,10 @@ public function init()
     ....
 }
 ```
+
+  * `layouts.backend` - using the layout named `backend` found in base layout directory (be it default or overridden)
+  * `backend` - using the layout named `backend` found in layout directory inside module
+  * `application.views.layouts.backend` - explicitly using the layout name `backend` in from the default layout directory (Note: this is dangerous, as it will bypass the layout override and caused inconsistency)
 
 ## Sample of layout view file in a module
 In `protected/modules/boilerplateStart/views/layouts/backend.php`:
