@@ -17,9 +17,9 @@ public function init()
 }
 ```
 
-  * `layouts.backend` - using the layout named `backend` found in base layout directory (be it default or overridden)
+  * `layouts.backend` - using the layout named `backend` found in application layout directory (be it default or overridden)
   * `backend` - using the layout named `backend` found in layout directory inside module
-  * `application.views.layouts.backend` - explicitly using the layout name `backend` in from the default layout directory (Note: this is dangerous, as it will bypass the layout override and caused inconsistency)
+  * `application.views.layouts.backend` - explicitly using the layout name `backend` in from the default application layout directory (Note: this is dangerous, as it will bypass the layout override and caused inconsistency)
 
 ## Sample of layout view file in a module
 In `protected/modules/boilerplateStart/views/layouts/backend.php`:
@@ -33,4 +33,4 @@ In `protected/modules/boilerplateStart/views/layouts/backend.php`:
 <?php $this->endContent(); ?>
 ```
 
-Notice the use of `layouts.backend`, it will automatically using the backend layout view file from base layout directory, be it the default or overridden.
+Notice the use of `layouts.backend`, it will automatically using the backend layout view file from application layout directory, be it the default or overridden.
