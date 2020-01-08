@@ -1,4 +1,4 @@
-## Which layout to use
+## Pointing to a layout view file in module
 
 You can define which layout to use in OpenHub's module controller in one of the following methods:
 
