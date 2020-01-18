@@ -29,4 +29,21 @@ HTML, CSS (Sass) files MUST follow the [Mark Otto’s coding standards](http://c
 All OpenHub files MUST start with the OpenHub license block:
 
 ### Core Files
+```
+/**
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the BSD 3-Clause License
+* that is bundled with this package in the file LICENSE.
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/BSD-3-Clause
+*
+*
+* @author Malaysian Global Innovation & Creativity Centre Bhd <tech@mymagic.my>
+* @link http://developer.mymagic.my/
+* @copyright 2017-2020 Malaysian Global Innovation & Creativity Centre Bhd and Contributors
+* @license https://opensource.org/licenses/BSD-3-Clause
+*/
+```
 ### Module files
