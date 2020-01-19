@@ -29,8 +29,8 @@
     * Update Settings
 
 
-## Configs
-### main.php
+### Config Files
+#### main.php
 Located at `protected/config/main.php`
 
 1. change the application name to yours, e.g.
@@ -92,10 +92,10 @@ Located at `protected/config/main.php`
     'sKey' => '',
 ),
 ```
-### console.php
+#### console.php
 This is the `main.php` version of console environment for command interface.
 
-### params.php
+#### params.php
 This is the application params that shared among web controller and console command interfaces.
 * maintenance - true|false, set to true if you need to temporary disable the site to enable maintenance mode 
 * dev - true|false, set true if it is a development environment
@@ -107,4 +107,4 @@ This is the application params that shared among web controller and console comm
 array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
 ```
 
-### path.php
+#### path.php
