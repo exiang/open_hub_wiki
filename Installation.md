@@ -45,32 +45,43 @@ Located at `protected/config/main.php`
 
 3. under `components\db`, set your database connection credential
 ```
-'connectionString' => 'mysql:host=localhost;dbname=magic_hub',
-'username' => 'root',
-'password' => 'mypassword',
+'db' => array(
+    'connectionString' => 'mysql:host=localhost;dbname=magic_hub',
+    'username' => 'root',
+    'password' => 'mypassword',
+    ...
+),
 ```
 
 4. under `components\cache`, you may choose to use the default file cache
 ```
-'class' => 'CFileCache',
+'cache' => array(
+    'class' => 'CFileCache',
+    ...
+),
 ```
- or using a redis cache server for scalablity
+ or using a redis cache server for scalability. Please take note that Cluster Redis Server is not supported by Yii1.
 ```
-'class' => 'CRedisCache',
-'hostname' => 'myRedisServerHost.com:6379',
-'port'=>6379,
+'cache' => array(
+    //'class' => 'CFileCache', // aws redis only available for local vpn
+    'class' => 'CRedisCache',
+    'hostname' => 'myRedisServerHost.com:6379',
+    'port'=>6379,
+),
 ```
 
 5. under `components\esLog`,  you may choose to either enable or disable it. esLog used AWS Elastic Search to log users activities. 
 ```
-'class' => 'application.yeebase.components.EsLog',
-'esLogRegion' => '',
-'enableEsLog' => true,
-'esLogIndexCode' => 'log-default',
-'esLogEndpoint' => '',
-'esLogKey' => '',
-'esLogSecret' => '',
-'esTestVar' => '123',
+'esLog' => array(
+    'class' => 'application.yeebase.components.EsLog',
+    'esLogRegion' => '',
+    'enableEsLog' => true,
+    'esLogIndexCode' => 'log-default',
+    'esLogEndpoint' => '',
+    'esLogKey' => '',
+    'esLogSecret' => '',
+    'esTestVar' => '123',
+),
 ``` 
 
 6. under `components\s3`, you has to set the `aKey`(api key) and `sKey`(secret key) to your AWS S3 bucket.
