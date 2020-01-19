@@ -57,7 +57,7 @@ rm $PIDFILE
 ```
 0 * * * * /var/www/_cron/bash/test-createJunk.sh /var/www/_cron
 ```
-6. Now, you should see database record added to `junk` table every hour automatically. Remember to disable this after tested.
+6. Now, you should be able to find new database record added to `junk` table every hour automatically. Remember to disable this after tested.
 
 ## Sample of basic cron setting
 ```
