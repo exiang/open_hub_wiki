@@ -1,3 +1,7 @@
+OpenHub rely on cron to run scheduled tasks automatically.
+
+
+1. create `/_cron/` directory
 2. Make sure there is a writable empty folder in `/_cron/runtime`.
 3. Create a bash file to create junk record in database for testing: `/_cron/bash/test-createJunk.sh`
 ```
@@ -41,11 +45,12 @@ echo "end";
 
 rm $PIDFILE
 ```
-
-4. Register this bash file to cron `sudo crontab -e`
+4. Make sure this bash file is executable, try it with command: `/var/www/_cron/bash/test-createJunk.sh  /var/www/_cron`
+5. Register this bash file to cron `sudo crontab -e`
 ```
 0 * * * * /var/www/_cron/bash/test-createJunk.sh /var/www/_cron
 ```
+6. Now, you should see database record added to `junk` table every hour automatically. Remember to disable this after tested.
 
 ## Sample of basic cron setting
 ```
