@@ -1,5 +1,6 @@
 These are the default modules bundle with the package.
 
+  * [BoilerplateStart](BoilerplateStart)
   * [Journey](Journey)
   * [F7](F7) Form - Custom Form builder
   * [Comment](Comment)
@@ -11,3 +12,4 @@ These are the default modules bundle with the package.
   * [Junk](Junk) - To dump junk data, useful when testing with callback restful api
   * [Cache](Cache) - 
   * [Service](Service) - 
+  * [Sample](Sample)
