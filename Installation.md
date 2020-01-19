@@ -104,7 +104,21 @@ This is the application params that shared among web controller and console comm
 * **sourceCurrency** - MYR
 * **languages** - Array, specified languages supported by this system which is align with your database. e.g.
 ```
-array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
+'languages'=>array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
+```
+* **frontendLanguages** - Array, subset of your supported languages that you like to make it available to frontend. e.g.
+```
+'frontendLanguages'=>array('en' => 'English', 'ms' => 'Bahasa'),
+```
+* **backendLanguages** - Array, subset of your supported languages that you like to make it available in backend. e.g.
+```
+'backendLanguages'=>array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
+```
+* **adminEmail** - email address of administrator
+* **webmasterEmail** - published email for this website
+* **routineEmails** - Array, a list of emails to be notify by cron activities. e.g.
+```
+'routineEmails'=>array('exiang83@gmail.com'),
 ```
 
 #### path.php
