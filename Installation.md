@@ -97,12 +97,12 @@ This is the `main.php` version of console environment for command interface.
 
 #### params.php
 This is the application params that shared among web controller and console command interfaces.
-* maintenance - true|false, set to true if you need to temporary disable the site to enable maintenance mode 
-* dev - true|false, set true if it is a development environment
-* cache - true|false, to enable application wide cache or not
-* environment - development|staging|production, specify the environment mode of this installation
-* sourceCurrency - MYR
-* languages - Array, specified languages supported by this system which is align with your database. e.g.
+* **maintenance** - true|false, set to true if you need to temporary disable the site to enable maintenance mode 
+* **dev** - true|false, set true if it is a development environment
+* **cache** - true|false, to enable application wide cache or not
+* **environment** - development|staging|production, specify the environment mode of this installation
+* **sourceCurrency** - MYR
+* **languages** - Array, specified languages supported by this system which is align with your database. e.g.
 ```
 array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
 ```
