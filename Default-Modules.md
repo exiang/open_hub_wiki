@@ -10,3 +10,4 @@ These are the default modules bundle with the package.
   * [Request](Request) - Generic request database, store request to be process by cron etc
   * [Junk](Junk) - To dump junk data, useful when testing with callback restful api
   * [Cache](Cache) - 
+  * [Service](Service) - 
