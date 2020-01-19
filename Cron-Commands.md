@@ -1,5 +1,6 @@
-OpenHub rely on cron to run scheduled tasks automatically.
-
+OpenHub rely on cron to run scheduled tasks automatically, examples:
+* Update currency conversation data automatically on daily basis
+* Process user request to download their personal data
 
 1. create `/_cron/` directory
 2. Make sure there is a writable empty folder in `/_cron/runtime`.
@@ -45,7 +46,10 @@ echo "end";
 
 rm $PIDFILE
 ```
-4. Make sure this bash file is executable, try it with command: `/var/www/_cron/bash/test-createJunk.sh  /var/www/_cron`
+4. Make sure this bash file is executable, try it with command: 
+```
+/var/www/_cron/bash/test-createJunk.sh  /var/www/_cron
+```
 5. Register this bash file to cron `sudo crontab -e`
 ```
 0 * * * * /var/www/_cron/bash/test-createJunk.sh /var/www/_cron
