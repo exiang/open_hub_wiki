@@ -2,6 +2,9 @@ OpenHub rely on cron to run scheduled tasks automatically, examples:
 * Update currency conversation data automatically on daily basis
 * Process user request to download their personal data
 
+## How to add command to cron
+This is the recommended method to add command to cron, using a bash file and lock the process id to prevent multiple instance being call caused duplicated job running concurrently.
+
 1. create `/_cron/` directory
 2. Make sure there is a writable empty folder in `/_cron/runtime`.
 3. Create a bash file to create junk record in database for testing: `/_cron/bash/test-createJunk.sh`
