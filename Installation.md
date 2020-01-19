@@ -7,7 +7,7 @@
 2. Setup required servers & services:
     1. Setup Ubuntu Server (18.04 & above)
     1. Setup Apache Web Server (Apache 2)
-    1. Setup MySQL database server and load default data to it
+    1. Setup MySQL database server and load default SQL to it
     1. Setup AWS S3 storage. You need 2 buckets, one for secure protected storage and one for normal public storage
     1. Setup AWS ElasticSearch server. 
     1. Acquire Google API key
@@ -27,3 +27,57 @@
 6. Setup crons
 7. Login to Backend
     * Update Settings
+
+
+## Configs
+### main.php
+Located at `protected/config/main.php`
+
+1. change the application name to yours, e.g.
+```
+'name' => 'MaGIC (Dev)',
+```
+
+2. under `components\requests\csrfCookie`, set to your domain
+```
+'domain' => '.mymagic.my',
+```
+
+3. under `components\db`, set your database connection credential
+```
+'connectionString' => 'mysql:host=localhost;dbname=magic_hub',
+'username' => 'root',
+'password' => 'mypassword',
+```
+
+4. under `components\cache`, you may choose to use the default file cache
+```
+'class' => 'CFileCache',
+```
+ or using a redis cache server for scalablity
+```
+'class' => 'CRedisCache',
+'hostname' => 'myRedisServerHost.com:6379',
+'port'=>6379,
+```
+
+5. under `components\esLog`,  you may choose to either enable or disable it. esLog used AWS Elastic Search to log users activities. 
+```
+'class' => 'application.yeebase.components.EsLog',
+'esLogRegion' => '',
+'enableEsLog' => true,
+'esLogIndexCode' => 'log-default',
+'esLogEndpoint' => '',
+'esLogKey' => '',
+'esLogSecret' => '',
+'esTestVar' => '123',
+``` 
+
+6. under `components\s3`, you has to set the `aKey`(api key) and `sKey`(secret key) to your AWS S3 bucket.
+```
+'s3' => array(
+    'class' => 'application.yeebase.extensions.s3.ES3',
+    'aKey' => '',
+    'sKey' => '',
+),
+```
