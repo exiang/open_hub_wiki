@@ -95,6 +95,16 @@ Located at `protected/config/main.php`
     'sKey' => '',
 ),
 ```
+
+7. under `components\neo4j`, you may choose to either enable or disable it and set your neo4j database connection credential
+
+```
+'neo4j' => array(
+	'enable' => true, // enable or disable neo4j database
+	'class'=>'application.extensions.neo4j.NeoEntity',
+	'neoConnectionString' => '', // protocol://username:password@neo4jurl:porttype  -- type port (http)7474, (bolt)7687 ex. bolt://neo4j:password@localhost:7687
+),
+```
 #### console.php
 This is the `main.php` version of console environment for command interface.
 
