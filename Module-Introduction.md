@@ -24,5 +24,5 @@ Inside each module, files are organized as:
   * Config - `protected/config/main.php` has been modified to include `protected/config/module.php` that read all configuration from `protected/modules/YOUR_MODULE/config` folder. Same goes to the  `protected/config/console.php`
   * Components
   * Controllers
-  * Models
+  * Models - Neo4J OGM stores under `models/neo4j`
   * Views
