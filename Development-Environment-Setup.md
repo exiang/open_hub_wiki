@@ -8,7 +8,7 @@ To get started with OpenHub, you will need to setup a local development environm
   * AWS S3
   * Elastic Search 
   * Elastic Cache (optional, do NOT support cluster)
-  * Noe4j
+  * Neo4j
   * Google API
   * PHP Composer
 
