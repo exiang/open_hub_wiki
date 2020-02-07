@@ -90,3 +90,7 @@ Go to views folder
 ### Congratulation, you make it!
 You are now ready to install this new module you have just created.
 After install the module from backend, you may access your module frontend with url: `https://hubd.mymagic.my/todo`
+
+
+### References
+  * [Quick Start with Boilerplate](Quick-Start-with-Boilerplate)
