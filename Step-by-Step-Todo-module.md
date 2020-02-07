@@ -7,12 +7,4 @@ In this tutorial, you will learn how to build a TODO module from ground up.
   * [Chapter 5](Step-by-Step-Todo-module-Chapter5) - Advance Use Case
 
 
-## Chapter 4
-In this chapter, we explore how to build web API interface for TODO module
-
-## Chapter 5
-Advance use case
-## Inject CSS & JS to application scope
-## Multilingual i18n
-## Gave your module a specific subdomain
 
