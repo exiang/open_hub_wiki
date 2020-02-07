@@ -127,3 +127,87 @@ Go to Yee Crud Generator `https://hubd.mymagic.my/yee/crud/index`
 Now, we can create a TODO record and link it to a specific company.
 
 ### Inject to Organization Core Model
+
+Remember one of the requirements is to allow admin to click into an organization and get a list of associated TODO?
+
+1. Rename `protected/modules/todo/components/BoilerplateStartOrganizationBehavior.php` to `protected/modules/todo/components/TodoOrganizationBehavior.php` and replace its content with:
+```php
+<?php
+
+Yii::import('modules.todo.models.*');
+
+// this allow you to inject method into organization object
+class TodoOrganizationBehavior extends Behavior
+{
+	// the organization model
+	public $model;
+
+	//
+	// items
+	public function countAllTodoItems()
+	{
+		return HubTodo::countAllTodos($this->model);
+	}
+
+	public function getTodoItems($limit = 100)
+	{
+		return HubTodo::getTodos($this->model, $limit);
+	}
+
+	public function shout()
+	{
+		return 'I am from todo module!';
+	}
+}
+```
+
+2. Modify `protected/modules/todo/models/HubTodo.php`, replace with content:
+```php
+<?php
+
+class HubTodo
+{
+	public function countAllTodos($organization)
+	{
+		return Todo::model()->countByAttributes(array(
+            'organization_id'=> $organization->id
+        ));
+	}
+
+	public function getTodos($organization, $limit = 100)
+	{
+		return Todo::model()->findAll(array(
+			'condition' => 'organization_id=:organizationId',
+			'params' => array(':organizationId'=> $organization->id),
+			'limit' => $limit,
+			'order' => 'id DESC'
+		));
+	}
+}
+
+```
+
+3. Modify `protected/modules/todo/config/console.php` and `protected/modules/todo/config/main.php`, also their dist files, to enable `modules > todo > modelBehaviors > Organization`
+```php
+'modelBehaviors' => array(
+    'Organization' => array(
+        'class' => 'application.modules.todo.components.TodoOrganizationBehavior',
+    ),
+```
+
+4. Modify `protected/modules/todo/controllers/TestController.php`, replace `actionBoilerplateStartOrganizationBehavior()` to `actionTodoOrganizationBehavior()` and with content:
+```php
+public function actionTodoOrganizationBehavior($id)
+{
+    $organization = Organization::model()->findByPk($id);
+    foreach($organization->getTodoItems() as $todo)
+    {
+        echo sprintf('<li>#%d - %s</li>', $todo->id, $todo->title);
+    }
+    
+}
+```
+
+Next, make sure you have created few todo items from backend and linked it to a specific organization. Acquired its organization id, append that to the end of URL, e.g. `https://hubd.mymagic.my/todo/test/todoOrganizationBehavior?id=999`
+
+You should now see title of todos associated to this organization display in list.
