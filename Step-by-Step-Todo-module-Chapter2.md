@@ -95,3 +95,6 @@ case 'backendNavService':{
 	break;
 }
 ```
+
+## Next Chapter
+[Chapter 3](Step-by-Step-Todo-module-Chapter3) - Upgrade and link to Organization model
