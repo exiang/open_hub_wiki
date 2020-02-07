@@ -79,7 +79,7 @@ class TodoModule extends WebModule
    - Under `developer`, set the `author`, `organization`, `email` to your detail
 6. Do not copy `console.dist.php` to `console.php` and `main.dist.php` to `main.php`. This will be done automatically when you install the module
 
-> For more info on module configuration, please refer to [Module Config](Module-Config)
+> For more information on module configuration, please refer to [Module Config](Module-Config)
 
 ### Some clean up
 Go to `protected/modules/todo/model` folder
