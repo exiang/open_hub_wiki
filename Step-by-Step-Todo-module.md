@@ -93,8 +93,11 @@ Go to views folder
 You are now ready to install this new module you have just created.
 After install the module from backend, you may access your module frontend with url: `https://hubd.mymagic.my/todo`
 
+## Chapter 2
+Now, your Todo module is not doing much other than display static page content. Let's build a CRUD (Create-Read-Ulter-Delete) function with database to manage user generated todo list.
+
 ### Create a model
-Now, your Todo module is not doing much other than display static page content. Let's build a CRUD (Create-Read-Ulter-Delete) function with database.
+
 1. Create a new folder `data` inside `todo` module folder.
 2. Create a new file `todo.build.php` in `data` folder, with content:
 ```php
@@ -188,17 +191,17 @@ case 'backendNavService':{
 }
 ```
 
-## Chapter 2
+## Chapter 3
 In this chapter, we will add in extra function to link a todo record to an organization
 
 ### Using upgrades to make changes
 ### Linking TODO record to organization
 ### Inject to Organization Core Model
 
-## Chapter 3
+## Chapter 4
 In this chapter, we explore how to build web API interface for TODO module
 
-## Chapter 4
+## Chapter 5
 Advance use case
 ## Inject CSS & JS to application scope
 ## Gave your module a specific subdomain
