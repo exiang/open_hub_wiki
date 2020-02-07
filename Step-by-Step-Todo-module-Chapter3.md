@@ -129,6 +129,7 @@ Now, we can create a TODO record and link it to a specific company.
 ### Inject to Organization Core Model
 
 Remember one of the requirements is to allow admin to click into an organization and get a list of associated TODO?
+Luckily, OpenHub support [Model Behavior Injection](Inject-Functions-to-Core-Models), where module developer can attach custom functions to existing core model, e.g. Organization in this case.
 
 1. Rename `protected/modules/todo/components/BoilerplateStartOrganizationBehavior.php` to `protected/modules/todo/components/TodoOrganizationBehavior.php` and replace its content with:
 ```php
