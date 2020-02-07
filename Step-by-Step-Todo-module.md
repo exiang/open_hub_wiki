@@ -125,22 +125,22 @@ return array(
 ); 
 ```
 3. Generate the model with yee at `https://hubd.mymagic.my/yee/model/index`
-  - set `model path` value to `application.modules.todo.models`
-  - set `module name` value to `todo`
-  - make sure `build relations` and `build extend class` are checked
+   - set `model path` value to `application.modules.todo.models`
+   - set `module name` value to `todo`
+   - make sure `build relations` and `build extend class` are checked
 
 ### Create a CRUD controller and views
 1. Generate controller with yee at `https://hubd.mymagic.my/yee/model/index`
-  - set `model class` to `application.modules.todo.models.Todo`
-  - make sure `Controller ID` is `todo/todo`
+   - set `model class` to `application.modules.todo.models.Todo`
+   - make sure `Controller ID` is `todo/todo`
 2. Now, you may access backend to manage todo records from `https://hubd.mymagic.my/todo/todo/admin`
 
 
 ### Enhance it
 #### Automatically track creator
-click `Create Todo`, you will find a list of user in the form which doesn't looks right and should be remove. When a new Todo record saved to database, we will like to know who created it. This should be done automatically in model `beforeSave` using data from user session, so it can not be tempered. 
+Click `Create Todo`, you will find a list of user in the form which doesn't looks right and should be remove. When a new Todo record saved to database, we will like to know who created it. This should be done automatically in model `beforeSave` using data from user session to prevent being tempered. 
 
-- edit `protected/modules/todo/views/todo/_form.php` and remove this chuck:
+1. Edit `protected/modules/todo/views/todo/_form.php` and remove this chuck:
 ```php
 <div class="form-group <?php echo $model->hasErrors('user_id') ? 'has-error':'' ?>">
 	<?php echo $form->bsLabelEx2($model,'user_id'); ?>
@@ -150,7 +150,7 @@ click `Create Todo`, you will find a list of user in the form which doesn't look
 	</div>
 </div>
 ```
-- edit `protected/modules/todo/models/Todo.php` and replace `beforeValidate()` function with:
+2. Edit `protected/modules/todo/models/Todo.php` and replace `beforeValidate()` function with:
 ```php
 public function beforeValidate() 
 {
@@ -167,7 +167,7 @@ public function beforeValidate()
 #### Add to navigation
 You may realised there is no easy way to access this page other than from the URL. It will be more user friendly if we can browse for it from the main navigation system in backend.
 
-- edit `protected/modules/todo/TodoModule.php`, under `getNavItems()`, add:
+1. Edit `protected/modules/todo/TodoModule.php`, under `getNavItems()`, add:
 
 ```php
 case 'backendNavService':{
