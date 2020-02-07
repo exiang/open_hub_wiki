@@ -210,4 +210,35 @@ public function actionTodoOrganizationBehavior($id)
 
 Next, make sure you have created few todo items from backend and linked it to a specific organization. Acquired its organization id, append that to the end of URL, e.g. `https://hubd.mymagic.my/todo/test/todoOrganizationBehavior?id=999`
 
-You should now see title of todos associated to this organization display in list.
+
+You should now see list of todos associated to this organization in display.
+
+5. It will be convenience for us to see the list of TODOs in the organization detail page. Let's add a new tab beneath the page.
+
+Modify `protected/modules/todo/TodoModule.php`, change `getOrganizationViewTabs()` function to:
+```php
+public function getOrganizationViewTabs($model, $realm = 'backend')
+{
+    $tabs = array();
+    if ($realm == 'backend') {
+        if (Yii::app()->user->accessBackend) {
+            $tabs['todo'][] = array(
+                'key' => 'todo',
+                'title' => 'Todo',
+                'viewPath' => 'modules.todo.views.backend._view-organization-todo',
+            );
+        }
+    }
+
+    return $tabs;
+}
+```
+
+Create a new partial view at `protected/modules/todo/views/backend/_view-organization-todo.php`:
+
+```php
+<?php $todos = $model->getTodoItems() ?>
+<?php foreach($todos as $todo): ?>
+    <li><a href="<?php echo $this->createUrl('todo/todo/view', array('id'=>$todo->id)) ?>"><?php echo $todo->title ?></a></li>
+<?php endforeach; ?>
+```
