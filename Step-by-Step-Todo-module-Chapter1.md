@@ -39,6 +39,8 @@ public function installDb($forceReset = false)
 	return true;
 }
 ```
+> For more information on BoilerplateStart, please refer to [Quick Start with Boilerplate](Quick-Start-with-Boilerplate)
+
 ### Setup configuration
 Go to `protected/modules/todo/config` folder
 1. Delete `console.php` and `main.php`
@@ -77,6 +79,8 @@ class TodoModule extends WebModule
    - Under `developer`, set the `author`, `organization`, `email` to your detail
 6. Do not copy `console.dist.php` to `console.php` and `main.dist.php` to `main.php`. This will be done automatically when you install the module
 
+> For more info on module configuration, please refer to [Module Config](Module-Config)
+
 ### Some clean up
 Go to `protected/modules/todo/model` folder
   - Rename `HubBoilerplateStart.php` to `HubTodo.php`
@@ -93,10 +97,6 @@ Hi, I am TODO module frontend index '<?php echo $this->module->var1 ?>'
 ### Congratulation, you make it!
 You are now ready to install this new module you have just created.
 After install the module from backend, you may access your module frontend with url: `https://hubd.mymagic.my/todo`
-
-### References
-  * [Quick Start with Boilerplate](Quick-Start-with-Boilerplate)
-
 
 ## Next Chapter
 [Chapter 2](Step-by-Step-Todo-module-Chapter2) - Add in CRUD function in backend
