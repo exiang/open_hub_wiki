@@ -1,5 +1,6 @@
 In this tutorial, you will learn how to build a TODO module from ground up.
 
+  * [Chapter 1](Step-by-Step-Todo-module-Chapter1)
 ## Chapter 1
 At the end of this chapter, you will have a working TODO module where you can CRUD records in backend.
 
