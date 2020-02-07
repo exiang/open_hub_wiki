@@ -9,7 +9,7 @@ Please refer the documentation available on [ReadTheDocs](http://neo4j-php-ogm.r
 ## Generate Neo4j OGM Class
 
 OGM class can be generated under `Gii - Model Generator`
-and make sure to create the none code meta data files at `\data` or `\modules\{modelName}\data` and have the following object.
+and make sure to create the none code meta data file at `\data` or `\modules\{modelName}\data` have the following object.
 
 ```
 
