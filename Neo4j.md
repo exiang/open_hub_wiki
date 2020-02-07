@@ -15,7 +15,7 @@ and make sure to create the none code meta data file at `\data` or `\modules\{mo
 
 'neo4j' => array (
         'attributes' => array(
-            'name' => 'type', // name should match with created model name and type can be 'string', 'int', 'boolean' or 'float'
+            'name' => 'type', // name should match with created model attribute and type can be 'string', 'int', 'boolean' or 'float'
             'id' => 'string', // example
         )
     )
