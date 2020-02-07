@@ -111,5 +111,10 @@ class getTodos extends Action
 3. Go to `https://hubd.mymagic.my/wapi/swagger?code=todo&format=yaml&module=todo`, your web API is now up and running, ready to test.
 ![](https://user-images.githubusercontent.com/5336690/74060699-7ecf9480-4a25-11ea-8358-021d2cda4291.png)
 
+4. Click `Execute` after inserted all the parameters for result
+![](https://user-images.githubusercontent.com/5336690/74061274-a8d58680-4a26-11ea-9d10-8b9ac93c6936.png)
+
+> Copy `toApi()` function from `protected/modules/todo/models/TodoBase.php` to  `protected/modules/todo/models/Todo.php` to make changes to output data.
+
 ## Next Chapter
 [Chapter 5](Step-by-Step-Todo-module-Chapter5) - Advance Use Case
