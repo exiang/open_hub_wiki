@@ -244,3 +244,6 @@ Create a new partial view at `protected/modules/todo/views/backend/_view-organiz
 <?php endforeach; ?>
 </ol>
 ```
+
+## Next Chapter
+[Chapter 4](Step-by-Step-Todo-module-Chapter4) - Implement Web API
