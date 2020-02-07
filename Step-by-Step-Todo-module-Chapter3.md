@@ -1,7 +1,8 @@
 ## Chapter 3
-In this chapter, we will add in an extra feature. Imagine here is a new request from your boss: As admin, I would like to see any pending TODO tasks in associate to a specific startup or company.
+Imagine this, after published the module, you got a new request from your boss: 
+> As admin, I would like to see any pending TODO tasks in associate to a specific startup or company.
 
-Analyzing this requirement, we know these are the action plans, translated in developer language:
+Analyzing the requirement, these are the action plans (translated to developer language):
 1. TODO can be associate to organization
 2. TODO has status (new, pending, in progress, done)
 3. I am able to see list of TODO associated to a specific organization in the organization view page.
