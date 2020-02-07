@@ -1,5 +1,5 @@
 ## Chapter 2
-Now, your Todo module is not doing much other than display static page content. Let's build a CRUD (Create-Read-Ulter-Delete) function with database to manage user generated todo list.
+Now, your Todo module is not doing much other than display static page content. Let's build a CRUD (Create-Read-Update-Delete) function with database to manage user generated todo list.
 
 ### Create a model
 
