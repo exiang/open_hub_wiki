@@ -94,6 +94,8 @@ Hi, I am TODO module frontend index '<?php echo $this->module->var1 ?>'
 You are now ready to install this new module you have just created.
 After install the module from backend, you may access your module frontend with url: `https://hubd.mymagic.my/todo`
 
+## Next Chapter
+[Chapter 2](Step-by-Step-Todo-module-Chapter2) - Add in CRUD function in backend
 
 ### References
   * [Quick Start with Boilerplate](Quick-Start-with-Boilerplate)
