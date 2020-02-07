@@ -109,4 +109,4 @@ class getTodos extends Action
 > Remember we created `getTodos($organization, $limit)` in `HubTodo` model in Chapter 3? Centralize your code in this way might seems troublesome at first but allow easier reference to it as your module getting more complicated
 
 3. Go to `https://hubd.mymagic.my/wapi/swagger?code=todo&format=yaml&module=todo`, your web API is now up and running, ready to test.
-
+![](https://user-images.githubusercontent.com/5336690/74060699-7ecf9480-4a25-11ea-8358-021d2cda4291.png)
