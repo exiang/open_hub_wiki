@@ -1,5 +1,5 @@
 ## Chapter 3
-Imagine this, after published the module, you got a new request from your boss: 
+Imagine: after published the module, you got a new request from your boss: 
 > As admin, I would like to see any pending TODO tasks in associate to a specific startup or company.
 
 Analyzing the requirement, these are the action plans (translated to developer language):
