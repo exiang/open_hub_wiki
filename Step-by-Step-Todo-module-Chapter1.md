@@ -81,6 +81,9 @@ class TodoModule extends WebModule
 
 > For more information on module configuration, please refer to [Module Config](Module-Config)
 
+> For more information on module installation, please refer to [Module Install & Upgrade
+](Module-Install-&-Upgrade)
+
 ### Some clean up
 Go to `protected/modules/todo/model` folder
   - Rename `HubBoilerplateStart.php` to `HubTodo.php`
