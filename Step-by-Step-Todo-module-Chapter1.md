@@ -4,10 +4,10 @@ At the end of this chapter, you will have a basic working TODO module.
 ### Getting started with boilerplateStart
 BoilerplateStart serve as a template for new module creation.
 1. Copy `boilerplateStart` to `todo` module
-2. Edit readme.md, replace the text in it to 'My first custom module to manage todo list'
+2. Edit `readme.md`, replace the text in it to 'My first custom module to manage todo list'
 3. Rename `BoilerplateStartModule.php` to `TodoModule.php`
 4. Edit `TodoModule.php` file
-    - Change the class name from BoilerplateStartModule to TodoModule
+    - Change the class name from `BoilerplateStartModule` to `TodoModule`
     - Replace all `boilerplateStart` to `todo`
     - Replace all `BoilerplateStart` to `Todo`
     - We going to create a new database table structure called `todo`, this has to be done in code thru `installDb` function:
@@ -51,8 +51,8 @@ Go to `protected/modules/todo/config` folder
    - Replace all `BoilerplateStart` to `Todo`
    - Make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2 when injecting core model
 4. Looking at both your `main.dist.php` and `console.dist.php` config files, at `modules > todo`, you have 2 variables:
-   - var1
-   - var2
+   - Set `var1` to 'Hello'
+   - Set `var2` to 'World'
 
 These variable must reflect in your `TodoModule.php` too.
 ```php
@@ -85,7 +85,10 @@ Go to `protected/modules/todo/model` folder
     - Replace all `BoilerplateStart` to `Todo`        
 
 Go to views folder
-  - Edit `frontend\index.php`, change the file content to `Hi, I am TODO module frontend index`
+  - Edit `frontend\index.php`, change the file content to 
+```php 
+Hi, I am TODO module frontend index '<?php echo $this->module->var1 ?>'
+```
 
 ### Congratulation, you make it!
 You are now ready to install this new module you have just created.
