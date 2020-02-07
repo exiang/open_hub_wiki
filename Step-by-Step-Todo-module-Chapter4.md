@@ -110,3 +110,6 @@ class getTodos extends Action
 
 3. Go to `https://hubd.mymagic.my/wapi/swagger?code=todo&format=yaml&module=todo`, your web API is now up and running, ready to test.
 ![](https://user-images.githubusercontent.com/5336690/74060699-7ecf9480-4a25-11ea-8358-021d2cda4291.png)
+
+## Next Chapter
+[Chapter 5](Step-by-Step-Todo-module-Chapter5) - Advance Use Case
