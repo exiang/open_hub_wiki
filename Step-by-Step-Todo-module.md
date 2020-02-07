@@ -98,8 +98,8 @@ Now, your Todo module is not doing much other than display static page content. 
 
 ### Create a model
 
-1. Create a new folder `data` inside `todo` module folder.
-2. Create a new file `todo.build.php` in `/protected/data` folder, with content:
+
+1. Create a new file `todo.build.php` in `/protected/data` folder, with content:
 ```php
 <?php
 return array(
@@ -127,7 +127,7 @@ return array(
 	),
 ); 
 ```
-3. Generate the model with yee at `https://hubd.mymagic.my/yee/model/index`
+2. Generate the model with yee at `https://hubd.mymagic.my/yee/model/index`
    - Set `model path` value to `application.modules.todo.models`
    - Set `module name` value to `todo`
    - Make sure `build relations` and `build extend class` are checked
