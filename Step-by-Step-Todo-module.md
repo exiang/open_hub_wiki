@@ -79,9 +79,114 @@ class TodoModule extends WebModule
    - under `developer`, set the `author`, `organization`, `email` to your detail
 6. Do not copy `console.dist.php` to `console.php` and `main.dist.php` to `main.php`. This will be done automatically when you install the module
 
+### Some clean up
+Go to `protected/modules/todo/model` folder
+  - rename `HubBoilerplateStart.php` to `HubTodo.php`
+  - edit `HubTodo.php`
+    - replace all `boilerplateStart` to `todo`
+    - replace all `BoilerplateStart` to `Todo`        
+
+Go to views folder
+  - edit `frontend\index.php`, change the file content to `Hi, I am TODO module frontend index`
+
+### Congratulation, you make it!
+You are now ready to install this new module you have just created.
+After install the module from backend, you may access your module frontend with url: `https://hubd.mymagic.my/todo`
+
 ### Create a model
-### Create a CRUD controller
-### Create a CRUD view
+Now, your Todo module is not doing much other than display static page content. Let's build a CRUD (Create-Read-Ulter-Delete) function with database.
+1. Create a new folder `data` inside `todo` module folder.
+2. Create a new file `todo.build.php` in `data` folder, with content:
+```php
+<?php
+return array(
+	'layout' => '//layouts/backend',
+	'menuTemplate' => array(
+		'index'=>'admin, create',
+		'admin'=>'create',
+		'create'=>'admin',
+		'update'=>'admin, create, view',
+		'view'=>'admin, create, update, delete',
+	),
+	'admin' => array(
+		'list' => array('id', 'title', 'user_id', 'date_added', 'date_modified'),
+	),
+	'structure' => array(
+		'json_extra'=>array('isJson'=>true),
+	),
+	// this foreignKey is mainly for crud view generation. model relationship will not use this at the moment
+	'foreignKey' => array(
+		'user_id'=>array( 'relationName'=>'user', 'model'=>'User', 'foreignReferAttribute'=>'username'),
+	),
+	'json'=>array(
+		'extra'=>array(
+		)
+	),
+); 
+```
+3. Generate the model with yee at `https://hubd.mymagic.my/yee/model/index`
+  - set `model path` value to `application.modules.todo.models`
+  - set `module name` value to `todo`
+  - make sure `build relations` and `build extend class` are checked
+
+### Create a CRUD controller and views
+1. Generate controller with yee at `https://hubd.mymagic.my/yee/model/index`
+  - set `model class` to `application.modules.todo.models.Todo`
+  - make sure `Controller ID` is `todo/todo`
+2. Now, you may access backend to manage todo records from `https://hubd.mymagic.my/todo/todo/admin`
+
+
+### Enhance it
+#### Automatically track creator
+click `Create Todo`, you will find a list of user in the form which doesn't looks right and should be remove. When a new Todo record saved to database, we will like to know who created it. This should be done automatically in model `beforeSave` using data from user session, so it can not be tempered. 
+
+- edit `protected/modules/todo/views/todo/_form.php` and remove this chuck:
+```php
+<div class="form-group <?php echo $model->hasErrors('user_id') ? 'has-error':'' ?>">
+	<?php echo $form->bsLabelEx2($model,'user_id'); ?>
+	<div class="col-sm-10">
+		<?php echo $form->bsForeignKeyDropDownList($model, 'user_id'); ?>
+		<?php echo $form->bsError($model,'user_id'); ?>
+	</div>
+</div>
+```
+- edit `protected/modules/todo/models/Todo.php` and replace `beforeValidate()` function with:
+```php
+public function beforeValidate() 
+{
+	// custom code here
+	// ...
+	if($this->isNewRecord) {
+		$this->user_id = Yii::app()->user->id;
+	} 
+	return parent::beforeValidate();
+}
+```
+
+
+#### Add to navigation
+You may realised there is no easy way to access this page other than from the URL. It will be more user friendly if we can browse for it from the main navigation system in backend.
+
+- edit `protected/modules/todo/TodoModule.php`, under `getNavItems()`, add:
+
+```php
+case 'backendNavService':{
+	return array(
+		array(
+			'label' => Yii::t('backend', 'TODO'), 'url' => '#',
+			'visible' => Yii::app()->user->getState('accessBackend') == true,
+			'active' => $controller->activeMenuMain == 'todo' ? true : false,
+			'itemOptions' => array('class' => 'dropdown-submenu'), 'submenuOptions' => array('class' => 'dropdown-menu'),
+			'linkOptions' => array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+			'items' => array(
+				array('label' => Yii::t('app', 'Todo'), 'url' => array('/todo/todo'), 'visible' => Yii::app()->user->getState('accessBackend') == true),
+			),
+		),
+	);
+
+	break;
+}
+```
 
 ## Chapter 2
 In this chapter, we will add in extra function to link a todo record to an organization
