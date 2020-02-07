@@ -238,7 +238,9 @@ Create a new partial view at `protected/modules/todo/views/backend/_view-organiz
 
 ```php
 <?php $todos = $model->getTodoItems() ?>
+<ol>
 <?php foreach($todos as $todo): ?>
-    <li><a href="<?php echo $this->createUrl('todo/todo/view', array('id'=>$todo->id)) ?>"><?php echo $todo->title ?></a></li>
+    <li><span class="label label-default"><?php echo $todo->formatEnumStatus($todo->status) ?></span> <a href="<?php echo $this->createUrl('todo/todo/view', array('id'=>$todo->id)) ?>"><?php echo $todo->title ?></a> by <?php echo $todo->user->username ?> created on <?php echo Html::formatDateTime($todo->date_added) ?></li>
 <?php endforeach; ?>
+</ol>
 ```
