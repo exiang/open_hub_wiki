@@ -9,10 +9,10 @@ BoilerplateStart serve as a template for new module creation.
 2. Edit readme.md, replace the text in it to 'My first custom module to manage todo list'
 3. Rename `BoilerplateStartModule.php` to `TodoModule.php`
 4. Edit `TodoModule.php` file
-    - change the class name from BoilerplateStartModule to TodoModule
-    - replace all `boilerplateStart` to `todo`
-    - replace all `BoilerplateStart` to `Todo`
-    - we going to create a new database table structure called `todo`, this has to be done in code thru `installDb` function:
+    - Change the class name from BoilerplateStartModule to TodoModule
+    - Replace all `boilerplateStart` to `todo`
+    - Replace all `BoilerplateStart` to `Todo`
+    - We going to create a new database table structure called `todo`, this has to be done in code thru `installDb` function:
 ```php
 public function installDb($forceReset = false)
 {
@@ -45,14 +45,14 @@ public function installDb($forceReset = false)
 Go to `protected/modules/todo/config` folder
 1. Delete `console.php` and `main.php`
 2. Edit `console.dist.php`
-   - replace all `boilerplateStart` to `todo`
-   - replace all `BoilerplateStart` to `Todo`
-   - make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2. when injecting core model
-3. edit `main.dist.php`
-   - replace all `boilerplateStart` to `todo`
-   - replace all `BoilerplateStart` to `Todo`
-   - make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2 when injecting core model
-4. looking at both your `main.dist.php` and `console.dist.php` config files, at `modules > todo`, you have 2 variables:
+   - Replace all `boilerplateStart` to `todo`
+   - Replace all `BoilerplateStart` to `Todo`
+   - Make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2. when injecting core model
+3. Edit `main.dist.php`
+   - Replace all `boilerplateStart` to `todo`
+   - Replace all `BoilerplateStart` to `Todo`
+   - Make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2 when injecting core model
+4. Looking at both your `main.dist.php` and `console.dist.php` config files, at `modules > todo`, you have 2 variables:
    - var1
    - var2
 
@@ -71,23 +71,23 @@ class TodoModule extends WebModule
 }
 ```
 5. Edit about.yaml
-   - set `code` value to `todo`
-   - give it a version, lets set `1.0`
-   - set `title` value to 'My TODO Module`
-   - set `oneliner` value to 'My first custom module to manage todo list'. It should be short and descriptive to help other users and developers to easily understand what your module function
-   - set `lastUpdate` to current date in `YYYY-MM-DD` format, e.g. `2020-02-08`
-   - under `developer`, set the `author`, `organization`, `email` to your detail
+   - Set `code` value to `todo`
+   - Give it a version, lets set `1.0`
+   - Set `title` value to 'My TODO Module`
+   - Set `oneliner` value to 'My first custom module to manage todo list'. It should be short and descriptive to help other users and developers to easily understand what your module function
+   - Set `lastUpdate` to current date in `YYYY-MM-DD` format, e.g. `2020-02-08`
+   - Under `developer`, set the `author`, `organization`, `email` to your detail
 6. Do not copy `console.dist.php` to `console.php` and `main.dist.php` to `main.php`. This will be done automatically when you install the module
 
 ### Some clean up
 Go to `protected/modules/todo/model` folder
-  - rename `HubBoilerplateStart.php` to `HubTodo.php`
-  - edit `HubTodo.php`
-    - replace all `boilerplateStart` to `todo`
-    - replace all `BoilerplateStart` to `Todo`        
+  - Rename `HubBoilerplateStart.php` to `HubTodo.php`
+  - Edit `HubTodo.php`
+    - Replace all `boilerplateStart` to `todo`
+    - Replace all `BoilerplateStart` to `Todo`        
 
 Go to views folder
-  - edit `frontend\index.php`, change the file content to `Hi, I am TODO module frontend index`
+  - Edit `frontend\index.php`, change the file content to `Hi, I am TODO module frontend index`
 
 ### Congratulation, you make it!
 You are now ready to install this new module you have just created.
@@ -128,14 +128,14 @@ return array(
 ); 
 ```
 3. Generate the model with yee at `https://hubd.mymagic.my/yee/model/index`
-   - set `model path` value to `application.modules.todo.models`
-   - set `module name` value to `todo`
-   - make sure `build relations` and `build extend class` are checked
+   - Set `model path` value to `application.modules.todo.models`
+   - Set `module name` value to `todo`
+   - Make sure `build relations` and `build extend class` are checked
 
 ### Create a CRUD controller and views
 1. Generate controller with yee at `https://hubd.mymagic.my/yee/model/index`
-   - set `model class` to `application.modules.todo.models.Todo`
-   - make sure `Controller ID` is `todo/todo`
+   - Set `model class` to `application.modules.todo.models.Todo`
+   - Make sure `Controller ID` is `todo/todo`
 2. Now, you may access backend to manage todo records from `https://hubd.mymagic.my/todo/todo/admin`
 
 
