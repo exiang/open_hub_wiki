@@ -6,7 +6,7 @@ WAPI (Web API) is a default module ship with OpenHub. WAPI helps you easily setu
 
 ![](https://user-images.githubusercontent.com/5336690/74059169-7fb2f700-4a22-11ea-830f-f6ce7649cbd8.png)
 
-### Create a getTodos Web API.
+### Create a getTodos Web API
 1. Firstly, create a yaml file to catalog our APIs at `protected/modules/todo/data/api/todo.yaml`:
 
 ```yaml
