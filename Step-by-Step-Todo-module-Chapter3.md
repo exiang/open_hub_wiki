@@ -43,6 +43,9 @@ Upgrade migration completed successfully.
 Table changes reflected in database.
 ![table database changes](https://user-images.githubusercontent.com/5336690/74012943-5a909b00-49c6-11ea-8b96-7e34d26185ca.png)
 
+> For more information on Module Upgrade, please refer to [Module Install & Upgrade
+](Module-Install-&-Upgrade)
+
 ### Regenerate MVC
 Next, we will need to regenerate the model, controller and view to reflect this database changes.
 
