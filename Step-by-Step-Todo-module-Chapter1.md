@@ -1,5 +1,5 @@
 ## Chapter 1
-At the end of this chapter, you will have a working TODO module where you can CRUD records in backend.
+At the end of this chapter, you will have a basic working TODO module.
 
 ### Getting started with boilerplateStart
 BoilerplateStart serve as a template for new module creation.
