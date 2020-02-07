@@ -116,5 +116,7 @@ class getTodos extends Action
 
 > Copy `toApi()` function from `protected/modules/todo/models/TodoBase.php` to  `protected/modules/todo/models/Todo.php` to make changes to output data.
 
+> For more information on Web API, please refer to [Module Web API](Module-Web-API)
+
 ## Next Chapter
 [Chapter 5](Step-by-Step-Todo-module-Chapter5) - Advance Use Case
