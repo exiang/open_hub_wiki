@@ -276,6 +276,7 @@ public function getOrganizationActions($model, $realm = 'backend')
 
     return $actions;
 }
+```
 
 2. It will be better if we can auto select the specific organization in create page, saving user's time of selecting from the list. Edit `actionCreate()` in `protected/modules/todo/controllers/TodoController.php`
 
