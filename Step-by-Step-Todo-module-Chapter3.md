@@ -249,7 +249,7 @@ Create a new partial view at `protected/modules/todo/views/backend/_view-organiz
 </ol>
 ```
  
-> For more information on Module Upgrade, please refer to [Module Function Hooks \ getOrganizationViewTabs
+> For more information on view tab injection, please refer to [Module Function Hooks \ getOrganizationViewTabs
 ](Module-Function-Hooks#getorganizationviewtabs)
 
 ## Next Chapter
