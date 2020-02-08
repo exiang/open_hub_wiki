@@ -252,5 +252,40 @@ Create a new partial view at `protected/modules/todo/views/backend/_view-organiz
 > For more information on view tab injection, please refer to [Module Function Hooks \ getOrganizationViewTabs
 ](Module-Function-Hooks#getorganizationviewtabs)
 
+## Create an action button
+Next, we like to add an extra button to easily create TODO in the above tab.
+
+1. Modify `getOrganizationActions()` in `protected/modules/todo/TodoModule.php`
+
+```php
+public function getOrganizationActions($model, $realm = 'backend')
+{
+    if ($realm == 'backend') {
+        if (!Yii::app()->user->accessBackend) {
+            return;
+        }
+
+        $actions['todo'][] = array(
+            'visual' => 'primary',
+            'label' => 'Create TODO',
+            'title' => 'Create TODO for this organization',
+            'url' => Yii::app()->controller->createUrl('/todo/todo/create', array('organizationId' => $model->id)),
+        );
+    } elseif ($realm == 'cpanel') {
+    }
+
+    return $actions;
+}
+
+2. It will be better if we can auto select the specific organization in create page, saving user's time of selecting from the list. Edit `actionCreate()` in `protected/modules/todo/controllers/TodoController.php`
+
+```php
+public function actionCreate($organizationId='')
+{
+    $model=new Todo;
+    $model->organization_id = $organizationId;
+
+```
+
 ## Next Chapter
 [Chapter 4](Step-by-Step-Todo-module-Chapter4) - Implement Web API
