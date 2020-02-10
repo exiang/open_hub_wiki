@@ -94,7 +94,7 @@ return array(
 
 ```
 
-Go to Yee Model Generator `https://hubd.mymagic.my/yee/model`
+Go to Yee Model Generator `https://mydomain.com/yee/model`
 1. Set `Table Name` to `todo`
 1. Set `Model Path` to `application.modules.todo.models`
 1. [!important] Uncheck `Build Extend Class`
@@ -103,7 +103,7 @@ Go to Yee Model Generator `https://hubd.mymagic.my/yee/model`
 1. You should also takes the opportunity to compare any changes to those functions you had overrided in `odules/todo/models/Todo.php` in this case, and update accordingly manually
 1. Checked [overwrite] and click the Generate button when everythign is good to go
 
-Go to Yee Crud Generator `https://hubd.mymagic.my/yee/crud/index`
+Go to Yee Crud Generator `https://mydomain.com/yee/crud/index`
 1. Set `Model Class` to `application.modules.todo.models.Todo`
 2. Set `Controller ID` to `todo/todo`
 3. Dont straightaway jump into regenerate the code files to replace existing. Remember we had done quite some changes here on the view `_form.php`? It's best to use the `[diff]` to carefully check what changes will be done to each of the files and apply them manually.
@@ -212,7 +212,7 @@ public function actionTodoOrganizationBehavior($id)
 }
 ```
 
-Next, make sure you have created few todo items from backend and linked it to a specific organization. Acquired its organization id, append that to the end of URL, e.g. `https://hubd.mymagic.my/todo/test/todoOrganizationBehavior?id=999`
+Next, make sure you have created few todo items from backend and linked it to a specific organization. Acquired its organization id, append that to the end of URL, e.g. `https://mydomain.com/todo/test/todoOrganizationBehavior?id=999`
 
 
 You should now see list of todos associated to this organization in display.
