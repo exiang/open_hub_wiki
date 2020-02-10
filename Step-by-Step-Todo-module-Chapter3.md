@@ -54,7 +54,7 @@ Update `protected/modules/todo/data/todo.build.php` to
 <?php
 
 return array(
-	'layout' => '//layouts/backend',
+	'layout' => 'backend',
 	'menuTemplate' => array(
 		'index' => 'admin, create',
 		'admin' => 'create',
