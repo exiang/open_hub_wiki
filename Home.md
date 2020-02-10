@@ -6,9 +6,9 @@ Welcome to the OpenHub **developer documentation**. This developer documentation
 
 ## Get your hand dirty
 * [Basics](Basics)
-* [Core Development](Core-Development)
 * [Build a Module](Build-Module)
 * [Override Core](Override-Core)
+* [Core Development](Core-Development)
 * [API for Developers](API-for-Developers)
 * [Multi Domains](Multi-Domains)
 * [Multilingual (i18n)](i18n)
