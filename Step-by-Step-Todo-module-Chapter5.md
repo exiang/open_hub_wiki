@@ -96,5 +96,14 @@ class TodoCommand extends ConsoleCommand
     
 }
 ```
+
+To run this command, at your docker project folder:
+```
+./bash.sh
+cd magic_hub/protected
+php yiic todo Shout --param1=Hello --param2=World
+```
+
+
 ## Multilingual i18n
 ## Sub domain for module
