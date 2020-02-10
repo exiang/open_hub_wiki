@@ -45,6 +45,31 @@ public function getSharedAssets($forInterface='*')
 }
 ```
 
+In `protected/views/layouts/backend.php`, this following code will scan all modules for assets to include.
+
+```php
+<?php
+$modules = YeeModule::getParsableModules();
+foreach ($modules as $moduleKey => $moduleParams) {
+	if (method_exists(Yii::app()->getModule($moduleKey), 'getSharedAssets')) {
+		$assets = Yii::app()->getModule($moduleKey)->getSharedAssets('layout-backend');
+		foreach ($assets['js'] as $jsAsset) {
+			Yii::app()->getClientScript()->registerScriptFile($jsAsset['src'], !empty($jsAsset['position']) ? $jsAsset['position'] : CClientScript::POS_END, !empty($jsAsset['htmlOptions']) ? $jsAsset['htmlOptions'] : array());
+		}
+		foreach ($assets['css'] as $cssAsset) {
+			Yii::app()->getClientScript()->registerCssFile($cssAsset['src'], !empty($cssAsset['media']) ? $cssAsset['media'] : '');
+		}
+	}
+}
+?>
+```
+
+All you need to do next is to code your logic in the following list of files:
+  * `protected/modules/todo/assets/css/backend.shared.css`
+  * `protected/modules/todo/assets/css/frontend.shared.css`
+  * `protected/modules/todo/assets/javascript/backend.shared.js`
+  * `protected/modules/todo/assets/javascript/frontend.shared.js`
+
 ## Multilingual i18n
 ## Cron Job
 ## Sub domain for module
