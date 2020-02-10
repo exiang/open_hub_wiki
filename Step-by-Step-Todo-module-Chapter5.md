@@ -116,7 +116,9 @@ In short:
 1. For database, follow the documentation above to learn how to structure it.
 
 ## Change module name
-You are accessing todo module from url `https://hubd.mymagic.my/todo` and your marketing department suddenly needs to change this to `https://hubd.mymagic.my/newtodo`. **You SHOULD NOT rename this module**.
+You are accessing todo module from url `https://hubd.mymagic.my/todo` and your marketing department suddenly needs to change this to `https://hubd.mymagic.my/newtodo`. 
+
+**You SHOULD NOT rename this module**.
 
 What you can do is edit `protected/modules/todo/config/main.php` and change this part of code:
 ```php
