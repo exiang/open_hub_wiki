@@ -252,7 +252,7 @@ Create a new partial view at `protected/modules/todo/views/backend/_view-organiz
 > For more information on view tab injection, please refer to [Module Function Hooks \ getOrganizationViewTabs
 ](Module-Function-Hooks#getorganizationviewtabs)
 
-## Create an action button
+### Create an action button
 Next, we like to add an extra button to easily create TODO in the above tab.
 
 1. Modify `getOrganizationActions()` in `protected/modules/todo/TodoModule.php`
@@ -288,7 +288,7 @@ public function actionCreate($organizationId='')
 
 ```
 
-## Handling Organization Merging 
+### Handling Organization Merging 
 #todo...
 
 ## Next Chapter
