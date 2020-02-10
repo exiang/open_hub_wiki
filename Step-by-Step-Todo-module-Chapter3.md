@@ -288,5 +288,8 @@ public function actionCreate($organizationId='')
 
 ```
 
+## Handling Organization Merging 
+#todo...
+
 ## Next Chapter
 [Chapter 4](Step-by-Step-Todo-module-Chapter4) - Implement Web API
