@@ -32,16 +32,16 @@ return array(
 	),
 ); 
 ```
-2. Generate the model with yee at `https://hubd.mymagic.my/yee/model/index`
+2. Generate the model with yee at `https://mydomain.com/yee/model/index`
    - Set `model path` value to `application.modules.todo.models`
    - Set `module name` value to `todo`
    - Make sure `build relations` and `build extend class` are checked
 
 ### Create a CRUD controller and views
-1. Generate controller with yee at `https://hubd.mymagic.my/yee/model/index`
+1. Generate controller with yee at `https://mydomain.com/yee/model/index`
    - Set `model class` to `application.modules.todo.models.Todo`
    - Make sure `Controller ID` is `todo/todo`
-2. Now, you may access backend to manage todo records from `https://hubd.mymagic.my/todo/todo/admin`
+2. Now, you may access backend to manage todo records from `https://mydomain.com/todo/todo/admin`
 
 
 ### Enhance it
