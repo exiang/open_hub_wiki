@@ -49,7 +49,7 @@ Table changes reflected in database.
 ### Regenerate MVC
 Next, we will need to regenerate the model, controller and view to reflect this database changes.
 
-Update `protected/data/todo.build.php` to
+Update `protected/modules/todo/data/todo.build.php` to
 ```php
 <?php
 
