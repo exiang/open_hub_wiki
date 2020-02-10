@@ -133,3 +133,4 @@ What you can do is edit `protected/modules/todo/config/main.php` and change this
 Now, you are good to go with url `https://hubd.mymagic.my/newtodo` and the old one `https://hubd.mymagic.my/todo` is still functioning for backward compatibility.
 
 ## Sub domain for module
+Todo...
