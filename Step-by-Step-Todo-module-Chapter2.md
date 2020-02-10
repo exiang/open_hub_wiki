@@ -8,7 +8,7 @@ Now, your Todo module is not doing much other than display static page content. 
 ```php
 <?php
 return array(
-	'layout' => '//layouts/backend',
+	'layout' => 'backend',
 	'menuTemplate' => array(
 		'index'=>'admin, create',
 		'admin'=>'create',
