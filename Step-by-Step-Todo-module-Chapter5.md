@@ -107,4 +107,12 @@ php yiic todo Shout --param1=Hello --param2=World
 To turn it into a cron command, please refer to this [documentation](Cron-Commands).
 
 ## Multilingual i18n
+Your module may like to support multilingual and internationalization (i18n). Please refer to this [documentation](i18n) for detail.
+
+In short: 
+1. Change all your interface text to i18n format. e.g. from `Hello World` to `<?php echo Yii:t('todo', 'Hello World')?>`
+  * Remember to use module code `todo` as the translation context
+1. For big chunk of text, separate them into partial view file.
+1. For database, follow the documentation above to learn how to structure it.
+
 ## Sub domain for module
