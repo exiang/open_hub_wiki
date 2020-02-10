@@ -4,7 +4,7 @@ Now, your Todo module is not doing much other than display static page content. 
 ### Create a model
 
 
-1. Create a new file `todo.build.php` in `/protected/data` folder, with content:
+1. Create a new file `todo.build.php` in `/protected/modules/todo/data` folder, with content:
 ```php
 <?php
 return array(
