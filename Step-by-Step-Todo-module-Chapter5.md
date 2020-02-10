@@ -70,6 +70,31 @@ All you need to do next is to code your logic in the following list of files:
   * `protected/modules/todo/assets/javascript/backend.shared.js`
   * `protected/modules/todo/assets/javascript/frontend.shared.js`
 
+## Command
+Your module can has Command Line functions to run back office functionality without worry about web server timeout limitation. A CLI command can also be escalate into cron job to run scheduled tasks automatically.
+
+Create file `protected/modules/todo/commands/TodoCommand.php` and fill with content:
+```php
+<?php
+
+class TodoCommand extends ConsoleCommand
+{
+    public $verbose=false;
+    public function actionIndex()
+    {
+	echo "Available command:\n";
+        echo "  * Shout --param1=hello --param2=world\n";
+        echo "\n"; 
+    }
+	
+    public function actionShout($param1, $param2)
+    {
+	echo sprintf("%s %s\n", $param1, $param2);
+        
+        Yii::app()->esLog->log(sprintf("called todo\should"), 'command', array('trigger'=>'TodoCommand::actionShout', 'model'=>'', 'action'=>'', 'id'=>''), '', array('param1'=>$param1, 'param2'=>$param2));
+    }
+    
+}
+```
 ## Multilingual i18n
-## Cron Job
 ## Sub domain for module
