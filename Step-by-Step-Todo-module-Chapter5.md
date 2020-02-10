@@ -104,6 +104,7 @@ cd magic_hub/protected
 php yiic todo Shout --param1=Hello --param2=World
 ```
 
+To turn it into a cron command, please refer to this [documentation](Cron-Commands).
 
 ## Multilingual i18n
 ## Sub domain for module
