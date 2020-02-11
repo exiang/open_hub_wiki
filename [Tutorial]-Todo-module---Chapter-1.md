@@ -48,15 +48,15 @@ Go to `protected/modules/todo/config` folder
    - Replace all `boilerplateStart` to `todo`
    - Replace all `BoilerplateStart` to `Todo`
    - Make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2. when injecting core model
+   - Set `var1` to 'Hello'
+   - Set `var2` to 'World'
 3. Edit `main.dist.php`
    - Replace all `boilerplateStart` to `todo`
    - Replace all `BoilerplateStart` to `Todo`
    - Make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2 when injecting core model
-4. Looking at both your `main.dist.php` and `console.dist.php` config files, at `modules > todo`, you have 2 variables:
    - Set `var1` to 'Hello'
    - Set `var2` to 'World'
-
-These variable must reflect in your `TodoModule.php` too.
+4. Looking at both your `main.dist.php` and `console.dist.php` config files, at `modules > todo`, you now have 2 variables. These variable must reflect in your `TodoModule.php` too.
 ```php
 <?php
 // use camelcase for class name with first character in uppsercase
@@ -99,6 +99,10 @@ Hi, I am TODO module frontend index '<?php echo $this->module->var1 ?>'
 
 ### Congratulation, you made it!
 You are now ready to install this new module you have just created.
+1. Go to `https://hubd.mymagic.my/sys/module/admin` 
+2. Click on the 'New Modules' tab
+3. Click initialize button to install your module
+
 After install the module from backend, you may access your module frontend with url: `https://mydomain.com/todo`
 
 ## Next Chapter
