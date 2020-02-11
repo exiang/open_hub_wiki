@@ -1,5 +1,5 @@
 ## Chapter 2
-Now, your Todo module is not doing much other than display static page content. Let's build a CRUD (Create-Read-Update-Delete) function with database to manage user generated todo list.
+Currently your Todo module is not doing much other than displaying static page content. Let's build a CRUD (Create-Read-Update-Delete) function with database to manage user generated todo list.
 
 ### Create a model
 
@@ -33,9 +33,12 @@ return array(
 ); 
 ```
 2. Generate the model with yee at `https://mydomain.com/yee/model/index`
+   - Set `Table Name` value to `todo`. `Model Class` value will be automatically populated.
    - Set `model path` value to `application.modules.todo.models`
    - Set `module name` value to `todo`
    - Make sure `build relations` and `build extend class` are checked
+   - Make sure `Build Neo4J OGM Class` and `Use Column Comments as Attribute Labels` are unchecked
+3. Click `Preview` and then click `Generate`
 
 ### Create a CRUD controller and views
 1. Generate controller with yee at `https://mydomain.com/yee/model/index`
