@@ -99,11 +99,13 @@ Hi, I am TODO module frontend index '<?php echo $this->module->var1 ?>'
 
 ### Congratulation, you made it!
 You are now ready to install this new module you have just created.
-1. Go to `https://hubd.mymagic.my/sys/module/admin` 
+1. Go to `https://mydomain.com/sys/module/admin` 
 2. Click on the 'New Modules' tab
-3. Click initialize button to install your module
+3. Click Initialize button on the Todo module to initialize your module
+4. Click on the 'Modules' tab
+5. Click Install button on the Todo module to install your module
 
-After install the module from backend, you may access your module frontend with url: `https://mydomain.com/todo`
+After installing the module from backend, you may access your module frontend with url: `https://mydomain.com/todo`
 
 ## Next Chapter
 [Chapter 2](Step-by-Step-Todo-module-Chapter2) - Add in CRUD function in backend
