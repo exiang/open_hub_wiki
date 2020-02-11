@@ -33,8 +33,8 @@ public function installDb($forceReset = false)
 	));
 
 	$migration->alterColumn('todo', 'title', 'varchar(255) NULL');
-	$this->createIndex('user_id', 'todo', 'user_id', false);
-	$this->addForeignKey("fk_todo-user_id", "todo", "user_id", "user", "id", "RESTRICT", "RESTRICT");
+	$migration->createIndex('user_id', 'todo', 'user_id', false);
+	$migration->addForeignKey("fk_todo-user_id", "todo", "user_id", "user", "id", "RESTRICT", "RESTRICT");
 
 	return true;
 }
