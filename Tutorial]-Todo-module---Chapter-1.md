@@ -3,8 +3,8 @@ At the end of this chapter, you will have a basic working TODO module.
 
 ### Getting started with boilerplateStart
 BoilerplateStart serve as a template for new module creation.
-1. Copy `boilerplateStart` to `todo` module
-2. Edit `readme.md`, replace the text in it to 'My first custom module to manage todo list'
+1. Copy `boilerplateStart` module folder and rename to `todo` to create the `todo` module
+2. Edit `readme.md`. Replace the text inside to 'My first custom module to manage todo list'
 3. Rename `BoilerplateStartModule.php` to `TodoModule.php`
 4. Edit `TodoModule.php` file
     - Change the class name from `BoilerplateStartModule` to `TodoModule`
@@ -97,7 +97,7 @@ Go to views folder
 Hi, I am TODO module frontend index '<?php echo $this->module->var1 ?>'
 ```
 
-### Congratulation, you make it!
+### Congratulation, you made it!
 You are now ready to install this new module you have just created.
 After install the module from backend, you may access your module frontend with url: `https://mydomain.com/todo`
 
