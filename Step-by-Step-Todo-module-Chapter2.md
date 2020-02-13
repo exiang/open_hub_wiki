@@ -44,14 +44,15 @@ return array(
 1. Click on `CRUD Generator` on the left side of the screen(or access it at `https://mydomain.com/yee/crud/index`)
    - Set `Model Class` to `application.modules.todo.models.Todo`
    - Set Make sure `Controller ID` is `todo/todo`
-2. Now, you may access backend to manage todo records from `https://mydomain.com/todo/todo/admin`
+2. Click Preview and then click Generate
+3. Now, you may access backend to manage todo records from `https://mydomain.com/todo/todo/admin`
 
 
 ### Enhance it
-#### Automatically track creator
-Click `Create Todo`, you will find a list of user in the form which doesn't looks right and should be remove. When a new Todo record saved to database, we will like to know who created it. This should be done automatically in model `beforeSave` using data from user session to prevent being tempered. 
+#### A. Automatically track creator
+1.Click `Create Todo` on the side menu bar on the right. You will see a list of users in the dropdown field of form which doesn't looks right and should be removed. We would keep track of who created the record when a new Todo record is created and saved to database. This should be done automatically in model `beforeSave` using data from user's browser session to prevent being the record from being tampered with. 
 
-1. Edit `protected/modules/todo/views/todo/_form.php` and remove this chuck:
+1. Edit `protected/modules/todo/views/todo/_form.php` and remove this section:
 ```php
 <div class="form-group <?php echo $model->hasErrors('user_id') ? 'has-error':'' ?>">
 	<?php echo $form->bsLabelEx2($model,'user_id'); ?>
@@ -61,7 +62,8 @@ Click `Create Todo`, you will find a list of user in the form which doesn't look
 	</div>
 </div>
 ```
-2. Edit `protected/modules/todo/models/Todo.php` and replace `beforeValidate()` function with:
+2. Refresh your browser and the User dropdown field should be removed from the form
+3. Open `protected/modules/todo/models/Todo.php` and insert the following codes into `beforeValidate()` function.:
 ```php
 public function beforeValidate() 
 {
@@ -73,12 +75,13 @@ public function beforeValidate()
 	return parent::beforeValidate();
 }
 ```
+EXPLANATION: The code gets the user's id from the browser session and inserts it into user_id variable before the form is validated to be saved later.
 
 
-#### Add to navigation
-You may realised there is no easy way to access this page other than from the URL. It will be more user friendly if we can browse for it from the main navigation system in backend.
+#### B. Add to navigation
+You may realised that there is no easy way to access this page other than from the accessing URL directly. It will be more user friendly if we can browse for it from the main navigation system in backend.
 
-1. Edit `protected/modules/todo/TodoModule.php`, under `getNavItems()`, add:
+1. Edit `protected/modules/todo/TodoModule.php`, under `getNavItems()` and insert the following case:
 
 ```php
 case 'backendNavService':{
@@ -98,6 +101,8 @@ case 'backendNavService':{
 	break;
 }
 ```
+EXPLANATION: This code adds a new nav item to the dropdown on the main backend nav bar.
+2. You should now be able to access the todo module page easily from the main navbar at the top via Services>TODO>Todo
 
 ## Next Chapter
 [Chapter 3](Step-by-Step-Todo-module-Chapter3) - Upgrade and link to Organization model
