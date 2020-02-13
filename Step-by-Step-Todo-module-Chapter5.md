@@ -1,14 +1,14 @@
 ## Chapter 5
-Advance use case
+Advanced use cases
 
 ## Settings in Module
 There are 2 methods to define a setting in module.
 
-First method is introduced in Chapter 1, where you can define variable in `protected/modules/todo/TodoModule.php` and use it with syntax `<?php echo $this->module->var1 ?>`. This none hardcoded method allows admin to edit configuration files like `protected/modules/todo/main.php` to change its value.
+First method is introduced in Chapter 1, where you can define variable in `protected/modules/todo/TodoModule.php` and use it with syntax `<?php echo $this->module->var1 ?>`. This non-hardcoded method allows admin to edit configuration files like `protected/modules/todo/main.php` to change its value.
 
-The method 2, an alternative to module settings, which is by using the functionalities provided by `Setting` default model. Unlike method 1 which is stored in file, method 2 is stored in database and accessible from `Backend > Site > Setting`.
+The 2nd method, an alternative to module settings which is by using the functionalities provided by `Setting` default model. Unlike method 1 which is stored in file, method 2 is stored in database and accessible from `Backend > Site > Setting`.
 
-To setup a setting, add inside `install()` function in file `protected/modules/todo/TodoModule.php`:
+To setup a setting, add the code inside `install()` function in file `protected/modules/todo/TodoModule.php`:
 
 `$this->setupSetting('todo-defaultDisplayLimit', '100', array('datatype' => 'integer'));`
   * This will create a setting entry with key `todo-defaultDisplayLimit` of `integer` data type and has default value of `100`
@@ -17,10 +17,10 @@ To setup a setting, add inside `install()` function in file `protected/modules/t
 To use a setting:
 
 `Setting::code2value('todo-defaultDisplayLimit', 50)`
-  * 50 is the default value to use when todo-defaultDisplayLimit not found or set
+  * 50 is the default error code value to use when todo-defaultDisplayLimit not found or set
 
 ## Inject CSS & JS to application scope
-There are scenario where your module need to apply CSS and Javascript to the entire application beyond module scope. e.g. a bookmark module will needs to add an 'Add to bookmark' button across all pages. 
+There are scenarios where your module need to apply CSS and Javascript to the entire application beyond module scope. e.g. a bookmark module will needs to add an 'Add to bookmark' button across all pages. 
 
 OpenHub module support this thru `protected/modules/todo/TodoModule.php`:
 ```php
@@ -71,7 +71,7 @@ All you need to do next is to code your logic in the following list of files:
   * `protected/modules/todo/assets/javascript/frontend.shared.js`
 
 ## Command
-Your module can has Command Line functions to run back office functionality without worry about web server timeout limitation. A CLI command can also be escalate into cron job to run scheduled tasks automatically.
+Your module can contain Command Line functions to run back office functionality without worry about web server timeout limitation. A CLI command can also be escalate into cron job to run scheduled tasks automatically.
 
 Create file `protected/modules/todo/commands/TodoCommand.php` and fill with content:
 ```php
@@ -107,7 +107,7 @@ php yiic todo Shout --param1=Hello --param2=World
 To turn it into a cron command, please refer to this [documentation](Cron-Commands).
 
 ## Multilingual i18n
-Your module may like to support multilingual and internationalization (i18n). Please refer to this [documentation](i18n) for detail.
+Your module might need to support multilingual and internationalization (i18n). Please refer to this [documentation](i18n) for more details.
 
 In short: 
 1. Change all your interface text to i18n format. e.g. from `Hello World` to `<?php echo Yii:t('todo', 'Hello World')?>`
