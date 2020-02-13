@@ -1,8 +1,8 @@
 ## Chapter 4
-In this chapter, we explore how to build web API interface for TODO module. We will be creating a public API where external developers can query a list of TODOs of a specific organization.
+In this chapter, we will explore how to build web API interface for TODO module. We will be creating a public API where external developers can query a list of TODOs of a specific organization.
 
 ### Web API
-WAPI (Web API) is a default module ship with OpenHub. WAPI helps you easily setup and test your module API functions thru Swagger interface.
+WAPI (Web API) is a default module shipped with OpenHub. WAPI helps you easily setup and test your module API functions thru Swagger interface.
 
 ![](https://user-images.githubusercontent.com/5336690/74059169-7fb2f700-4a22-11ea-830f-f6ce7649cbd8.png)
 
@@ -106,12 +106,12 @@ class getTodos extends Action
 }
 ```
 
-> Remember we created `getTodos($organization, $limit)` in `HubTodo` model in Chapter 3? Centralize your code in this way might seems troublesome at first but allow easier reference to it as your module getting more complicated
+> Remember that we created `getTodos($organization, $limit)` in `HubTodo` model in Chapter 3? Centralizing your code in this way might seems troublesome at first but it allows easier reference to it as your module becomes increasingly complicated
 
 3. Go to `https://mydomain.com/wapi/swagger?code=todo&format=yaml&module=todo`, your web API is now up and running, ready to test.
 ![](https://user-images.githubusercontent.com/5336690/74060699-7ecf9480-4a25-11ea-8358-021d2cda4291.png)
 
-4. Click `Execute` after inserted all the parameters for result
+4. Click `Execute` after inserting all the parameters for result
 ![](https://user-images.githubusercontent.com/5336690/74061274-a8d58680-4a26-11ea-9d10-8b9ac93c6936.png)
 
 > Copy `toApi()` function from `protected/modules/todo/models/TodoBase.php` to  `protected/modules/todo/models/Todo.php` to make changes to output data.
