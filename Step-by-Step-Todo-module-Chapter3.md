@@ -290,7 +290,7 @@ public function actionCreate($organizationId='')
     $model->organization_id = $organizationId;
     ...
 ```
-3. Add 
+3. Replace the content of _view-organization-todo.php with this code:
 ```php
 <?php $todos = $model->getTodoItems() ?>
 <?php if(!empty($actions['todo'])): ?>
