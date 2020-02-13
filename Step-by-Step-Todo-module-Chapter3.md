@@ -250,12 +250,13 @@ Create a new partial view at `protected/modules/todo/views/backend/_view-organiz
 <?php endforeach; ?>
 </ol>
 ```
- 
+Now, we view list of TODO in the tab of the organization details page at https://yourdomain.com/organization/view?id=999.
+
 > For more information on view tab injection, please refer to [Module Function Hooks \ getOrganizationViewTabs
 ](Module-Function-Hooks#getorganizationviewtabs)
 
-### Create an action button
-Next, we like to add an extra button to easily create TODO in the above tab.
+### Step 4: Create an action button
+Next, we would like to add an extra button to easily create new TODO in the tab.
 
 1. Modify `getOrganizationActions()` in `protected/modules/todo/TodoModule.php`
 
@@ -287,7 +288,27 @@ public function actionCreate($organizationId='')
 {
     $model=new Todo;
     $model->organization_id = $organizationId;
-
+    ...
+```
+3. Add 
+```php
+<?php $todos = $model->getTodoItems() ?>
+<?php if(!empty($actions['todo'])): ?>
+<div class="row">
+    <div class="col col-md-12">
+    <div class="well text-center">
+    <?php foreach($actions['todo'] as $action): ?>
+        <a class="margin-bottom-sm btn btn-<?php echo $action['visual']?>" href="<?php echo $action[url] ?>" title="<?php echo $action['title'] ?>"><?php echo $action[label] ?></a>
+    <?php endforeach; ?>
+    </div>
+    </div>
+</div>
+<?php endif; ?>
+<ol>
+<?php foreach($todos as $todo): ?>
+    <li><span class="label label-default"><?php echo $todo->formatEnumStatus($todo->status) ?></span> <a href="<?php echo $this->createUrl('todo/todo/view', array('id'=>$todo->id)) ?>"><?php echo $todo->title ?></a> by <?php echo $todo->user->username ?> created on <?php echo Html::formatDateTime($todo->date_added) ?></li>
+<?php endforeach; ?>
+</ol>
 ```
 
 ### Handling Organization Merging 
