@@ -42,8 +42,8 @@ return array(
 
 ### Create a CRUD controller and views
 1. Click on `CRUD Generator` on the left side of the screen(or access it at `https://mydomain.com/yee/crud/index`)
-- Set `Model Class` to `application.modules.todo.models.Todo`
-- Set Make sure `Controller ID` is `todo/todo`
+   - Set `Model Class` to `application.modules.todo.models.Todo`
+   - Set Make sure `Controller ID` is `todo/todo`
 2. Now, you may access backend to manage todo records from `https://mydomain.com/todo/todo/admin`
 
 
