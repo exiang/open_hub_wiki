@@ -30,6 +30,12 @@ return array(
 		'extra'=>array(
 		)
 	),
+        'neo4j' => array (
+                'attributes' => array(
+                    'id' => 'string',
+                    'title' => 'string'
+        )
+    )
 ); 
 ```
 2. Generate the model with yee at `https://mydomain.com/yee/model/index`
