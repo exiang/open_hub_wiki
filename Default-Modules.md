@@ -1,15 +1,18 @@
 These are the default modules bundle with the package.
 
-  * [BoilerplateStart](BoilerplateStart)
-  * [Journey](Journey)
-  * [F7](F7) Form - Custom Form builder
-  * [Comment](Comment)
-  * [Currency](Currency)
-  * [esLog](esLog) - Application log using Elastic Search
-  * [Wapi](WAPI) - Web API
-  * [Registry](Registry) - 
-  * [Request](Request) - Generic request database, store request to be process by cron etc
-  * [Junk](Junk) - To dump junk data, useful when testing with callback restful api
-  * [Cache](Cache) - 
-  * [Service](Service) - 
-  * [Sample](Sample)
+  * [BoilerplateStart](Module-boilerplateStart)
+  * [Challenge](Module-challenge)
+  * [Collection](Module-collection)
+  * [Comment](Module-comment)
+  * [EsLog](Module-esLog) - Application log using Elastic Search
+  * [Eventbrite](Module-eventbrite)
+  * [F7](Module-f7) Form - Custom Form builder
+  * [Interest](Module-interest) - 
+  * [Journey](Module-journey)
+  * [OpenHub](Module-openHub) - 
+  * [Recommendation](Module-recommendation) - 
+  * [Resource](Module-resource) - 
+  * [Sample](Module-sample)
+  * [Service](Module-service) - 
+  * [Wapi](Module-wapi) - Web API
+  * [Yee](Module-yee) - Code Generator
