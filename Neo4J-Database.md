@@ -11,5 +11,5 @@ Graph database is great tool to look into relationship of a data with another da
 ## Guides
 
 * [Installation](Install-Neo4J)
-* [Extension Setup](Neo4j-Extension-Setup)
+* [Data Structure](Neo4j-Data-Structure)
 * [Functions Usage](Neo4J-Functions)
