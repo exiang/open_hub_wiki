@@ -12,6 +12,12 @@ Neo4jModelName::model($this)->sync();
 Neo4jUser::model($this)->sync();
 ```
 
+Get the enable or disable status from the config
+
+```php
+Yii::app()->neo4j->getStatus()
+```
+
 ## Examples
 Find all Users
 
