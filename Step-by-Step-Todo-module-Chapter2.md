@@ -38,6 +38,8 @@ return array(
     )
 ); 
 ```
+Please refer [Neo4J Data Structure](Neo4j-Data-Structure) to get a glimpse on the data type available.
+
 2. Generate the model with yee at `https://mydomain.com/yee/model/index`
    - Set `Table Name` value to `todo`. `Model Class` value will be automatically populated.
    - Set `model path` value to `application.modules.todo.models`
