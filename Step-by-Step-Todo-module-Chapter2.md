@@ -32,8 +32,12 @@ return array(
 	),
         'neo4j' => array (
                 'attributes' => array(
+                    'name' => 'type', // name should match with created model attribute and type can be 'string', 'int', 'boolean' or 'float'
                     'id' => 'string',
-                    'title' => 'string'
+                    'title' => 'string',
+                    'price' => 'float',
+                    'is_active' => 'boolean',
+                    'date_created' => 'int',
         )
     )
 ); 
