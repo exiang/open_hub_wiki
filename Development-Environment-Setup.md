@@ -32,17 +32,17 @@ To setup Docker on local development server, we highly recommend using docker th
 
 ## Steps by Steps
 
-  1. Create all the required dist folders:
-    * /protected/messages
-    * /protected/vendor
-    * /public_html/assets
-    * /public_html/uploads
-  2. Update composer
+1. Create all the required dist folders:
+  * `protected/messages`
+  * `protected/vendor`
+  * `public_html/assets`
+  * `public_html/uploads`
+2. Update composer
 ```bash
 cd ~/docker/magic_hub_docker
 ./bash.sh
 cd /var/www/open_hub/protected
 composer update
 ```
-  3. Complete .env files 
-  4. Run message command
+3. Complete `protected/.env` files 
+4. Run message command
