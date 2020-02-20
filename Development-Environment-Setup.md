@@ -50,6 +50,7 @@ To setup Docker on local development server, we highly recommend using docker th
 1. Create all the required dist folders:
   * `protected/messages`
   * `protected/vendor`
+  * `protected/overrides`
   * `protected/runtime`
   * `public_html/assets`
   * `public_html/uploads`
