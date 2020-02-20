@@ -37,8 +37,10 @@ To setup Docker on local development server, we highly recommend using docker th
 1. Create all the required dist folders:
   * `protected/messages`
   * `protected/vendor`
+  * `protected/runtime`
   * `public_html/assets`
   * `public_html/uploads`
+
 2. Update composer
 ```bash
 cd ~/docker/magic_hub_docker
