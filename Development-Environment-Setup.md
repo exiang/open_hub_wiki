@@ -29,3 +29,20 @@ To get started with OpenHub, you will need to setup a local development environm
 
 ## Setup with Docker
 To setup Docker on local development server, we highly recommend using docker than the manual way. Use docker from repo: [hub_docker](https://github.com/mymagic/hub_docker). Refer to the setup documents there
+
+## Steps by Steps
+
+  1. Create all the required dist folders:
+    * /protected/messages
+    * /protected/vendor
+    * /public_html/assets
+    * /public_html/uploads
+  2. Update composer
+```bash
+cd ~/docker/magic_hub_docker
+./bash.sh
+cd /var/www/open_hub/protected
+composer update
+```
+  3. Complete .env files 
+  4. Run message command
