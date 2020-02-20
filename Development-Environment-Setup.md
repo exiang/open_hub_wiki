@@ -6,6 +6,9 @@ To get started with OpenHub, you will need to setup a local development environm
   * PHP version: 7.2
     * [YAML](https://www.php.net/manual/en/book.yaml.php)
     * [CURL](https://www.php.net/manual/en/book.curl.php)
+    * [GD]
+    * [REDIS]
+    * [ZLIB]
   * [MySQL 5.5 (must be able to support json query)]()
   * [AWS S3](https://aws.amazon.com/s3/)
   * [Elastic Search](https://www.elastic.co/)
