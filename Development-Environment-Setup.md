@@ -35,7 +35,17 @@ To get started with OpenHub, you will need to setup a local development environm
 ## Setup with Docker
 To setup Docker on local development server, we highly recommend using docker than the manual way. Use docker from repo: [hub_docker](https://github.com/mymagic/hub_docker). Refer to the setup documents there
 
-## Steps by Steps
+## Preparation
+### Setup AWS S3 buckets
+### Setup AWS Elastic Cache - REDIS
+### Setup AWS Elastic Search
+### Setup Neo4J
+### Setup Mandrill
+### Get a Google API Account
+### Get an Open Exchange Rate Account
+### Get a MaGIC Connect Account
+
+## Application Setups
 
 1. Create all the required dist folders:
   * `protected/messages`
@@ -52,4 +62,8 @@ cd /var/www/open_hub/protected
 composer update
 ```
 3. Complete `protected/.env` files 
-4. Run message command
+4. Run message command 
+```bash 
+php yiic message config/message.php 
+```
+5. Test from url `https://openhub.mymagic.my/test`
