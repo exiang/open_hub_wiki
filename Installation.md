@@ -18,8 +18,9 @@
     1. Setup Redis server for faster caching (optional) or use default file cache
     1. Setup Cloudflare (optional) to use its HTTPS service
 3. Upload to web server and unzip
-4. Modify configuration files under `protected/config`, all `*.dist.php` need to copy to `*.php` and has variable in it modified according to your environment
+4. Copy `protected/dist.env` to `protected/.env`, and has variable in it modified according to your environment
 5. Make sure the following directory and all files in it are writable by server
+    * `protected/vendor`
     * `protected/runtime`
     * `protected/messages`
     * `protected/data`
@@ -30,108 +31,3 @@
 6. Setup crons
 7. Login to Backend
     * Update Settings
-
-
-### Config Files
-#### main.php
-Located at `protected/config/main.php`
-
-1. change the application name to yours, e.g.
-```
-'name' => 'MaGIC (Dev)',
-```
-
-2. under `components\requests\csrfCookie`, set to your domain
-```
-'domain' => '.mymagic.my',
-```
-
-3. under `components\db`, set your database connection credential
-```
-'db' => array(
-    'connectionString' => 'mysql:host=localhost;dbname=magic_hub',
-    'username' => 'root',
-    'password' => 'mypassword',
-    ...
-),
-```
-
-4. under `components\cache`, you may choose to use the default file cache
-```
-'cache' => array(
-    'class' => 'CFileCache',
-    ...
-),
-```
- or using a redis cache server for scalability. Please take note that Cluster Redis Server is not supported by Yii1.
-```
-'cache' => array(
-    //'class' => 'CFileCache', // aws redis only available for local vpn
-    'class' => 'CRedisCache',
-    'hostname' => 'myRedisServerHost.com:6379',
-    'port'=>6379,
-),
-```
-
-5. under `components\esLog`,  you may choose to either enable or disable it. esLog used AWS Elastic Search to log users activities. 
-```
-'esLog' => array(
-    'class' => 'application.yeebase.components.EsLog',
-    'esLogRegion' => '',
-    'enableEsLog' => true,
-    'esLogIndexCode' => 'log-default',
-    'esLogEndpoint' => '',
-    'esLogKey' => '',
-    'esLogSecret' => '',
-    'esTestVar' => '123',
-),
-``` 
-
-6. under `components\s3`, you has to set the `aKey`(api key) and `sKey`(secret key) to your AWS S3 bucket.
-```
-'s3' => array(
-    'class' => 'application.yeebase.extensions.s3.ES3',
-    'aKey' => '',
-    'sKey' => '',
-),
-```
-
-7. under `components\neo4j`, you may choose to either enable or disable it and set your neo4j database connection credential
-
-```
-'neo4j' => array(
-	'enable' => true, // enable or disable neo4j database
-	'class'=>'application.extensions.neo4j.NeoEntity',
-	'neoConnectionString' => '', // protocol://username:password@neo4jurl:porttype  -- type port (http)7474, (bolt)7687 ex. bolt://neo4j:password@localhost:7687
-),
-```
-#### console.php
-This is the `main.php` version of console environment for command interface.
-
-#### params.php
-This is the application params that shared among web controller and console command interfaces.
-* **maintenance** - true|false, set `true` to temporary disable the site to enable maintenance mode 
-* **dev** - true|false, set `true` to mark this is a development environment
-* **cache** - true|false, to enable application wide cache or not
-* **environment** - development|staging|production, specify the environment mode of this installation
-* **sourceCurrency** - MYR
-* **languages** - Array, specified languages supported by this system which is align with your database. e.g.
-```
-'languages'=>array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
-```
-* **frontendLanguages** - Array, subset of your supported languages that you like to make it available to frontend. e.g.
-```
-'frontendLanguages'=>array('en' => 'English', 'ms' => 'Bahasa'),
-```
-* **backendLanguages** - Array, subset of your supported languages that you like to make it available in backend. e.g.
-```
-'backendLanguages'=>array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
-```
-* **adminEmail** - email address of administrator
-* **webmasterEmail** - published email for this website
-* **routineEmails** - Array, a list of emails to be notify by cron activities. e.g.
-```
-'routineEmails'=>array('exiang83@gmail.com'),
-```
-
-#### path.php
