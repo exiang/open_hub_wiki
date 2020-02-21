@@ -2,6 +2,7 @@ This section describes technical aspects of the OpenHub Core.
   * [Coding Standard](Coding-Standard)
   * [Naming Convention](Naming-Convention)
   * [The Core Architecture](The-Core-Architecture)
+  * [Configuration](Configuration)
   * [Database](Database)
   * [Components](Components)
   * [Layouts & Views System](Layouts-and-Views-System)
