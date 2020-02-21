@@ -37,6 +37,29 @@ To setup Docker on local development server, we highly recommend using docker th
 
 ## Preparation
 ### Setup AWS S3 buckets
+We needs 2 buckets here, one for public access and another to store secure files
+#### Public Bucket
+1. Create a bucket and name it `openhub-staging`
+2. Make sure `Block all public access` is `off`
+3. Go to `Properties` and `Static Website Hosting`, select `Use this bucket to host a website`
+3. Here is the bucket policy for your reference:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::openhub-staging/*"
+        }
+    ]
+}
+```
+#### Secure Bucket
+1. Create a bucket and name it `openhub-staging-secure`
+2. Make sure `Block all public access` is `on`
 ### Setup AWS Elastic Cache - REDIS
 ### Setup AWS Elastic Search
 ### Setup Neo4J
