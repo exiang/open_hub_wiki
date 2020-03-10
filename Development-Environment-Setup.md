@@ -69,8 +69,11 @@ We needs 2 buckets here, one for public access and another to store secure files
 ### Get a MaGIC Connect Account
 
 ## Application Setups
+1. Make sure repo is loaded correctly.
+Open Hub used submodule at `protected/yeebase` and `public_html/themes`, make sure codes are loaded properly too.
 
-1. Create all the required dist folders:
+``` git submodule update --init --recursive --force```
+2. Create all the required dist folders:
   * `protected/messages`
   * `protected/vendor`
   * `protected/overrides`
@@ -78,16 +81,16 @@ We needs 2 buckets here, one for public access and another to store secure files
   * `public_html/assets`
   * `public_html/uploads`
 
-2. Update composer
+3. Update composer
 ```bash
 cd ~/docker/magic_hub_docker
 ./bash.sh
 cd /var/www/open_hub/protected
 composer update
 ```
-3. Complete `protected/.env` files 
-4. Run message command 
+4. Complete `protected/.env` files 
+5. Run message command 
 ```bash 
 php yiic message config/message.php 
 ```
-5. Test from url `https://openhub.mymagic.my/test`
+6. Test from url `https://openhub.mymagic.my/test`
