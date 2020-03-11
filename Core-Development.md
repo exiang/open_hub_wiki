@@ -10,4 +10,5 @@ This section describes technical aspects of the OpenHub Core.
   * [Master Data](Master-Data)
   * [Default Modules](Default-Modules)
   * [Cron](Cron-Commands)
+  * [DevOps](DevOps)
 
