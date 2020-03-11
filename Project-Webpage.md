@@ -1,1 +1,1 @@
-OpenHub project webpage is open source as well and available at `/docs` folder.
+OpenHub project webpage is open source as well and available at `docs/` folder.
