@@ -6,6 +6,7 @@ This section describes technical aspects of the OpenHub Core.
   * [Database](Database)
   * [Components](Components)
   * [Layouts & Views System](Layouts-and-Views-System)
+  * [UI Components](UI Components)
   * [Common Building Block](Common-Building-Block)
   * [Master Data](Master-Data)
   * [Default Modules](Default-Modules)
