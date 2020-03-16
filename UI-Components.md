@@ -1,3 +1,4 @@
+## Date Time picker
 ```php
 <?php $this->widget('application.yeebase.extensions.CJuiDateTimePicker.CJuiDateTimePicker', array(
     'name' => 'dateStart',
