@@ -28,11 +28,11 @@ First,  `Event Mapping Instruction` in the form must be set. This will tell the 
                 "approved"
             ],
             "mappings": {
-                "eventRegistration.fullname": "f7.f1name",
-                "eventRegistration.email": "f7.f1email",
-                "eventRegistration.phone": "f7.f1phone",
-                "eventRegistration.gender": "f7.f1gender",
-                "eventRegistration.nationality": ""
+                "fullname": "f7.f1name",
+                "email": "f7.f1email",
+                "phone": "f7.f1phone",
+                "gender": "f7.f1gender",
+                "nationality": ""
             }
         }
     ]
