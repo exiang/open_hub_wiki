@@ -28,7 +28,7 @@ First,  `Event Mapping Instruction` in the form must be set. This will tell the 
                 "approved"
             ],
             "mappings": {
-                "fullname": "f7.f1name",
+                "full_name": "f7.f1name",
                 "email": "f7.f1email",
                 "phone": "f7.f1phone",
                 "gender": "f7.f1gender",
