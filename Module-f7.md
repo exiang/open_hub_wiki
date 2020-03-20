@@ -1,5 +1,5 @@
 ## Sync to Event
-One of the benefit of using F7 form is it has built in ability to sync form submissions to event. Both Organization and Individual registration can be sync.
+One of the benefit of using F7 form is it has built in ability to sync form submissions to event. Both Organization and Individual registration information can be extract from a F7 Form and sync to Event as 'Company Participants' (`event_organization`) & 'Registrations' (`event_registration`).
 
 First,  `Event Mapping Instruction` in the form must be set. This will tell the system on how to map data between a F7 form and event.
 
