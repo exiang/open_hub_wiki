@@ -15,7 +15,7 @@ First,  `Event Mapping Instruction` in the form must be set. This will tell the 
             "workflows": {
                 "application": "participant",
                 "screening": "participant",
-                "inProgram": "selectedParticipant",
+                "inprogram": "selectedParticipant",
                 "rejected": "rejectedParticipant"
             }
         }
@@ -25,14 +25,15 @@ First,  `Event Mapping Instruction` in the form must be set. This will tell the 
         {
             "name": "Founder 1",
             "attendance_map_workflow": [
-                "approved"
+                "inprogram"
             ],
             "mappings": {
                 "full_name": "f7.f1name",
                 "email": "f7.f1email",
                 "phone": "f7.f1phone",
                 "gender": "f7.f1gender",
-                "nationality": ""
+                "organization": "f7.startup",
+                "nationality": "MY"
             }
         }
     ]
