@@ -38,3 +38,5 @@ First,  `Event Mapping Instruction` in the form must be set. This will tell the 
     ]
 }
 ```
+
+Please note that on each execution, system will automatically clear all target data with the same form and vendor code `f7`.
