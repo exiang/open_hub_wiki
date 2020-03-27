@@ -4,6 +4,7 @@ This section describes technical aspects of the OpenHub Core.
   * [The Core Architecture](The-Core-Architecture)
   * [Configuration](Configuration)
   * [Database](Database)
+  * [Extending Model with Meta](Extending-Model-Meta)
   * [Components](Components)
   * [Layouts & Views System](Layouts-and-Views-System)
   * [UI Components](UI-Components)
