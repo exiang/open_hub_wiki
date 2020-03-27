@@ -4,6 +4,8 @@ Meta allowing you to extends a model without changing database structure. This i
 ## Enable Meta for Model
 Meta do not automatically enable for model, developers need to do it thru coding.
 
+[Refer here](Naming-Convention#meta-data) on how to name your meta variable.
+
 ```php
 public function init()
 {
