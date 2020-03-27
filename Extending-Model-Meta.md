@@ -41,3 +41,20 @@ public function relations()
     );
 }
 ```
+
+## Known Issues
+### Meta Items value cant set due to bad code from modules' behavior
+You tried to set value `$org->_dynamicData[organization-abc'] = 'Hello World' but it is not working, meta value is not saved. 
+But when you commented the following line from model `Organization` for example, the problem no longer exists. 
+```php
+public function behaviors()
+{
+    /*foreach (Yii::app()->modules as $moduleKey => $moduleParams) {
+        if (isset($moduleParams['modelBehaviors']) && !empty($moduleParams['modelBehaviors']['Organization'])) {
+            $return[$moduleKey] = Yii::app()->getModule($moduleKey)->modelBehaviors['Organization'];
+            $return[$moduleKey]['model'] = $this;
+        }
+    }*/
+}
+```
+This show the sign where one of your module (as long as it is initiated) is causing this issue.
