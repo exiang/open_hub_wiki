@@ -29,6 +29,6 @@ Eventbrite module not only allows you to sync your events from eventbrite, but a
 #### when registration and attendance created & updated
   * Payload URL: Insert `https://openhub.mymagic.my/eventbrite/callback/attendeeChanges`
   * Event: Select `All Event`
-  * make sure you checked `barcode.checked_in`, `attendee.updated`, `barcode.un_checked_in` too
+  * make sure you checked `attendee.updated`, `attendee.checked_in`(`barcode.checked_in`), `attendee.checked_out`(`barcode.un_checked_in`) too
 
 ### Setup Webhooks in OpenHub
