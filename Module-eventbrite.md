@@ -54,3 +54,4 @@ Request Payload
   }
 } 
 ```
+6. If you setup everything correctly, at OpenHub Backend `Event -> Sync from Eventbrite`, you should see your organizations display in the list. Click on it and you should see the list of events available in your eventbrite account.
