@@ -14,17 +14,12 @@ Eventbrite module not only allows you to sync your events from eventbrite, but a
 
 ### Step 2: Setup Webhooks in Eventbrite
 1. Login Eventbrite, goto `Account Settings -> Developer Links -> Webhooks`
-2. You will need to create 3 webhooks here that this OpenHub eventbrite module supported:
+2. You will need to create 2 webhooks here that this OpenHub eventbrite module supported:
 
-#### when event created
-* Payload URL: Insert `https://openhub.mymagic.my/eventbrite/callback/eventCreate`
+#### when event created & updated
+* Payload URL: Insert `https://openhub.mymagic.my/eventbrite/callback/eventChanges`
 * Event: Select `All Event`
-* make sure you checked `event.created` too
-
-#### when event updated
-* Payload URL: Insert `https://openhub.mymagic.my/eventbrite/callback/eventUpdate`
-* Event: Select `All Event`
-* make sure you checked `event.updated` too
+* make sure you checked `event.created`, `event.updated` too
 
 #### when registration and attendance created & updated
 * Payload URL: Insert `https://openhub.mymagic.my/eventbrite/callback/attendeeChanges`
