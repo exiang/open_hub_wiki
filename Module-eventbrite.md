@@ -19,7 +19,7 @@ Eventbrite module not only allows you to sync your events from eventbrite, but a
 #### when event created & updated
 * Payload URL: Insert `https://openhub.mymagic.my/eventbrite/callback/eventChanges`
 * Event: Select `All Event`
-* make sure you checked `event.created`, `event.updated` too
+* make sure you checked `event.created`, `event.updated`, `event.published`, `event.unpublished`, `organizer.updated`, `venue.updated` too
 
 #### when registration and attendance created & updated
 * Payload URL: Insert `https://openhub.mymagic.my/eventbrite/callback/attendeeChanges`
