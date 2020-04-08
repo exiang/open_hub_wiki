@@ -6,7 +6,7 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 
 ### Using Cloudflare
 Cloudflare is free and it helps you protect your server against DDOS. 
-First, point your domain name to cloudflare, then point it to AWS using A records:
+First, point your domain name to Cloudflare, then point it to AWS using A records:
 
 ```
 Type: A
@@ -17,6 +17,7 @@ Type: A
 Name: api-openhub.mymagic.my
 IPv4 Address: 64.128.128.128
 ```
+> If you ping `openhub.mymagic.my` now, you will find the IP address you get is not `64.128.128.128` but something else, eg. `100.24.16.200`. This is Cloudflare proxy IP, that's how it protect your real server from attack.
 
 ### Map IP in local hosts file
 IP address is hard to remember, you will like to map it to a hostname in your local machine for easier access.
