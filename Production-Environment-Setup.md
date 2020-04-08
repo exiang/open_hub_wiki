@@ -22,7 +22,7 @@ IPv4 Address: 64.128.128.128
 ### Map IP in local hosts file
 IP address is hard to remember, you will like to map it to a hostname in your local machine for easier access.
 
-In CLI:
+In Command Line Interface:
 ```sudo nano /etc/hosts```
 
 edit and save:
@@ -33,9 +33,9 @@ edit and save:
 > The reason we mapping to ip.openhub.mymagic.my but not openhub.mymagic.my is because we already routed openhub.mymagic.my thru Cloudflare and we do not what to interfere with it
 
 ### SSH in Mac
-We need to do a little setup on Mac now which will help us easily connect to this instance by just typing `ssh ip.openhub.mymagic.my`:
+We need to do a little setup on Mac now which will help us easily connect to this instance by just typing `ssh ip.openhub.mymagic.my`.
 
-In CLI:
+In Command Line Interface:
 ```sudo nano ~/.ssh/config```
 
 edit and save:
