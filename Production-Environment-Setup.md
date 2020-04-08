@@ -32,6 +32,7 @@ edit and save:
 > The reason we mapping to ip.openhub.mymagic.my but not openhub.mymagic.my is because we already routed openhub.mymagic.my thru Cloudflare and we do not what to interfere with it
 
 ### SSH in Mac
+We need to do a little setup on Mac now which will help us easily connect to this instance by just typing `ssh ip.openhub.mymagic.my`
 ```sudo nano ~/.ssh/config```
 
 edit and save:
