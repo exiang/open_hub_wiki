@@ -7,7 +7,8 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 ### Using Cloudflare
 Cloudflare is free and it helps you protect your server against DDOS. 
 Point your domain name to cloudflare using A records:
-<code>
+
+```
 Type: A
 Name: openhub.mymagic.my
 IPv4 Address: 64.128.128.128
@@ -15,8 +16,7 @@ IPv4 Address: 64.128.128.128
 Type: A
 Name: api-openhub.mymagic.my
 IPv4 Address: 64.128.128.128
-
-</code>
+```
 
 ### Map IP in local hosts file
 IP address is hard to remember, you will like to map it to a hostname in your local machine for easier access.
