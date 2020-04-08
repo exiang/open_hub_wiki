@@ -67,6 +67,9 @@ We needs 2 buckets here, one for public access and another to store secure files
 * Note down the `Primary Endpoint`
 
 ### Setup AWS Elastic Search
+  * Domain name: Just insert any name like `esearch`
+  * Note down the `Endpoint`
+
 ### Setup Neo4J
 ### Setup Mandrill
 ### Get a Google API Account
