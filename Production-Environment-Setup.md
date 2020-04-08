@@ -47,3 +47,9 @@ IdentityFile "~/private/path/to/aws/magic-secret.pem"
 ```
 
 You may get complaint on 'Permission for xxx Key are too open.' This command will help solving this: `chmod 600 ~/private/path/to/aws/magic-secret.pem`
+
+### Download a release
+```
+cd /home/ubuntu
+wget https://openhub-main.s3-ap-southeast-1.amazonaws.com/github/release/openhub-v0.4.zip
+```
