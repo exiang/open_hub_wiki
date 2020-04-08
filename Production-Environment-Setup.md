@@ -6,7 +6,7 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 
 ### Using Cloudflare
 Cloudflare is free and it helps you protect your server against DDOS. 
-Point your domain name to cloudflare using A records:
+First, point your domain name to cloudflare, then point it to AWS using A records:
 
 ```
 Type: A
