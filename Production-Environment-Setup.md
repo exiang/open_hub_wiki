@@ -1,5 +1,5 @@
 ### Pick a Domain
-In this case, assume it is openhub.mymagic.my.
+In this case, assume it is `openhub.mymagic.my`.
 
 ### Setup a EC2 instance
 Make sure you created an elastic IP and map to this instance. Assume your public elastic IP is `64.128.128.128`.
