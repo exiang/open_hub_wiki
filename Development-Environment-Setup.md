@@ -61,6 +61,10 @@ We needs 2 buckets here, one for public access and another to store secure files
 1. Create a bucket and name it `openhub-staging-secure`
 2. Make sure `Block all public access` is `on`
 ### Setup AWS Elastic Cache - REDIS
+* One replica will do
+* `cache.t3.micro` will do for the start
+* Untick `Multi-AZ with Auto-Failover`
+
 ### Setup AWS Elastic Search
 ### Setup Neo4J
 ### Setup Mandrill
