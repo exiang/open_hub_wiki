@@ -63,7 +63,8 @@ We needs 2 buckets here, one for public access and another to store secure files
 ### Setup AWS Elastic Cache - REDIS
 * One replica will do
 * `cache.t3.micro` will do for the start
-* Untick `Multi-AZ with Auto-Failover`
+* Uncheck `Multi-AZ with Auto-Failover`
+* Note down the `Primary Endpoint`
 
 ### Setup AWS Elastic Search
 ### Setup Neo4J
