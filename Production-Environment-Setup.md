@@ -45,3 +45,5 @@ Hostname ip.openhub.mymagic.my
 User ubuntu
 IdentityFile "~/private/path/to/aws/magic-secret.pem"
 ```
+
+You may get complaint on 'Permission for xxx Key are too open.' This command will help solving this: `chmod 600 ~/private/path/to/aws/magic-secret.pem`
