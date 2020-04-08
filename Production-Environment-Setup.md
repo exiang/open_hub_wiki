@@ -17,8 +17,8 @@ edit and save:
 
 edit and save:
 ```
-Host openhub.mymagic.my
-Hostname openhub.mymagic.my
+Host ip.openhub.mymagic.my
+Hostname ip.openhub.mymagic.my
 User ubuntu
 IdentityFile "~/private/path/to/aws/magic-secret.pem"
 ```
