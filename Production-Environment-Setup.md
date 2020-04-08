@@ -51,11 +51,11 @@ You may get complaint on 'Permission for xxx Key are too open.' This command wil
 ### Download a release
 ```
 cd /home/ubuntu
-wget https://openhub-main.s3-ap-southeast-1.amazonaws.com/github/release/openhub-v0.4.zip
+wget https://openhub-main.s3-ap-southeast-1.amazonaws.com/github/release/openhub-latest.zip
 ```
 
 When completed, unzip to `/var/www`:
 
 ```
-unzip openhub-v0.4.zip -d /var/www
+unzip openhub-latest.zip -d /var/www
 ```
