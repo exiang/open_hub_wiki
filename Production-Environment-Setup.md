@@ -124,4 +124,4 @@ unzip openhub-latest.zip -d /var/www
 ```
 
 ### Run Web Installer
-Open browser and go to `https://openhub.mymagic.my/installer`
+Open browser and go to `https://openhub.mymagic.my/installer`. Follow the instruction there and fill up everything.
