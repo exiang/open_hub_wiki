@@ -32,10 +32,10 @@ To get started with OpenHub, you will need to setup a local development environm
   * Staging - this is the staging site for beta testing (e.g. https://hub.mymagic.my)
   * Production - this is your live site (e.g. https://central.mymagic.my)
 
-## Setup with Docker
+## Setup local Docker for development
 To setup Docker on local development server, we highly recommend using docker than the manual way. Use docker from repo: [hub_docker](https://github.com/mymagic/hub_docker). Refer to the setup documents there
 
-## Remote Staging
+## Setup Remote Staging
 
 ```
 rm -rf /var/www/public_html/assets/*
