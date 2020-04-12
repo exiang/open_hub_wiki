@@ -5,7 +5,7 @@ Welcome to the OpenHub **developer documentation**. This developer documentation
 * interested in startup ecosystem digital tools' development
 
 ## Get your hand dirty
-* [Basics](Basics)
+* [Basics, Setup & Install](Basics)
 * [Build a Module](Build-Module)
 * [Override Core](Override-Core)
 * [Core Development](Core-Development)
