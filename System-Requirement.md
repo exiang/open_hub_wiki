@@ -6,7 +6,7 @@
     * [GD]
     * [REDIS]
     * [ZLIB]
-  * [MySQL 5.5 (must be able to support json query)]()
+  * MariaDb (must be able to support json query)
   * [AWS S3](https://aws.amazon.com/s3/)
   * [Elastic Search](https://www.elastic.co/)
   * [Redis Cache (optional, do NOT support cluster)](https://redis.io/)
