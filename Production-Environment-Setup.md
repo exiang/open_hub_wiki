@@ -67,7 +67,10 @@ Setup graph database server (Neo4j)
 Setup SMTP mail server. We recommend using transaction mail services from Mailchimp
 
 ### Get a Google API Account
+Google API account is required, use to translate address to lat long location etc. 
+
 ### Get an Open Exchange Rate Account
+Required for currency conversion to works. All monetary value stored in database in USD. Get a free account here [https://openexchangerates.org/signup/free](https://openexchangerates.org/signup/free).
 
 ### Acquire MaGIC Account
 OpenHub still reply on MaGIC Account for user authorization and authentication. This step has to be done by MaGICian with admin right.
