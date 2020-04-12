@@ -1,8 +1,5 @@
 > We are still in the process building a web interface installer to make installation easier for our users. Please stay tune with us.
 
-### Recommended Architecture
-![image](https://user-images.githubusercontent.com/5336690/72774597-225b2f80-3c46-11ea-9548-2dbe5b97cc7f.png)
-
 ### Manual Installation
 1. Download the distributed zip file
     * PHP composer dependency packages are included
