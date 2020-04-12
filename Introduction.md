@@ -32,4 +32,4 @@ The Controller manages synchronization events between the Model and the View, an
 If an action needs data to be changed, the Controller will “ask” the Model to change the data, and in turn the Model will notify the View that the data has been changed, so that the View can update itself.
 
 ## Yii Framework
-Using a proven and popular open-source framework will allow us to focus on our core business code (managing startup, tracking founder activities, etc.) with greater efficiency, while enjoying the stability of a globally recognized framework.
+Using a proven and popular open-source framework will allow us to focus on our core business code (managing startup, tracking founder activities, etc.) with greater efficiency, while enjoying the stability of a globally recognized framework. OpenHub is using the latest Yii 1.1.22 version.
