@@ -80,17 +80,5 @@ Open Hub used submodule at `protected/yeebase` and `public_html/themes`, make su
   * `protected/runtime`
   * `public_html/assets`
   * `public_html/uploads`
-
-3. Update composer
-```bash
-cd ~/docker/magic_hub_docker
-./bash.sh
-cd /var/www/open_hub/protected
-composer update
 ```
-4. Complete `protected/.env` files 
-5. Run message command 
-```bash 
-php yiic message config/message.php 
-```
-6. Test from url `https://openhub.mymagic.my/test`
+3. Complete `protected/.env` files 
