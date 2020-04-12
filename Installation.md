@@ -24,7 +24,17 @@
     * `protected/modules`
     * `protected/overrides`
     * `public_html/assets`
-    * `public_html/uploads`
-6. Setup crons
-7. Login to Backend
+    * `public_html/uploads
+6. Update composer
+```bash
+cd ~/docker/magic_hub_docker
+./bash.sh
+cd /var/www/open_hub/protected
+composer update
+7. Run message command 
+```bash 
+php yiic message config/message.php 
+```
+8. Setup crons
+9. Login to Backend
     * Update Settings
