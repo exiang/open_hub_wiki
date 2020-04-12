@@ -50,6 +50,11 @@ We needs 2 buckets here, one for public access and another to store secure files
   * Domain name: Just insert any name like `esearch`
   * Note down the `Endpoint`
 
+### Setup Neo4J
+### Setup Mandrill
+### Get a Google API Account
+### Get an Open Exchange Rate Account
+
 ### Acquire MaGIC Account
 OpenHub still reply on MaGIC Account for user authorization and authentication. This step has to be done by MaGICian with admin right.
 
