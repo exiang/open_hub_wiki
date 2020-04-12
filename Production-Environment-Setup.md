@@ -5,6 +5,10 @@ In this case, assume the setup is at `openhub.mymagic.my`. Please take note Open
 ### Setup EC2 instance
 Make sure you created an elastic IP and map to this instance. Assume your public elastic IP is `64.128.128.128`.
 
+1. Setup Ubuntu Server (18.04 & above)
+2. Setup Apache Web Server (Apache 2)
+3. Setup PHP 7.2 
+
 ### Setup RDS
 1. Select `Easy Create`
 2. Select `MariaDB` in configuration
@@ -40,7 +44,9 @@ We needs 2 buckets here, one for public access and another to store secure files
 #### Secure Bucket
 1. Create a bucket and name it `openhub-staging-secure`
 2. Make sure `Block all public access` is `on`
+
 ### Setup AWS Elastic Cache - REDIS
+Setup Redis server for faster caching (optional) or use default file cache. Here, we use REDIS.
 * One replica will do
 * `cache.t3.micro` will do for the start
 * Uncheck `Multi-AZ with Auto-Failover`
@@ -52,7 +58,11 @@ We needs 2 buckets here, one for public access and another to store secure files
   * Note down the `Endpoint`
 
 ### Setup Neo4J
+Setup graph database server (Neo4j)
+
 ### Setup Mandrill
+Setup SMTP mail server. We recommend using transaction mail services from Mailchimp
+
 ### Get a Google API Account
 ### Get an Open Exchange Rate Account
 
@@ -67,7 +77,8 @@ OpenHub still reply on MaGIC Account for user authorization and authentication. 
 4. Copy the Secret and Client ID.
 
 ### Using Cloudflare
-Cloudflare is free and it helps you protect your server against DDOS. 
+Cloudflare is free and it helps you protect your server against DDOS. We also use Cloudflare for it easy setup HTTPS.
+
 First, point your domain name to Cloudflare, then point it to AWS using A records:
 
 ```
@@ -112,6 +123,7 @@ You may get complaint on 'Permission for xxx Key are too open.' This command wil
 
 ## Setup OpenHub
 ### Download a release
+PHP composer dependency packages and SQL database structure are included.
 ```
 cd /home/ubuntu
 wget https://openhub-main.s3-ap-southeast-1.amazonaws.com/github/release/openhub-latest.zip
