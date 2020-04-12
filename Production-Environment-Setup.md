@@ -1,4 +1,7 @@
+> Here is our setup guide using most of AWS services. This is the recommended way but not the only way. 
+
 ## Preparation
+
 ### Pick a Domain
 In this case, assume the setup is at `openhub.mymagic.my`. Please take note OpenHub must run on a SSL enabled server thru https. Don't worry if you do not have a valid SSL cert. You can always use FREE Cloudflare for https.
 
