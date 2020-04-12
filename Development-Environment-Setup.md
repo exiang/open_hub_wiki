@@ -35,47 +35,6 @@ To get started with OpenHub, you will need to setup a local development environm
 ## Setup with Docker
 To setup Docker on local development server, we highly recommend using docker than the manual way. Use docker from repo: [hub_docker](https://github.com/mymagic/hub_docker). Refer to the setup documents there
 
-## Preparation
-### Setup AWS S3 buckets
-We needs 2 buckets here, one for public access and another to store secure files
-#### Public Bucket
-1. Create a bucket and name it `openhub-staging`
-2. Make sure `Block all public access` is `off`
-3. Go to `Properties` and `Static Website Hosting`, select `Use this bucket to host a website`
-3. Here is the bucket policy for your reference:
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AddPerm",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::openhub-staging/*"
-        }
-    ]
-}
-```
-#### Secure Bucket
-1. Create a bucket and name it `openhub-staging-secure`
-2. Make sure `Block all public access` is `on`
-### Setup AWS Elastic Cache - REDIS
-* One replica will do
-* `cache.t3.micro` will do for the start
-* Uncheck `Multi-AZ with Auto-Failover`
-* Note down the `Primary Endpoint`
-
-### Setup AWS Elastic Search
-  * Domain name: Just insert any name like `esearch`
-  * Note down the `Endpoint`
-
-### Setup Neo4J
-### Setup Mandrill
-### Get a Google API Account
-### Get an Open Exchange Rate Account
-### Get a MaGIC Connect Account
-
 ## Application Setups
 
 ```
