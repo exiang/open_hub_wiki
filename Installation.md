@@ -1,3 +1,3 @@
 * [System Requirements](System-Requirement)
-* Setup Development Environment
-* Setup Production Environment
+* [Development Environment Setup](Development-Environment-Setup)
+* [Production Environment Setup](Production-Environment-Setup)
