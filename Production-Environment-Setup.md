@@ -61,7 +61,7 @@ Setup Redis server for faster caching (optional) or use default file cache. Here
   * Note down the `Endpoint`
 
 ### Setup Neo4J
-Setup graph database server (Neo4j)
+Setup graph database server (Neo4j) following [instruction here](Neo4J-Database).
 
 ### Setup Mandrill
 Setup SMTP mail server. We recommend using transaction mail services from Mailchimp
