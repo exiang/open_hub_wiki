@@ -10,7 +10,4 @@ Welcome to the OpenHub **developer documentation**. This developer documentation
 * [Override Core](Override-Core)
 * [Core Development](Core-Development)
 * [API for Developers](API-for-Developers)
-* [Neo4J Database](Neo4J-Database)
-* [Multi Domains](Multi-Domains)
-* [Multilingual (i18n)](i18n)
 * [Contribute](Contribute)
