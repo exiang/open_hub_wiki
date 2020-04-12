@@ -19,8 +19,8 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 4. Wait for it to be created. When done, make sure you set `Public accessibility` to on.
 5. Test remote connectivity with mysqladmin
 6. Login and create database: 
-   * Charset: utf8mb4
-   * Collation: uft8mb4_unicode_ci
+   * Charset: `utf8mb4`
+   * Collation: `uft8mb4_unicode_ci`
 7. Last, copy the created database name, database hostname, database username and database user password.
 
 ### Setup AWS S3 buckets
