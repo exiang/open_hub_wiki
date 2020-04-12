@@ -24,7 +24,7 @@
     * `protected/modules`
     * `protected/overrides`
     * `public_html/assets`
-    * `public_html/uploads
+    * `public_html/uploads`
 6. Update composer
 ```bash
 cd ~/docker/magic_hub_docker
