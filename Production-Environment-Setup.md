@@ -1,8 +1,29 @@
 ### Pick a Domain
-In this case, assume the setup is at `openhub.mymagic.my`.
+In this case, assume the setup is at `openhub.mymagic.my`. Please take note OpenHub must run on a SSL enabled server thru https. Don't worry if you do not have a valid SSL cert. You can always use FREE Cloudflare for https.
 
 ### Setup a EC2 instance
 Make sure you created an elastic IP and map to this instance. Assume your public elastic IP is `64.128.128.128`.
+
+### Setup RDS
+1. Select `Easy Create`
+2. Select `MariaDB` in configuration
+3. Select `Free tier`
+4. Wait for it to be created. When done, make sure you set `Public accessibility` to on.
+5. Test remote connectivity with mysqladmin
+6. Login and create database: 
+  * Charset: utf8mb4
+  * Collation: uft8mb4_unicode_ci
+7. Last, copy the created database name, database hostname, database username and database user password.
+
+### Acquire MaGIC Account
+OpenHub still reply on MaGIC Account for user authorization and authentication. This step has to be done by MaGICian with admin right.
+
+1. Goto `https://account.mymagic.my/api`
+2. Click `Create New Client`
+3. Insert:
+  * Name: Anything that help you easily identify
+  * Redirect URL: https://square.sarawak.digital/connectCallback
+4. Copy the Secret and Client ID.
 
 ### Using Cloudflare
 Cloudflare is free and it helps you protect your server against DDOS. 
@@ -59,3 +80,4 @@ When completed, unzip to `/var/www`:
 ```
 unzip openhub-latest.zip -d /var/www
 ```
+
