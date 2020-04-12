@@ -45,6 +45,11 @@ We needs 2 buckets here, one for public access and another to store secure files
 * Uncheck `Multi-AZ with Auto-Failover`
 * Note down the `Primary Endpoint`
 
+
+### Setup AWS Elastic Search
+  * Domain name: Just insert any name like `esearch`
+  * Note down the `Endpoint`
+
 ### Acquire MaGIC Account
 OpenHub still reply on MaGIC Account for user authorization and authentication. This step has to be done by MaGICian with admin right.
 
