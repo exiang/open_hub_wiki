@@ -31,6 +31,7 @@ cd ~/docker/magic_hub_docker
 ./bash.sh
 cd /var/www/open_hub/protected
 composer update
+```
 7. Run message command 
 ```bash 
 php yiic message config/message.php 
