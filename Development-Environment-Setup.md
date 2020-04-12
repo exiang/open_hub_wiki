@@ -6,7 +6,7 @@ To get started with OpenHub development, you will need to setup a local developm
   * Production - this is your live site (e.g. https://central.mymagic.my)
 
 ## Setup local Docker for development
-To setup Docker on local development server, we highly recommend using this over the manual method. Use docker from repo: [hub_docker](https://github.com/mymagic/hub_docker). Refer to the setup documents there
+We highly recommend using this over the manual method. Use docker from repo: [hub_docker](https://github.com/mymagic/hub_docker). Refer to the setup documents there
 
 ## Setup Remote Staging
 Edit `sudo nano /home/ubuntu/repo/web-main.git/hooks/post-receive` and insert:
