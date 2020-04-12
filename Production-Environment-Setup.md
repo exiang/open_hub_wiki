@@ -7,7 +7,7 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 
 1. Setup Ubuntu Server (18.04 & above)
 2. Setup Apache Web Server (Apache 2)
-3. Setup PHP 7.2 
+3. Setup PHP 7.2 and all the required modules
 
 ### Setup RDS
 1. Select `Easy Create`
