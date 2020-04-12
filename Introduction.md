@@ -9,6 +9,7 @@ A module is an extension to OpenHub that enables any developer to add the follow
   * Communicate with other services (Acuity Scheduling, Futurelab, Envoy).
   * Expose additional functionality thru API interface.
 
+![image](https://user-images.githubusercontent.com/5336690/72774597-225b2f80-3c46-11ea-9548-2dbe5b97cc7f.png)
 ## MVC as root
 This is the same principle as the Model>View>Controller (MVC) architecture, only in a simpler and more accessible way.
 
