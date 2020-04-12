@@ -11,8 +11,8 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 4. Wait for it to be created. When done, make sure you set `Public accessibility` to on.
 5. Test remote connectivity with mysqladmin
 6. Login and create database: 
-  * Charset: utf8mb4
-  * Collation: uft8mb4_unicode_ci
+   * Charset: utf8mb4
+   * Collation: uft8mb4_unicode_ci
 7. Last, copy the created database name, database hostname, database username and database user password.
 
 ### Acquire MaGIC Account
@@ -21,8 +21,8 @@ OpenHub still reply on MaGIC Account for user authorization and authentication. 
 1. Goto `https://account.mymagic.my/api`
 2. Click `Create New Client`
 3. Insert:
-  * Name: Anything that help you easily identify
-  * Redirect URL: https://square.sarawak.digital/connectCallback
+   * Name: Anything that help you easily identify
+   * Redirect URL: https://square.sarawak.digital/connectCallback
 4. Copy the Secret and Client ID.
 
 ### Using Cloudflare
