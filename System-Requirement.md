@@ -1,4 +1,4 @@
-### System
+### Server System
   * Apache 2.0 and above
   * PHP version: 7.2
     * [YAML](https://www.php.net/manual/en/book.yaml.php)
