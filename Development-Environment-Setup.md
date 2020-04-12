@@ -1,4 +1,4 @@
-To get started with OpenHub, you will need to setup a local development environment where you can modify code and test it live on browser.
+To get started with OpenHub development, you will need to setup a local development environment where you can modify code and test it live on browser.
 
 ## Environment
   * Dev - your local machine will be use for the development (e.g. https://hubd.mymagic.my)
