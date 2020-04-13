@@ -15,7 +15,7 @@ Edit `sudo nano /home/ubuntu/repo/web-main.git/hooks/post-receive` and insert:
 rm -rf /var/www/public_html/assets/*
 cd /var/www/protected
 sudo mkdir /var/www/protected/vendor
-sudo chmod -R 755 /var/www/protected/vendor
+sudo chmod -R 777 /var/www/protected/vendor
 sudo chown -R ubuntu:www-data /var/www/protected/vendor
 sudo composer update
 cd /var/www/
