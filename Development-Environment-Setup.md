@@ -21,21 +21,21 @@ sudo composer update
 cd /var/www/
 sudo git --git-dir=/home/ubuntu/repo/web-main.git --work-tree=/var/www submodule update --init --recursive --force
 sudo mkdir /var/www/protected/messages
-sudo chmod -R 755 /var/www/protected/messages
+sudo chmod -R 777 /var/www/protected/messages
 sudo chown -R ubuntu:www-data /var/www/protected/messages
 sudo mkdir /var/www/public_html/uploads
-sudo chmod -R 755 /var/www/public_html/uploads
+sudo chmod -R 777 /var/www/public_html/uploads
 sudo chown -R ubuntu:www-data /var/www/public_html/uploads
 sudo mkdir /var/www/protected/runtime
-sudo chmod -R 755 /var/www/protected/runtime
+sudo chmod -R 777 /var/www/protected/runtime
 sudo chown -R ubuntu:www-data /var/www/protected/runtime
 sudo mkdir /var/www/public_html/assets
-sudo chmod -R 755 /var/www/public_html/assets
+sudo chmod -R 777 /var/www/public_html/assets
 sudo chown -R ubuntu:www-data /var/www/public_html/assets
 sudo mkdir /var/www/protected/data
-sudo chmod -R 755 /var/www/protected/data
+sudo chmod -R 777 /var/www/protected/data
 sudo chown -R ubuntu:www-data /var/www/protected/data
-sudo chmod -R 755 /var/www/protected/modules
+sudo chmod -R 777 /var/www/protected/modules
 sudo chown -R ubuntu:www-data /var/www/protected/modules
 cd /var/www/protected
 php yiic migrate --interactive=0
