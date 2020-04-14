@@ -12,6 +12,7 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 2. Setup Apache Web Server (Apache 2)
 3. Setup PHP 7.2 and all the required modules
 
+#### PHP.ini setting
 ### Setup RDS
 1. Select `Easy Create`
 2. Select `MariaDB` in configuration
