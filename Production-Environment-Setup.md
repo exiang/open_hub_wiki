@@ -13,6 +13,20 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 3. Setup PHP 7.2 and all the required modules
 
 #### PHP.ini setting
+```
+max_execution_time = 120
+max_input_time = 60
+memory_limit = 1024M
+max_input_vars = 10000
+post_max_size = 48M
+upload_max_filesize = 20M
+output_buffering = 20480
+mbstring.language = 'UTF-8'
+mbstring.internal_encoding = 'UTF-8'
+mbstring.http_output = 'UTF-8'
+mbstring.encoding_translation = 1
+```
+
 ### Setup RDS
 1. Select `Easy Create`
 2. Select `MariaDB` in configuration
