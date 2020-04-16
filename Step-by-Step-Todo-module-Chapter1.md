@@ -36,6 +36,43 @@ public function installDb($forceReset = false)
 	$migration->createIndex('user_id', 'todo', 'user_id', false);
 	$migration->addForeignKey("fk_todo-user_id", "todo", "user_id", "user", "id", "RESTRICT", "RESTRICT");
 
+	$module = '';
+	if (preg_match('/Module$/', __CLASS__)) {
+		$module = preg_replace('/Module$/', '', __CLASS__);
+		$module = lcfirst($module);
+	}
+
+	// need to define controller & action to be insert into table access
+	// depend on how many controller & action have in the module
+	$arrControllerAction = [
+		'controllerOne' => ['actionOne','actionTwo'],
+		'controllerTwo' => ['actionOne']
+	];
+
+	foreach($arrControllerAction as $controller => $actions){
+		foreach($actions as $action){
+			$access = [$module, $controller, $action];
+			$access = array_filter($access);
+			$route = implode('/',$access);
+
+			$migration = Yii::app()->db->createCommand();
+			// need to check before insert in case using forceInstall
+			$exist = $migration->select('code')->from('access')->where('code=:code', [':code'=>$route])->queryRow();
+			if($exist===false){
+				$migration->insert('access', [
+						'code' => $route,
+						'title' => $route,
+						'module' => $module,
+						'controller' => $controller,
+						'action' => $action,
+						'is_active' => 1,
+						'date_added' => time(),
+						'date_modified' => time()
+				]);
+			}
+		}
+	}
+
 	return true;
 }
 ```
