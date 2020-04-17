@@ -45,8 +45,8 @@ public function installDb($forceReset = false)
 	// need to define controller & action to be insert into table access
 	// depend on how many controller & action have in the module
 	$arrControllerAction = [
-		'controllerOne' => ['actionOne','actionTwo'],
-		'controllerTwo' => ['actionOne']
+		// 'controllerOne' => ['actionOne','actionTwo'],
+		// 'controllerTwo' => ['actionOne']
 	];
 
 	foreach($arrControllerAction as $controller => $actions){
