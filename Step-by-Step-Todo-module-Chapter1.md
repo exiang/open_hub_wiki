@@ -55,9 +55,11 @@ public function installDb($forceReset = false)
 			$access = array_filter($access);
 			$route = implode('/',$access);
 
-			$migration = Yii::app()->db->createCommand();
 			// need to check before insert in case using forceInstall
-			$exist = $migration->select('code')->from('access')->where('code=:code', [':code'=>$route])->queryRow();
+			$exist = Yii::app()->db->createCommand()
+					->select('code')->from('access')
+					->where('code=:code', [':code'=>$route])
+					->queryRow();
 			if($exist===false){
 				$migration->insert('access', [
 						'code' => $route,
