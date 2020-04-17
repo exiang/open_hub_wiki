@@ -23,7 +23,7 @@ public function roleCheckerAction($role, $controller, $action = '') {
 ## Usage
 There are few ways to use the function. It depends on where you want to put it.
 
- * In controller
+ * in accessRule for Controller file using _**expression**_. Provide _**Yii::app()->controller**_ as second parameter.
  ```
  public function accessRules(){
 	return array(
@@ -34,4 +34,14 @@ There are few ways to use the function. It depends on where you want to put it.
 		),
 	);
  }
+ ```
+
+ * in view to hide or show menu (Action is in the same Controller). Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case create is the action)
+ ```
+ $this->menu = array(
+	array(
+		'label' => Yii::t('app', 'Create Sample'), 'url' => array('/todo/todo/create'),
+		'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), Yii::app()->controller,'create')
+	),
+);
  ```
