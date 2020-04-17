@@ -37,8 +37,8 @@ There are few ways to use the function. It depends on where you want to put it.
  ```
 
  * in view to hide or show menu 
-	* #first array - Action is in the _**same Controller**_). Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _create_ is the action)
-	* #second array - Action is in the _**different Controller**_). Provide custom parameter for the second parameter
+	* _**first array**_ - Action is in the _**same Controller**_). Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _create_ is the action)
+	* _**second array**_ - Action is in the _**different Controller**_). Provide _**custom parameter**_ for the second parameter
  ```
  $this->menu = array(
 	array(
