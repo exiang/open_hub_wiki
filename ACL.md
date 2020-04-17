@@ -1,5 +1,5 @@
 ## What is ACL?
-It is a list of permissions attached to an action or operation. ACL can specifies which roles are granted access to actions or operations. By doing this, you do not have to hard-coded the role to access any menu or action and you can add dynamic role as per need in the future and allow specific action or operation they can access.
+Access Control List is a list of permissions attached to an action or operation. ACL can specifies which roles are granted access to actions or operations. By doing this, you do not have to hard-coded the role to access any menu or action and you can add dynamic role as per need in the future and allow specific action or operation they can access.
 
 ## How it works?
 We will supply the role for current user with the action or operation
@@ -23,7 +23,7 @@ public function roleCheckerAction($role, $controller, $action = '') {
 ## Usage
 There are few ways to use the function. It depends on where you want to put it.
 
- * in accessRule for Controller file using _**expression**_. Provide _**Yii::app()->controller**_ as second parameter.
+ * example in accessRules function in Controller file using _**expression**_. Provide _**Yii::app()->controller**_ as second parameter.
  ```
  public function accessRules(){
 	return array(
@@ -36,18 +36,36 @@ There are few ways to use the function. It depends on where you want to put it.
  }
  ```
 
- * in view to hide or show menu 
-	* _**first array**_ - Action is in the _**same Controller**_). Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _create_ is the action)
-	* _**second array**_ - Action is in the _**different Controller**_). Provide _**custom parameter**_ for the second parameter
+ * example in view to hide or show menu 
+	* _**first array**_ - Action is in the _**same Controller**_. Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _admin_ is the action)
+	* _**second array**_ - Action is in the _**different Controller**_. Provide _**custom parameter**_ for the second parameter
  ```
  $this->menu = array(
 	array(
-		'label' => Yii::t('app', 'Create Todo'), 'url' => array('/todo/todo/create'),
-		'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), Yii::app()->controller,'create')
+		'label' => Yii::t('app', 'Manage Todo'), 'url' => array('/todo/todo/admin'),
+		'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), Yii::app()->controller,'admin')
 	),
 	array(
-		'label' => Yii::t('app', 'Create Sample1'), 'url' => array('/module1/controller1/create'),
-		'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), (object)['id'=>'controller1','action'=>(object)['id'=>'create'],'module'=>(object)['id'=>'module1']])
+		'label' => Yii::t('app', 'Manage Sample1'), 'url' => array('/module1/controller1/admin'),
+		'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), (object)['id'=>'controller1','action'=>(object)['id'=>'admin'],'module'=>(object)['id'=>'module1']])
 	),
 );
+```
+
+* example in gridview to hide or show icon 
+	* _**view icon**_ - Action is in the _**different Controller**_. Provide _**custom parameter**_ for the second parameter
+	* _**update icon**_ - Action is in the _**same Controller**_. Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _update_ is the action)
+```
+array(
+	'class' => 'application.components.widgets.ButtonColumn',
+	'template' => '{view}{update}',
+	'buttons' => array(
+		'view' => array(
+			'url' => 'Yii::app()->controller->createUrl("/organization/view", array("id"=>$data->id))'),
+			'visible' => function(){ return HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), (object)['id'=>'organization','action'=>(object)['id'=>'view']]); }
+		'update' => array(
+			'visible' => function(){ return HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), Yii::app()->controller,'update'); }
+		),
+	),
+),
 ```
