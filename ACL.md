@@ -36,12 +36,18 @@ There are few ways to use the function. It depends on where you want to put it.
  }
  ```
 
- * in view to hide or show menu (Action is in the same Controller). Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case create is the action)
+ * in view to hide or show menu 
+	* #first array - Action is in the _**same Controller**_). Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _create_ is the action)
+	* #second array - Action is in the _**different Controller**_). Provide custom parameter for the second parameter
  ```
  $this->menu = array(
 	array(
-		'label' => Yii::t('app', 'Create Sample'), 'url' => array('/todo/todo/create'),
+		'label' => Yii::t('app', 'Create Todo'), 'url' => array('/todo/todo/create'),
 		'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), Yii::app()->controller,'create')
 	),
+	array(
+		'label' => Yii::t('app', 'Create Sample1'), 'url' => array('/module1/controller1/create'),
+		'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), (object)['id'=>'controller1','action'=>(object)['id'=>'create'],'module'=>(object)['id'=>'module1']])
+	),
 );
- ```
+```
