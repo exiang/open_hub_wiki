@@ -1,5 +1,8 @@
 ## What is ACL?
-Access Control List is a list of permissions attached to an action or operation. ACL can specifies which roles are granted access to actions or operations. By doing this, you do not have to hard-coded the role to access any menu or action and you can add dynamic role as per need in the future and allow specific action or operation they can access.
+Access Control List is a list of permissions attached to an action or operation. ACL can specifies which roles are granted access to actions or operations. By doing this, you do not have to hard-coded the role to access any menu or action and you can add dynamic role as per need in the future and allowed specific action or operation they can access.
+
+## Why ACL?
+You can change preset Role to limit/grant the access to any action. You can add new Role to match with the new requirements without opening the source code.
 
 ## How it works?
 We will supply the role for current user with the action or operation
