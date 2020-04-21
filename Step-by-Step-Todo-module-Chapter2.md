@@ -55,6 +55,8 @@ Please refer [Neo4J Data Structure](Neo4j-Data-Structure) to get a glimpse on th
 2. Click Preview and then click Generate
 3. Now, you may access backend to manage todo records from `https://mydomain.com/todo/todo/admin`
 
+### Insert Access
+* [Inserting Access](Inserting-Access) - Insert Access to limit an access to the Action
 
 ### Enhance it
 #### A. Automatically track creator
