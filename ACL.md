@@ -7,7 +7,7 @@ You can change preset Role to limit/grant the access to any action. You can add 
 ## How it works?
 We will supply the role for current user with the action or operation
 
-```
+```php
 /**
  * to check whether role is allowed to access the route/action
  *
@@ -27,7 +27,7 @@ public function roleCheckerAction($role, $controller, $action = '') {
 There are few ways to use the function. It depends on where you want to put it.
 
  * example in accessRules function in Controller file using _**expression**_. Provide _**Yii::app()->controller**_ as second parameter.
- ```
+ ```php
  public function accessRules(){
 	return array(
  	array('allow',
@@ -42,7 +42,7 @@ There are few ways to use the function. It depends on where you want to put it.
  * example in view to hide or show menu 
 	* _**first array**_ - Action is in the _**same Controller**_. Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _admin_ is the action)
 	* _**second array**_ - Action is in the _**different Controller**_. Provide _**custom parameter**_ for the second parameter
- ```
+ ```php
  $this->menu = array(
 	array(
 		'label' => Yii::t('app', 'Manage Todo'), 'url' => array('/todo/todo/admin'),
@@ -58,7 +58,7 @@ There are few ways to use the function. It depends on where you want to put it.
 * example in gridview to hide or show icon 
 	* _**view icon**_ - Action is in the _**different Controller**_. Provide _**custom parameter**_ for the second parameter
 	* _**update icon**_ - Action is in the _**same Controller**_. Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _update_ is the action)
-```
+```php
 array(
 	'class' => 'application.components.widgets.ButtonColumn',
 	'template' => '{view}{update}',
