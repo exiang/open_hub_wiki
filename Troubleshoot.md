@@ -1,0 +1,2 @@
+### 'CDbConnection failed to open the DB connection' error on view organization page
+It is caused by installed modules who connect to external database failed in the process. It could be targeted database timeout, credential not match or etc. 
