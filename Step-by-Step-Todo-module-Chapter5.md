@@ -132,5 +132,8 @@ What you can do is edit `protected/modules/todo/config/main.php` and change this
 
 Now, you are good to go with url `https://mydomain.com/newtodo` and the old one `https://mydomain.com/todo` is still functioning for backward compatibility.
 
+## Using composer in module
+OpenHub comes with default composer packages install at `protected/vendor`. However, your module may required specific package that not included in this default bundle. You can have your module specific package.
+
 ## Sub domain for module
 Todo...
