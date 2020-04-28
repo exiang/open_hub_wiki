@@ -160,7 +160,7 @@ unzip openhub-latest.zip -d /var/www
 Open browser and go to `https://openhub.mymagic.my/installer`. Follow the instruction there and fill up everything needed.
 
 ### Post installation
-SSH into your web server to run command line.
+SSH into your web server to run these commands.
 
 1. Apply migration update, including new database changes.
 ```
@@ -170,5 +170,6 @@ php yiic migrate up
 
 2. Refresh translation messages, generate the message php file across the system.
 ```
+cd /var/www/protected
 php yiic message config/message.php
 ```
