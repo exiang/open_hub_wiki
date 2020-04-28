@@ -158,3 +158,16 @@ unzip openhub-latest.zip -d /var/www
 
 ### Run Web Installer
 Open browser and go to `https://openhub.mymagic.my/installer`. Follow the instruction there and fill up everything needed.
+
+### Post installation
+SSH into your web server to run command line.
+
+1. Apply migrations
+```
+cd /var/www/protected
+php yiic migrate up
+```
+
+2. Refresh translation messages
+```
+```
