@@ -144,5 +144,7 @@ composer require knplabs/github-api php-http/guzzle6-adapter "^1.1"
 * `vendor` directory will be created, ignore by repository in default
 * `composer.json` & `composer.lock` files created
 
+Add `require_once dirname(__FILE__) . '/vendor/autoload.php';` to the start of `public function init(){}` inside `protected/modules/todo/TodoModule.php`
+
 ## Sub domain for module
 Todo...
