@@ -162,7 +162,7 @@ Open browser and go to `https://openhub.mymagic.my/installer`. Follow the instru
 ### Post installation
 SSH into your web server to run command line.
 
-1. Apply migrations, including new database upgrades and changes.
+1. Apply migration update, including new database changes.
 ```
 cd /var/www/protected
 php yiic migrate up
