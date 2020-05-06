@@ -115,7 +115,7 @@ OpenHub ouput JSON in SoJF (Standard OpenHub JSON Format).
 }
 ```
 
-`V1Controller` come with few helpful functions to output in OpenHub standard JSON format:
+`V1Controller` come with few helpful functions to output in SoJF:
 ```php
 public function outputMessage($msg, $meta = array())
 {
