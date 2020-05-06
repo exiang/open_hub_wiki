@@ -1,4 +1,4 @@
-> Here is our setup guide using most of AWS services. This is the recommended way but not the only way. 
+> Here is our setup guide using most of AWS services. This is the recommended way but not the only way. Please be cautious when using AWS as its charge by usage and your instance size. For your reference, a new setup should not exceed USD100/month, while setup for 20,000 active users should be around USD400/month. 
 
 ## Preparation
 
@@ -72,6 +72,7 @@ Setup Redis server for faster caching (optional) or use default file cache. Here
 
 
 ### Setup AWS Elastic Search
+> Start with a small instance limit to 1 zone at 10GB is good enough
   * Domain name: Just insert any name like `esearch`
   * Note down the `Endpoint`
 
