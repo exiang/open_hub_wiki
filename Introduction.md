@@ -12,7 +12,7 @@ A module is an extension to OpenHub that enables any developer to add the follow
   * Expose additional functionality thru API interface.
 
 ## MVC as root
-This is the same principle as the Model>View>Controller (MVC) architecture, only in a simpler and more accessible way.
+This is the same principle as the Model > View > Controller (MVC) architecture, only in a simpler and more accessible way.
 
 ### Model
 A model represents the application’s behavior: data processing, database interaction, etc.
