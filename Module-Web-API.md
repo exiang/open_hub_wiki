@@ -85,26 +85,33 @@ class sayDemmoHello extends Action
 ### Outputting JSON
 `V1Controller` came with a few helpful functions for you to output JSON in OpenHub data format.
 
-```
+```php
 public function outputMessage($msg, $meta = array())
 {
     $this->outputJson('', $msg, 'success', $meta);
 }
+```
 
+```php
 public function outputSuccess($data, $meta = array(), $msg = '')
 {
     $this->outputJson($data, $msg, 'success', $meta);
 }
+```
 
+```php
 public function outputFail($msg, $meta = array())
 {
     $this->outputJson($data, $msg, 'fail', $meta);
 }
+```
 
+```php
 public function outputPipe($result)
 {
     $this->outputJson($result['data'], $result['msg'], ($result['status'] == 'success' || $result['success'] == true) ? true : false, $result['meta']);
 }
+```
 ```
 
 
