@@ -83,7 +83,8 @@ class sayDemmoHello extends Action
 ```
 
 ### Outputting JSON
-`V1Controller` come with few helpful functions to output in OpenHub standard JSON format:
+OpenHub ouput JSON in SoJF (Standard OpenHub JSON Format).
+
 ```json
 {
   "status": "success",
@@ -114,6 +115,7 @@ class sayDemmoHello extends Action
 }
 ```
 
+`V1Controller` come with few helpful functions to output in OpenHub standard JSON format:
 ```php
 public function outputMessage($msg, $meta = array())
 {
