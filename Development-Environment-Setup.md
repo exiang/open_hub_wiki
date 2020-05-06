@@ -60,8 +60,8 @@ Open Hub used submodule at `protected/yeebase` and `public_html/themes`, make su
   * `protected/runtime`
   * `public_html/assets`
   * `public_html/uploads`
-```
 
 5. Run Yii migration to update changes
+
 
 Last, Complete the `protected/.env` files 
