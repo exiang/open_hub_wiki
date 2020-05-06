@@ -11,9 +11,9 @@ An example of YAML looks like the following:
 ```yaml
 swagger: '2.0'
 info:
-  description: Provides information of todos.
+  description: Demo module related API.
   version: "v1"
-  title: Todo
+  title: Demo
   # put the contact info for your development or API team
   contact:
     email: yee.siang@mymagic.my
