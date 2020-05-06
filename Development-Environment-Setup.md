@@ -42,12 +42,18 @@ php yiic migrate --interactive=0
 sudo chmod u+x /var/www/_cron -R
 ```
 
-1. Make sure repo is loaded correctly.
+Script above basically do the following task for you automatically:
+
+1. Reset and clear assets
+
+2. Make sure repo is loaded correctly.
 Open Hub used submodule at `protected/yeebase` and `public_html/themes`, make sure codes are loaded properly too.
 
 ``` git submodule update --init --recursive --force```
 
-2. Create all the required dist folders:
+3. Update composer
+
+4. Create all the required dist folders and make sure they all have write permission:
   * `protected/messages`
   * `protected/vendor`
   * `protected/overrides`
@@ -55,4 +61,7 @@ Open Hub used submodule at `protected/yeebase` and `public_html/themes`, make su
   * `public_html/assets`
   * `public_html/uploads`
 ```
-3. Complete `protected/.env` files 
+
+5. Run Yii migration to update changes
+
+Last, Complete the `protected/.env` files 
