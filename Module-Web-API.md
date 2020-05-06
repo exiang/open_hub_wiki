@@ -83,7 +83,36 @@ class sayDemmoHello extends Action
 ```
 
 ### Outputting JSON
-`V1Controller` came with a few helpful functions for you to output JSON in OpenHub data format.
+`V1Controller` come with few helpful functions to output in OpenHub standard JSON format:
+```json
+{
+  "status": "success",
+  "meta": {
+    "input": {
+      "var1FromPost": "abc",
+      "var2FromPost": "def",
+      "output": {
+        "total": 2
+      }
+    }
+  },
+  "msg": "Everything works fine",
+  "data": [
+    {
+      "orderId": "99",
+      "productTitle": "4K LED TV",
+      "deliveryLocation": "Cyberjaya, Malaysia",
+      "buyerName": "Allen Tan"
+    },
+    {
+      "orderId": "88",
+      "productTitle": "Playstation 4",
+      "deliveryLocation": "KLIA, Malaysia",
+      "buyerName": "Foo Bar"
+    }
+  ]
+}
+```
 
 ```php
 public function outputMessage($msg, $meta = array())
