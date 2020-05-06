@@ -23,3 +23,4 @@
 
 ### Licenses
   * [Inspinia](https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S) - You will need to purchase Inspinia (single license at USD44) if you are using the default theme shipped with OpenHub
+  * [CKeditor](https://ckeditor.com/) - Optional, you will need to purchase this only if you are using the WYSIWYG HTML Editor with image that need to store at S3.
