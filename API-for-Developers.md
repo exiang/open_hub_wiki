@@ -7,5 +7,5 @@ API is an important component in OpenHub to allow its services to be consumed an
 ## Swagger
 OpenHub default module `WAPI` provide a web interface for developers to test their REST like API with the use of Swagger. It is accessible from `https://mydomain.com/wapi/swagger`.
 
-## API in module
+## Module API
 More information available at [Module Web API](Module-Web-API)
