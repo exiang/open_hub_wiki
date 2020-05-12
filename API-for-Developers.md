@@ -100,7 +100,7 @@ or
 
 ## Security
 ### Use API AUTH
-You may enable API AUTH in `protected/.env` file to apply username and password for every API call available in WAPI. It used [HTTP Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication) and thus should be use along with HTTPS.
+Enable this to protect all your API call in WAPI with [HTTP Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication). 
 
 > Basic auth features no encryption or obfuscation beyond a base64 transport encoding. Usage of SSL is advised in order to ensure the confidentiality of login credentials.
 
