@@ -110,7 +110,7 @@ Modify `protected/.env` file:
 * `API_USERNAME` to `api` or any other name
 * `API_PASSWORD` to a random secure password
 
-If Basic Auth failed, you will get a `HTTP/1.1 401 Unauthorized` response:
+If Basic Auth failed when incorrect username and password inserted, `HTTP/1.1 401 Unauthorized` is return:
 
 ![](https://user-images.githubusercontent.com/5336690/81630930-66fb1880-9439-11ea-854e-ee75589aa931.png)
 
