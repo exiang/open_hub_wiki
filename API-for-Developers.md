@@ -41,7 +41,8 @@ In Postman interface:
 ```
 
 ## SoJF (Standard OpenHub JSON Format)
-OpenHub output JSON in its own standard format like:
+OpenHub output JSON in its own standard format. Please make sure you following this whenever you are output a JSON in not just WAPI, but in any module action too. 
+ 
 ```
 {
     "status": "fail",
