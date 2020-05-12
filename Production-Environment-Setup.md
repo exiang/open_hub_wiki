@@ -175,4 +175,4 @@ cd /var/www/protected
 php yiic message config/message.php
 ```
 
-3. Secure your web API with API AUTH and enforce HTTPS. Please refer to [API for Developers](API-for-Developers) for guide.
+3. Secure your web API with API AUTH and enforce HTTPS. Please refer to [API for Developers](API-for-Developers#use-api-auth) for guide.
