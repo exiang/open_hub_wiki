@@ -100,11 +100,22 @@ or
 
 ## Security
 ### Use API AUTH
-You may enable API AUTH in `protected/.env` file to apply username and password for every API call available in WAPI.
+You may enable API AUTH in `protected/.env` file to apply username and password for every API call available in WAPI. It used [HTTP Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication) and thus should be use along with HTTPS.
 
+> Basic auth features no encryption or obfuscation beyond a base64 transport encoding. Usage of SSL is advised in order to ensure the confidentiality of login credentials.
+
+`ENFORCE_API_SSL`
 `ENABLE_API_AUTH`
 `API_USERNAME`
 `API_PASSWORD`
+
+If Basic Auth failed, you will get a `HTTP/1.1 401 Unauthorized` response:
+
+![](https://user-images.githubusercontent.com/5336690/81630930-66fb1880-9439-11ea-854e-ee75589aa931.png)
+
+#### Troubleshoot
+If test in browser and you keep getting popup asking for username and password, make sure the following code exists in your  `public_html/.htaccess`
+```RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]```
 
 ## Module API
 More information available at [Module Web API](Module-Web-API)
