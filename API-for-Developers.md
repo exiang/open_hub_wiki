@@ -104,10 +104,11 @@ You may enable API AUTH in `protected/.env` file to apply username and password 
 
 > Basic auth features no encryption or obfuscation beyond a base64 transport encoding. Usage of SSL is advised in order to ensure the confidentiality of login credentials.
 
-`ENFORCE_API_SSL`
-`ENABLE_API_AUTH`
-`API_USERNAME`
-`API_PASSWORD`
+Modify `protected/.env` file:
+* `ENFORCE_API_SSL` to `true`
+* `ENABLE_API_AUTH` to `true`
+* `API_USERNAME` to `api` or any other name
+* `API_PASSWORD` to a random secure password
 
 If Basic Auth failed, you will get a `HTTP/1.1 401 Unauthorized` response:
 
