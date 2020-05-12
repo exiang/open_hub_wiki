@@ -45,14 +45,7 @@ OpenHub output JSON in its own standard format like:
 ```
 {
     "status": "fail",
-    "meta": {
-        "input": {
-            "var1": "Hello",
-            "var2": null
-        }
-    },
-    "msg": "Unknown error, something go wrong",
-    "data": "Hello"
+    "msg": "Unknown error, something go wrong"
 }
 ```
 
