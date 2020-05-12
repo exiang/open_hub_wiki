@@ -63,7 +63,7 @@ schemes:
 Your API action sit at `protected/modules/demo/actions/wapi/V1Controller/sayDemoHello.php`
 ```php
 
-class sayDemmoHello extends Action
+class sayDemoHello extends Action
 {
 	public function run()
 	{
