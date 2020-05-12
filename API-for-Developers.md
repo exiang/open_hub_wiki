@@ -5,4 +5,7 @@ API is an important component in OpenHub to allow its services to be consumed an
   * **User** - user can only access the API thru the above two entity: either partner or developer. Eg: a normal user that like to access his own information thru API has to register as a developer with us
 
 ## Swagger
-OpenHub default module `WAPI` provide a web interface for developers to test their API with the use of Swagger. It is accessible from `https://mydomain.com/wapi/swagger`.
+OpenHub default module `WAPI` provide a web interface for developers to test their REST like API with the use of Swagger. It is accessible from `https://mydomain.com/wapi/swagger`.
+
+## API in module
+More information available at [Module Web API](Module-Web-API)
