@@ -119,4 +119,4 @@ If test in browser and you keep getting popup asking for username and password, 
 ```RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]```
 
 ## Module API
-More information available at [Module Web API](Module-Web-API)
+API is supported in OpenHub module architecture. More information available at [Module Web API](Module-Web-API)
