@@ -1,4 +1,4 @@
-## Configuration in Backend
+## Backend System Config
 Your system wide configuration information can be accessible from backend: `Site > System > Config`.
 
 ## .ENV
