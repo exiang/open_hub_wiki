@@ -13,9 +13,33 @@ All files containing code MUST:
 ## PHP code conventions
 PHP files MUST follow the PSR-2 standard. 
 
-PHP CS Fixer has been configured for the OpenHub project to help developers to comply with these conventions. As long as you are using visual studio code, it will auto run upon files save. The location of this file is at `/.php_cs`
+PHP CS Fixer has been configured for the OpenHub project to help developers to comply with these conventions. As long as you are using visual studio code, it will auto run upon file save. Please make sure you installed the right extension: php cs fixer from junstyle.
 
-Content of file for your reference:
+![](https://user-images.githubusercontent.com/5336690/81776895-49ee4480-9522-11ea-8e54-2dad561ded4f.png)
+
+Also make sure this extension is set as the defaultFormatter in Visual Studio Code user's setting.
+
+```
+// Place your settings in this file to overwrite the default settings
+{
+    "files.autoSave": "off",
+    "workbench.editor.enablePreview": false,
+    "editor.mouseWheelZoom": true,
+    "editor.wordWrap": "on",
+    "window.zoomLevel": 0,
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "git.ignoreMissingGitWarning": true,
+    "php-cs-fixer.exclude": [
+    
+    ]
+}
+```
+
+The location of this file is at `/.php_cs`
+
+Content of the PHP cs fixer file for your reference:
 ``` php
 <?php
 $finder = PhpCsFixer\Finder::create()
