@@ -1,5 +1,5 @@
 * [Home](Home)
-* [Basic, Setup & Install](Basics)
+* [Get Started & Install](Basics)
   * [Introduction](Introduction)
   * [Installation](Installation)
   * [Update](Update)
