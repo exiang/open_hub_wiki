@@ -74,12 +74,6 @@ class TodoModule extends WebModule
 ](Module-Install-&-Upgrade)
 
 ### Some clean up
-Go to `protected/modules/todo/model` folder
-  - Rename `HubBoilerplateStart.php` to `HubTodo.php`
-  - Edit `HubTodo.php`
-    - Replace all `boilerplateStart` to `todo`
-    - Replace all `BoilerplateStart` to `Todo`        
-
 Go to views folder
   - Edit `frontend\index.php`, change the file content to 
 ```php 
