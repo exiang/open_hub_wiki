@@ -42,21 +42,10 @@ public function installDb($forceReset = false)
 > For more information on BoilerplateStart, please refer to [Quick Start with Boilerplate](Quick-Start-with-Boilerplate)
 
 ### Setup configuration
-Go to `protected/modules/todo/config` folder
-1. Delete `console.php` and `main.php`
-2. Edit `console.dist.php`
-   - Replace all `boilerplateStart` to `todo`
-   - Replace all `BoilerplateStart` to `Todo`
-   - Make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2. when injecting core model
-   - Set `var1` to 'Hello'
-   - Set `var2` to 'World'
-3. Edit `main.dist.php`
-   - Replace all `boilerplateStart` to `todo`
-   - Replace all `BoilerplateStart` to `Todo`
-   - Make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2 when injecting core model
-   - Set `var1` to 'Hello'
-   - Set `var2` to 'World'
-4. Looking at both your `main.dist.php` and `console.dist.php` config files, at `modules > todo`, you now have 2 variables. These variable must reflect in your `TodoModule.php` too.
+1. Go to `protected/modules/todo/config` folder
+2. Looking at both your `base.php` config files, at `modules > todo`, 
+   - Make sure everything in `modules > todo > modelBehaviors` are commented, we will come back to this later in chapter 2 
+   - you now have 2 variables. These variable must reflect in your `TodoModule.php` too.
 ```php
 <?php
 // use camelcase for class name with first character in uppsercase
@@ -70,14 +59,14 @@ class TodoModule extends WebModule
 	public $var2;
 }
 ```
-5. Edit about.yaml
+3. Edit about.yaml
    - Set `code` value to `todo`
    - Give it a version, lets set `1.0`
    - Set `title` value to 'My TODO Module`
    - Set `oneliner` value to 'My first custom module to manage todo list'. It should be short and descriptive to help other users and developers to easily understand what your module function
    - Set `lastUpdate` to current date in `YYYY-MM-DD` format, e.g. `2020-02-08`
    - Under `developer`, set the `author`, `organization`, `email` to your detail
-6. Do not copy `console.dist.php` to `console.php` and `main.dist.php` to `main.php`. This will be done automatically when you install the module
+4. Do not copy `console.dist.php` to `console.php` and `main.dist.php` to `main.php`. This will be done automatically when you install the module
 
 > For more information on module configuration, please refer to [Module Config](Module-Config)
 
