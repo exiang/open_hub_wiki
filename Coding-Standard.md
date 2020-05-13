@@ -11,7 +11,7 @@ All files containing code MUST:
   * End with a single blank line.
 
 ## PHP code conventions
-PHP files MUST follow the PSR-2 standard. 
+PHP files MUST follow the **PSR-2** standard. 
 
 PHP CS Fixer has been configured for the OpenHub project to help developers to comply with these conventions. As long as you are using visual studio code, it will auto run upon file save. Please make sure you installed the right extension: php cs fixer from junstyle.
 
