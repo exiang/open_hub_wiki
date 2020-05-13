@@ -12,7 +12,7 @@
   * [Module Configuration](Module-Config)
   * [Module Layout](Module-Layout)
   * [Module Web Assets](Module-Web-Assets)
-  * [Implement Web API in Module](Module-Web-API)
+  * [Web API in Module](Module-Web-API)
   * [Step by Step Guide](Step-by-step-Todo-module)
 * [Override Core](Override-Core)
 * [Core Development](Core-Development)
