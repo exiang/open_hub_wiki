@@ -15,9 +15,15 @@ We have some standard action names:
 - `actionUpdate` : show language edit form page and handle its submit 
 - `actionDelete` : delete an item
 
+### Functions
+> [verb][Adjective][ModuleName][Noun][Preposition][Pronoun][Adjective]
+
+Some examples:
+- getAllEsLogRecords4AdminQuickly()
+
 Function name from modules that use in global scope with potential to clash with others (e.g. Model Behavior) should have module name as part of the function name.
 
-For example, function `countAllBoilerplateStartItems()` in `/protected/modules/boilerplateStart/components/BoilerplateStartMemberBehavior.php` follow the naming convention of `[verb][ModuleName][FunctionName]`:  
+For example, function `countAllBoilerplateStartItems()` in `/protected/modules/boilerplateStart/components/BoilerplateStartMemberBehavior.php` follow the naming convention of `[verb][Adjective][ModuleName][Noun]`:  
 
 ``` php
 class BoilerplateStartMemberBehavior extends Behavior
