@@ -143,7 +143,7 @@ return PhpCsFixer\Config::create()
 ;
 ```
 ### Bulk fix
-In command line at the specific directory to fix all PHP files in it, type command `php-cs-fixer fix`.
+To fix all PHP files in a specific directory, type command `php-cs-fixer fix` in CLI.
 
 ![](https://user-images.githubusercontent.com/5336690/81777341-3394b880-9523-11ea-90af-4130cd36726d.png)
 
