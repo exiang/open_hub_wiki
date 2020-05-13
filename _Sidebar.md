@@ -1,3 +1,4 @@
+* [Home](Home)
 * [Basics, Setup & Install](Basics)
   * [Introduction](Introduction)
   * [Installation](Installation)
