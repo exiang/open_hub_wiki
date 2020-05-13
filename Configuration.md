@@ -79,6 +79,18 @@ Located at `protected/config/main.php`
 #### console.php
 This is the `main.php` version of console environment for command interface.
 
+#### route.php
+Derived from `main.php` and `console.php`.
+
+#### module.php
+Derived from `main.php` and `console.php`.
+
+#### csrfExcludeRegular.php
+Derived from `main.php` and `console.php`.
+
+#### csrfExcludeRegex.php
+Derived from `main.php` and `console.php`.
+
 #### params.php
 This is the application params that shared among web controller (`/protected/config/main.php`) and console command interfaces (`/protected/config/console.php`).
 
@@ -105,9 +117,27 @@ This is the application params that shared among web controller (`/protected/con
 ```  php
 'routineEmails'=>array('exiang83@gmail.com'),
 ```
+#### thumbnail.php
+Derived from `params.php`.
+
+#### layoutParams.php
+Derived from `params.php`.
+
+#### secureFiles.php
+Derived from `params.php`.
+
+#### cors.php
+Derived from `params.php`.
+
+#### role.php
+**Deprecated**. Derived from `params.php`.
+
+#### message.php
+
+#### phpini.php
 
 #### path.php
-Path configuration should be automatically detected.
+Path configuration should be automatically detected. For advance use case, you may like to modify these path to suite your relocation.
 
 ``` php
 Yii::setPathOfAlias('wwwroot', dirname(__DIR__, 2) . '/public_html');
@@ -116,7 +146,7 @@ Yii::setPathOfAlias('static', dirname(__DIR__, 2) . '/public_html/static');
 Yii::setPathOfAlias('runtime', dirname(__DIR__) . '/runtime');
 Yii::setPathOfAlias('cronRoutine', dirname(__DIR__) . '/runtime/routine');
 Yii::setPathOfAlias('cronLog', dirname(__DIR__, 2) . '/_cron/runtime/log');
-Yii::setPathOfAlias('data',dirname(__DIR__) . '/data');
+Yii::setPathOfAlias('data', dirname(__DIR__) . '/data');
 
 Yii::setPathOfAlias('components', dirname(__DIR__) . '/components');
 Yii::setPathOfAlias('controllers', dirname(__DIR__) . '/controllers');
@@ -125,4 +155,5 @@ Yii::setPathOfAlias('modules', dirname(__DIR__) . '/modules');
 Yii::setPathOfAlias('views', dirname(__DIR__) . '/views');
 Yii::setPathOfAlias('messages', dirname(__DIR__) . '/messages');
 Yii::setPathOfAlias('overrides', dirname(__DIR__) . '/overrides');
+
 ```
