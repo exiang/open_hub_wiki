@@ -177,4 +177,3 @@ All OpenHub files MUST start with the OpenHub license block:
 * @license https://opensource.org/licenses/BSD-3-Clause
 */
 ```
-### Module files
