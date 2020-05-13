@@ -99,7 +99,13 @@ or
 ```
 
 ## Security
-### Protect WAPI interface
+### Protect WAPI Swagger
+`TODO`
+This interface should be accessible by your internal developers but not public. 
+
+
+### Whitelist API Gateway IPs
+`TODO`
 
 ### Use API AUTH
 Enable this to protect all your API call in WAPI with [HTTP Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication). 
