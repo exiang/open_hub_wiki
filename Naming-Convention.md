@@ -9,7 +9,30 @@ Prefix controller with resource name in singular form (e.g. `OrganizationControl
 
 Action name should be clear and concise (e.g. `actionCreate()`, `actionBulkInsert()` are good examples, but `actionForm()` or `actionProcess()` is not and thus should be avoided).
 
-We have some standard action names: - `actionList` : display the listing - `actionCreate` : show language creation form page and handle its submit - `actionUpdate` : show language edit form page and handle its submit - `actionDelete` : delete an item
+We have some standard action names: 
+- `actionList` : display the listing 
+- `actionCreate` : show language creation form page and handle its submit 
+- `actionUpdate` : show language edit form page and handle its submit 
+- `actionDelete` : delete an item
+
+Function name from modules that use in global scope with potential to clash with others (e.g. Model Behavior) should have module name as part of the function name.
+
+For example, function `countAllBoilerplateStartItems()` in `/protected/modules/boilerplateStart/components/BoilerplateStartMemberBehavior.php` follow the naming convention of `[verb][ModuleName][FunctionName]`:  
+
+``` php
+class BoilerplateStartMemberBehavior extends Behavior
+{
+	// the member model
+	public $model;
+
+	//
+	// items
+	public function countAllBoilerplateStartItems()
+	{
+		return HubBoilerplateStart::countAllMemberBoilerplateStarts($this->model);
+	}
+}
+```
 
 ### Variable
 Variable in PHP and javascript should follow the lowercase first camel case format. e.g: `$var1`, `$formSubmission`. However, variable in Model which map to database table column should follow database column naming convention. e.g: `$full_name`, `$date_added`, '$is_active`.
