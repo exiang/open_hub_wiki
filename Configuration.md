@@ -1,10 +1,10 @@
-### .ENV
+## .ENV
 Most of the common configuration is expose and can be modify easily at `/protected/.env`. A sample `/protected/dist.env` is available for your reference.
 
-### Config Files
+## Config Files
 Historically, configuration are done in PHP files. Yii framework architecture used 2 main configuration files: `main.php` and `console.php`.
 
-#### main.php
+### main.php
 Located at `protected/config/main.php`
 
 1. change the application name to yours, e.g.
@@ -76,22 +76,22 @@ Located at `protected/config/main.php`
 	'neoConnectionString' => '', // protocol://username:password@neo4jurl:porttype  -- type port (http)7474, (bolt)7687 ex. bolt://neo4j:password@localhost:7687
 ),
 ```
-#### console.php
+### console.php
 This is the `main.php` version of console environment for command interface.
 
-#### route.php
+### route.php
 Derived from `main.php` and `console.php`.
 
-#### module.php
+### module.php
 Derived from `main.php` and `console.php`.
 
-#### csrfExcludeRegular.php
+### csrfExcludeRegular.php
 Derived from `main.php` and `console.php`.
 
-#### csrfExcludeRegex.php
+### csrfExcludeRegex.php
 Derived from `main.php` and `console.php`.
 
-#### params.php
+### params.php
 This is the application params that shared among web controller (`/protected/config/main.php`) and console command interfaces (`/protected/config/console.php`).
 
 * **maintenance** - true|false, set `true` to temporary disable the site to enable maintenance mode 
@@ -117,26 +117,26 @@ This is the application params that shared among web controller (`/protected/con
 ```  php
 'routineEmails'=>array('exiang83@gmail.com'),
 ```
-#### thumbnail.php
+### thumbnail.php
 Derived from `params.php`.
 
-#### layoutParams.php
+### layoutParams.php
 Derived from `params.php`.
 
-#### secureFiles.php
+### secureFiles.php
 Derived from `params.php`.
 
-#### cors.php
+### cors.php
 Derived from `params.php`.
 
-#### role.php
+### role.php
 **Deprecated**. Derived from `params.php`.
 
-#### message.php
+### message.php
 
-#### phpini.php
+### phpini.php
 
-#### path.php
+### path.php
 Path configuration should be automatically detected. For advance use case, you may like to modify these path to suite your relocation.
 
 ``` php
