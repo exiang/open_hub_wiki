@@ -37,4 +37,5 @@ Here is how the files are organised:
   * `/yeebase`: OpenHub sit on top of an extended version of Yii Framework version 1. This is where the extended code sit in and shared across other applications.
 
 #### /framework
-#### /.vscode
+Yii Framework code are all in here.
+
