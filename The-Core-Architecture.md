@@ -2,7 +2,7 @@
 As OpenHub is built on top of Yii Framework version 1, our developers have done their best to clearly and intuitively separate the various parts of the software on top of the framework structure.
 
 ![](https://user-images.githubusercontent.com/5336690/81780179-aeac9d80-9528-11ea-9897-5a4a3e9563c4.png)
-Source: https://docs.google.com/presentation/d/1q5nNMcLXClJKMh83GxFYLndU607rpJ64FEtylspjM5M/edit?usp=sharing
+[_Source_](https://docs.google.com/presentation/d/1q5nNMcLXClJKMh83GxFYLndU607rpJ64FEtylspjM5M/edit?usp=sharing)
 
 ## Folder structure
 Here is how the files are organised:
