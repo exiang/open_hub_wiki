@@ -1,8 +1,14 @@
+## Configuration in Backend
+Your system wide configuration information can be accessible from backend: `Site > System > Config`.
+
 ## .ENV
 Most of the common configuration is expose and can be modify easily at `/protected/.env`. A sample `/protected/dist.env` is available for your reference.
 
 ## Config Files
 Historically, configuration are done in PHP files. Yii framework architecture used 2 main configuration files: `main.php` and `console.php`.
+
+### config.yaml
+A human readable & machine parsable format YAML file to describe all configuration and store their meta data. 
 
 ### main.php
 Located at `protected/config/main.php`
