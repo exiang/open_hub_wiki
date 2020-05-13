@@ -16,7 +16,7 @@ Historically, configuration are done in these config PHP files instead of .env. 
 Yii Framework architecture used 2 main configuration files: `main.php` and `console.php`.
 
 ### config.yaml
-A human readable & machine parsable format YAML file to describe all configuration and store their meta data. 
+A human readable & machine parsable format YAML file to describe all configuration and store meta data. 
 
 ### main.php
 Located at `protected/config/main.php`
