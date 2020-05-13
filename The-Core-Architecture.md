@@ -1,6 +1,11 @@
+## Architecture Diagram
 As OpenHub is built on top of Yii Framework version 1, our developers have done their best to clearly and intuitively separate the various parts of the software on top of the framework structure.
 
-Here is how the files are organized:
+![](https://user-images.githubusercontent.com/5336690/81780179-aeac9d80-9528-11ea-9897-5a4a3e9563c4.png)
+Source: https://docs.google.com/presentation/d/1q5nNMcLXClJKMh83GxFYLndU607rpJ64FEtylspjM5M/edit?usp=sharing
+
+## Folder structure
+Here is how the files are organised:
 
 #### /public_html
   * `/css`: contains all application level CSS files that are not attached to themes
@@ -33,7 +38,3 @@ Here is how the files are organized:
 
 #### /framework
 #### /.vscode
-
-
-## Architecture Diagram ##
-https://docs.google.com/presentation/d/1q5nNMcLXClJKMh83GxFYLndU607rpJ64FEtylspjM5M/edit?usp=sharing
