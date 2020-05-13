@@ -21,9 +21,9 @@ Translated into Postman interface:
 1. Add a New Request
 2. Insert `https://api-hubd.mymagic.my/v1/testPost` and select `POST` to Request URL
 3. As this API deal with POST data, click `Body` tab
-- Select `x-www-form-urlencoded`
-- Insert 'var1' to `KEY`, 'Hello' to `VALUE`
-- Insert 'var2' to `KEY`, 'World' to `VALUE`
+    - Select `x-www-form-urlencoded`
+    - Insert 'var1' to `KEY`, 'Hello' to `VALUE`
+    - Insert 'var2' to `KEY`, 'World' to `VALUE`
 4. Click `Send` button and receive the following returned output in SoJF (Standard OpenHub JSON Format):
 
 ```
@@ -109,10 +109,10 @@ MaGIC Central used [tyk.io](https://tyk.io), an open source API Gateway to expos
 
 ### Adding a new API
 1. Add new API
-  * apiName: getAllLegalForms
-  * apiSlug: getAllLegalForms
-  * targetUrl: https://api-central.mymagic.my/v1/getAllLegalForms (make sure it start with https, mapping https to http will not pass the POST value when called)
-  * Authentication: AUTH Token
+    * apiName: `getAllLegalForms`
+    * apiSlug: `getAllLegalForms`
+    * targetUrl: `https://api-central.mymagic.my/v1/getAllLegalForms` (make sure it start with https, mapping https to http will not pass the POST value when called)
+    * Authentication: `AUTH Token`
 2. Add API to Policy
 3. Test with Postman
 4. Insert API into swagger.io
