@@ -32,7 +32,9 @@ Preposition is written in short form numeric:
   * for -> 4
   * to -> 2
   * on -> On
-  * With -> W
+  * by -> By
+  * With -> With
+  * From -> From
 
 Function name from modules that use in global scope with potential to clash with others (e.g. Model Behavior) should have module name as part of the function name.
 
