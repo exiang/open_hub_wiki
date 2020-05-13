@@ -1,8 +1,10 @@
+OpenHub has two configuration system, one is file base and another is database. Both use to store configuration of different use case. File base config serve as the core while database is more fo soft setting. 
+
 ## Backend System Config
 Your system wide configuration information can be accessible from backend: `Site > System > Config`.
 
 ## .ENV
-Most of the common configuration is expose and can be modify easily at `/protected/.env`. A sample `/protected/dist.env` is available for your reference.
+Most of the common file base configuration is expose here and can be modify easily at `/protected/.env`. A sample `/protected/dist.env` is available for your reference.
 
 ## Config Files
 Historically, configuration are done in PHP files. Yii framework architecture used 2 main configuration files: `main.php` and `console.php`.
