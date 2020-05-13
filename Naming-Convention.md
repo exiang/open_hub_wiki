@@ -11,6 +11,7 @@ Action name should be clear and concise (e.g. `actionCreate()`, `actionBulkInser
 
 We have some standard action names: - `actionList` : display the listing - `actionCreate` : show language creation form page and handle its submit - `actionUpdate` : show language edit form page and handle its submit - `actionDelete` : delete an item
 
+### Variable
 Variable in PHP and javascript should follow the lowercase first camel case format. e.g: `$var1`, `$formSubmission`. However, variable in Model which map to database table column should follow database column naming convention. e.g: `$full_name`, `$date_added`, '$is_active`.
 
 ## Database
