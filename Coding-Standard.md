@@ -17,7 +17,7 @@ PHP CS Fixer has been configured for the OpenHub project to help developers to c
 
 ![](https://user-images.githubusercontent.com/5336690/81776895-49ee4480-9522-11ea-8e54-2dad561ded4f.png)
 
-Also make sure this extension is set as the defaultFormatter in Visual Studio Code user's setting.
+Also make sure this extension is set as the `defaultFormatter` in Visual Studio Code user's setting.
 
 ```
 // Place your settings in this file to overwrite the default settings
