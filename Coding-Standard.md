@@ -147,8 +147,8 @@ In command line at the specific directory to fix all PHP files in it, type comma
 
 ![](https://user-images.githubusercontent.com/5336690/81777341-3394b880-9523-11ea-90af-4130cd36726d.png)
 
-
-<code></code>
+### Known Issues
+Yee do not generate skeleton code that is 100% comply to this coding standard yet. For time being, open all generated files and save them again to reformat to this standard.
 
 ## Javascript code conventions
 Javascript files MUST follow the [Airbnb Javascript style guide](https://github.com/airbnb/javascript).
