@@ -175,8 +175,8 @@ Translated into Postman interface:
 }
 ```
 
-## SoJF (Standard OpenHub JSON Format)
-OpenHub output JSON in its own standard format. Please make sure you following this whenever you are output a JSON in not just WAPI, but in any module action too. 
+## SoJF
+SoJF stands for '**Standard OpenHub JSON Format**'. OpenHub output JSON in its own standard format. Please make sure you following this whenever you are output a JSON in not just WAPI, but in any module action too. 
  
 ``` json
 {
