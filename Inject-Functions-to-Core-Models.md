@@ -2,7 +2,7 @@ Model Behavior allows developer to inject custom functions into existing core mo
 
 For example, `protected/modules/boilerplateStart/components/BoilerplateStartOrganizationBehavior.php` add customize functions to `Organization` model:
 
-```
+``` php
 <?php
 
 Yii::import('modules.boilerplateStart.models.*');
