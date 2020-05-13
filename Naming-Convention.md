@@ -56,7 +56,7 @@ class BoilerplateStartMemberBehavior extends Behavior
 ```
 
 ### Variable
-Variable in PHP and javascript should follow the lowercase first camel case format. e.g: `$var1`, `$formSubmission`. However, variable in Model which map to database table column should follow database column naming convention. e.g: `$full_name`, `$date_added`, '$is_active`.
+Variable in PHP and javascript should follow the lowercase first camel case format. e.g: `$var1`, `$formSubmission`. However, variable in Model which map to database table column should follow database column naming convention. e.g: `$full_name`, `$date_added`, `$is_active`.
 
 ## Database
 ### Table naming
