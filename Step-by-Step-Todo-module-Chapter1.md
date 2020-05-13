@@ -2,14 +2,14 @@
 At the end of this chapter, you will have a basic working TODO module.
 
 ### Getting started with boilerplateStart
-BoilerplateStart serve as a template for new module creation.
-1. Copy `boilerplateStart` module folder and rename to `todo` to create the `todo` module
-2. Edit `readme.md`. Replace the text inside to 'My first custom module to manage todo list'
-3. Rename `BoilerplateStartModule.php` to `TodoModule.php`
-4. Edit `TodoModule.php` file
-    - Change the class name from `BoilerplateStartModule` to `TodoModule`
-    - Replace all `boilerplateStart` to `todo`
-    - Replace all `BoilerplateStart` to `Todo`
+BoilerplateStart serve as a template for new module creation easily using CLI.
+
+1. Run command in CLI:
+```
+cd protected
+php yiic boilerplate create --name="Todo"
+```
+2. Edit `TodoModule.php` file
     - We going to create a new database table structure called `todo`, this has to be done in code thru `installDb` function:
 ```php
 public function installDb($forceReset = false)
