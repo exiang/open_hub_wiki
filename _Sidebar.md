@@ -13,7 +13,6 @@
   * [Module Layout](Module-Layout)
   * [Module Web Assets](Module-Web-Assets)
   * [Implement Web API in Module](Module-Web-API)
-  * [Module To do](Module-todo)
   * [Step by Step Guide building a Todo Module](Step-by-step-Todo-module)
 * [Override Core](Override-Core)
 * [Core Development](Core-Development)
