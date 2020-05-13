@@ -3,7 +3,7 @@ OpenHub has two configuration system, one is file base and another is database. 
 ## Backend System Config
 Your system wide configuration information can be accessible from backend: `Site > System > Config`.
 
-## .ENV
+## .env
 Most of the common file base configuration is expose here and can be modify easily at `/protected/.env`. A sample `/protected/dist.env` is available for your reference.
 
 ## Config Files
