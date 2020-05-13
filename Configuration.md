@@ -11,7 +11,9 @@ Most of the common file base configuration is expose here and can be modify easi
 Since this file hold important information about your system including database access credential and other keys and passwords, you will wanto make sure it is not expose to the public.
 
 ## Config Files
-Historically, configuration are done in PHP files. Yii framework architecture used 2 main configuration files: `main.php` and `console.php`.
+Historically, configuration are done in these config PHP files instead of .env. Other than advance use case, you should not have to touch these files now.
+
+Yii Framework architecture used 2 main configuration files: `main.php` and `console.php`.
 
 ### config.yaml
 A human readable & machine parsable format YAML file to describe all configuration and store their meta data. 
