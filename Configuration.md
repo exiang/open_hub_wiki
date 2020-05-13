@@ -6,7 +6,7 @@ Your system wide configuration information can be accessible from backend: `Site
 ## .env
 Most of the common file base configuration is expose here and can be modify easily at `/protected/.env`. A sample `/protected/dist.env` is available for your reference.
 
-Since this file hold important information about your system, you will wanto make sure it is not expose to the public.
+Since this file hold important information about your system including database access credential and other keys and passwords, you will wanto make sure it is not expose to the public.
 
 ## Config Files
 Historically, configuration are done in PHP files. Yii framework architecture used 2 main configuration files: `main.php` and `console.php`.
