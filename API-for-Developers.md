@@ -99,6 +99,8 @@ or
 ```
 
 ## Security
+### Protect WAPI interface
+
 ### Use API AUTH
 Enable this to protect all your API call in WAPI with [HTTP Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication). 
 
@@ -117,6 +119,8 @@ When query in Postman, make sure you have selected `Basic Auth` and inserted the
 #### Troubleshoot
 If test in browser and you keep getting popup asking for username and password, make sure the following code exists in your  `public_html/.htaccess`
 ```RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]```
+
+
 
 ## Module API
 API is supported in OpenHub module architecture. More information available at [Module Web API](Module-Web-API)
