@@ -3,17 +3,17 @@
 Located at `protected/config/main.php`
 
 1. change the application name to yours, e.g.
-```
+``` php
 'name' => 'MaGIC (Dev)',
 ```
 
 2. under `components\requests\csrfCookie`, set to your domain
-```
+``` php
 'domain' => '.mymagic.my',
 ```
 
 3. under `components\db`, set your database connection credential
-```
+``` php
 'db' => array(
     'connectionString' => 'mysql:host=localhost;dbname=magic_hub',
     'username' => 'root',
@@ -23,14 +23,14 @@ Located at `protected/config/main.php`
 ```
 
 4. under `components\cache`, you may choose to use the default file cache
-```
+``` php
 'cache' => array(
     'class' => 'CFileCache',
     ...
 ),
 ```
  or using a redis cache server for scalability. Please take note that Cluster Redis Server is not supported by Yii1.
-```
+``` php
 'cache' => array(
     //'class' => 'CFileCache', // aws redis only available for local vpn
     'class' => 'CRedisCache',
@@ -40,7 +40,7 @@ Located at `protected/config/main.php`
 ```
 
 5. under `components\esLog`,  you may choose to either enable or disable it. esLog used AWS Elastic Search to log users activities. 
-```
+``` php
 'esLog' => array(
     'class' => 'application.yeebase.components.EsLog',
     'esLogRegion' => '',
@@ -54,7 +54,7 @@ Located at `protected/config/main.php`
 ``` 
 
 6. under `components\s3`, you has to set the `aKey`(api key) and `sKey`(secret key) to your AWS S3 bucket.
-```
+``` php
 's3' => array(
     'class' => 'application.yeebase.extensions.s3.ES3',
     'aKey' => '',
@@ -64,7 +64,7 @@ Located at `protected/config/main.php`
 
 7. under `components\neo4j`, you may choose to either enable or disable it and set your neo4j database connection credential
 
-```
+``` php
 'neo4j' => array(
 	'enable' => true, // enable or disable neo4j database
 	'class'=>'application.extensions.neo4j.NeoEntity',
@@ -82,28 +82,28 @@ This is the application params that shared among web controller and console comm
 * **environment** - development|staging|production, specify the environment mode of this installation
 * **sourceCurrency** - MYR
 * **languages** - Array, specified languages supported by this system which is align with your database. e.g.
-```
+``` php
 'languages'=>array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
 ```
 * **frontendLanguages** - Array, subset of your supported languages that you like to make it available to frontend. e.g.
-```
+``` php
 'frontendLanguages'=>array('en' => 'English', 'ms' => 'Bahasa'),
 ```
 * **backendLanguages** - Array, subset of your supported languages that you like to make it available in backend. e.g.
-```
+``` php
 'backendLanguages'=>array('en' => 'English', 'ms' => 'Bahasa', 'zh' => '中文'),
 ```
 * **adminEmail** - email address of administrator
 * **webmasterEmail** - published email for this website
 * **routineEmails** - Array, a list of emails to be notify by cron activities. e.g.
-```
+```  php
 'routineEmails'=>array('exiang83@gmail.com'),
 ```
 
 #### path.php
 Path configuration should be automatically detected.
 
-```php
+``` php
 Yii::setPathOfAlias('wwwroot', dirname(__DIR__, 2) . '/public_html');
 Yii::setPathOfAlias('uploads', dirname(__DIR__, 2) . '/public_html/uploads');
 Yii::setPathOfAlias('static', dirname(__DIR__, 2) . '/public_html/static');
