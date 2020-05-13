@@ -19,7 +19,7 @@ We have some standard action names:
 > [verb][Adjective][ModuleName][Noun][Preposition][Pronoun][Adjective]
 
 Some examples:
-- `getAllEsLogRecords4AdminQuickly()`
+- `getAllModuleXRecords4AdminQuickly()`
 - `getOrganization2EmailUserID()`
 - `getOrCreateOrganization()`
 - `getOrganizationByCode()`
