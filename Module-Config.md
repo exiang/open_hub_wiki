@@ -7,7 +7,7 @@ Module with name `mentor` will be access thru url likes `https://hub.mymagic.my/
 
 You should never rename the module folder directly to achieve this. 
 
-```
+``` php
 'components' => array(
     'urlManager' => array(
         'rules' => array(
