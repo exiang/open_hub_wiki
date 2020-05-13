@@ -1,4 +1,9 @@
+### .ENV
+Most of the common configuration is expose and can be modify easily at `/protected/.env`. A sample `/protected/dist.env` is available for your reference.
+
 ### Config Files
+Historically, configuration are done in PHP files. Yii framework architecture used 2 main configuration files: `main.php` and `console.php`.
+
 #### main.php
 Located at `protected/config/main.php`
 
@@ -75,7 +80,8 @@ Located at `protected/config/main.php`
 This is the `main.php` version of console environment for command interface.
 
 #### params.php
-This is the application params that shared among web controller and console command interfaces.
+This is the application params that shared among web controller (`/protected/config/main.php`) and console command interfaces (`/protected/config/console.php`).
+
 * **maintenance** - true|false, set `true` to temporary disable the site to enable maintenance mode 
 * **dev** - true|false, set `true` to mark this is a development environment
 * **cache** - true|false, to enable application wide cache or not
