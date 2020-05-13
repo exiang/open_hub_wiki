@@ -6,6 +6,6 @@ OpenHub used Github Actions for CI workflow. Actions are as per recorded at `.gi
 
 ## Secret
 Makes sure you had set these secrets before running any actions at github project settings page:
-  * AWS_S3_BUCKET
-  * AWS_ACCESS_KEY_ID
-  * AWS_SECRET_ACCESS_KEY
+  * `AWS_S3_BUCKET`
+  * `AWS_ACCESS_KEY_ID`
+  * `AWS_SECRET_ACCESS_KEY`
