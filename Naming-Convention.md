@@ -20,6 +20,13 @@ We have some standard action names:
 
 Some examples:
 - getAllEsLogRecords4AdminQuickly()
+- getOrganization2EmailUserID()
+- getOrCreateOrganization()
+- getOrganizationByCode()
+- getActiveOrganizations()
+- getOrganization2Email()
+
+Use plural nouns if you are expecting multiple records in return.
 
 Preposition is written in short form numeric:
   * for -> 4
