@@ -10,7 +10,7 @@ OpenHub default module `WAPI` stands for `Web API`, is enabled by default after 
 ![](https://user-images.githubusercontent.com/5336690/81764067-3f708280-9503-11ea-97cd-c095c00130aa.png)
 
 ### Swagger Definition in YAML
-API definition is written according to swagger format and store as YAML file. They can be located at the following location:
+API definition is written according to swagger format and store as YAML file. Default API definition can be located at the following location:
 
 * `protected/data/api/`
 * `protected/modules/journey/api/journey.yaml`
@@ -161,7 +161,7 @@ Translated into Postman interface:
     - Insert 'var2' to `KEY`, 'World' to `VALUE`
 4. Click `Send` button and receive the following returned output in SoJF (Standard OpenHub JSON Format):
 
-```
+``` json
 {
     "status": "success",
     "meta": {
@@ -178,7 +178,7 @@ Translated into Postman interface:
 ## SoJF (Standard OpenHub JSON Format)
 OpenHub output JSON in its own standard format. Please make sure you following this whenever you are output a JSON in not just WAPI, but in any module action too. 
  
-```
+``` json
 {
     "status": "fail",
     "msg": "Unknown error, something go wrong"
@@ -187,7 +187,7 @@ OpenHub output JSON in its own standard format. Please make sure you following t
 
 or
 
-```
+``` json
 {
     "status": "success",
     "meta": {
@@ -203,7 +203,7 @@ or
 
 or
 
-```
+``` json
 {
   "status": "success",
   "meta": {
@@ -286,4 +286,5 @@ If test in browser and you keep getting popup asking for username and password, 
 
 
 ## Module API
-API is supported in OpenHub module architecture. More information available at [Module Web API](Module-Web-API)
+API is supported in OpenHub module architecture. More information available at [Module Web API](Module-Web-API).
+Module's API definition is stored in location: `protected/modules/[moduleCode]/api/[moduleCode].yaml`
