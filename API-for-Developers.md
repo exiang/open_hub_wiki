@@ -98,6 +98,28 @@ or
 }
 ```
 
+## API Gateway
+MaGIC Central used [tyk.io](https://tyk.io), an open source API Gateway to expose API available for external developers. MaGIC do not have the capacity to host and maintain an API gateway internally. 
+
+
+### Catalog & Policy
+* 1 Policy for 1 Catalog only. this is sucks but it is like this. make sure the policy name and catalog are corresponding to each others
+* Do not remove/delete Policy!
+* 1 API can attach to multiple policy, only API with authentication will show in the list
+
+### Adding a new API
+1. Add new API
+  * apiName: getAllLegalForms
+  * apiSlug: getAllLegalForms
+  * targetUrl: https://api-central.mymagic.my/v1/getAllLegalForms (make sure it start with https, mapping https to http will not pass the POST value when called)
+  * Authentication: AUTH Token
+2. Add API to Policy
+3. Test with Postman
+4. Insert API into swagger.io
+5. Export to unresolved json
+6. Copy paste into the tyk.io related documentation under the catalog (delete if pre-exists)
+
+
 ## Security
 ### Protect WAPI Swagger
 `TODO`
