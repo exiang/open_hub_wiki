@@ -142,8 +142,11 @@ return PhpCsFixer\Config::create()
     ->setLineEnding("\n")
 ;
 ```
+### Bulk fix
+In command line at the specific directory to fix all PHP files in it, type command `php-cs-fixer fix`.
 
-You may also manually run it using the following command:
+![](https://user-images.githubusercontent.com/5336690/81777341-3394b880-9523-11ea-90af-4130cd36726d.png)
+
 
 <code></code>
 
