@@ -103,9 +103,9 @@ MaGIC Central used [tyk.io](https://tyk.io), an open source API Gateway to expos
 
 
 ### Catalog & Policy
-* 1 Policy for 1 Catalog only. this is sucks but it is like this. make sure the policy name and catalog are corresponding to each others
+* One Policy for one Catalog only. Make sure the policy name and catalog are corresponding to each others
 * Do not remove/delete Policy!
-* 1 API can attach to multiple policy, only API with authentication will show in the list
+* One API can attach to multiple policy, only API with authentication will show in the list
 
 ### Adding a new API
 1. Add new API
