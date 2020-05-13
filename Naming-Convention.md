@@ -19,22 +19,22 @@ We have some standard action names:
 > [verb][Adjective][ModuleName][Noun][Preposition][Pronoun][Adjective]
 
 Some examples:
-- getAllEsLogRecords4AdminQuickly()
-- getOrganization2EmailUserID()
-- getOrCreateOrganization()
-- getOrganizationByCode()
-- getActiveOrganizations()
-- getOrganization2Email()
+- `getAllEsLogRecords4AdminQuickly()`
+- `getOrganization2EmailUserID()`
+- `getOrCreateOrganization()`
+- `getOrganizationByCode()`
+- `getActiveOrganizations()`
+- `getOrganization2Email()`
 
 Use plural nouns if you are expecting multiple records in return.
 
 Preposition is written in short form numeric:
-  * for -> 4
-  * to -> 2
-  * on -> On
-  * by -> By
-  * With -> With
-  * From -> From
+  * for -> `4`
+  * to -> `2`
+  * on -> `On`
+  * by -> `By`
+  * With -> `With`
+  * From -> `From`
 
 Function name from modules that use in global scope with potential to clash with others (e.g. Model Behavior) should have module name as part of the function name.
 
