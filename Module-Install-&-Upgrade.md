@@ -8,3 +8,5 @@ public function install($forceReset = false){}
 ```php
 public function installDb($forceReset = false){}
 ```
+
+#### upgrade
