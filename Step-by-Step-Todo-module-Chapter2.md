@@ -2,7 +2,7 @@
 Currently your Todo module is not doing much other than displaying static page content. Let's build a CRUD (Create-Read-Update-Delete) function with database to manage user generated todo list.
 
 ### Create a model
-> We use Yee in this tutorial to create database table and model code thru `todo.build.php` below just to demo how code generation works. A better way is to implement `installDb()` in `TodoModule` so your module is distributable and database setup is done along with module installation.
+> We use Yee in this tutorial to create database table and model code thru `todo.build.php` below just to demo how code generation works. The proper and also a better way is to implement `installDb()` in `TodoModule` so your module is distributable and database setup is done along with module installation.
 
 1. Create a new file `todo.build.php` in `/protected/modules/todo/data` folder, with content:
 ```php
