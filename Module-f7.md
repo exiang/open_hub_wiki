@@ -1,4 +1,4 @@
-## Structure
+## Form Structure
 ``` json
 {
     "1": {
@@ -1444,7 +1444,10 @@
     ]
 }
 ```
-## Pipeline
+## Stage Pipeline
+F7 form comes with simple process pipeline. It is linear and new application start with the first stage, e.g. `Application` in example below.
+
+![](https://user-images.githubusercontent.com/5336690/82217092-84a21380-994c-11ea-87e8-fdd7e84011a0.png)
 ``` json
 [
     {
