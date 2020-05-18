@@ -1,4 +1,4 @@
-Related tables:
+Related database tables:
 * `form`
 * `form_submission`
 * `form2intake`
