@@ -40,7 +40,7 @@ When survey is enabled and automatically sent to attended participants a day aft
 * Event has to be active and not cancel
 * Setting `event-sendPostSurveyEmail` must be turned on
 * Hourly cron job is set to trigger the command `php yiic emailSurveyAfterEvent oneDayAfter`
-* Respective F7 form must be exists
+* Respective F7 form must exists
 
 #### Todo
 Survey is hard corded by @Mahboubian and this need to be improve to a modularise and flexible manners.
