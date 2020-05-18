@@ -2,6 +2,13 @@ Related database tables:
 * `form`
 * `form_submission`
 * `form2intake`
+* `tag2intake`
+* `impact2intake`
+* `industry2intake`
+* `persona2intake`
+* `sdg2intake`
+* `startup_stage2intake`
+
 
 ## Intake
 Intake is the way to group multiple forms under 1 event into a logical structure. For example, throughout the entire 'MaGIC Accelerator Program 2016', multiple forms involve:
