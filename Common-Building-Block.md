@@ -30,5 +30,7 @@ Multiple events can be group under 1 Event Group. For example, a 'MaGIC Accelera
 ### Event Registration
 Event registration keep track of individuals who participated in an event. 
 
+These data can be sync thru module like `Eventbrite` and `Bizzabo`. It can also be manually bulk loaded using spreadsheet. (todo: attach link of the spreadsheet template here).
+
 ### Event Organization
-Event Organization keep track of companies/organizations who participated in an event. 
+Event Organization keep track of companies/organizations who participated in an event. For examples, an event would be sponsored by `Google` and `Facebook`. With judges came from `Microsoft` and `Intel`.
