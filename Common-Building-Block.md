@@ -20,3 +20,15 @@ Most of the activities happened in startup ecosystem can be break down and categ
   * [Persona](Master-Data-Persona) - this event is targeting for attendees of what kind of persona
   * [Industry](Master-Data-Industry) - this event is for attendees of which industry
   * [Startup Stages](Master-Data-Startup-Stages) - this event is targeting for startup at which stages
+
+### Event Group
+Multiple events can be group under 1 Event Group. For example, a 'MaGIC Accelerator Program' is an event group with the following events:
+  * MaGIC Accelerator Program 2015
+  * MaGIC Accelerator Program 2016
+  * MaGIC Accelerator Program 2017
+
+### Event Registration
+Event registration keep track of individuals who participated in an event. 
+
+### Event Organization
+Event Organization keep track of companies/organizations who participated in an event. 
