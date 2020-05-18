@@ -34,3 +34,23 @@ These data can be sync thru module like `Eventbrite` and `Bizzabo`. It can also 
 
 ### Event Organization
 Event Organization keep track of companies/organizations who participated in an event. For examples, an event would be organised by `MaGIC` and `Ministry of Technology`, sponsored by `Google` and `Facebook`, with judges came from `Multimedia University` and `Startup Melaka`.
+
+### Survey
+When survey is enabled and automatically sent to attended participants a day after the event ended. For this to happens:
+* Event has to be active and not cancel
+* Setting `event-sendPostSurveyEmail` must be turned on
+* Hourly cron job is set to trigger the command `php yiic emailSurveyAfterEvent oneDayAfter`
+* Respective F7 form must be exists
+
+#### Todo
+Survey is hard corded by @Mahboubian and this need to be improve to a modularise and flexible manners.
+
+```php
+public function getSurveyTypes($eventId)
+{
+    return array(
+        '1Day' => array('numberOfDays' => '1', 'formSlug' => 'Feedback1', 'participantsMode' => 'attended'),
+        '6Months' => array('numberOfDays' => '180', 'formSlug' => 'Feedback2', 'participantsMode' => 'attended'),
+    );
+}
+```
