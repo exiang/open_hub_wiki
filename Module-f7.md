@@ -1,5 +1,5 @@
 ## Form Structure
-Here is a [Sample F7 Form Structure](Sample-F7-Form-Struture) that demo all the supported form components.
+Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the supported form components.
 
 
 ## Stage Pipeline
