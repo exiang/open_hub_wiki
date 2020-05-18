@@ -15,13 +15,15 @@ Hence, you will like to create an intake called 'MaGIC Accelerator Program 2016'
 
 To reuse a form for other intakes, simply duplicate it. 
 
-> Submission data is linked to the form. Since form is not a template, you will need to duplicate to reuse it.
+> Submission data is linked to the specific form. Since form is not a template, you will need to duplicate to reuse it.
 
 ## Form & Submission
 Both form structure and submission data in F7 Form is stored as JSON format inside database table cell. This design allow flexiblity in creating all kind of form without hard code into a database table structure, trading off with the simplicity of SQL query. 
 
 ## Form Structure
 Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the supported form components.
+
+> It's not suggested to change the form structure after it is published and had collected user submissions.
 
 ## Stage Pipeline
 F7 form comes with simple process pipeline. It is linear and new application start with the first stage, e.g. `Application` in example below.
