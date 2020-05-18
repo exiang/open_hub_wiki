@@ -178,3 +178,6 @@ php yiic message config/message.php
 
 4. Secure your web API with API AUTH and enforce HTTPS. Please refer to [API for Developers](API-for-Developers#use-api-auth) for guide.
 
+5. todo: Settings are inserted thru the database structure, some of the settings are file base and these file is not loaded together with the installer. e.g. `eventRegistration-bulkInsertTemplateFile`, `eventOrganization-bulkInsertTemplateFile`, `mentor-guide4Mentee`, `mentor-guide4Mentor`.
+
+
