@@ -33,4 +33,4 @@ Event registration keep track of individuals who participated in an event.
 These data can be sync thru module like `Eventbrite` and `Bizzabo`. It can also be manually bulk loaded using spreadsheet. (todo: attach link of the spreadsheet template here).
 
 ### Event Organization
-Event Organization keep track of companies/organizations who participated in an event. For examples, an event would be organised by `MaGIC` and `Ministry of Technology`, sponsored by `Google` and `Facebook`, with judges came from `Microsoft` and `Intel`.
+Event Organization keep track of companies/organizations who participated in an event. For examples, an event would be organised by `MaGIC` and `Ministry of Technology`, sponsored by `Google` and `Facebook`, with judges came from `Multimedia University` and `Startup Mamak`.
