@@ -1,7 +1,27 @@
+Related tables:
+* `form`
+* `form_submission`
+* `form2intake`
+
+## Intake
+Intake is the way to group multiple forms under 1 event into a logical structure. For example, throughout the entire 'MaGIC Accelerator Program 2016', multiple forms involve:
+* Application Form (default)
+* Pre-arrival Form
+* Claim Form
+* Giving Back Form
+* Post-Program Feedback Form
+
+Hence, you will like to create an intake called 'MaGIC Accelerator Program 2016' and link all the others individual forms to it. 
+
+To reuse a form for other intakes, simply duplicate it. 
+
+> Submission data is linked to the form. Since form is not a template, you will need to duplicate to reuse it.
+
+## Form & Submission
+Both form structure and submission data in F7 Form is stored as JSON format inside database table cell. This design allow flexiblity in creating all kind of form without hard code into a database table structure, trading off with the simplicity of SQL query. 
+
 ## Form Structure
-
 Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the supported form components.
-
 
 ## Stage Pipeline
 F7 form comes with simple process pipeline. It is linear and new application start with the first stage, e.g. `Application` in example below.
