@@ -1,12 +1,14 @@
-## Query with Yii ActiveRecord
+## Advance Query in Yii
 
 To select all matching individual records associated with email 'erlich@piedpiper.com' in simple SQL:
 
 ``` sql
-SELECT t.* FROM individual as t LEFT JOIN `individual2email` as i2e ON t.id=i2e.individual_id WHERE i2e.user_email='erlich@piedpiper.com'
+SELECT t.* FROM individual as t 
+LEFT JOIN `individual2email` as i2e ON t.id=i2e.individual_id 
+WHERE i2e.user_email='erlich@piedpiper.com'
 ```
 
-Doing this in Yii ActiveRecord:
+Method 1 - Doing this in Yii ActiveRecord:
 
 ``` php
 $userEmail = 'erlich@piedpiper.com';
@@ -29,7 +31,7 @@ public function relations()
          ...
 ```
 
-then, you can also query it with:
+Method 2 - then, you can also query it with:
 ```php
 $criteria = new CDbCriteria;
 $criteria->with = 'individual2Emails';
