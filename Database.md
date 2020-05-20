@@ -22,7 +22,7 @@ $criteria->params[':userEmail'] = $userEmail;
 $result = Individual::model()->findAll($criteria);
 ```
 
-or, if relations is defined in `Individual` model like this:
+Method 2 - or, if relations is defined in `Individual` model like this:
 ``` php
 public function relations()
 {
@@ -31,7 +31,7 @@ public function relations()
          ...
 ```
 
-Method 2 - then, you can also query it with:
+then, you can have shorter query:
 ```php
 $criteria = new CDbCriteria;
 $criteria->with = 'individual2Emails';
