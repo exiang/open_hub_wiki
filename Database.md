@@ -1,4 +1,5 @@
-## Advance Query in Yii
+## Yii ActiveRecord
+### Advance Query
 
 To select all matching individual records associated with email 'erlich@piedpiper.com' in simple SQL:
 
