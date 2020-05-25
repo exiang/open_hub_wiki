@@ -158,7 +158,7 @@ unzip openhub-latest.zip -d /var/www
 ```
 
 ### Run Web Installer
-Please note that OpenHub Web Installer runs thru Web Server (e.g. Apache) and this could break your installation process if it took too long beyond the limit of PHP max_execution_time setting or depends on it is running as mod_php or mod_fastcgi. This too can be affected if you are behind proxy or firewall (e.g. Cloudflare).
+> Please note that OpenHub Web Installer runs thru Web Server (e.g. Apache) and this could break your installation process if it took too long beyond the limit of PHP max_execution_time setting or depends on it is running as mod_php or mod_fastcgi. This too can be affected if you are behind proxy or firewall (e.g. Cloudflare).
 
 Open browser and go to `https://openhub.mymagic.my/installer`. Follow the instruction there and fill up everything needed.
 
