@@ -38,6 +38,3 @@ Click on Upgrade button to upgrade your module from backend.
 
 You will see this when Upgrade migration completed successfully.
 ![](https://user-images.githubusercontent.com/5336690/74012902-45b40780-49c6-11ea-84d7-849a43d41c82.png)
-
-Table changes will be reflected in database.
-![table database changes](https://user-images.githubusercontent.com/5336690/74012943-5a909b00-49c6-11ea-8b96-7e34d26185ca.png)
