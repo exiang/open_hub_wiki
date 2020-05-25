@@ -10,6 +10,8 @@ public function installDb($forceReset = false){}
 ```
 
 #### upgrade
+The modular architecture of OpenHub comes with built-in versioning control. Update version numbering in `protected/modules/[moduleCode]/config/about.yaml`
+
 Migration instruction file is located at `protected/modules/todo/upgrades/upgrade-1.1.php`:
 ```php
 <?php
