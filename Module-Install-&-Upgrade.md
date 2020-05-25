@@ -11,7 +11,7 @@ public function installDb($forceReset = false){}
 
 ## Module Upgrade
 
-> Please note that unlike `Yii migrate` which run on CLI, module upgrade is run thru PHP Web and this could break your upgrade process if it took too long beyond the limit of PHP `max_execution_time` setting
+> Please note that unlike `Yii migrate` which run on CLI, module upgrade runs thru PHP Web and this could break your upgrade process if it took too long beyond the limit of PHP `max_execution_time` setting
 
 The modular architecture of OpenHub comes with built-in versioning control. Update version numbering in `protected/modules/[moduleCode]/config/about.yaml`
 
