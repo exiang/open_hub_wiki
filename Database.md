@@ -41,3 +41,10 @@ $criteria->params[':userEmail'] = $userEmail;
 
 $result = Individual::model()->findAll($criteria);
 ```
+
+## Updating Database structure
+> Todo: Automated build should auto generate `public_html/installer/protected/data/base.sql` removing manual work in step 2 below.
+Please follow this rule strictly:
+1. All updates to core database structure must be done thru migration code
+2. For best installation experience (without the need to run migration in ssh), update `public_html/installer/protected/data/base.sql` corresponding to your changes. Do not forget insert entry to `tbl_migration`  too.
+3. All modules update, regardless default or 3rd party modules, must be done in respective module upgrade function.
