@@ -1,6 +1,6 @@
 SSH into your web server:
 
-1. Download latest release package and replace files
+1. Download latest release package, unzip and replace files
 
 2. Apply migration update, including new database changes.
 ```
