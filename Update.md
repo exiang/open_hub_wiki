@@ -1,4 +1,4 @@
-SSH into your web server to run these commands.
+SSH into your web server:
 
 1. Download latest release package and replace files
 
