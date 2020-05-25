@@ -30,7 +30,7 @@ function upgrade_module_1_1($about)
 
 Instructions in this file will run automatically when you upgrade your module.
 
-Click on Upgrade button to upgrade Todo module from backend.
+Click on Upgrade button to upgrade your module from backend.
 ![](https://user-images.githubusercontent.com/5336690/74012856-2a48fc80-49c6-11ea-880e-34d017d80647.png)
 
 You will see this when Upgrade migration completed successfully.
