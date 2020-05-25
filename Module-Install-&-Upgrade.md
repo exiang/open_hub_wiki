@@ -10,6 +10,7 @@ public function installDb($forceReset = false){}
 ```
 
 #### upgrade
+Migration instruction file is located at `protected/modules/todo/upgrades/upgrade-1.1.php`:
 ```php
 <?php
 function upgrade_module_1_1($about)
