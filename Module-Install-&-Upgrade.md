@@ -30,6 +30,8 @@ function upgrade_module_1_1($about)
 
 Instructions in this file will run automatically when you upgrade your module.
 
+> Please take note that this is run thru PHP web and this might break your upgrade process if it took too long beyond the limit of PHP `max_execution_time` setting
+
 Click on Upgrade button to upgrade your module from backend.
 ![](https://user-images.githubusercontent.com/5336690/74012856-2a48fc80-49c6-11ea-880e-34d017d80647.png)
 
