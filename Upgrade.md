@@ -5,7 +5,7 @@ cd /var/www/protected
 php yiic openhub upgrade
 ```
 
-use parameter `--force=1` to force upgrade when latest release version is lower than current installation one. Use this as caution as you are command for a downgrade.
+use parameter `--force=1` to force upgrade when latest release version is lower than current installation. Use this carefully as you are command for a downgrade.
 
 ## Method 3: Manually
 SSH into your web server:
