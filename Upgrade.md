@@ -1,3 +1,5 @@
+## Thru Web Backend
+## Thru OpenHub Command
 ## Manually
 SSH into your web server:
 
