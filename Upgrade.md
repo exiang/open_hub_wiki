@@ -1,6 +1,6 @@
-## Thru Web Backend
-## Thru OpenHub Command
-## Manually
+## Method 1: Thru Web Backend
+## Method 2: Thru OpenHub Command
+## Method 3: Manually
 SSH into your web server:
 
 1. Download latest release package, unzip and replace files
