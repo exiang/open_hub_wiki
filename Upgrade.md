@@ -1,3 +1,4 @@
+## Manually
 SSH into your web server:
 
 1. Download latest release package, unzip and replace files
