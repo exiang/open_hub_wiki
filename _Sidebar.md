@@ -2,7 +2,7 @@
 * [Get Started & Install](Basics)
   * [Introduction](Introduction)
   * [Installation](Installation)
-  * [Update](Update)
+  * [Upgrade](Upgrade)
 * [Build a Module](Build-Module)
   * [Modules Architecture](Modules-Architecture)
   * [Quick Start with Boilerplate](Quick-Start-with-Boilerplate)
