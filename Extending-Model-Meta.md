@@ -44,6 +44,8 @@ public function relations()
 }
 ```
 
+OpenHub comes with built in function `MetaStructure::initMeta` to help you create the structure:
+
 ``` php
 MetaStructure::initMeta('organization', 'sample', 'extraColumn1', 'boolean', 'Highlight in Sample', 'Is this organization a lighted sample?', '');
 ```
