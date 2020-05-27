@@ -28,6 +28,8 @@ print_r($embed->getErrors());
 ```
 
 #### Using an embed in view:
+> Notice that you do not need to insert the specific language suffix as it has already taken care of internally
+
 Display the title:
 ```php
 <?php echo Embed::code2value('cpanel-deleteAccountMessage', 'title') ?>
