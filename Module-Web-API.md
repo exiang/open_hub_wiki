@@ -92,9 +92,9 @@ OpenHub ouput JSON in SoJF (Standard OpenHub JSON Format).
     "input": {
       "var1FromPost": "abc",
       "var2FromPost": "def",
-      "output": {
-        "total": 2
-      }
+    },
+    "output": {
+      "total": 2
     }
   },
   "msg": "Everything works fine",
