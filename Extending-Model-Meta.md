@@ -44,6 +44,10 @@ public function relations()
 }
 ```
 
+``` php
+MetaStructure::initMeta('organization', 'sample', 'extraColumn1', 'boolean', 'Highlight in Sample', 'Is this organization a lighted sample?', '');
+```
+
 ## Known Issues
 ### Meta Items value cant set due to bad code from modules' behavior
 You tried to set value `$org->_dynamicData[organization-abc'] = 'Hello World' but it is not working, meta value is not saved. 
