@@ -51,6 +51,8 @@ When a code not found, `Embed::code2value()` will return empty string '' if the 
 <?php echo Embed::code2value('cpanel-deleteAccountMessage', '', true) ?>
 ```
 
+Caching
+Embed is cache for 30 seconds.
 
 #### Delete an embed:
 ```php
