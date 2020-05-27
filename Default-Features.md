@@ -44,7 +44,7 @@ Getting the entire object can be done without specified any attribute name:
 <?php echo Embed::code2value('cpanel-deleteAccountMessage') ?>
 ```
 
-By default when a code not found, `Embed::code2value()` will return empty string '' if the `attribute` is specified; or null if `attribute` is not specified.
+When a code not found, `Embed::code2value()` will return empty string '' if the `attribute` is specified; or null if `attribute` is not specified.
 
 
 #### Delete an embed:
