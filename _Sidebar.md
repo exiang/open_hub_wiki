@@ -28,6 +28,7 @@
   * [Common Building Block](Common-Building-Block)
   * [Master Data](Master-Data)
   * [Default Modules](Default-Modules)
+  * [Default Features](Default-Features)
   * [Cron](Cron-Commands)
   * [Neo4J Database](Neo4J-Database)
   * [Multi Domains](Multi-Domains)
