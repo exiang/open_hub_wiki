@@ -10,7 +10,7 @@ Think of Embed as snippet of content to include in your website which is i18n se
 
 #### Create/Update an embed:
 ```php
-$embed = Embed::setEmbed('cpanel-deactivateAccountMessage', array(
+$embed = Embed::setEmbed('cpanel-deleteAccountMessage', array(
     'is_title_enabled' => true,
     'is_text_description_enabled' => false,
     'is_html_content_enabled' => true,
@@ -28,9 +28,16 @@ print_r($embed->getErrors());
 ```
 
 #### Using an embed in view:
-
+Display the title:
+```php
+<?php echo Embed::code2value('cpanel-deleteAccountMessage', 'title') ?>
+```
+Display the Html Content:
+```php
+<?php echo Embed::code2value('cpanel-deleteAccountMessage', 'html_content') ?>
+```
 
 #### Delete an embed:
 ```php
-$success = Embed::deleteEmbed('cpanel-deactivateAccountMessage')
+$success = Embed::deleteEmbed('cpanel-deleteAccountMessage')
 ```
