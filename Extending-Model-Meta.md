@@ -54,7 +54,7 @@ This will create a `meta_structure` record with code `Organization-sample-extraC
 
 ## Known Issues
 ### Meta Items value cant set due to bad code from modules' behavior
-You tried to set value `$org->_dynamicData[organization-abc'] = 'Hello World' but it is not working, meta value is not saved. 
+You tried to set value `$org->_dynamicData[organization-abc'] = 'Hello World'` but it is not working, meta value is not saved. 
 But when you commented the following line from model `Organization` for example, the problem no longer exists. 
 ```php
 public function behaviors()
