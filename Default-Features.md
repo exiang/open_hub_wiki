@@ -8,7 +8,7 @@ Think of Embed as snippet of content to include in your website which is i18n se
 * HTML Content
 * Image
 
-Create/Update an embed:
+#### Create/Update an embed:
 ```php
 $embed = Embed::setEmbed('cpanel-deactivateAccountMessage', array(
     'is_title_enabled' => true,
@@ -27,10 +27,10 @@ $embed->validate();
 print_r($embed->getErrors());
 ```
 
-Using an embed in view:
+#### Using an embed in view:
 
 
-Delete an embed:
+#### Delete an embed:
 ```php
 $success = Embed::deleteEmbed('cpanel-deactivateAccountMessage')
 ```
