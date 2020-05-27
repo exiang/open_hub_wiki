@@ -52,7 +52,8 @@ When a code not found, `Embed::code2value()` will return empty string '' if the 
 ```
 
 Caching
-Embed is cache for 30 seconds.
+
+Do not panic if your update do not apply immediately. Request is cache for 30 seconds internally.
 
 #### Delete an embed:
 ```php
