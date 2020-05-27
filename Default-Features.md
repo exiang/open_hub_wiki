@@ -3,10 +3,10 @@
 ## Embed
 Think of Embed as snippet of content to include in your website which is i18n sensitive. A standard snippet has the following structure:
 
-* Title
-* Description Text
-* HTML Content
-* Image
+* Title (`title_en`, `title_ms`...)
+* Description Text (`text_description_en`, `text_description_ms`...)
+* HTML Content (`html_content_en`, `html_content_ms`...)
+* Image (`image_main_en`, `image_main_ms`...)
 
 #### Create/Update an embed:
 ```php
