@@ -38,6 +38,15 @@ mbstring.encoding_translation = 1
    * Collation: `uft8mb4_unicode_ci`
 7. Last, copy the created database name, database hostname, database username and database user password.
 
+### Setup AWS IAM
+We recommend using IAM instead of your root key. 
+Make sure you tick the `Programmatic access` but not `AWS Management Console access`
+Next, provide the following permissions:
+* AmazonElastiCacheFullAccess
+* AmazonS3FullAccess
+* AmazonElasticFileSystemFullAccess
+
+ AmazonElasticFileSystemFullAccess
 ### Setup AWS S3 buckets
 We needs 2 buckets here, one for public access and another to store secure files
 #### Public Bucket
