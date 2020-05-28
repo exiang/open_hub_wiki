@@ -26,7 +26,7 @@ public function roleCheckerAction($role, $controller, $action = '') {
 ## Usage
 There are few ways to use the function. It depends on where you want to put it.
 
- * example in accessRules function in Controller file using _**expression**_. Provide _**Yii::app()->controller**_ as second parameter.
+ * example in accessRules function in Controller file using `expression`. Provide `Yii::app()->controller` as second parameter.
  ```php
  public function accessRules(){
 	return array(
