@@ -72,3 +72,6 @@ array(
 	),
 ),
 ```
+
+## Example for Sensitive Data
+
