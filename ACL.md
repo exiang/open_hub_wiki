@@ -40,7 +40,7 @@ There are few ways to use the function. It depends on where you want to put it.
  ```
 
  * example in view to hide or show menu 
-	* _**first array**_ - Action is in the _**same Controller**_. Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _admin_ is the action)
+	* _**first array**_ - Action is in the _**same Controller**_. Provide `Yii::app()->controller` as second parameter and Action for the third parameter (in this case, _admin_ is the action)
 	* _**second array**_ - Action is in the _**different Controller**_. Provide _**custom parameter**_ for the second parameter
  ```php
  $this->menu = array(
@@ -57,7 +57,7 @@ There are few ways to use the function. It depends on where you want to put it.
 
 * example in gridview to hide or show icon 
 	* _**view icon**_ - Action is in the _**different Controller**_. Provide _**custom parameter**_ for the second parameter
-	* _**update icon**_ - Action is in the _**same Controller**_. Provide _**Yii::app()->controller**_ as second parameter and Action for the third parameter (in this case, _update_ is the action)
+	* _**update icon**_ - Action is in the _**same Controller**_. Provide `Yii::app()->controller` as second parameter and Action for the third parameter (in this case, _update_ is the action)
 ```php
 array(
 	'class' => 'application.components.widgets.ButtonColumn',
