@@ -44,7 +44,7 @@ We needs 2 buckets here, one for public access and another to store secure files
 1. Create a bucket and name it `openhub-staging`
 2. Make sure `Block all public access` is `off`
 3. Go to `Properties` and `Static Website Hosting`, select `Use this bucket to host a website`
-3. Go to `Permissions` and `Bucket Policy`, modify `openhub-staging` to your bucket name if required, then insert the following code and save:
+3. Go to `Permissions` and `Bucket Policy`, modify the following code to replace `openhub-staging` to your bucket name if required, then insert and save:
 ```
 {
     "Version": "2012-10-17",
