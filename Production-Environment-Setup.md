@@ -83,6 +83,7 @@ Setup Redis server for faster caching (optional) or use default file cache. Here
 ### Setup AWS Elastic Search
 > Start with a small instance limit to 1 zone at 10GB is good enough
   * Domain name: Just insert any name like `esearch`
+  * Pick a custom one, allow public access
   * Note down the `Endpoint`
 
 ### Setup Neo4J
