@@ -43,5 +43,7 @@
   * [API Gateway](API-for-Developers#api-gateway)
   * [Security](API-for-Developers#Security)
   * [Module API](API-for-Developers#module-api)
+* Others
+  * [YeeBase](YeeBase)
 * [Contribute](Contribute)
 * [Troubleshoot](Troubleshoot)
