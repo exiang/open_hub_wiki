@@ -27,6 +27,10 @@ function upgrade_module_1_1($about)
 	// addForeignKey ( $name, $table, $columns, $refTable, $refColumns, $delete = null, $update = null )
 	$migration->addForeignKey('fk_todo-organization_id', 'todo', 'organization_id', 'organization', 'id', 'SET NULL', 'CASCADE');
 
+	// if your upgrade consist of new controller and you want to allow the action to be accessed by certain role
+	// Access::setAccessRole('[moduleCode]','controller_file',['action1','action2'],['role1','role2']);
+	Access::setAccessRole('todo','TodoController',['index','admin'],['admin','developer']);
+
 	return "Upgraded to version 1.1\n";
 }
 ```
