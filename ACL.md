@@ -92,4 +92,17 @@ $this->menu = array(
 );
 ```
 
-## Action that's limited to Developer but not SuperAdmin role
+## Action that is limited to Developer but not SuperAdmin role
+For action that have real route, you need to allow `Developer` role to access it. Refer to this [step](https://github.com/mymagic/open_hub/wiki/Inserting-Access#assign-access-to-role). Certain cases, you need custom/fake access to allow certain role to have that accessibility. For this case the role is `Developer`.
+```php
+$this->menu = array(
+   array(
+   	'label' => Yii::t('app', 'Manage Todo'), 'url' => array('/todo/todo/admin'),
+   	'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState("rolesAssigned"), (object)['id'=>'todo','action'=>(object)['id'=>'admin'],'module'=>(object)['id'=>'todo']])
+   ),
+   array(
+   	'label' => Yii::t('app', 'Manage Sample1'), 'url' => array('/module1/controller1/admin'),
+   	'visible'=>HUB::roleCheckerAction(Yii::app()->user->getState('rolesAssigned'), (object)['id' => 'custom', 'action' => (object)['id' => 'developer']])
+   ),
+);
+```
