@@ -23,6 +23,9 @@ public function roleCheckerAction($role, $controller, $action = '') {
 }
 ```
 
+## How to add the access?
+[Inserting Access](https://github.com/mymagic/open_hub/wiki/Inserting-Access)
+
 ## Usage
 There are few ways to use the function. It depends on where you want to put it.
 
