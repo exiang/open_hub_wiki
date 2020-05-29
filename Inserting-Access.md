@@ -15,41 +15,7 @@ There are some ways to add access into the database
 ```php
 public function up()
 {
-	$migration = Yii::app()->db->createCommand();
-
-	$module = 'todo';
-
-	// need to define controller & action to be insert into table access
-	// depend on how many controller & action have in the module
-	$arrControllerAction = [
-		// 'controllerOne' => ['actionOne','actionTwo'],
-		// 'controllerTwo' => ['actionOne']
-	];
-
-	foreach($arrControllerAction as $controller => $actions){
-		foreach($actions as $action){
-			$access = [$module, $controller, $action];
-			$access = array_filter($access);
-			$route = implode('/',$access);
-
-			// need to check before insert in case using forceInstall
-			$exist = Yii::app()->db->createCommand()
-					->select('code')->from('access')
-					->where('code=:code', [':code'=>$route])
-					->queryRow();
-			if($exist===false){
-				$migration->insert('access', [
-					'code' => $route,
-					'title' => $route,
-					'module' => $module,
-					'controller' => $controller,
-					'action' => $action,
-					'is_active' => 1,
-					'date_added' => time(),
-					'date_modified' => time()
-				]);
-			}
-		}
-	}
+	// Access::setAccessRole('module_name','controller_file',['action1','action2'],['role1','role2']);
+	Access::setAccessRole('todo','TodoController',['index','admin'],['admin','developer']);
 }
 ```
