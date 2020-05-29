@@ -80,42 +80,6 @@ Array
                 (
                 )
 
-            [class] => opArray
-(
-    [collection] => Array
-        (
-            [var1] => 
-            [var2] => 
-            [modelBehaviors] => Array
-                (
-                    [Organization] => Array
-                        (
-                            [class] => application.modules.collection.components.CollectionOrganizationBehavior
-                        )
-
-                    [User] => Array
-                        (
-                            [class] => application.modules.collection.components.CollectionUserBehavior
-                        )
-
-                )
-
-            [class] => collection.CollectionModule
-        )
-
-    [openHub] => Array
-        (
-            [var1] => 
-            [var2] => 
-            [githubOrganization] => mymagic
-            [githubRepoName] => open_hub
-            [githubReleaseUrl] => https://openhub-main.s3-ap-southeast-1.amazonaws.com/github
-            [isMockUpgrade] => 1
-            [modelBehaviors] => Array
-                (
-                )
-
-
             [class] => openHub.OpenHubModule
         )
 ...
