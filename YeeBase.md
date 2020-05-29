@@ -1,10 +1,10 @@
 YeeBase is an external repo which extended Yii Framework 1.0 functionality with various customization.
 
 ## Helpful Functions
-#### public static function getActionsInController($controllerName, $moduleKey = '', $withPrefixAction = true)
+#### getActionsInController($controllerName, $moduleKey = '', $withPrefixAction = true)
 This will return a list of actions name inside a controller which belongs to base or module. 
 
-`getActionsInController('TestController', 'boilerplateStart')`
+`YeeBase::getActionsInController('TestController', 'boilerplateStart')`
 
 ```php
 Array
@@ -14,7 +14,7 @@ Array
 )
 ```
 
-`getActionsInController('TestController', 'boilerplateStart', false)`
+`YeeBase::getActionsInController('TestController', 'boilerplateStart', false)`
 ```php
 Array
 (
