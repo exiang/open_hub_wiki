@@ -76,6 +76,20 @@ array(
 ),
 ```
 
-## Example for Sensitive Data
+
+## For Sensitive Data
+Some data or information, it can be only visible/accessible to specific role. You may use this to limit the accessibility `Yii::app()->user->getState('accessSensitiveData')` 
+```php
+$this->menu = array(
+   array(
+   	'label' => Yii::t('app', 'Manage Todo'), 'url' => array('/todo/todo/admin'),
+   	'visible'=>Yii::app()->user->getState('accessSensitiveData')
+   ),
+   array(
+   	'label' => Yii::t('app', 'Manage Sample1'), 'url' => array('/module1/controller1/admin'),
+   	'visible'=>Yii::app()->user->getState('accessSensitiveData')
+   ),
+);
+```
 
 ## Action that's limited to Developer but not SuperAdmin role
