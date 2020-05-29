@@ -13,7 +13,7 @@ There are some ways to add access into the database
 * after done the previous step then you should go to `Site > Sys > Role > Manage Role` to assign the access to the `Role`
 ![](https://user-images.githubusercontent.com/55473894/83234192-795bad00-a1c2-11ea-8b88-df24156151ef.png)
 
-* choose & select the action/route you want grant access to that role
+* choose & select the action/route you want grant access to that `Role`
 ![](https://user-images.githubusercontent.com/55473894/83234198-7c569d80-a1c2-11ea-90e4-5ef9322f1995.png)
 
 3.  alternatively, you might want to do it through migration file
