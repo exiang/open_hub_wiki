@@ -43,7 +43,7 @@ Return a list of new modules' code, including those who are not installed yet
 Just a short hand of `return Yii::app()->modules;`
 
 #### YeeModule::getActiveParsableModules()
-Return list of activated parsable modules
+Return list of activated parsable modules object, which is recorded in database and has `is_active` flag switched on. Core modules are not included in the list.
 ```php
 Array
 (
@@ -84,3 +84,6 @@ Array
         )
 ...
 ```
+
+### getParsableModules()
+Get list of parsable modules object, including those not registered in database. Core module is not included.
