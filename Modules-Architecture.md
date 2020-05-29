@@ -85,5 +85,5 @@ Array
 ...
 ```
 
-#### getParsableModules()
+#### YeeModule::getParsableModules()
 Get list of parsable modules object, including those not registered in database. Core module is not included.
