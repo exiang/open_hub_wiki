@@ -87,3 +87,57 @@ Array
 
 #### YeeModule::getParsableModules()
 Get list of parsable modules object, including those not registered in database. Core module is not included.
+
+## Sample Code
+#### To loop thru controllers and actions of all modules
+``` php
+public function actionGetModuleActions()
+{
+    $modules = YeeModule::getActiveParsableModules();
+    foreach ($modules as $moduleKey => $moduleParams) {
+        $module = Yii::app()->getModule($moduleKey);
+        echo sprintf('<h3>%s</h3>', $moduleKey);
+        $controllers = YeeModule::getControllers($moduleKey, true);
+
+        foreach ($controllers as $controllerKey) {
+            echo sprintf('<h5>%s</h5>', $controllerKey);
+            $actions = YeeBase::getActionsInController($controllerKey, $moduleKey, true);
+            foreach ($actions as $action) {
+                echo sprintf('<li>%s</li>', $action);
+                ;
+            }
+        }
+    }
+}
+```
+
+Which return result like:
+```php
+
+collection
+MeController
+- actionIndex
+- actionList
+- actionView
+- actionAddItem2Collection
+- actionGetCollections
+- actionDeleteCollection
+TestController
+- actionIndex
+- actionAddCollection
+- actionHubAddCollectionItem
+- actionHubGetCollectionByUser
+- actionHubDeleteCollection
+- actionHubRenameCollection
+- actionHubMoveCollectionSub
+- actionHubRenameCollectionSub
+- actionHubDeleteCollectionSub
+- actionHubDeleteCollectionItem
+- actionTestZone
+
+openHub
+BackendController
+- actionIndex
+- actionUpgrade
+- actionDoUpgrade
+```
