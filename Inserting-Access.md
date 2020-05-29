@@ -10,12 +10,6 @@ There are some ways to add access into the database
 ![](https://user-images.githubusercontent.com/55473894/79819459-9c719080-83bc-11ea-9ed8-36c06de45ecd.png)
    > You need to add manually one by one or you can even create fake action
 
-* after done the previous step then you should go to `Site > Sys > Role > Manage Role` to assign the access to the `Role`
-![](https://user-images.githubusercontent.com/55473894/83234192-795bad00-a1c2-11ea-8b88-df24156151ef.png)
-
-* choose & select the action/route you want grant access to that `Role`
-![](https://user-images.githubusercontent.com/55473894/83234198-7c569d80-a1c2-11ea-90e4-5ef9322f1995.png)
-
 3.  alternatively, you might want to do it through migration file
 ```php
 public function up()
@@ -24,3 +18,10 @@ public function up()
 	Access::setAccessRole('todo','TodoController',['index','admin'],['admin','developer']);
 }
 ```
+
+## Assign Access to Role
+* after done the above step (#1 or #2) then you should go to `Site > Sys > Role > Manage Role` to assign the access to the `Role`
+![](https://user-images.githubusercontent.com/55473894/83234192-795bad00-a1c2-11ea-8b88-df24156151ef.png)
+
+* choose & select the action/route you want grant access to that `Role`
+![](https://user-images.githubusercontent.com/55473894/83234198-7c569d80-a1c2-11ea-90e4-5ef9322f1995.png)
