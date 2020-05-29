@@ -31,3 +31,92 @@ Inside each module, files are organized as:
   * Controllers
   * Models - Neo4J OGM stores under `protected/modules/YOUR_MODULE/models/neo4j`
   * Views
+
+## Helpful Functions
+#### YeeModule::getCoreModules()
+Return a list of system defined core modules' code
+
+#### YeeModule::getNewModules()
+Return a list of new modules' code, including those who are not installed yet
+
+#### YeeModule::getAllModules()
+Just a short hand of `return Yii::app()->modules;`
+
+#### YeeModule::getActiveParsableModules()
+Return list of activated parsable modules
+```php
+Array
+(
+    [collection] => Array
+        (
+            [var1] => 
+            [var2] => 
+            [modelBehaviors] => Array
+                (
+                    [Organization] => Array
+                        (
+                            [class] => application.modules.collection.components.CollectionOrganizationBehavior
+                        )
+
+                    [User] => Array
+                        (
+                            [class] => application.modules.collection.components.CollectionUserBehavior
+                        )
+
+                )
+
+            [class] => collection.CollectionModule
+        )
+
+    [openHub] => Array
+        (
+            [var1] => 
+            [var2] => 
+            [githubOrganization] => mymagic
+            [githubRepoName] => open_hub
+            [githubReleaseUrl] => https://openhub-main.s3-ap-southeast-1.amazonaws.com/github
+            [isMockUpgrade] => 1
+            [modelBehaviors] => Array
+                (
+                )
+
+            [class] => opArray
+(
+    [collection] => Array
+        (
+            [var1] => 
+            [var2] => 
+            [modelBehaviors] => Array
+                (
+                    [Organization] => Array
+                        (
+                            [class] => application.modules.collection.components.CollectionOrganizationBehavior
+                        )
+
+                    [User] => Array
+                        (
+                            [class] => application.modules.collection.components.CollectionUserBehavior
+                        )
+
+                )
+
+            [class] => collection.CollectionModule
+        )
+
+    [openHub] => Array
+        (
+            [var1] => 
+            [var2] => 
+            [githubOrganization] => mymagic
+            [githubRepoName] => open_hub
+            [githubReleaseUrl] => https://openhub-main.s3-ap-southeast-1.amazonaws.com/github
+            [isMockUpgrade] => 1
+            [modelBehaviors] => Array
+                (
+                )
+
+
+            [class] => openHub.OpenHubModule
+        )
+...
+```
