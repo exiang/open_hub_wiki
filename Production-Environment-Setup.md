@@ -12,14 +12,66 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 2. Setup Apache Web Server (Apache 2)
 3. Setup PHP 7.2 and all the required modules
 
-#### Enable PHP Modules
+Keep the local version currently installed
+```
+do-release-upgrade
+sudo apt-get dist-upgrade
 ```
 
-sudo apt install php-yaml
-sudo apt install php-curl
-sudo apt install php7.2-gd
-sudo apt install php-redis
-sudo apt install php-bcmath
+Insall LAMP
+```
+sudo apt-get install tasksel
+sudo tasksel install lamp-server
+```
+
+Configure Vhost
+```
+cd /etc/apache2/sites-available
+sudo cp default-ssl.conf openhub.dlab.work.conf
+```
+
+  * remove: `<IfModule mod_ssl.c>`
+  * change: `<VirtualHost *:80 *:443>`
+  * change: `ocumentRoot /var/www/public_html`
+  * add: 
+```
+ServerName openhub.dlab.work
+ServerAlias api-openhub.dlab.work
+<Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+```
+
+Enabled Apache modules:
+```
+sudo a2enmod ssl
+sudo a2enmod rewrite
+sudo a2enmod headers 
+```
+
+Set permissions and user group to web directory:
+```
+sudo chgrp -R www-data /var/www
+sudo chown -R ubuntu /var/www
+sudo service apache2 restart
+```
+
+
+```
+sudo apt install unzip
+```
+
+#### Enable PHP Modules
+```
+sudo apt-get install php-redis
+sudo apt-get install php7.2-curl zip unzip php7.2-zip
+sudo apt-get install php7.2-mbstring
+sudo apt-get install php7.2-xml
+sudo apt-get install php7.2-gd
+sudo apt-get install php-bcmath
+sudo apt-get install php7.2-yaml
 ```
 
 #### PHP.ini setting
@@ -37,6 +89,8 @@ mbstring.http_output = 'UTF-8'
 mbstring.encoding_translation = 1
 ```
 ### Setup RDS
+We recommend using AWS RDS for real production setup than sharing the same database with web server instance. You may skip if you decided to use mysql created by tasksel
+
 1. Select `Easy Create`
 2. Select `MariaDB` in configuration
 3. Select `Free tier`
