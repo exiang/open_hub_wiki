@@ -6,6 +6,7 @@
     * [GD](https://www.php.net/manual/en/book.image.php)
     * [ZLIB](https://www.php.net/manual/en/book.zlib.php)
     * [REDIS](https://github.com/phpredis/phpredis)
+    * [BCMATH] (required by Neo4J Composer package)
   * [PHP Composer](https://getcomposer.org/)
   * [MariaDb](https://mariadb.org/) (must be able to support json query)
   * [AWS S3](https://aws.amazon.com/s3/)
