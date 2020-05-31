@@ -14,6 +14,10 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 
 #### Enable PHP Modules
 ```
+
+sudo apt install php-yaml
+sudo apt install php-curl
+sudo apt install php7.2-gd
 sudo apt install php-redis
 sudo apt install php-bcmath
 ```
