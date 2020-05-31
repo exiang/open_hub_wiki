@@ -18,6 +18,16 @@ use parameter `--force=1` to force upgrade when latest release version is lower 
 SSH into your web server:
 
 1. Download latest release package, unzip and replace files
+PHP composer dependency packages and SQL database structure are included.
+```
+cd /home/ubuntu
+wget https://openhub-main.s3-ap-southeast-1.amazonaws.com/github/release/openhub-latest.zip
+```
+
+When completed, unzip to `/var/www` (you may wanto make a backup before this):
+```
+unzip openhub-latest.zip -d /var/www
+```
 
 2. Apply migration update, including new database changes.
 ```
