@@ -127,7 +127,9 @@ Type: A
 Name: api-openhub.mymagic.my
 IPv4 Address: 64.128.128.128
 ```
+> Please take notes we need 2 separate subdomains here, one for the web and another for the API interface.
 > If you ping `openhub.mymagic.my` now, you will find the IP address you get is not `64.128.128.128` but something else, e.g. `100.24.16.200`. This is Cloudflare proxy IP, that's how it protect your real server from attack.
+
 
 ### Map IP in local hosts file
 IP address is hard to remember, you will like to map it to a hostname in your local machine for easier access.
