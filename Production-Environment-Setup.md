@@ -12,6 +12,12 @@ Make sure you created an elastic IP and map to this instance. Assume your public
 2. Setup Apache Web Server (Apache 2)
 3. Setup PHP 7.2 and all the required modules
 
+#### Enable PHP Modules
+```
+sudo apt install php-redis
+sudo apt install php-bcmath
+```
+
 #### PHP.ini setting
 ```
 max_execution_time = 120
@@ -26,7 +32,6 @@ mbstring.internal_encoding = 'UTF-8'
 mbstring.http_output = 'UTF-8'
 mbstring.encoding_translation = 1
 ```
-
 ### Setup RDS
 1. Select `Easy Create`
 2. Select `MariaDB` in configuration
