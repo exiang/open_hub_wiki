@@ -65,12 +65,12 @@ sudo apt install unzip
 
 #### Enable PHP Modules
 ```
-sudo apt-get install php-redis
+sudo apt-get install php7.2-redis
 sudo apt-get install php7.2-curl zip unzip php7.2-zip
 sudo apt-get install php7.2-mbstring
 sudo apt-get install php7.2-xml
 sudo apt-get install php7.2-gd
-sudo apt-get install php-bcmath
+sudo apt-get install php7.2-bcmath
 sudo apt-get install php7.2-yaml
 ```
 
