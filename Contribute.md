@@ -10,4 +10,4 @@ This project used GitFlow [methodology](https://datasift.github.io/gitflow/Intro
 2. Clearly log changes of this version at `/changelog.md in markdown format
 3. When commit, build number in `/public_html/.build` should auto increase by git client
 4. Always release from GITHUB page by creating a tag
-5. Action `/.github/workflows/release.yml` automatically run upon release
+5. Action `/.github/workflows/release.yml` automatically run upon release to create downloadable package files at https://openhub-main.s3-ap-southeast-1.amazonaws.com/github/release/openhub-latest.zip
