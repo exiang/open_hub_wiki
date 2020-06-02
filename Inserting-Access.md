@@ -19,7 +19,7 @@ public function up()
 ```
 
 ## Assign Access to Role
-* after done the above step (#1 or #2) then you should go to `Site > Sys > Role > Manage Role` to assign the access to the `Role`
+* after done the above step (#1 or #2) then you should go to `Site > Sys > Role > Manage Role` to assign the `Access` to the `Role`
 ![](https://user-images.githubusercontent.com/55473894/83234192-795bad00-a1c2-11ea-8b88-df24156151ef.png)
 
 * choose & select the action/route you want grant access to that `Role`
