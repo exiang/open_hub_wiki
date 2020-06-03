@@ -45,5 +45,6 @@
   * [Module API](API-for-Developers#module-api)
 * Others
   * [YeeBase](YeeBase)
+* [Test](Test)
 * [Contribute](Contribute)
 * [Troubleshoot](Troubleshoot)
