@@ -10,7 +10,11 @@ Companies in the startup ecosystem are volatile. They formed over a weekend and 
   * [Legal Form](Master-Data-Legal-Form)
 
 ## Individual
+
 Individuals are person, they can founders of tech startups, or student aspiring to be an entrepreneurs. 
+
+![Untitled drawing](https://user-images.githubusercontent.com/5336690/83710843-47c86300-a654-11ea-93c8-cc9747ffea43.png)
+Individual is links to user thru verified emails. Do not confuse between user, profile, member and individual. Use the diagram above to understand their relationship.
 
   * [Persona](Master-Data-Persona)
 
