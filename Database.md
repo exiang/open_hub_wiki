@@ -14,6 +14,18 @@ class MentorProgram extends MentorProgramBase
 ```
 
 ```php
+public function rules()
+{
+    // NOTE: you should only define rules for those attributes that
+    // will receive user inputs.
+    return array(
+        // json_extra
+        array('brandCode', 'safe'),
+    );
+}
+```
+
+```php
 protected function beforeSave()
 {
     // custom code here
