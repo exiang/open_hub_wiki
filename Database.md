@@ -1,3 +1,8 @@
+## Flexible Schema
+OpenHub achieved flexible schema thru the following 2 methods:
+  * `json_extra` column
+  * `meta_structure` table
+
 ## Yii ActiveRecord
 ### Advance Query
 
