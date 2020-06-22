@@ -3,6 +3,39 @@ OpenHub achieved flexible schema thru the following 2 methods:
   * `json_extra` column
   * `meta_structure` table
 
+### Json
+```php
+<?php
+
+class MentorProgram extends MentorProgramBase
+{
+	public $aFlexibleVariable = 'abc';
+}
+```
+
+```php
+protected function beforeSave()
+{
+    // custom code here
+    // ...
+    $this->jsonArray_extra->aFlexibleVariable = $this->aFlexibleVariable;
+    return parent::beforeSave();
+}
+```
+
+```php
+protected function afterFind()
+{
+    // custom code here
+    // ...
+
+    parent::afterFind();
+    $this->aFlexibleVariable = $this->jsonArray_extra->aFlexibleVariable;
+
+    // return void
+}
+```
+
 ## Yii ActiveRecord
 ### Advance Query
 
