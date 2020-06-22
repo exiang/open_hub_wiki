@@ -1,5 +1,5 @@
 # Meta
-Meta allowing you to extends a model without changing database structure. This is helpful when module need to add new attribute to one of the core model such as organization, individual, event...
+Meta allowing you to extends a model without changing database structure. As one of the method of [flexible schema](Database#flexible-schema), this is helpful when module needs to add new attribute to one of the core model such as organization, individual, event...
 
 ## Enable Meta for Model
 Meta is not automatically enabled for all models, it has to be done thru coding by developer.
