@@ -3,7 +3,7 @@ OpenHub achieved flexible schema thru the following 2 methods:
   * `json_extra` column
   * `meta_structure` table
 
-### Json
+### json_extra method
 ```php
 <?php
 
