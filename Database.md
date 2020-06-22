@@ -1,3 +1,6 @@
+## Create a new table
+Please follow this [naming convention](Extending-Model-Meta) strictly
+
 ## Flexible Schema
 OpenHub used traditional relationship database as the core data storage method. The development team has been creative to  achieve flexible schema with the following 2 methods:
   * `json_extra` column
