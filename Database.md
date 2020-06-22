@@ -1,9 +1,10 @@
 ## Flexible Schema
-OpenHub achieved flexible schema thru the following 2 methods:
+OpenHub used traditional relationship database as the core data storage method. The development team has been creative to  achieve flexible schema with the following 2 methods:
   * `json_extra` column
   * `meta_structure` table
 
 ### json_extra method
+First, create variable name in camelCase in the model class.
 ```php
 <?php
 
@@ -13,6 +14,7 @@ class MentorProgram extends MentorProgramBase
 }
 ```
 
+Secondly, make sure this variable is safe to write thru `$_POST`
 ```php
 public function rules()
 {
@@ -25,6 +27,7 @@ public function rules()
 }
 ```
 
+Third, use `beforeSave` to automatically save this variable into `json_extra` column in database table.
 ```php
 protected function beforeSave()
 {
@@ -35,6 +38,7 @@ protected function beforeSave()
 }
 ```
 
+Last, use `afterFind` to automatically load this variable into model from database.
 ```php
 protected function afterFind()
 {
