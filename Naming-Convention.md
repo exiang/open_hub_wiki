@@ -116,22 +116,3 @@ In this example, module `sample` would like to add a virtual column called `extr
   * meta_struture_id:
   * ref_id:
   * value: `longtext`
-
-##### Query a meta structure
-SQL join is required to query value from meta data.
-
-```sql
-SELECT o.id FROM organization as `o` 
-
-INNER JOIN `meta_structure` as ms1 on ms1.ref_table='organization'
-INNER JOIN `meta_item` as mi1 on mi1.meta_structure_id=ms1.id
-
-INNER JOIN `meta_structure` as ms2 on ms2.ref_table='organization'
-INNER JOIN `meta_item` as mi2 on mi2.meta_structure_id=ms2.id
-
-WHERE  
-(ms1.code='Organization-idea-membershipType'  AND mi1.ref_id=o.id) AND 
-(ms2.code='Organization-idea-isEnterprise' AND mi2.value='1' AND mi2.ref_id=o.id) 
-
-GROUP BY o.id ORDER BY o.title ASC
-```
