@@ -40,9 +40,7 @@ For more information on Yii framework views and layouts system, please visit htt
 ## Brand
 Brand is a small hack around layout system to display different branding (e.g. custom header and footer) for different 'owner' of the system. Please note this is just a gimmick than actual multi tenant system which OpenHub is never aspired to be. 
 
-Brand is implemented thru variable `$this->layoutParams['brand']`.
-
-Brand can be tied to entire central by domain name, allowing dedicated brand layout to display for a specific domain name.
+Brand is implemented thru variable `$this->layoutParams['brand']` and applied system wide. Dedicated brand layout is display according to the calling domain name utilizing [Multi Domains feature](Multi-Domains).
 
 In `protected/overrides/config/domain.php`
 ```php
