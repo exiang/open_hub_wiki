@@ -40,7 +40,7 @@ For more information on Yii framework views and layouts system, please visit htt
 ## Brand
 Brand is a small hack around layout system to display different branding (e.g. custom header and footer) for different 'owner' of the system. Please note this is just a gimmick than actual multi tenant system which OpenHub is never aspired to be. 
 
-Brand is implemented thru variable `$this->layoutParams['brand']` and applied system wide. Dedicated brand layout is display according to the calling domain name utilizing [Multi Domains feature](Multi-Domains).
+Brand is implemented thru variable `$this->layoutParams['brand']` and applied system wide. Dedicated brand layout is display according to the calling domain name utilizing [Multi Domains feature](Multi-Domains) and [Core Overrides feature](Override-Core).
 
 In `protected/overrides/config/domain.php`
 ```php
@@ -83,7 +83,7 @@ In `protected/overrides/views/layouts/frontend.php`, we implemented a hardcoded 
 <img width="273" alt="Screenshot 2020-06-25 at 11 11 26 AM" src="https://user-images.githubusercontent.com/5336690/85649017-a83b4500-b6d4-11ea-8ca9-3cec060d0145.png">
 
 
-Brand aware module has higher override priority than system wide brand setting. Current module who aware of brand are:
+Brand aware module has higher override priority than system wide brand setting. Current module who are brand aware:
 - f7: display branding according to brand value set in intake
 - mentor: display branding according to brand value set in mentor program
 
