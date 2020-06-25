@@ -37,6 +37,58 @@ OpenHub layout system make use of theme. Theme is a superset of layout in OpenHu
 
 For more information on Yii framework views and layouts system, please visit https://www.yiiframework.com/doc/guide/1.1/en/basics.view.
 
+## Brand
+Brand is a small hack around layout system to display different branding (e.g. custom header and footer) for different 'owner' of the system. Please note this is just a gimmick than actual multi tenant system which OpenHub is never aspired to be. 
+
+Brand is implemented thru variable `$this->layoutParams['brand']`.
+
+Brand can be tied to entire central by domain name, allowing dedicated brand layout to display for a specific domain name.
+
+In `protected/overrides/config/domain.php`
+```php
+<?php
+return array(
+	'hubpsk.gov.my' => array(
+		'defaultController' => 'resource/frontend',
+		'params' => array(
+			'masterDomain' => 'hubpsk.gov.my',
+			'masterUrl' => '//hubpsk.gov.my',
+			'baseDomain' => 'hubpsk.gov.my',
+			'baseUrl' => '//hubpsk.gov.my',
+			'connectSecretKey' => '',
+			'connectClientId' => '',
+			'brand' => 'psk',
+		),
+		'modules' => array(
+			'resource' => array(
+				'allowUserAddResource' => false
+			)
+		)
+	)
+);
+
+```
+
+In `protected/overrides/views/layouts/frontend.php`, we implemented a hardcoded selection.
+``` php
+<?php if ($this->layoutParams['brand'] == 'kkip'): ?>
+    <?php $this->beginContent('layouts.brands.kkip.frontend'); ?>
+<?php elseif ($this->layoutParams['brand'] == 'psk'): ?>
+    <?php $this->beginContent('layouts.brands.psk.frontend'); ?>
+<?php else: ?>
+    <?php $this->beginContent('layouts.brands.default.frontend'); ?>
+<?php endif; ?>
+    <?php echo $content; ?>
+<?php $this->endContent(); ?>
+```
+
+<img width="273" alt="Screenshot 2020-06-25 at 11 11 26 AM" src="https://user-images.githubusercontent.com/5336690/85649017-a83b4500-b6d4-11ea-8ca9-3cec060d0145.png">
+
+
+Brand aware module has higher override priority than system wide brand setting. Current module who aware of brand are:
+- f7: display branding according to brand value set in intake
+- mentor: display branding according to brand value set in mentor program
+
 ## Theme
 Theming is a systematic way of customizing the outlook of pages in a Web application. By applying a new theme, the overall appearance of a Web application can be changed instantly and dramatically.
 
