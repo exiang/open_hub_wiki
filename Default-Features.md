@@ -1,4 +1,7 @@
 ## Setting
+```php
+Setting::setSetting('moduleCode-settingVariableName', '1,2,3', 'array');
+```
 
 ## Embed
 Think of Embed as snippet of content to include in your website which is i18n sensitive. A standard snippet has the following structure:
