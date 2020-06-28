@@ -1,7 +1,16 @@
 ## Date Time picker
 ```php
 $form->bsDateTextField($model, 'dateStart', array('options' => array(
-    'yearRange' => sprintf('1920:%s', date('Y'))
+    'dateFormat' => 'yy-mm-dd',
+    'changeMonth' => 'true',
+    'changeYear' => 'true',
+    'yearRange' => sprintf('1920:%s', date('Y')),
+    'constrainInput' => 'true',
+    'timeInput' => false,
+    'showTime' => false,
+    'showHour' => false,
+    'showMinute' => false,
+    'showTimepicker' => false,
 )))
 ```
 
