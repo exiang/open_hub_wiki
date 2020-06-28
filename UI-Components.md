@@ -1,5 +1,9 @@
 ## Date Time picker
 ```php
+$form->bsDateTextField($model, 'dateStart', array('options' => array('yearRange' => sprintf('1920:%s', date('Y')))))
+```
+
+```php
 <?php $this->widget('application.yeebase.extensions.CJuiDateTimePicker.CJuiDateTimePicker', array(
     'name' => 'dateStart',
     'value' => date('Y-m-d', strtotime('this week monday')),
