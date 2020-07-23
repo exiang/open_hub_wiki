@@ -33,6 +33,8 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
 > It's not suggested to change the form structure after it is published and had collected user submissions.
 
 ### Rating Component
+> prop name must be prefix with `voted-`
+
 ```json
 "1": {
     "tag": "group",
