@@ -32,6 +32,38 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
 
 > It's not suggested to change the form structure after it is published and had collected user submissions.
 
+### Rating Component
+```json
+"1": {
+    "tag": "group",
+    "prop": {
+        "css": ""
+    },
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 1,
+                "for": "voted-satisfaction",
+                "value": "Rate the satisfaction of customer support"
+            }
+        },
+        {
+            "tag": "rating",
+            "prop": {
+                "required": 1,
+                "showinbackendlist": "1",
+                "csv_label": "Satisfaction Rating",
+                "hint": "",
+                "value": "",
+                "name": "voted-satisfaction",
+                "error": ""
+            }
+        }
+    ]
+},
+```
+
 ## Stage Pipeline
 F7 form comes with simple process pipeline. It is linear and new application start with the first stage, e.g. `Application` in example below.
 
