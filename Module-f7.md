@@ -59,6 +59,8 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
                 "hint": "",
                 "value": "",
                 "name": "voted-satisfaction",
+                "label_low": "Strongly Disagree",
+                "label_high": "Strongly Agree",
                 "error": ""
             }
         }
