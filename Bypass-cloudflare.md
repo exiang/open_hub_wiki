@@ -10,8 +10,7 @@ As result, this error page will be displayed.
 ### The solution
 The solution is to create a subdomain and have it bypass by cloudflare.
 
-1) Create an A record DNS entry in cloudflare, e.g: `bypass-openhub.mymagic.my`
-<img width="1054" alt="Screenshot 2020-08-06 at 9 25 05 AM" src="https://user-images.githubusercontent.com/5336690/89480049-f1e47880-d7c6-11ea-9652-6fdb2c4bb84f.png">
+1) Create an A record DNS entry in cloudflare, e.g: `noproxy-openhub.mymagic.my` pointing to the same IP as your main domain.
 
 2) Edit `.env` to include the following entries:
 ```
