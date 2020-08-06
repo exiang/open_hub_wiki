@@ -38,6 +38,29 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
 ### Break Component
 ### Divider Component
 ### Button Component
+```
+ {
+ 	"tag": "button",
+ 	"prop": {
+ 		"css1": "",
+ 		"css2": "",
+ 		"name": "Submit",
+ 		"items": [{
+ 				"name": "save",
+ 				"value": "Draft",
+ 				"text": "Save Draft",
+ 				"css": "btn-white"
+ 			},
+ 			{
+ 				"name": "save",
+ 				"value": "submit",
+ 				"text": "Submit",
+ 				"css": "btn-primary"
+ 			}
+ 		]
+ 	}
+ }
+```
 
 ### Textbox Component
 Textbox is the most common field component you will be using, good to take in short free text answer like a person name, which is equivalent to `<input type="text">` in HTML.
@@ -57,12 +80,108 @@ Textbox is the most common field component you will be using, good to take in sh
 ```
 ### Number Component
 Number is similar to `textbox` field component except it only take in number value (integer and floating point too), which is equivalent to `<input type="number">` in HTML. 
+```
+{
+	"tag": "number",
+	"prop": {
+		"required": 1,
+		"showinbackendlist": "1",
+		"csv_label": "Total Customer",
+		"hint": "This is a custom number only input",
+		"value": "",
+		"name": "totalCustomer",
+		"error": ""
+	}
+}
+```
 ### URL Component
+```
+{
+	"tag": "url",
+	"prop": {
+		"required": 1,
+		"csv_label": "Youtube",
+		"hint": "This video should be less than 2 min on introduction about your project and each team members. Upload the video to youtube and set it public/unlisted, then paste the link here.",
+		"value": "",
+		"name": "urlYoutube",
+		"error": ""
+	}
+}
+```
+
 ### Email Component
+```
+{
+	"tag": "email",
+	"prop": {
+		"required": 0,
+		"showinbackendlist": "0",
+		"csv_label": "Participant Email",
+		"hint": "",
+		"value": "",
+		"name": "email",
+		"error": "Participant email address is required."
+	}
+}
+```
+
 ### Phone Component
+```
+{
+	"tag": "phone",
+	"prop": {
+		"required": 1,
+		"showinbackendlist": "0",
+		"csv_label": "Participant Contact",
+		"hint": "Please insert not less than 7 digit number only",
+		"value": "",
+		"name": "f1phone",
+		"error": "Participant contact number is required."
+	}
+}
+```
+
 ### Textarea Component
 ### Boolean Button Component
+```
+{
+	"tag": "booleanButton",
+	"prop": {
+		"required": 0,
+		"showinbackendlist": "0",
+		"csv_label": "Yes Or No",
+		"hint": "",
+		"value": "",
+		"name": "yesOrNo",
+		"error": ""
+	}
+}
+```
+
 ### List Component
+```
+{
+	"tag": "list",
+	"prop": {
+		"required": 1,
+		"showinbackendlist": "1",
+		"csv_label": "Category",
+		"hint": "This is a custom list",
+		"value": "",
+		"name": "category",
+		"error": "Please specify the category you are interested in.",
+		"text": "Select",
+		"items": [{
+				"text": "Social Track"
+			},
+			{
+				"text": "Technology Track"
+			}
+		]
+	}
+}
+```
+
 ### Checkbox Component
 ### Radio Button Component
 ### Google Place Component
