@@ -15,14 +15,14 @@ The solution is to create a subdomain and have it bypass by cloudflare.
 
 2) Edit `.env` to include the following entries:
 ```
-NOPROXY_DOMAIN=bypass-hub.mymagic.my
-NOPROXY_URL=//bypass-hub.mymagic.my
+NOPROXY_DOMAIN=noproxy-hub.mymagic.my
+NOPROXY_URL=//noproxy-hub.mymagic.my
 ```
 
 3) Edit `/protected/overrides/domain.php` to add an entry:
-Note: as `bypass-hub.mymagic.my` is a new subdomain, you will need to obtain new connect id and secret key and update to the code block below.
+Note: as `noproxy-hub.mymagic.my` is a new subdomain, you will need to obtain new connect id and secret key and update to the code block below.
 ```
-'bypass-hub.mymagic.my' => array(
+'noproxy-hub.mymagic.my' => array(
   'params' => array(
     'connectSecretKey' => '',
     'connectClientId' => '99',
