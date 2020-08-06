@@ -157,13 +157,14 @@ Please note that on each execution, system will automatically clear all target d
 ## Extra Settings
 Extra setting can be set at `Extra` field in form.
 
-### Hide user previous submissions
+### View Controls
+#### Hide user previous submissions
 `hideMySubmissions`
 
-### Hide other forms of the same intake
+#### Hide other forms of the same intake
 `hideAvailableFormForIntake`
 
-### Override OK button in view submission page
+#### Override OK button in view submission page
 `publishViewOkButton`
 
 ### Sample:
