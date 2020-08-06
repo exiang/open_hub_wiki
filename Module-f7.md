@@ -42,8 +42,6 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
  {
  	"tag": "button",
  	"prop": {
- 		"css1": "",
- 		"css2": "",
  		"name": "Submit",
  		"items": [{
  				"name": "save",
