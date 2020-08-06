@@ -38,8 +38,25 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
 ### Break Component
 ### Divider Component
 ### Button Component
+
 ### Textbox Component
+Textbox is the most common field component you will be using, good to take in short free text answer like a person name, which is equivalent to `<input type="text">` in HTML.
+```
+{
+	"tag": "textbox",
+	"prop": {
+		"required": 1,
+		"showinbackendlist": "1",
+		"csv_label": "Participant Name",
+		"hint": "",
+		"value": "",
+		"name": "fullname",
+		"error": "Participant full name is required."
+	}
+}
+```
 ### Number Component
+Number is similar to `textbox` field component except it only take in number value (integer and floating point too), which is equivalent to `<input type="number">` in HTML. 
 ### URL Component
 ### Email Component
 ### Phone Component
