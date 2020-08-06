@@ -154,8 +154,13 @@ First,  `Event Mapping Instruction` in the form must be set. This will tell the 
 
 Please note that on each execution, system will automatically clear all target data with the same form and vendor code `f7`.
 
+## Extra Settings
+```json
+{"hooks":[{"code":"onNotifyAfterSubmitForm","call":"HubSim::hookNotifyAfterSubmitForm"},{"code":"onNotifyAfterChangedSubmit2Draft","call":"HubSim::hookNotifyAfterChangedSubmit2Draft"}],"viewControls":{"hideMySubmissions":true,"hideAvailableFormForIntake":true,"publishViewOkButton":{"url":"\/sea\/frontend\/manage","urlParams":[{"key":"id","map":"startup_id"}]}}}
+```
+
 ## Known Issues
 This module was heavily hard coded by a developer and lots of refactor and rework needed to set it right. Here are few issues to take notes:
-  - File upload is hardcoded to 10MB only
+  - File upload is hardcoded to 10MB only and involved session
   - Survey is hardcoded to the database table
   - views generated are buggy
