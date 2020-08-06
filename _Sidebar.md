@@ -45,6 +45,7 @@
   * [Module API](API-for-Developers#module-api)
 * Others
   * [YeeBase](YeeBase)
+  * [Bypass Cloudflare](Bypass-cloudflare)
 * [Test](Test)
 * [Contribute](Contribute)
 * [Troubleshoot](Troubleshoot)
