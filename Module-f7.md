@@ -325,6 +325,9 @@ Extra setting can be set at `Extra` field in form.
 	}
 }
 ```
+## Others
+### Preset value from URL
+### Conditional form
 
 ## Known Issues
 This module was heavily hard coded by a developer and lots of refactor and rework needed to set it right. Here are few issues to take notes:
