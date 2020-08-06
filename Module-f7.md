@@ -31,7 +31,25 @@ Both form structure and submission data in F7 Form is stored as JSON format insi
 Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the supported form components.
 
 > It's not suggested to change the form structure after it is published and had collected user submissions.
-
+### Section Component
+### Group Component
+### Label Component
+### Headline Component
+### Break Component
+### Divider Component
+### Button Component
+### Textbox Component
+### Number Component
+### URL Component
+### Email Component
+### Phone Component
+### Textarea Component
+### Boolean Button Component
+### List Component
+### Checkbox Component
+### Radio Button Component
+### Google Place Component
+### Upload Component
 ### Rating Component
 > prop name must be prefix with `voted-`
 
