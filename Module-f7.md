@@ -1,3 +1,7 @@
+F7 is a google form inspired module with aim to allow admin quickly create form without any coding needed. MaGIC is using it for programs like Bootcamp, YouthColab and other small and straightforward programs, with an aim to replace ATAS for accelerator program in near future.
+
+Forms can be group into intake in F7, allowing multiple forms for different process of a same program can display in one interface. 
+
 Related database tables:
 * `form`
 * `form_submission`
