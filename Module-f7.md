@@ -185,6 +185,8 @@ Number is similar to `textbox` field component except it only take in number val
 ```
 
 ### Checkbox Component
+#### Inline
+#### List
 ### Radio Button Component
 ### Google Place Component
 ### Upload Component
