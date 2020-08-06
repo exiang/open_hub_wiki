@@ -305,7 +305,7 @@
                     "hint": "This is a custom list",
                     "value": "",
                     "name": "category",
-                    "error": "Please specify the category you are insterested in.",
+                    "error": "Please specify the category you are interested in.",
                     "text": "Select",
                     "items": [
                         {
