@@ -155,8 +155,39 @@ First,  `Event Mapping Instruction` in the form must be set. This will tell the 
 Please note that on each execution, system will automatically clear all target data with the same form and vendor code `f7`.
 
 ## Extra Settings
+Extra setting can be set at `Extra` field in form.
+
+### Hide user previous submissions
+`hideMySubmissions`
+
+### Hide other forms of the same intake
+`hideAvailableFormForIntake`
+
+### Override OK button in view submission page
+`publishViewOkButton`
+
+### Sample:
 ```json
-{"hooks":[{"code":"onNotifyAfterSubmitForm","call":"HubSim::hookNotifyAfterSubmitForm"},{"code":"onNotifyAfterChangedSubmit2Draft","call":"HubSim::hookNotifyAfterChangedSubmit2Draft"}],"viewControls":{"hideMySubmissions":true,"hideAvailableFormForIntake":true,"publishViewOkButton":{"url":"\/sea\/frontend\/manage","urlParams":[{"key":"id","map":"startup_id"}]}}}
+{
+	"hooks": [{
+		"code": "onNotifyAfterSubmitForm",
+		"call": "HubSim::hookNotifyAfterSubmitForm"
+	}, {
+		"code": "onNotifyAfterChangedSubmit2Draft",
+		"call": "HubSim::hookNotifyAfterChangedSubmit2Draft"
+	}],
+	"viewControls": {
+		"hideMySubmissions": true,
+		"hideAvailableFormForIntake": true,
+		"publishViewOkButton": {
+			"url": "\/sea\/frontend\/manage",
+			"urlParams": [{
+				"key": "id",
+				"map": "startup_id"
+			}]
+		}
+	}
+}
 ```
 
 ## Known Issues
