@@ -85,6 +85,7 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
     ]
 },
 ```
+### Mapped Component
 
 ## Stage Pipeline
 F7 form comes with simple process pipeline. It is linear and new application start with the first stage, e.g. `Application` in example below.
