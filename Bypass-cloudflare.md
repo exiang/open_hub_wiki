@@ -22,10 +22,10 @@ NOPROXY_URL=//bypass-hub.mymagic.my
 3) Edit `/protected/overrides/domain.php` to add an entry:
 Note: as `bypass-hub.mymagic.my` is a new subdomain, you will need to obtain new connect id and secret key and update to the code block below.
 ```
-'bypass-hub.mymagic.my.com' => array(
+'bypass-hub.mymagic.my' => array(
   'params' => array(
     'connectSecretKey' => '',
-    'connectClientId' => '21',
+    'connectClientId' => '99',
   )
 ),
 ```
