@@ -3,6 +3,10 @@ Although we strongly recommend putting cloudflare in front of your installation,
 * prevent sending code in POST data. This will affect OpenHub's module configuration editing feature.
 * impose a maximum limit to number of POST items. This will affect i18n module translation feature.
 
+As result, this error page will be displayed.
+<img width="699" alt="Screenshot 2020-08-06 at 9 32 17 AM" src="https://user-images.githubusercontent.com/5336690/89480375-bdbd8780-d7c7-11ea-93cc-55b82d9c7aad.png">
+
+
 ### The solution
 The solution is to create a subdomain and have it bypass by cloudflare.
 
