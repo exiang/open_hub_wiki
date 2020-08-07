@@ -3,13 +3,19 @@ Think setting like file config except it is store in database and can be easily 
 
 #### Create/Update a setting:
 ```php
-$value = ''1,2,3';
+$value = '1,2,3';
 $dataType = 'array';
 Setting::setSetting('moduleCode-settingVariableName', $value, $dataType, $dataTypeValue = '');
 ```
 * will auto initialize module setting, auto create if not exists, else just ignore 
 * code should come with prefix with moduleKey infront, eg: `boilerplateStart-var1`
 * supported dataType: image, integer, boolean, float, string, text, html, array, enum, date, file
+
+#### Retrieve a setting value
+```php
+Setting::code2value('moduleCode-settingVariableName', $defaultValue = null);
+```
+* pass in `defaultValue` to return as default value if setting record not found
 
 ## Embed
 Think of Embed as snippet of content to include in your website which is i18n sensitive. A standard snippet has the following structure:
