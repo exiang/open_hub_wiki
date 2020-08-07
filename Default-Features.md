@@ -2,6 +2,8 @@
 Think setting like file config except it is store in database and can be easily update thru backend. 
 
 #### Create/Update a setting:
+> Use `Embed` if the value is i18n sensitive
+
 ```php
 $value = '1,2,3';
 $dataType = 'array';
@@ -9,7 +11,7 @@ Setting::setSetting('moduleCode-settingVariableName', $value, $dataType, $dataTy
 ```
 * will auto initialize module setting, auto create if not exists, else just ignore 
 * code should come with prefix with moduleKey infront, eg: `boilerplateStart-var1`
-* supported dataType: image, integer, boolean, float, string, text, html, array, enum, date, file
+* supported `dataType`: `image`, `integer`, `boolean`, `float`, `string`, `text`, `html`, `array`, `enum`, `date`, `file`
 
 #### Retrieve a setting value
 ```php
