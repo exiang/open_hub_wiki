@@ -2,7 +2,7 @@
 Think setting like file config except it is store in database and can be easily update thru backend. 
 
 #### Create/Update a setting:
-> Use `Embed` if the value is i18n sensitive
+> Use `Embed` if the value is i18n sensitive. e.g.: chunk of instruction text that need to be display in different language according to user selection
 
 ```php
 $value = '1,2,3';
