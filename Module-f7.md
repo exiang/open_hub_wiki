@@ -97,6 +97,8 @@ Number is similar to `textbox` field component except it only take in number val
 }
 ```
 ### URL Component
+<img width="767" alt="Screenshot 2020-08-09 at 9 15 56 PM" src="https://user-images.githubusercontent.com/5336690/89733082-998ece80-da85-11ea-82cd-712e6b0850cc.png">
+
 ```
 {
 	"tag": "url",
@@ -317,7 +319,9 @@ Number is similar to `textbox` field component except it only take in number val
  }
 ```
 ### Upload Component
-```php
+<img width="795" alt="Screenshot 2020-08-09 at 9 15 52 PM" src="https://user-images.githubusercontent.com/5336690/89733088-a4e1fa00-da85-11ea-8be0-5275ee787c5e.png">
+
+```
  {
  	"tag": "upload",
  	"prop": {
@@ -331,6 +335,8 @@ Number is similar to `textbox` field component except it only take in number val
  }
 ```
 ### Rating Component
+<img width="577" alt="Screenshot 2020-08-09 at 9 16 02 PM" src="https://user-images.githubusercontent.com/5336690/89733071-8d0a7600-da85-11ea-8710-08545fc43f83.png">
+
 > prop name must be prefix with `voted-`
 
 ```json
