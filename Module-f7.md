@@ -177,6 +177,8 @@ Number is similar to `textbox` field component except it only take in number val
 ```
 
 ### List Component
+<img width="796" alt="Screenshot 2020-08-09 at 9 17 38 PM" src="https://user-images.githubusercontent.com/5336690/89733104-c7741300-da85-11ea-8f5c-5ffabea0552e.png">
+
 ```
 {
 	"tag": "list",
