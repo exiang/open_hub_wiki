@@ -307,7 +307,8 @@ Number is similar to `textbox` field component except it only take in number val
 ```
 
 ### Google Place Component
-> This component has bug as it is hardcoded to appear only once per form.
+> This component has bug as it is hardcoded to appear only once per form. It's now at drawback mode displaying just text input box.
+
 ```php
  {
  	"tag": "googleplace",
