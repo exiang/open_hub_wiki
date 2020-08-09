@@ -188,8 +188,60 @@ Number is similar to `textbox` field component except it only take in number val
 #### Inline
 #### List
 ### Radio Button Component
+```php
+{
+	"tag": "radio",
+	"prop": {
+		"required": 1,
+		"showinbackendlist": "1",
+		"csv_label": "Your Hobby",
+		"hint": "Please elect either one",
+		"value": "",
+		"css": "inline",
+		"name": "radio1",
+		"error": "",
+		"text": "Select",
+		"items": [{
+				"text": "Food Lover"
+			},
+			{
+				"text": "Movie Lover"
+			}
+		]
+	}
+}
+```
+
 ### Google Place Component
+> This component has bug as it is hardcoded to appear only once per form.
+```php
+ {
+ 	"tag": "googleplace",
+ 	"prop": {
+ 		"required": 1,
+ 		"showinbackendlist": "1",
+ 		"csv_label": "HQ Location",
+ 		"hint": "This is a google map input",
+ 		"value": "",
+ 		"name": "location",
+ 		"error": ""
+ 	}
+ }
+```
 ### Upload Component
+```php
+ {
+ 	"tag": "upload",
+ 	"prop": {
+ 		"required": 1,
+ 		"csv_label": "Pitch Deck",
+ 		"hint": "Only PDF format and the file size must be less than 10Mb.",
+ 		"value": "",
+ 		"name": "uploadPitchdeck",
+ 		"error": ""
+ 	}
+ }
+```
 ### Rating Component
 > prop name must be prefix with `voted-`
 
