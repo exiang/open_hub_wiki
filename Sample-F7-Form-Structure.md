@@ -305,7 +305,7 @@
                     "hint": "This is a custom list",
                     "value": "",
                     "name": "category",
-                    "error": "Please specify the category you are interested in.",
+                    "error": "Please specify the category you are insterested in.",
                     "text": "Select",
                     "items": [
                         {
@@ -376,79 +376,34 @@
             {
                 "tag": "checkbox",
                 "prop": {
-                    "required": 0,
+                    "required": 1,
+                    "isGroup": 1,
+                    "isInlineItems": 0,
                     "showinbackendlist": "0",
-                    "csv_label": "Region",
+                    "csv_label": "Regions",
                     "hint": "",
-                    "value": "1",
-                    "name": "region-north",
+                    "name": "regions",
                     "error": "",
-                    "text": "North Peninsula"
-                }
-            },
-            {
-                "tag": "checkbox",
-                "prop": {
-                    "required": 0,
-                    "showinbackendlist": "0",
-                    "csv_label": "Region",
-                    "hint": "",
-                    "value": "1",
-                    "name": "region-central",
-                    "error": "",
-                    "text": "Central Peninsula"
-                }
-            },
-            {
-                "tag": "checkbox",
-                "prop": {
-                    "required": 0,
-                    "showinbackendlist": "0",
-                    "csv_label": "Region",
-                    "hint": "",
-                    "value": "1",
-                    "name": "region-south",
-                    "error": "",
-                    "text": "South Peninsula"
-                }
-            },
-            {
-                "tag": "checkbox",
-                "prop": {
-                    "required": 0,
-                    "showinbackendlist": "0",
-                    "csv_label": "Region",
-                    "hint": "",
-                    "value": "1",
-                    "name": "region-eastcoast",
-                    "error": "",
-                    "text": "Eastcoast Peninsula"
-                }
-            },
-            {
-                "tag": "checkbox",
-                "prop": {
-                    "required": 0,
-                    "showinbackendlist": "0",
-                    "csv_label": "Region",
-                    "hint": "",
-                    "value": "1",
-                    "name": "region-sarawak",
-                    "error": "",
-                    "text": "Sarawak"
-                }
-            },
-            {
-                "tag": "checkbox",
-                "prop": {
-                    "required": 0,
-                    "showinbackendlist": "0",
-                    "csv_label": "Region",
-                    "hint": "",
-                    "value": "1",
-                    "name": "region-sabah",
-                    "error": "",
-                    "text": "Sabah"
+                    "items": [
+                        {
+                            "text": "North Peninsula"
+                        },
+                        {
+                            "text": "Central Peninsula"
+                        },
+                        {
+                            "text": "South Peninsula"
+                        },
+                        {
+                            "text": "Eastcoast Peninsula"
+                        },
+                        {
+                            "text": "Sarawak"
+                        },
+                        {
+                            "text": "Sabah"
+                        }
+                    ]
                 }
             }
         ]
