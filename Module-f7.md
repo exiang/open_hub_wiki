@@ -144,6 +144,20 @@ Number is similar to `textbox` field component except it only take in number val
 ```
 
 ### Textarea Component
+```
+{
+	"tag": "textarea",
+	"prop": {
+		"required": 1,
+		"showinbackendlist": "1",
+		"csv_label": "Short Description",
+		"hint": "",
+		"value": "",
+		"name": "shortDescription",
+		"error": "Short Description is required."
+	}
+}
+```
 ### Boolean Button Component
 ```
 {
