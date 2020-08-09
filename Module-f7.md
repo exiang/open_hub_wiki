@@ -200,6 +200,8 @@ Number is similar to `textbox` field component except it only take in number val
 
 ### Checkbox Component
 #### Inline
+<img width="683" alt="Screenshot 2020-08-09 at 9 12 02 PM" src="https://user-images.githubusercontent.com/5336690/89732997-10779780-da85-11ea-97c1-92b7f59ad889.png">
+
 ```
 {
 	"tag": "checkbox",
