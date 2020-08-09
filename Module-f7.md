@@ -42,6 +42,8 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
 ### Break Component
 ### Divider Component
 ### Button Component
+<img width="387" alt="Screenshot 2020-08-09 at 9 18 21 PM" src="https://user-images.githubusercontent.com/5336690/89733121-deb30080-da85-11ea-96ab-9c934677fce5.png">
+
 ```
  {
  	"tag": "button",
