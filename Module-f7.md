@@ -237,6 +237,42 @@ Number is similar to `textbox` field component except it only take in number val
 }
 ```
 #### List
+<img width="378" alt="Screenshot 2020-08-09 at 9 13 50 PM" src="https://user-images.githubusercontent.com/5336690/89733024-3dc44580-da85-11ea-89a5-b043d3972369.png">
+
+```
+{
+	"tag": "checkbox",
+	"prop": {
+		"required": 1,
+		"isGroup": 1,
+		"isInlineItems": 0,
+		"showinbackendlist": "0",
+		"csv_label": "Regions",
+		"hint": "",
+		"name": "regions",
+		"error": "",
+		"items": [{
+				"text": "North Peninsula"
+			},
+			{
+				"text": "Central Peninsula"
+			},
+			{
+				"text": "South Peninsula"
+			},
+			{
+				"text": "Eastcoast Peninsula"
+			},
+			{
+				"text": "Sarawak"
+			},
+			{
+				"text": "Sabah"
+			}
+		]
+	}
+}
+```
 ### Radio Button Component
 ```
 {
