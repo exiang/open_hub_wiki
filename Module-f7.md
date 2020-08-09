@@ -200,9 +200,43 @@ Number is similar to `textbox` field component except it only take in number val
 
 ### Checkbox Component
 #### Inline
+```
+{
+	"tag": "checkbox",
+	"prop": {
+		"required": 1,
+		"isGroup": 1,
+		"isInlineItems": 1,
+		"showinbackendlist": "0",
+		"csv_label": "Regions",
+		"hint": "",
+		"name": "regions",
+		"error": "",
+		"items": [{
+				"text": "North Peninsula"
+			},
+			{
+				"text": "Central Peninsula"
+			},
+			{
+				"text": "South Peninsula"
+			},
+			{
+				"text": "Eastcoast Peninsula"
+			},
+			{
+				"text": "Sarawak"
+			},
+			{
+				"text": "Sabah"
+			}
+		]
+	}
+}
+```
 #### List
 ### Radio Button Component
-```php
+```
 {
 	"tag": "radio",
 	"prop": {
