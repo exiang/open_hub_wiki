@@ -274,6 +274,8 @@ Number is similar to `textbox` field component except it only take in number val
 }
 ```
 ### Radio Button Component
+<img width="409" alt="Screenshot 2020-08-09 at 9 15 07 PM" src="https://user-images.githubusercontent.com/5336690/89733053-6b10f380-da85-11ea-8bc5-6520224c396b.png">
+
 ```
 {
 	"tag": "radio",
