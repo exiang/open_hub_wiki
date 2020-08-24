@@ -52,6 +52,9 @@ You will be linking your eventbrite account with your organization record in Ope
    1. Click `Test` button one of the created webhooks in eventbrite
    2. Wait for a minute
    3. Once callback is done, don't worry about its fail error, expands the section for detail. You can then extract the `user_id` out. e.g. In this case, 107038522227
+
+<img width="640" alt="Screenshot 2020-08-24 at 10 55 21 AM" src="https://user-images.githubusercontent.com/5336690/90999794-2b581900-e5fa-11ea-9273-25b6050f996f.png">
+
 ```
 Request Payload
 {
@@ -64,9 +67,6 @@ Request Payload
   }
 } 
 ```
-
-<img width="640" alt="Screenshot 2020-08-24 at 10 55 21 AM" src="https://user-images.githubusercontent.com/5336690/90999794-2b581900-e5fa-11ea-9273-25b6050f996f.png">
-
 <img width="640" alt="Screenshot 2020-08-24 at 10 42 12 AM" src="https://user-images.githubusercontent.com/5336690/91001773-3feae000-e5ff-11ea-905a-915b58c392d5.png">
 
 
