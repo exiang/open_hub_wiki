@@ -67,6 +67,9 @@ Request Payload
 
 <img width="640" alt="Screenshot 2020-08-24 at 10 55 21 AM" src="https://user-images.githubusercontent.com/5336690/90999794-2b581900-e5fa-11ea-9273-25b6050f996f.png">
 
+<img width="1278" alt="Screenshot 2020-08-24 at 10 42 12 AM" src="https://user-images.githubusercontent.com/5336690/91001773-3feae000-e5ff-11ea-905a-915b58c392d5.png">
+
+
 6. If you setup everything correctly, at OpenHub Backend `Event -> Sync from Eventbrite`, you should see your organizations display in the list. Click on it and you should see the list of events available in your eventbrite account.
 
 
