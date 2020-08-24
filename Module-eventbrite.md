@@ -42,7 +42,7 @@ You will be linking your eventbrite account with your organization record in Ope
 
 <img width="640" alt="Screenshot 2020-08-24 at 10 41 49 AM" src="https://user-images.githubusercontent.com/5336690/90999311-dec00e00-e5f8-11ea-8071-e8b044985b43.png">
 
-2. Click `Go` button to register a new webhook
+2. Click `Manage Webhooks` button to register a new webhook
 
 <img width="640" alt="Screenshot 2020-08-24 at 10 41 59 AM" src="https://user-images.githubusercontent.com/5336690/90999390-057e4480-e5f9-11ea-8f36-ec943d8ac570.png">
 
