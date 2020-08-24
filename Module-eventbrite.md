@@ -16,6 +16,9 @@ Eventbrite module not only allows you to sync your events from eventbrite, but a
 
 4. Click Create Key
 5. Click 'Show API key, client secret and tokens' on this created API
+
+<img width="640" alt="Screenshot 2020-08-24 at 10 43 44 AM" src="https://user-images.githubusercontent.com/5336690/91004373-94458e00-e606-11ea-8a3d-e2fb88d26a99.png">
+
 6. Copy the Private token, this will be your Eventbrite OAUTH Secret
 
 ### Step 2: Setup Webhooks in Eventbrite
