@@ -499,6 +499,7 @@ Tabular is a group of supported inputs display in table form.
 
 ## Stage Pipeline
 F7 form comes with simple process pipeline. It is linear and new application start with the first stage, e.g. `Application` in example below.
+`All form must have a defined stages pipeline to function properly`
 
 ![](https://user-images.githubusercontent.com/5336690/82217092-84a21380-994c-11ea-87e8-fdd7e84011a0.png)
 ``` json
