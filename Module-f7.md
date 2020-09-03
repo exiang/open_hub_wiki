@@ -379,6 +379,17 @@ Number is similar to `textbox` field component except it only take in number val
 
 ### Tabular Component
 Tabular is a group of supported inputs display in table form.
+* It must has a predefined headers(columns) and rows.
+* It only support the following components:
+  * Label
+  * Url
+  * Email
+  * Phone
+  * Textbox
+  * Number
+  * Textarea
+  * List
+  * BooleanButton
 
 <img width="1141" alt="Screenshot 2020-09-03 at 12 02 36 PM" src="https://user-images.githubusercontent.com/5336690/92069970-64a03e00-eddd-11ea-8dd4-9e8eb482af33.png">
 
