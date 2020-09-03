@@ -83,7 +83,7 @@ Textbox is the most common field component you will be using, good to take in sh
 }
 ```
 ### Number Component
-Number is similar to `textbox` field component except it only take in number value (integer and floating point too), which is equivalent to `<input type="number">` in HTML. 
+Number is similar to `textbox` field component except it only take in number value (integer and floating point too), which is equivalent to `<input type="number" step="any">` in HTML. 
 ```
 {
 	"tag": "number",
