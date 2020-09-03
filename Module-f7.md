@@ -391,106 +391,175 @@ Tabular is a group of supported inputs display in table form.
   * List
   * BooleanButton
 
-<img width="1141" alt="Screenshot 2020-09-03 at 12 02 36 PM" src="https://user-images.githubusercontent.com/5336690/92069970-64a03e00-eddd-11ea-8dd4-9e8eb482af33.png">
+<img width="1106" alt="Screenshot 2020-09-03 at 2 18 44 PM" src="https://user-images.githubusercontent.com/5336690/92078190-717a5d00-edf0-11ea-8393-2ecde9da6819.png">
+
 
 ```json
 {
-    "tag": "tabular",
-    "prop": {
-        "required": 1,
-        "showinbackendlist": "0",
-        "csv_label": "Shareholders",
-        "hint": "Insert all your shareholders here",
-        "value": "",
-        "name": "shareholders",
-        "error": "Shareholders detail is required",
-        "headers": [{
-            "text": "#",
-            "css": "text-center"
-        }, {
-            "text": "Name",
-            "css": "text-center"
-        }, {
-            "text": "Percentage of Share (%)",
-            "css": "text-center"
-        }, {
-            "text": "Amount invested\/Capital in USD",
-            "css": "text-center"
-        }],
-        "members": [{
-            "tag": "row",
-            "members": [{
-                "tag": "label",
-                "prop": {
-                    "value": "1",
-                    "css": "text-center"
-                }
-            }, {
-                "tag": "textbox",
-                "prop": {
-                    "csv_label": "Shareholder Name #1",
-                    "hint": "",
-                    "value": "",
-                    "name": "shareholders1-name",
-                    "error": ""
-                }
-            }, {
-                "tag": "number",
-                "prop": {
-                    "csv_label": "Share Percentage #1",
-                    "hint": "",
-                    "value": "",
-                    "name": "shareholders1-sharePercentage",
-                    "error": ""
-                }
-            }, {
-                "tag": "number",
-                "prop": {
-                    "csv_label": "Amount Invested #1",
-                    "hint": "",
-                    "value": "",
-                    "name": "shareholders1-amountInvested",
-                    "error": ""
-                }
-            }]
-        }, {
-            "tag": "row",
-            "members": [{
-                "tag": "label",
-                "prop": {
-                    "value": "2",
-                    "css": "text-center"
-                }
-            }, {
-                "tag": "textbox",
-                "prop": {
-                    "csv_label": "Shareholder Name #2",
-                    "hint": "",
-                    "value": "",
-                    "name": "shareholders2-name",
-                    "error": ""
-                }
-            }, {
-                "tag": "number",
-                "prop": {
-                    "csv_label": "Share Percentage #2",
-                    "hint": "",
-                    "value": "",
-                    "name": "shareholders2-sharePercentage",
-                    "error": ""
-                }
-            }, {
-                "tag": "number",
-                "prop": {
-                    "csv_label": "Amount Invested #2",
-                    "hint": "",
-                    "value": "",
-                    "name": "shareholders2-amountInvested",
-                    "error": ""
-                }
-            }]
-        }]
-    }
+	"1": {
+		"tag": "group",
+		"prop": {
+			"css": ""
+		},
+		"members": [{
+			"tag": "label",
+			"prop": {
+				"required": 1,
+				"csv_label": "",
+				"for": "shareholders",
+				"hint": "",
+				"value": "List all equity ownership by shareholders name"
+			}
+		}, {
+			"tag": "tabular",
+			"prop": {
+				"showinbackendlist": "0",
+				"csv_label": "Shareholders",
+				"hint": "Insert all your shareholders here. Must insert minimum 1.",
+				"value": "",
+				"name": "shareholders",
+				"error": "Shareholders detail is required",
+				"headers": [{
+					"text": "#",
+					"css": "text-center"
+				}, {
+					"required": 1,
+					"text": "Name",
+					"css": "text-center"
+				}, {
+					"required": 1,
+					"text": "Percentage of Share",
+					"hint": "in percentage %",
+					"css": "text-center"
+				}, {
+					"required": 1,
+					"text": "Amount invested\/Capital",
+					"hint": "in USD",
+					"css": "text-center"
+				}, {
+					"text": "Note",
+					"hint": "Optional",
+					"css": "text-center"
+				}],
+				"members": [{
+					"tag": "row",
+					"members": [{
+						"tag": "label",
+						"prop": {
+							"required": 1,
+							"value": "1",
+							"css": "text-center"
+						}
+					}, {
+						"tag": "textbox",
+						"prop": {
+							"required": 1,
+							"csv_label": "Shareholder Name #1",
+							"hint": "",
+							"value": "",
+							"name": "shareholders1-name",
+							"error": ""
+						}
+					}, {
+						"tag": "number",
+						"prop": {
+							"required": 1,
+							"csv_label": "Share Percentage #1",
+							"hint": "",
+							"value": "",
+							"name": "shareholders1-sharePercentage",
+							"error": ""
+						}
+					}, {
+						"tag": "number",
+						"prop": {
+							"required": 1,
+							"csv_label": "Amount Invested #1",
+							"hint": "",
+							"value": "",
+							"name": "shareholders1-amountInvested",
+							"error": ""
+						}
+					}, {
+						"tag": "textarea",
+						"prop": {
+							"required": 0,
+							"csv_label": "Note #1",
+							"hint": "",
+							"value": "",
+							"name": "shareholders1-note",
+							"rows": 2,
+							"error": ""
+						}
+					}]
+				}, {
+					"tag": "row",
+					"members": [{
+						"tag": "label",
+						"prop": {
+							"value": "2",
+							"css": "text-center"
+						}
+					}, {
+						"tag": "textbox",
+						"prop": {
+							"csv_label": "Shareholder Name #2",
+							"hint": "",
+							"value": "",
+							"name": "shareholders2-name",
+							"error": ""
+						}
+					}, {
+						"tag": "number",
+						"prop": {
+							"csv_label": "Share Percentage #2",
+							"hint": "",
+							"value": "",
+							"name": "shareholders2-sharePercentage",
+							"error": ""
+						}
+					}, {
+						"tag": "number",
+						"prop": {
+							"csv_label": "Amount Invested #2",
+							"hint": "",
+							"value": "",
+							"name": "shareholders2-amountInvested",
+							"error": ""
+						}
+					}, {
+						"tag": "textarea",
+						"prop": {
+							"required": 0,
+							"csv_label": "Note #2",
+							"hint": "",
+							"value": "",
+							"name": "shareholders2-note",
+							"rows": 2,
+							"error": ""
+						}
+					}]
+				}]
+			}
+		}]
+	},
+	"99": {
+		"tag": "button",
+		"prop": {
+			"name": "Submit",
+			"items": [{
+				"name": "save",
+				"value": "Draft",
+				"text": "Save Draft",
+				"css": "btn-white"
+			}, {
+				"name": "save",
+				"value": "submit",
+				"text": "Submit",
+				"css": "btn-primary"
+			}]
+		}
+	}
 }
 ```
 
