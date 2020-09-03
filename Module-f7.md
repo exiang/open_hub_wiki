@@ -376,6 +376,114 @@ Number is similar to `textbox` field component except it only take in number val
     ]
 },
 ```
+
+### Tabular Component
+Tabular is a group of supported inputs display in table form.
+
+<img width="1141" alt="Screenshot 2020-09-03 at 12 02 36 PM" src="https://user-images.githubusercontent.com/5336690/92069970-64a03e00-eddd-11ea-8dd4-9e8eb482af33.png">
+
+```json
+{
+    "tag": "tabular",
+    "prop": {
+        "required": 1,
+        "showinbackendlist": "0",
+        "csv_label": "Shareholders",
+        "hint": "Insert all your shareholders here",
+        "value": "",
+        "name": "shareholders",
+        "error": "Shareholders detail is required",
+        "headers": [{
+            "text": "#",
+            "css": "text-center"
+        }, {
+            "text": "Name",
+            "css": "text-center"
+        }, {
+            "text": "Percentage of Share (%)",
+            "css": "text-center"
+        }, {
+            "text": "Amount invested\/Capital in USD",
+            "css": "text-center"
+        }],
+        "members": [{
+            "tag": "row",
+            "members": [{
+                "tag": "label",
+                "prop": {
+                    "value": "1",
+                    "css": "text-center"
+                }
+            }, {
+                "tag": "textbox",
+                "prop": {
+                    "csv_label": "Shareholder Name #1",
+                    "hint": "",
+                    "value": "",
+                    "name": "shareholders1-name",
+                    "error": ""
+                }
+            }, {
+                "tag": "number",
+                "prop": {
+                    "csv_label": "Share Percentage #1",
+                    "hint": "",
+                    "value": "",
+                    "name": "shareholders1-sharePercentage",
+                    "error": ""
+                }
+            }, {
+                "tag": "number",
+                "prop": {
+                    "csv_label": "Amount Invested #1",
+                    "hint": "",
+                    "value": "",
+                    "name": "shareholders1-amountInvested",
+                    "error": ""
+                }
+            }]
+        }, {
+            "tag": "row",
+            "members": [{
+                "tag": "label",
+                "prop": {
+                    "value": "2",
+                    "css": "text-center"
+                }
+            }, {
+                "tag": "textbox",
+                "prop": {
+                    "csv_label": "Shareholder Name #2",
+                    "hint": "",
+                    "value": "",
+                    "name": "shareholders2-name",
+                    "error": ""
+                }
+            }, {
+                "tag": "number",
+                "prop": {
+                    "csv_label": "Share Percentage #2",
+                    "hint": "",
+                    "value": "",
+                    "name": "shareholders2-sharePercentage",
+                    "error": ""
+                }
+            }, {
+                "tag": "number",
+                "prop": {
+                    "csv_label": "Amount Invested #2",
+                    "hint": "",
+                    "value": "",
+                    "name": "shareholders2-amountInvested",
+                    "error": ""
+                }
+            }]
+        }]
+    }
+}
+```
+
+
 ### Mapped Component
 
 ## Stage Pipeline
