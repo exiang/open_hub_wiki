@@ -36,7 +36,7 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
 
 > It's not suggested to change the form structure after it is published and had collected user submissions.
 ### Section Component
-Section has 2 modes: default or accordion.
+Section serve as a visual container and has 2 modes: default or accordion.
 
 #### Default Section
 ```
