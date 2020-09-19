@@ -124,6 +124,56 @@ Nested section is possible.
 
 
 ### Group Component
+Group component is use to group multiple form field components into a logical grouping. Normally, group consists of a label and form field component.  It is also especially useful for condition control a group of multiple fields. 
+```
+ {
+    "tag": "group",
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 1,
+                "for": "startup",
+                "value": "Startup Name"
+            }
+        },
+        {
+            "tag": "textbox",
+            "prop": {
+                "required": 1,
+                "csv_label": "Startup Name",
+                "hint": "",
+                "value": "",
+                "name": "startup",
+                "error": "startup name is required."
+            }
+        },
+        {
+            "tag": "break",
+        },
+        {
+            "tag": "label",
+            "prop": {
+                "required": 1,
+                "for": "totalCustomer",
+                "value": "Total Customer"
+            }
+        },
+        {
+            "tag": "number",
+            "prop": {
+                "required": 1,
+                "csv_label": "Total Customer",
+                "hint": "",
+                "value": "",
+                "name": "totalCustomer",
+                "error": "Total Customer is required."
+            }
+        }
+    ]
+ }
+```
+
 ### Headline Component
 ```
 {
