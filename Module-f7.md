@@ -124,8 +124,17 @@ Nested section is possible.
 
 
 ### Group Component
-### Label Component
 ### Headline Component
+```
+{
+    "tag": "headline",
+    "prop": {
+        "css": "",
+        "style": "font-size: x-large",
+        "text": "Sub Header Title"
+    }
+},
+```
 
 ### Break Component
 This add a vertical padding of about 2em.
@@ -145,6 +154,23 @@ This add a horizontal line to the form, useful to visually separate form content
     }
 }
 ```
+
+
+### Label Component
+Label is a common component to use along with the rest of form field input components.
+> The required set here only has visual effect, it doesn't dictate the validation. 
+
+```
+{
+    "tag": "label",
+    "prop": {
+        "required": 0,
+        "for": "startup",
+        "value": "Startup Team / Company / Project name:"
+    }
+}
+```
+
 ### Button Component
 <img width="387" alt="Screenshot 2020-08-09 at 9 18 21 PM" src="https://user-images.githubusercontent.com/5336690/89733121-deb30080-da85-11ea-96ab-9c934677fce5.png">
 
