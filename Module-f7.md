@@ -62,6 +62,8 @@ Section serve as a visual container and has 2 modes: default or accordion.
 ```
 #### Accordion Section
 Use `"accordionOpen": "in"` to expand this accordion section by default. 
+<img width="688" alt="Screenshot 2020-09-19 at 3 11 34 PM" src="https://user-images.githubusercontent.com/5336690/93661449-75fa7300-fa8a-11ea-844e-258e6a0cd2dd.png">
+
 ```
 {
     "tag": "section",
@@ -84,6 +86,42 @@ Use `"accordionOpen": "in"` to expand this accordion section by default.
     ]
 },
 ```
+
+#### Nested Section
+Nested section is possible.
+
+<img width="675" alt="Screenshot 2020-09-19 at 3 11 40 PM" src="https://user-images.githubusercontent.com/5336690/93661462-94606e80-fa8a-11ea-9971-b85c8c70743b.png">
+
+```
+{
+    "tag": "section",
+    "prop": {
+        "name": "accordion-3",
+        "css": "",
+        "class": "",
+        "text": "Nested Accordion Section 3",
+        "mode": "accordion"
+    },
+    "members": [{
+        "tag": "section",
+        "prop": {
+            "name": "accordion-4",
+            "css": "",
+            "class": "",
+            "text": "Nested Accordion Section 4",
+            "mode": "accordion"
+        },
+        "members": [{
+            "tag": "html",
+            "prop": {
+                "value": "This is a nested accordion"
+            }
+
+        }]
+    }]
+}
+```
+
 
 ### Group Component
 ### Label Component
