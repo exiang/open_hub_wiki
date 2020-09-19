@@ -61,7 +61,7 @@ Section has 2 modes: default or accordion.
 }
 ```
 #### Accordion Section
-Use `"accordionOpen": "in"` to open this accordion section by default. 
+Use `"accordionOpen": "in"` to expand this accordion section by default. 
 ```
 {
     "tag": "section",
