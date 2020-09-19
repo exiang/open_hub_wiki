@@ -36,6 +36,55 @@ Here is a [Sample F7 Form Structure](Sample-F7-Form-Structure) that demo all the
 
 > It's not suggested to change the form structure after it is published and had collected user submissions.
 ### Section Component
+Section has 2 modes: default or accordion.
+
+#### Default Section
+```
+{
+    "tag": "section",
+    "prop": {
+        "name": "section-1",
+        "css": "",
+        "class": "",
+        "text": "Normal Section"
+    },
+
+    "members":[
+        {
+            "tag": "html",
+            "prop":{
+                "value": "This is a section by default"
+            }
+            
+        }
+    ]
+}
+```
+#### Accordion Section
+Use `"accordionOpen": "in"` to open this accordion section by default. 
+```
+{
+    "tag": "section",
+    "prop": {
+        "name": "accordion-1",
+        "css": "",
+        "class": "",
+        "text": "Accordion Section 1",
+        "mode": "accordion",
+        "accordionOpen": "in"
+    },
+    "members":[
+        {
+            "tag": "html",
+            "prop":{
+                "value": "This is a section with accordion mode and expand by default"
+            }
+            
+        }
+    ]
+},
+```
+
 ### Group Component
 ### Label Component
 ### Headline Component
