@@ -149,7 +149,7 @@ Group component is use to group multiple form field components into a logical gr
             }
         },
         {
-            "tag": "break",
+            "tag": "break"
         },
         {
             "tag": "label",
