@@ -126,7 +126,14 @@ Nested section is possible.
 ### Group Component
 ### Label Component
 ### Headline Component
+
 ### Break Component
+This add a vertical padding of about 2em.
+```
+{
+    "tag": "break",
+}
+```
 
 ### Divider Component
 This add a horizontal line to the form, useful to visually separate form content.
@@ -136,7 +143,7 @@ This add a horizontal line to the form, useful to visually separate form content
     "prop": {
         "style": "",
     }
-},
+}
 ```
 ### Button Component
 <img width="387" alt="Screenshot 2020-08-09 at 9 18 21 PM" src="https://user-images.githubusercontent.com/5336690/89733121-deb30080-da85-11ea-96ab-9c934677fce5.png">
