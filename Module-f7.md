@@ -744,6 +744,12 @@ Tabular is a group of supported inputs display in table form.
 ```
 
 #### Dynamic Row
+Dynamic row allows applicant to create entry dynamically without constraint to the predefined row. 
+
+* use `limitTabularDynamicRow` to set the maximum row for this tabular table
+* use `"tag": "drow"` to identify it is a dynamic row tabular field
+* F7 will replace all %%N%% to row number
+
 ```
 {
     "1": {
