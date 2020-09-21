@@ -743,6 +743,149 @@ Tabular is a group of supported inputs display in table form.
 }
 ```
 
+#### Dynamic Row
+```
+{
+    "1": {
+        "tag": "group",
+        "prop": {
+            "css": ""
+        },
+        "members": [
+            {
+                "tag": "label",
+                "prop": {
+                    "required": 1,
+                    "csv_label": "",
+                    "for": "shareholders",
+                    "hint": "",
+                    "value": "List all equity ownership by shareholders name"
+                }
+            },
+            {
+                "tag": "tabular",
+                "prop": {
+                    "limitTabularDynamicRow": 5,
+                    "showinbackendlist": "0",
+                    "csv_label": "Shareholders",
+                    "hint": "Insert all your shareholders here. Must insert minimum 1.",
+                    "value": "",
+                    "name": "shareholders",
+                    "error": "Shareholders detail is required",
+                    "headers": [
+                        {
+                            "text": "#",
+                            "css": "text-center"
+                        },
+                        {
+                            "required": 1,
+                            "text": "Name",
+                            "css": "text-center"
+                        },
+                        {
+                            "required": 1,
+                            "text": "Percentage of Share",
+                            "hint": "in percentage %",
+                            "css": "text-center"
+                        },
+                        {
+                            "required": 1,
+                            "text": "Amount invested/Capital",
+                            "hint": "in USD",
+                            "css": "text-center"
+                        },
+                        {
+                            "text": "Note",
+                            "hint": "Optional",
+                            "css": "text-center"
+                        }
+                    ],
+                    "members": [
+                        {
+                            "tag": "drow",
+                            "members": [
+                                {
+                                    "tag": "label",
+                                    "prop": {
+                                        "required": 1,
+                                        "value": "%%N%%",
+                                        "css": "text-center"
+                                    }
+                                },
+                                {
+                                    "tag": "textbox",
+                                    "prop": {
+                                        "required": 1,
+                                        "csv_label": "Shareholder Name #N>",
+                                        "hint": "",
+                                        "value": "",
+                                        "name": "shareholders%%N%%-name",
+                                        "error": ""
+                                    }
+                                },
+                                {
+                                    "tag": "number",
+                                    "prop": {
+                                        "required": 1,
+                                        "csv_label": "Share Percentage #%%N%%",
+                                        "hint": "",
+                                        "value": "",
+                                        "name": "shareholders%%N%%-sharePercentage",
+                                        "error": ""
+                                    }
+                                },
+                                {
+                                    "tag": "number",
+                                    "prop": {
+                                        "required": 1,
+                                        "csv_label": "Amount Invested #%%N%%",
+                                        "hint": "",
+                                        "value": "",
+                                        "name": "shareholders%%N%%-amountInvested",
+                                        "error": ""
+                                    }
+                                },
+                                {
+                                    "tag": "textarea",
+                                    "prop": {
+                                        "required": 0,
+                                        "csv_label": "Note #%%N%%",
+                                        "hint": "",
+                                        "value": "",
+                                        "name": "shareholders%%N%%-note",
+                                        "rows": 2,
+                                        "error": ""
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "99": {
+        "tag": "button",
+        "prop": {
+            "name": "Submit",
+            "items": [
+                {
+                    "name": "save",
+                    "value": "Draft",
+                    "text": "Save Draft",
+                    "css": "btn-white"
+                },
+                {
+                    "name": "save",
+                    "value": "submit",
+                    "text": "Submit",
+                    "css": "btn-primary"
+                }
+            ]
+        }
+    }
+}
+```
 
 ### Mapped Component
 
