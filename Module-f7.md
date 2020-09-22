@@ -744,6 +744,8 @@ Tabular is a group of supported inputs display in table form.
 ```
 
 #### Dynamic Row
+<img width="1100" alt="Screenshot 2020-09-22 at 10 49 41 AM" src="https://user-images.githubusercontent.com/5336690/93840011-7761b080-fcc1-11ea-82d3-fbfac0cbf81d.png">
+
 Dynamic row allows applicant to create entry dynamically without constraint to the predefined row. 
 
 * use `limitTabularDynamicRow` to set the maximum row for this tabular table
