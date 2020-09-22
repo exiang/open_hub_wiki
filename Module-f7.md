@@ -749,6 +749,7 @@ Dynamic row allows applicant to create entry dynamically without constraint to t
 * use `limitTabularDynamicRow` to set the maximum row for this tabular table
 * use `"tag": "drow"` to identify it is a dynamic row tabular field
 * F7 will replace all %%N%% to row number
+* Validation rules are not apply to dynamic row
 
 ```
 {
