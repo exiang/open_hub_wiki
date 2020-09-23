@@ -902,9 +902,6 @@ Dynamic row allows applicant to create entry dynamically without constraint to t
 ```
 {
     "tag": "group",
-    "prop": {
-        "css": ""
-    },
     "members": [{
         "tag": "label",
         "prop": {
@@ -928,7 +925,6 @@ Dynamic row allows applicant to create entry dynamically without constraint to t
             "items": "",
             "model_mapping": {
                 "startup": "Organization",
-                "hideOthers": false,
                 "modifier": {
                     "title": {
                         "label": "Organisation",
@@ -948,6 +944,117 @@ Dynamic row allows applicant to create entry dynamically without constraint to t
     }]
 }
 ```
+#### Persona
+{
+    "tag": "group",
+    "members": [{
+        "tag": "label",
+        "prop": {
+            "required": 1,
+            "for": "myPersona",
+            "value": "Persona"
+        }
+    }, {
+        "tag": "list",
+        "prop": {
+            "required": 1,
+            "showinbackendlist": "1",
+            "csv_label": "Persona",
+            "hint": "",
+            "value": "",
+            "name": "myPersona",
+            "error": "How should we clasify you",
+            "text": "Select",
+            "items": "",
+            "model_mapping": {
+                "myPersona": "persona"
+            }
+        }
+    }]
+}
+
+#### Startup Stages
+{
+    "tag": "group",
+    "members": [{
+        "tag": "label",
+        "prop": {
+            "required": 1,
+            "for": "theStartupStage",
+            "value": "Your Startup Stages"
+        }
+    }, {
+        "tag": "list",
+        "prop": {
+            "required": 1,
+            "csv_label": "Startup Stage",
+            "hint": "At which stages your startup current is",
+            "value": "",
+            "name": "theStartupStage",
+            "text": "Select",
+            "error": "",
+            "model_mapping": {
+                "theStartupStage": "startupStage"
+            }
+        }
+    }]
+}
+
+#### Industry
+```
+{
+    "tag": "group",
+    "members": [{
+        "tag": "label",
+        "prop": {
+            "required": 1,
+            "for": "primaryIndustry",
+            "value": "Industry"
+        }
+    }, {
+        "tag": "list",
+        "prop": {
+            "required": 1,
+            "csv_label": "Industry",
+            "hint": "Select one primary Industry",
+            "name": "primaryIndustry",
+            "text": "Select",
+            "error": "",
+            "model_mapping": {
+                "primaryIndustry": "industry"
+            }
+        }
+    }]
+}
+```
+
+#### SDG
+````
+{
+    "tag": "group",
+    "members": [{
+        "tag": "label",
+        "prop": {
+            "required": 1,
+            "for": "primarySdg",
+            "value": "SDG"
+        }
+    }, {
+        "tag": "list",
+        "prop": {
+            "required": 1,
+            "csv_label": "SDG",
+            "hint": "Select one primary SDG",
+            "name": "primarySdg",
+            "text": "Select",
+            "error": "",
+            "model_mapping": {
+                "primarySdg": "sdg"
+            }
+        }
+    }]
+}
+````
 
 
 ## Stage Pipeline
