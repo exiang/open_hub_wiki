@@ -998,13 +998,17 @@ Extra setting can be set at `Extra` field in form. It allow admin / developer to
 
 ### View Controls - `viewControls`
 #### Hide user previous submissions
-F7 automatically display the user previous submissions section. There are circumstances where you like to hide this section, e.g. you had create an interface in module and just like to use F7 for a form submission tool as it is. Set `hideMySubmissions` to `true` to achieve this. 
-
+F7 automatically display the user previous submissions section like this:
 <img width="1113" alt="Screenshot 2020-09-23 at 11 53 14 AM" src="https://user-images.githubusercontent.com/5336690/93965137-ead3f280-fd93-11ea-8c78-7a59f681bb7e.png">
 
+There are circumstances where you like to hide this section, e.g. you had create an interface in module and just like to use F7 for a form submission tool as it is. Set `hideMySubmissions` to `true` to achieve this. 
 
 #### Hide other forms of the same intake
-`hideAvailableFormForIntake`
+When you added multiple F7 forms to intake, they will display at the side like this:
+<img width="1127" alt="Screenshot 2020-09-23 at 12 02 51 PM" src="https://user-images.githubusercontent.com/5336690/93965467-caf0fe80-fd94-11ea-8931-b07624c0944e.png">
+
+There are circumstances where you like to hide this section, e.g. you had create an interface in module and just like to use F7 for a form submission tool as it is. Set `hideAvailableFormForIntake` to `true` to achieve this. 
+
 
 #### Override OK button in view submission page
 `publishViewOkButton`
