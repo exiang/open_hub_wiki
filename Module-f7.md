@@ -547,7 +547,7 @@ Number is similar to `textbox` field component except it only take in number val
                 "csv_label": "Satisfaction Rating",
                 "hint": "",
                 "value": "",
-                "name": "voted-satisfaction",
+                "name": "satisfaction",
                 "label_low": "Strongly Disagree",
                 "label_high": "Strongly Agree",
                 "error": ""
@@ -556,6 +556,7 @@ Number is similar to `textbox` field component except it only take in number val
     ]
 },
 ```
+When render, a hidden field will be generated `<input type="hidden" id="voted-satisfaction" name="voted-satisfaction" value="">` to store the data.
 
 ### Tabular Component
 Tabular is a group of supported inputs display in table form.
