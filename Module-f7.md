@@ -898,6 +898,57 @@ Dynamic row allows applicant to create entry dynamically without constraint to t
 ```
 
 ### Mapped Component
+#### Organization
+```
+{
+    "tag": "group",
+    "prop": {
+        "css": ""
+    },
+    "members": [{
+        "tag": "label",
+        "prop": {
+            "required": 0,
+            "csv_label": "",
+            "for": "startup",
+            "hint": "",
+            "value": "Startup Team \/ Company \/ Project name:"
+        }
+    }, {
+        "tag": "list",
+        "prop": {
+            "required": 0,
+            "showinbackendlist": "0",
+            "csv_label": "Startup Name",
+            "hint": "A working name for your team \/ project is also acceptable.",
+            "value": "",
+            "name": "startup",
+            "error": "Startup Name field is required",
+            "text": "choose your team \/ company \/ project",
+            "items": "",
+            "model_mapping": {
+                "startup": "Organization",
+                "hideOthers": false,
+                "modifier": {
+                    "title": {
+                        "label": "Organisation",
+                        "placeholder": "Insert company name here"
+                    },
+                    "url_website": {
+                        "label": "Website URL",
+                        "placeholder": "http://"
+                    },
+                    "text_oneliner": {
+                        "label": "One liner",
+                        "placeholder": "Insert one liner description here"
+                    }
+                }
+            }
+        }
+    }]
+}
+```
+
 
 ## Stage Pipeline
 F7 form comes with simple process pipeline. It is linear and new application start with the first stage, e.g. `Application` in example below.
