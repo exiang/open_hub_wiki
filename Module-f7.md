@@ -522,7 +522,7 @@ Number is similar to `textbox` field component except it only take in number val
 ### Rating Component
 <img width="577" alt="Screenshot 2020-08-09 at 9 16 02 PM" src="https://user-images.githubusercontent.com/5336690/89733071-8d0a7600-da85-11ea-8710-08545fc43f83.png">
 
-> prop name must be prefix with `voted-`
+> prop name must be prefix with `voted-` due to historical design reason. If it doesn't, system will auto prepand it
 
 ```json
 "1": {
