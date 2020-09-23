@@ -899,6 +899,14 @@ Dynamic row allows applicant to create entry dynamically without constraint to t
 
 ### Mapped Component
 #### Organization
+This model mapping allow form applicant to select from  list of organization profile he has access to. This help save his time to re-insert the same organization information over and over again across different forms, and also helps system admin to keep organization profile consistent in database.
+
+<img width="581" alt="Screenshot 2020-09-23 at 5 08 30 PM" src="https://user-images.githubusercontent.com/5336690/93991974-8cbd0480-fdbf-11ea-8319-88e7049f5fdc.png">
+
+If the participant do not have a organization profile to start with, he can create new one by clicking on `or, create a new one here`:
+
+<img width="635" alt="Screenshot 2020-09-23 at 5 08 39 PM" src="https://user-images.githubusercontent.com/5336690/93991954-84fd6000-fdbf-11ea-867b-7e8b1b3dd01c.png">
+
 ```
 {
     "tag": "group",
