@@ -953,6 +953,8 @@ If the participant do not have a organization profile to start with, he can crea
 }
 ```
 #### Persona
+
+```
 {
     "tag": "group",
     "members": [{
@@ -980,8 +982,10 @@ If the participant do not have a organization profile to start with, he can crea
         }
     }]
 }
+```
 
 #### Startup Stages
+```
 {
     "tag": "group",
     "members": [{
@@ -1007,6 +1011,7 @@ If the participant do not have a organization profile to start with, he can crea
         }
     }]
 }
+```
 
 #### Industry
 ```
