@@ -1042,7 +1042,7 @@ If the participant do not have a organization profile to start with, he can crea
 ```
 
 #### SDG
-````
+```
 {
     "tag": "group",
     "members": [{
@@ -1067,7 +1067,7 @@ If the participant do not have a organization profile to start with, he can crea
         }
     }]
 }
-````
+```
 
 
 ## Stage Pipeline
