@@ -969,17 +969,7 @@ First,  `Event Mapping Instruction` in the form must be set. This will tell the 
 Please note that on each execution, system will automatically clear all target data with the same form and vendor code `f7`.
 
 ## Extra Settings
-Extra setting can be set at `Extra` field in form.
-
-### View Controls
-#### Hide user previous submissions
-`hideMySubmissions`
-
-#### Hide other forms of the same intake
-`hideAvailableFormForIntake`
-
-#### Override OK button in view submission page
-`publishViewOkButton`
+Extra setting can be set at `Extra` field in form. It allow admin / developer to tweak F7 default behaviour.
 
 ### Sample:
 ```json
@@ -1004,6 +994,21 @@ Extra setting can be set at `Extra` field in form.
 	}
 }
 ```
+### Hooks - `hooks`
+
+### View Controls - `viewControls`
+#### Hide user previous submissions
+F7 automatically display the user previous submissions section. There are circumstances where you like to hide this section, e.g. you had create an interface in module and just like to use F7 for a form submission tool as it is. Set `hideMySubmissions` to `true` to achieve this. 
+
+<img width="1113" alt="Screenshot 2020-09-23 at 11 53 14 AM" src="https://user-images.githubusercontent.com/5336690/93965137-ead3f280-fd93-11ea-8c78-7a59f681bb7e.png">
+
+
+#### Hide other forms of the same intake
+`hideAvailableFormForIntake`
+
+#### Override OK button in view submission page
+`publishViewOkButton`
+
 ## Others
 ### Preset value from URL
 ### Conditional form
