@@ -2,7 +2,7 @@ WAPI (Web API) is a default module shipped with OpenHub. WAPI helps you easily s
 ![](https://user-images.githubusercontent.com/5336690/74059169-7fb2f700-4a22-11ea-830f-f6ce7649cbd8.png)
 
 Assume our module here is `demo`
-Wapi support modularization architecture and able to read your module's swagger definition. `protected/modules/wapi/V1Controller.php` has been modified to auto load `protected/modules/demo/actions/wapi/V1Controller/*.php` for api action
+Wapi support modularization architecture and able to read your module's swagger definition. `protected/modules/wapi/controllers/V1Controller.php` has been modified to auto load `protected/modules/demo/actions/wapi/V1Controller/*.php` for api action
 
 ### Step 1: Define API YAML
 Create a yaml file to catalog your module APIs at `protected/modules/demo/data/api/demo.yaml`.
