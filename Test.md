@@ -8,3 +8,8 @@ cd /protected/tests
 ```
 
 ## for Module
+> Your module unit test should not be in the main application unit test folder
+```
+cd /var/www/open_hub/protected/modules/YOUR_MODULE/tests
+../../../vendor/phpunit/phpunit/phpunit unit/ModuleJunkTest
+```
