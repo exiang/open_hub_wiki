@@ -146,7 +146,7 @@ composer require knplabs/github-api php-http/guzzle6-adapter "^1.1"
 
 Add `require_once dirname(__FILE__) . '/vendor/autoload.php';` to the start of `public function init(){}` inside `protected/modules/todo/TodoModule.php`
 
-OpenHub used [https://github.com/wikimedia/composer-merge-plugin](Wikimedia Composer Merge) to accomplish this.
+OpenHub used [Wikimedia Composer Merge](https://github.com/wikimedia/composer-merge-plugin) to accomplish this.
 
 ## Sub domain for module
 Todo...
