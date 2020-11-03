@@ -128,6 +128,7 @@ For example, we are modifying existing `TestCommmand`
 ),
 ```
 Notes: This is an extra step required to override existing command
+
 3. Execute it thru CLI:
 ```
 php yiic test
