@@ -52,6 +52,12 @@ MetaStructure::initMeta('organization', 'sample', 'extraColumn1', 'boolean', 'Hi
 
 This will create a `meta_structure` record with code `Organization-sample-extraColumn1` where `sample` is the module code name and `extraColumn1` is the variable name.
 
+## Get a meta structure
+As simple as:
+```php
+<?php echo $model->_dynamicData['Organization-sample-extraColumn1']
+```
+
 ## Query a meta structure
 SQL join is required to query value from meta data.
 
