@@ -50,7 +50,7 @@ OpenHub comes with built in function `MetaStructure::initMeta` to help you creat
 MetaStructure::initMeta('organization', 'sample', 'extraColumn1', 'boolean', 'Highlight in Sample', 'Is this organization a lighted sample?', '');
 ```
 
-This will create a `meta_structure` record with code `Organization-sample-extraColumn1`.
+This will create a `meta_structure` record with code `Organization-sample-extraColumn1` where `sample` is the module code name and `extraColumn1` is the variable name.
 
 ## Query a meta structure
 SQL join is required to query value from meta data.
