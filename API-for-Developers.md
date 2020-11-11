@@ -236,7 +236,8 @@ or
 ## API Gateway
 MaGIC Central used [tyk.io](https://tyk.io), an open source API Gateway to expose API available for external developers. MaGIC do not have the capacity to host and maintain an API gateway internally. 
 
-
+### TYK Backend
+The backend can be access from https://admin.cloud.tyk.io/
 ### Catalog & Policy
 * One Policy for one Catalog only. Make sure the policy name and catalog are corresponding to each others
 * Do not remove/delete Policy!
