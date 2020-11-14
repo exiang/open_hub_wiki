@@ -47,5 +47,6 @@
   * [YeeBase](YeeBase)
   * [Bypass Cloudflare](Bypass-cloudflare)
 * [Test](Test)
+* [Optimisation](Optimisation)
 * [Contribute](Contribute)
 * [Troubleshoot](Troubleshoot)
