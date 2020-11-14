@@ -7,16 +7,17 @@ Make sure `CACHE=true` && `DB_SCHEMA_CACHE_DURATION` is set to an integer number
 
 SET `ENABLE_PROFILE_LOG=true` in `proctected/.env` to display profile.
 
+To measure your code using profiling:
 ```php
 // starting
-if (filter_var(getenv('DEV', false), FILTER_VALIDATE_BOOLEAN)) {
+if (Yii::app()->params['enableProfileLog']) {
 	Yii::beginProfile('anyIdHere');
 }
 
 // your code to measure execution speed
 
 // ending
-if (filter_var(getenv('DEV', false), FILTER_VALIDATE_BOOLEAN)) {
+if (Yii::app()->params['enableProfileLog']) {
 	Yii::endProfile('anyIdHere');
 }
 ```
