@@ -62,5 +62,8 @@ protected function afterFind()
 
 In situation where list of organizations loaded, say 30, each has x5 relations (impacts, sgds, personas, industries, classifications) and that would be equal to 150 queries. 
 
+### Modules
+Having too many custom modules also contributed to the pro-long load time of the entire system. In this case, you may move some of the modules out from the file system and only keep those related one.
+
 ## Troubleshoot
 You may disable all custom modules to troubleshoot why slow. Make sure `MODULE_DISABLE_NONE_CORE=true` in `proctected/.env`.
