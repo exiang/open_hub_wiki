@@ -60,7 +60,7 @@ protected function afterFind()
 }
 ```
 
-In situation where list of organizations loaded, say 30, each has x5 relations (impacts, sgds, personas, industries, classifications) and that would be equal to 150 queries. 
+In situation where list of organizations loaded, say 30 when viewing Manage Organization page in backend, each has x5 relations (impacts, sgds, personas, industries, classifications) and that would be equal to 150 queries. Multiply these by each of organization's META data (say 4 each), the SQL statements can easily go up to 600 queries.
 
 ### Modules
 Having too many custom modules also contributed to the pro-long load time of the entire system. In this case, you may move some of the modules out from the file system and only keep those needed one.
