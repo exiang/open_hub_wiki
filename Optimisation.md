@@ -31,7 +31,7 @@ Although convenience for developers, meta data itself is a join table relationsh
 
 Caching solve this problem. All meta are cache for a day, and these caches are remove when there's changes to the value by override model `afterSave()`.
 
-### Relation
+### Model Relation
 Model like `organization` loads all related necessary objects in `afterFind` as below:
 
 ```php
