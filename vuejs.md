@@ -1,8 +1,8 @@
 ## Overview
-Backend used vuejs1 while frontend & cpanel used vuejs2 due to MaGIC header.
+Backend used Vuejs1 while frontend & cpanel used Vuejs2 due to MaGIC header.
 
-## Vuejs1 to Vuejs2
-Here are few differences when using vuejs1 vs vuejs2
+## Vuejs1 vs Vuejs2
+Here are few differences when using Vuejs1 vs Vuejs2
 
 ### passing data from view to vuejs
 Vuejs1 method:
