@@ -72,7 +72,7 @@ class sayDemoHello extends Action
                 $meta['input']['guestName'] = $guestName;
 		
                 try {
-			$data = sprintf('Hello %s', $guestName)
+			$data = sprintf('Hello %s', $guestName);
 
 			$this->getController()->outputSuccess($data, $meta);
 		} catch (Exception $e) {
