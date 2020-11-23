@@ -1,7 +1,5 @@
 ## Modal Common
-This is a bootstrap modal ready for use in UI. 
-
-Below is an example where by clicking a button will trigger ajax load view into the modal common.
+This is a bootstrap modal ready for use in UI. Below is an example where by clicking a button will trigger ajax load view into the modal common.
 
 Button to trigger:
 ```html
