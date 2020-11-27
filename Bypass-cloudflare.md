@@ -1,6 +1,6 @@
 ### Overview
 Although we strongly recommend putting cloudflare in front of your installation, but there's situation where you need to bypass cloudflare. For example, Cloudflare security:
-* prevent sending code in POST data. This will affect OpenHub's module configuration editing feature.
+* prevent sending programming code in POST data. This will affect OpenHub's module configuration editing feature.
 * impose a maximum limit to number of POST items. This will affect i18n module translation feature.
 
 As result, this error page will be displayed.
@@ -28,4 +28,15 @@ Note: as `noproxy-hub.mymagic.my` is a new subdomain, you will need to obtain ne
   )
 ),
 ```
+4) When developer implementing form action or link url which need to bypass cloudflare, make sure you use the following function `createProxyUrl()` instead of `createUrl()`
+```php
+$this->createProxyUrl('/seolytic/update', array('id' => 1));
+```
 
+below shows how it works inner `createProxyUrl()`
+```php
+public static function createProxyUrl($controller, $urlPart, $urlParams)
+{
+    return sprintf('%s%s', Yii::app()->params['noProxyUrl'], $controller->createUrl($urlPart, $urlParams));
+}
+```
