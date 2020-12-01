@@ -1343,6 +1343,9 @@ Else if movie lover is selected, the following section will be shown.
     ]
 }
 ```
+
+It's all made possible with this chunk of code of javascript.
+
 ```javascript
 "jscripts": 
 [
