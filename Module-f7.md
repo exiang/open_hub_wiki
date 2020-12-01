@@ -1188,6 +1188,189 @@ There are circumstances where you like to hide this section, e.g. you had create
 ## Others
 ### Preset value from URL
 ### Conditional form
+F7 support conditional 
+
+So there is this option selection where user can select between 'Food Lover' or 'Movie Lover'
+
+``` javascript
+"71": {
+    "tag": "group",
+    "prop": {
+        "css": "inline"
+    },
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 1,
+                "for": "condition1",
+                "value": "Select an option"
+            }
+        },
+        {
+            "tag": "radio",
+            "prop": {
+                "required": 1,
+                "showinbackendlist": "1",
+                "csv_label": "Your Hobby",
+                "hint": "This is a condition",
+                "value": "",
+                "css": "inline",
+                "name": "condition1",
+                "error": "",
+                "text": "Select",
+                "items": [
+                    {
+                        "text": "Food Lover"
+                    },
+                    {
+                        "text": "Movie Lover"
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+If 'Food Lover is selected', the following section will be shown.
+
+```javascript
+"72": {
+    "tag": "group",
+    "prop": {
+        "name": "choice-A",
+        "css": "",
+        "size": 3,
+        "text": "Food Lover"
+    },
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 0,
+                "for": "favRestaurant",
+                "value": "Favorite Restaurant:"
+            }
+        },
+        {
+            "tag": "textbox",
+            "prop": {
+                "required": 0,
+                "showinbackendlist": "0",
+                "csv_label": "Favorite Restaurant",
+                "hint": "",
+                "value": "",
+                "name": "favRestaurant",
+                "error": ""
+            }
+        },
+        {
+            "tag": "label",
+            "prop": {
+                "required": 0,
+                "for": "favFruit",
+                "value": "Favorite Fruit:"
+            }
+        },
+        {
+            "tag": "textbox",
+            "prop": {
+                "required": 0,
+                "showinbackendlist": "0",
+                "csv_label": "Favorite Fruit",
+                "hint": "",
+                "value": "",
+                "name": "favFruit",
+                "error": ""
+            }
+        }
+    ]
+}
+```
+
+Else if movie lover is selected, the following section will be shown.
+
+``` javascript
+"73": {
+    "tag": "group",
+    "prop": {
+        "name": "choice-B",
+        "css": "",
+        "size": 3,
+        "text": "Movie Lover"
+    },
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 0,
+                "for": "favCinema",
+                "value": "Favorite Cinema:"
+            }
+        },
+        {
+            "tag": "textbox",
+            "prop": {
+                "required": 0,
+                "showinbackendlist": "0",
+                "csv_label": "Favorite Cinema",
+                "hint": "",
+                "value": "",
+                "name": "favCinema",
+                "error": ""
+            }
+        },
+        {
+            "tag": "label",
+            "prop": {
+                "required": 0,
+                "for": "favMovie",
+                "value": "Favorite Movie:"
+            }
+        },
+        {
+            "tag": "textbox",
+            "prop": {
+                "required": 0,
+                "showinbackendlist": "0",
+                "csv_label": "Favorite Movie",
+                "hint": "",
+                "value": "",
+                "name": "favMovie",
+                "error": ""
+            }
+        }
+    ]
+}
+```
+```javascript
+"jscripts": 
+[
+    {
+        "caller": "condition1",
+        "action": "show",
+        "items": [
+            "favFruit",
+            "favRestaurant"
+        ],
+        "condition": {
+            "check": "Food Lover"
+        }
+    },
+    {
+        "caller": "condition1",
+        "action": "show",
+        "items": [
+            "favMovie",
+            "favCinema"
+        ],
+        "condition": {
+            "check": "Movie Lover"
+        }
+    }
+]
+```
+
 ### Override layout design
 
 ## Known Issues
