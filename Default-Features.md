@@ -1,5 +1,5 @@
-## Merge
-Both organization and individual support merging where duplicate records can be merge into one. After merged, source record will be set to inactive while all its dependancies data are transferred to the destination record (provided the module owner implemented this).
+## Merge Duplicate
+Both organization and individual default feature support merging where duplicate records can be merge into one. After merged, source record will be set to inactive while all its dependancies data are transferred to the destination record (provided the module owner implemented this).
 
 For your module, implement functions `doOrganizationsMerge($source, $target)` & `doIndividualsMerge($source, $target)` inside `YourModuleCodeModule.php` to do the merging. While the preview part is implemented at:
   * `protected/modules/[moduleCode]/views/_organization/_getOrganizationNodes.php`
