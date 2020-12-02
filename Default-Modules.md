@@ -4,6 +4,7 @@ These are the default modules bundle with the package.
   * [Challenge](Module-challenge)
   * [Collection](Module-collection)
   * [Comment](Module-comment)
+  * [CV](Module-cv)
   * [EsLog](Module-esLog) - Application log using Elastic Search
   * [Eventbrite](Module-eventbrite)
   * [F7](Module-f7) Form - Custom Form builder
