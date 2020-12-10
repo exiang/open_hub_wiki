@@ -2,6 +2,23 @@
 ## Enable Caching
 Make sure `CACHE=true` && `DB_SCHEMA_CACHE_DURATION` is set to an integer number like `60` in `proctected/.env`.
 
+Use this as guideline to implement cache in you code:
+> Please take not the `cacheId` is universal. Hence follow a strict naming convention to prevent collision is essential
+
+> Increase the version number `v2` to `v3` for example when you change sql or logic to generate the result
+
+```php
+$useCache = Yii::app()->params['cache'];
+$cacheId = sprintf('%s::%s-%s', 'ClassName', 'functionName', sha1(json_encode(array('v2', 'param1', 'param2'))));
+$result = Yii::app()->cache->get($cacheId);
+if ($result === false || $useCache === false) {
+    $result = Yii::app()->db->createCommand("sql...")->queryScalar();
+
+    // cache for 5min
+    Yii::app()->cache->set($cacheId, $result, 300);
+}
+```
+
 ## Profiling
   > Enable profiling will make all none html page output fail, including json
 
