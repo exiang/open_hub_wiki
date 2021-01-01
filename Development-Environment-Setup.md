@@ -35,10 +35,12 @@ sudo chown -R ubuntu:www-data /var/www/public_html/assets
 sudo mkdir /var/www/protected/data
 sudo chmod -R 777 /var/www/protected/data
 sudo chown -R ubuntu:www-data /var/www/protected/data
+sudo mkdir /var/www/protected/modules
 sudo chmod -R 777 /var/www/protected/modules
 sudo chown -R ubuntu:www-data /var/www/protected/modules
 cd /var/www/protected
 php yiic migrate --interactive=0
+php yiic message config/message.php
 sudo chmod u+x /var/www/_cron -R
 ```
 
