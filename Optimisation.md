@@ -20,7 +20,7 @@ if ($result === false || $useCache === false) {
 ```
 
 ## Profiling
-  > Enable profiling will make all none html page output fail, including json. Use `$this->outputJsonRaw(array('key'=>'value'))` to output your json safely, or include `$this->layout = false;` at the top in your action()
+  > Enable profiling will make all none html page output fail, including json. Use `$this->outputJsonRaw(array('key'=>'value'))` to output your json safely, or include `$this->layout = false;` at the top in your action function.
 
 SET `ENABLE_PROFILE_LOG=true` in `proctected/.env` to display profile.
 
