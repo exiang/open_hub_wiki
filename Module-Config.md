@@ -1,10 +1,10 @@
-A standard module has the following configuration files inside `config` folder.
 <img width="170" alt="Screenshot 2021-01-20 at 3 16 19 PM" src="https://user-images.githubusercontent.com/5336690/105140715-10e78480-5b33-11eb-999f-2c5975e5692b.png">
 
-A module is not initialise to activate until the below configuration files are created. These are installation environment specification configurations:
-  * `module/config/main.php` - setting specific for for web applications
-  * `module/config/console.php` - setting specific for command line console applications
+A standard module has the following configuration files inside `config` folder.
 
+A module is not initialise to activate until the below configuration files are created. These are installation environment specification configurations:
+  * `module/config/main.php` - setting specific for for web applications and it override value in `module/config/main.base.php`
+  * `module/config/console.php` - setting specific for command line console applications and it override value in `module/config/console.base.php`
 
 
 
