@@ -3,7 +3,7 @@
 A standard module has the following configuration files inside `config` folder.
 
 A module is not initialise to activate until the below configuration files are created. These are installation environment specification configurations:
-  * `module/config/main.php` - setting specific for for web applications and it override value in `module/config/main.base.php`
+  * `module/config/main.php` - setting specific for web applications and it override value in `module/config/main.base.php`
   * `module/config/console.php` - setting specific for command line console applications and it override value in `module/config/console.base.php`
 
 
