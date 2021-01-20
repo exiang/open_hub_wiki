@@ -25,11 +25,11 @@ You like to set a default value to it. By this we means the value will be commit
 <?php
 
 return array(
-	'modules' => array(
-		'boilerplateStart' => array(
-                 'var1' => 'from config/base.php',
-        )
-    )
+    'modules' => array(
+        'boilerplateStart' => array(
+            'var1' => 'from config/base.php',
+         )
+     )
 
     // other configurations ....
 );
