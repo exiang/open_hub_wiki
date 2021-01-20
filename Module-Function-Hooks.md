@@ -239,3 +239,45 @@ Individual feature allows admin to merge duplicate from source to target records
 ### getEventActions
 
 ### getEventViewTabs
+
+### getDashboardNotices
+For both cpanel and backend, display flash message on top of page.
+```php
+public function getDashboardNotices($model, $realm = 'backend')
+{
+    if($realm == 'cpanel'){
+        $notices[] = array('message' => 'Hello World', 'type' => Notice_WARNING);
+        return $notices;
+    }
+}
+```
+
+### getDashboardViewTabs
+For both cpanel and backend.
+```php
+public function getDashboardViewTabs($model, $realm = 'backend')
+{
+    $tabs = array();
+    if ($realm == 'backend') {
+        if (Yii::app()->user->accessBackend) {
+        }
+    } elseif ($realm == 'cpanel') {
+        $tabs['magicOps'][] = array(
+            'key' => 'magicOps',
+            'title' => 'Welcome',
+            'viewPath' => 'modules.magicOps.views.cpanel._view-dashboard-welcome',
+            'ordering' => -100,
+        );
+        /*$tabs['magicOps'][] = array(
+            'key' => 'magicOps',
+            'title' => 'Upcoming Events & Mentorships',
+            'viewPath' => 'modules.magicOps.views.cpanel._view-dashboard-upcoming',
+            'ordering' => 100,
+        );*/
+    }
+
+    return $tabs;
+}
+```
+
+### 
