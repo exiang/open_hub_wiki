@@ -6,6 +6,13 @@ A module is not initialise to activate until the below configuration files are c
   * `module/config/main.php` - setting specific for web applications and it override value in `module/config/main.base.php`
   * `module/config/console.php` - setting specific for command line console applications and it override value in `module/config/console.base.php`
 
+OpenHub module configuration system follow hierarchical design to allow greatest flexiblity for super admin and developers overriding setting at each layer.
+
+
+<img width="790" alt="Screenshot 2021-01-20 at 4 21 40 PM" src="https://user-images.githubusercontent.com/5336690/105147118-b141a700-5b3b-11eb-9546-50f3a2cef565.png">
+
+
+
 ### Exposing a module variable to config
 Your `BoilerplateStartModule` has a new variable called `var1` where its value can be access anywhere in code with `Yii::app()->getModule('boilerplateStart')->var1`.
 ```
@@ -78,7 +85,7 @@ In backend, through module interface, system admin will be able to take these `*
 
 <img width="1271" alt="Screenshot 2021-01-20 at 3 51 19 PM" src="https://user-images.githubusercontent.com/5336690/105143955-835a6380-5b37-11eb-9735-a0c5f0f1d194.png">
 
-By now, you should understand this hierarchical design allow greatest flexiblity for super admin and developers to override setting at each layer.
+
 
 ### Changing Module URL
 Module with name `mentor` will be access thru url likes `https://hub.mymagic.my/mentor` by Yii framework rule. If you needs to change the URL to `https://hub.mymagic.my/mentorship` and still correctly point to `mentor` module, you should change it in the `modules/mentor/config/main.php` route section.
