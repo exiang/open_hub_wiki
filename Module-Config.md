@@ -6,7 +6,34 @@ A module is not initialise to activate until the below configuration files are c
   * `module/config/main.php` - setting specific for web applications and it override value in `module/config/main.base.php`
   * `module/config/console.php` - setting specific for command line console applications and it override value in `module/config/console.base.php`
 
+### Exposing a module variable to config
+Your `BoilerplateStartModule` has a new variable called `var1` where its value can be access anywhere in code with `Yii::app()->getModule('boilerplateStart')->var1`.
+```
+<?php
 
+// use camelcase for class name with first character in uppercase
+class BoilerplateStartModule extends WebModule
+{
+	public $var1;
+
+        // more code...
+}
+```
+
+You like to set a default value to it. If this value are the same for both `web` and `console` environments, you put it at `/protected/boilerplateStart/modules/config/base.php`:
+```
+<?php
+
+return array(
+	'modules' => array(
+		'boilerplateStart' => array(
+                 'var1' => 'from config/base.php',
+        )
+    )
+
+    // other configurations ....
+);
+```
 
 
 ### Changing Module URL
