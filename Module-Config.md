@@ -78,7 +78,7 @@ In backend, through module interface, system admin will be able to take these `*
 
 <img width="1271" alt="Screenshot 2021-01-20 at 3 51 19 PM" src="https://user-images.githubusercontent.com/5336690/105143955-835a6380-5b37-11eb-9735-a0c5f0f1d194.png">
 
-By now, you should understand this hierarchical design allow greatest flexiblity for admin to developers to override setting at each layer.
+By now, you should understand this hierarchical design allow greatest flexiblity for super admin and developers to override setting at each layer.
 
 ### Changing Module URL
 Module with name `mentor` will be access thru url likes `https://hub.mymagic.my/mentor` by Yii framework rule. If you needs to change the URL to `https://hub.mymagic.my/mentorship` and still correctly point to `mentor` module, you should change it in the `modules/mentor/config/main.php` route section.
