@@ -61,9 +61,8 @@ return array(
 );
 ```
 
-In these config files, your will have some other setting that you do not encourage your user to modify. For those you like to expose, you will need to do a hint at `/protected/boilerplateStart/modules/config/main.dist.php` and `/protected/boilerplateStart/modules/config/console.dist.php` files:
+In these config files, your will have some other settings that you do not encourage your super admin to modify. But for those you like to expose, hint of their existent is recorded at `/protected/boilerplateStart/modules/config/main.dist.php` and `/protected/boilerplateStart/modules/config/console.dist.php`:
 
-for both `/protected/boilerplateStart/modules/config/main.dist.php` and `/protected/boilerplateStart/modules/config/console.dist.php`
 ```
 <?php
 return array(
@@ -75,7 +74,7 @@ return array(
 );
 ```
 
-In backend, at module interface, system admin will be able to take these `*.dist.php` file for reference to set their own `/protected/boilerplateStart/modules/config/main.php` and `/protected/boilerplateStart/modules/config/console.php` respectively.
+In backend, through module interface, system admin will be able to take these `*.dist.php` file for reference to set their own `/protected/boilerplateStart/modules/config/main.php` and `/protected/boilerplateStart/modules/config/console.php` respectively.
 
 <img width="1271" alt="Screenshot 2021-01-20 at 3 51 19 PM" src="https://user-images.githubusercontent.com/5336690/105143955-835a6380-5b37-11eb-9735-a0c5f0f1d194.png">
 
