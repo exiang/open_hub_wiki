@@ -20,7 +20,7 @@ class BoilerplateStartModule extends WebModule
 }
 ```
 
-You like to set a default value to it. If this value are the same for both `web` and `console` environments, you put it at `/protected/boilerplateStart/modules/config/base.php`:
+You like to set a default value to it. By this we means the value will be commit to the code repository and available to the public when they download and install your module. If this value are the same for both `web` and `console` environments, you put it at `/protected/boilerplateStart/modules/config/base.php`:
 ```
 <?php
 
@@ -35,6 +35,30 @@ return array(
 );
 ```
 
+But if you need `var1` value to be different at both environment, for example, `apple` for `web` and `orange` for `console` environment, you will need to modify these files respectively:
+
+for `/protected/boilerplateStart/modules/config/main.base.php`:
+```
+<?php
+return array(
+	'modules' => array(
+		'boilerplateStart' => array(
+			'var1' => 'apple',
+		)
+	)
+);
+```
+`/protected/boilerplateStart/modules/config/console.base.php`
+```
+<?php
+return array(
+	'modules' => array(
+		'boilerplateStart' => array(
+			'var1' => 'orange',
+		)
+	)
+);
+```
 
 ### Changing Module URL
 Module with name `mentor` will be access thru url likes `https://hub.mymagic.my/mentor` by Yii framework rule. If you needs to change the URL to `https://hub.mymagic.my/mentorship` and still correctly point to `mentor` module, you should change it in the `modules/mentor/config/main.php` route section.
