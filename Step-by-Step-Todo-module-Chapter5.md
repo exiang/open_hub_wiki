@@ -148,6 +148,17 @@ Add `require_once dirname(__FILE__) . '/vendor/autoload.php';` to the start of `
 
 OpenHub used [Wikimedia Composer Merge](https://github.com/wikimedia/composer-merge-plugin) to accomplish this.
 
+Composer package used by the module can be access in the application scope as well as in other modules. All you need to do is run `composer update` under `/protected`. 
+
+Now, this package is ready to use, e.g.: `/protected/TestController.php`
+```php
+public function actionWebflowModule()
+{
+    $webflow = new \Webflow\Api(Yii::app()->getModule('webflow')->apiToken);
+    print_r($webflow->info());
+}
+```
+
 ## Sub domain for module
 Todo...
 
