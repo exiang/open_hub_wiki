@@ -53,3 +53,5 @@ In this example, we are using hub.example.com, hubd.example.com and central.exam
 
 ![step 5](https://firebasestorage.googleapis.com/v0/b/edmondtm-1d8ed.appspot.com/o/s3-cors-step5.png?alt=media&token=03eebecc-9479-43b3-8561-fc8a91812552)
 
+[AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html)
+
