@@ -131,7 +131,7 @@ We needs 2 buckets here, one for public access and another to store secure files
     ]
 }
 ```
-3. Go to `Permissions` and `Cross-origin resource sharing (CORS)`, then edit, insert and save:
+3. Go to `Permissions` and `Cross-origin resource sharing (CORS)`, then edit, insert and save [instruction here](https://github.com/mymagic/open_hub/wiki/AWS-S3-Bucket-CORS-Setting):
 ```
 [
     {
