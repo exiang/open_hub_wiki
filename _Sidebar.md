@@ -47,6 +47,7 @@
   * [YeeBase](YeeBase)
   * [Bypass Cloudflare](Bypass-cloudflare)
   * [Vuejs](vuejs)
+  * [CORS Setting for S3 Bucket] (AWS-S3-Bucket-CORS-Setting)
 * [Test](Test)
 * [Optimisation](Optimisation)
 * [Contribute](Contribute)
