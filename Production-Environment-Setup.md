@@ -131,6 +131,26 @@ We needs 2 buckets here, one for public access and another to store secure files
     ]
 }
 ```
+3. Go to `Permissions` and `Cross-origin resource sharing (CORS)`, then edit, insert and save:
+```
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "https://hub.mymagic.my", #your staging 
+            "https://hubd.mymagic.my", #your development
+            "https://central.mymagic.my" #your production
+        ],
+        "ExposeHeaders": []
+    }
+]
+```
+
 #### Secure Bucket
 1. Create a bucket and name it `openhub-staging-secure`
 2. Make sure `Block all public access` is `on`
