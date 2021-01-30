@@ -3,7 +3,7 @@
   * PHP version: 7.2
     * [YAML](https://www.php.net/manual/en/book.yaml.php)
     * [CURL](https://www.php.net/manual/en/book.curl.php)
-    * [MBSTRING](https://www.php.net/manual/en/book.mbstring.php) - required to store json_x data ensuring array is in utf8 format
+    * [MBSTRING](https://www.php.net/manual/en/book.mbstring.php)
     * [GD](https://www.php.net/manual/en/book.image.php)
     * [ZLIB](https://www.php.net/manual/en/book.zlib.php)
     * [REDIS](https://github.com/phpredis/phpredis)
@@ -26,3 +26,6 @@
 ### Licenses
   * [Inspinia](https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S) - You will need to purchase Inspinia (single license at USD44) if you are using the default theme shipped with OpenHub
   * [CKeditor](https://ckeditor.com/) - Optional, you will need to purchase this only if you are using the WYSIWYG HTML Editor with image that need to store at S3.
+
+### Notes
+  * PHP mbstring module is required to store json_x data ensuring array is in utf8 format
