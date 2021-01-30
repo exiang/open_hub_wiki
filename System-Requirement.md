@@ -3,6 +3,7 @@
   * PHP version: 7.2
     * [YAML](https://www.php.net/manual/en/book.yaml.php)
     * [CURL](https://www.php.net/manual/en/book.curl.php)
+    * [MBSTRING](https://www.php.net/manual/en/book.mbstring.php) - required to store json_x data ensuring array is in utf8 format
     * [GD](https://www.php.net/manual/en/book.image.php)
     * [ZLIB](https://www.php.net/manual/en/book.zlib.php)
     * [REDIS](https://github.com/phpredis/phpredis)
