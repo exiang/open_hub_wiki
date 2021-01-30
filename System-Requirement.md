@@ -28,4 +28,4 @@
   * [CKeditor](https://ckeditor.com/) - Optional, you will need to purchase this only if you are using the WYSIWYG HTML Editor with image that need to store at S3.
 
 ### Notes
-  * PHP mbstring module is required to store json_x data ensuring array is in utf8 format
+  * PHP mbstring module is required to store json_x data ensuring array is in utf8 format or else it will store as null
