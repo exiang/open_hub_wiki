@@ -21,7 +21,7 @@ class TestModel extends ActiveRecordBase
 }
 ```
 
-To trigger it:
+To trigger it (usually from controller):
 ```php
 $model = new TestModel();
 
