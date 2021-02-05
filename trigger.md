@@ -14,14 +14,10 @@ class TestModel extends ActiveRecordBase
     }
 
     // this is required event is empty
-	public function onApproveSuccess($event)
-	{
-	}
+    public function onApproveSuccess($event){}
 
     // this is required event is empty
-	public function onApproveFailed($event)
-	{
-	}
+    public function onApproveFailed($event){}
 }
 ```
 
