@@ -1,4 +1,4 @@
-Yii Framework support event driven application out of the box by default. 
+Yii Framework support event driven application out of the box by default. To avoid confuse with `Event` model of OpenHub, we called it `Trigger`.
 
 ```php  
 class TestModel extends ActiveRecordBase
