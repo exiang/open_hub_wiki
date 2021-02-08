@@ -3,6 +3,7 @@ Kibana is a popular visualization tool for Elasticsearch. If you have enabled es
 **1. Find your Elasticsearch version**
 
 a. Go to your Elasticsearch Endpoint. (/protected/.env under "ESLOG_ENDPOINT")
+`
 b. Enter this link into your browser. eg. https://xxxxxxxxxxxxxxxxxxxx.ap-southeast-1.es.amazonaws.com
 
 ![Elasticsearch Version](https://firebasestorage.googleapis.com/v0/b/edmondtm-1d8ed.appspot.com/o/elasticsearchversion.png?alt=media&token=36a27df2-8921-49a4-81a8-6598ae7955a2)
