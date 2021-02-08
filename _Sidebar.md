@@ -48,6 +48,7 @@
   * [Bypass Cloudflare](Bypass-cloudflare)
   * [Vuejs](vuejs)
   * [CORS Setting for S3 Bucket](AWS-S3-Bucket-CORS-Setting)
+  * [Setting Up Kibana locally](https://github.com/mymagic/open_hub/wiki/Setting-up-Kibana-for-Amazon-Elasticsearch)
   * [Trigger](trigger)
 * [Test](Test)
 * [Optimisation](Optimisation)
