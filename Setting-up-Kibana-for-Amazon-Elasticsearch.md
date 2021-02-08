@@ -1,6 +1,7 @@
 Kibana is a popular visualization tool for Elasticsearch. If you have enabled esLog in you .env file and wanted to view the logs in Elasticsearch these are the steps.
 
 **1. Find your Elasticsearch version**
+
 a. Go to your Elasticsearch Endpoint. (/protected/.env under "ESLOG_ENDPOINT")
 b. Enter this link into your browser. eg. https://xxxxxxxxxxxxxxxxxxxx.ap-southeast-1.es.amazonaws.com
 
