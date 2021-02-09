@@ -9,6 +9,7 @@ b. Enter this link into your browser. eg. https://xxxxxxxxxxxxxxxxxxxx.ap-southe
 ![Elasticsearch Version](https://firebasestorage.googleapis.com/v0/b/edmondtm-1d8ed.appspot.com/o/elasticsearchversion.png?alt=media&token=36a27df2-8921-49a4-81a8-6598ae7955a2)
 
 **2. Download Kibana corresponding to your Elasticsearch version and Operating System**
+
 In my example, I want to use version 5.3.2 (This is to avoid compatibility issue)
 [https://www.elastic.co/downloads/past-releases#elasticsearch](Download Kibana)
 
