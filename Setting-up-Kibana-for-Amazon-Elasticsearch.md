@@ -11,17 +11,21 @@ b. Enter this link into your browser. eg. https://xxxxxxxxxxxxxxxxxxxx.ap-southe
 **2. Download Kibana corresponding to your Elasticsearch version and Operating System**
 
 In my example, I want to use version 5.3.2 (This is to avoid compatibility issue)
+
 [https://www.elastic.co/downloads/past-releases#elasticsearch](Download Kibana)
 
 **3. Install**
 
 **4. Configure Kibana**
+
 For Linux and Mac, your configuration file should be at etc/kibana/kibana.yml
+
 ![Kibana Configuration](https://firebasestorage.googleapis.com/v0/b/edmondtm-1d8ed.appspot.com/o/kibana%20configuration.png?alt=media&token=2b15de9e-a2de-4a69-a4f9-ff72acf23d80)
 
 [AWS Documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-kibana.html)
 
 **5. Open http://localhost:5601 on your web browser.
+
 ![Kibana Screenshot](https://firebasestorage.googleapis.com/v0/b/edmondtm-1d8ed.appspot.com/o/kibana%20screenshot.png?alt=media&token=9a2724b9-b082-42be-9c3b-aa284f539324)
 
 
