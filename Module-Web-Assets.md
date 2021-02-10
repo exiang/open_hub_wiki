@@ -17,6 +17,8 @@ public function beforeControllerAction($controller, $action)
 }
 ```
 
+> If any of these still not working, you may want to make sure your `/public_html/assets` directory is writable by `chmod -R 0777 /public_html/assets`. Empty the directory first would help to create a fresh asset cache.
+
 ## Images
 ```php
 <?php echo Html::image($this->module->assetsUrl.'/images/photo1.png'); ?>
