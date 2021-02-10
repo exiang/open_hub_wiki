@@ -37,7 +37,7 @@ public static function member_user_linkUserEmail($user, $user2email)
     $params['urlDelete'] = Yii::app()->createAbsoluteUrl('/cpanel/cancelUser2Email', array('email' => $user2email->user_email, 'key' => $user2email->delete_key));
 
     // always start with views folder
-    $return['content'] = HUB::renderPartial('/emails/_user_linkUserEmail', $params, true);
+    $return['content'] = HUB::renderPartial('/_email/user_linkUserEmail', $params, true);
 
     return $return;
 }
@@ -56,7 +56,7 @@ $params['urlVerify'] = Yii::app()->createAbsoluteUrl('/cpanel/verifyUser2Email',
 $params['urlDelete'] = Yii::app()->createAbsoluteUrl('/cpanel/cancelUser2Email', array('email' => $user2email->user_email, 'key' => $user2email->delete_key));
 
 // always start with views folder
-$notifMaker['content'] = HUB::renderPartial('/emails/_user_linkUserEmail', $params, true);
+$notifMaker['content'] = HUB::renderPartial('/_email/user_linkUserEmail', $params, true);
 
 $options['email']['receivers'][] = array('method' => 'cc', 'name' => $nameTeam, 'email' => $emailTeam);
 HUB::sendNotify('member', $submission->user->username, $notifMaker['message'], $notifMaker['title'], $notifMaker['content'], 3, $options);
