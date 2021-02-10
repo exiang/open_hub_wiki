@@ -177,7 +177,7 @@ Setup SMTP mail server. We recommend using transaction mail services from Mailch
 
 ### Get a Google API Account
 Google API account is required, use to translate address to lat long location etc. 
-  * Your account needs to tied  with Credit Card
+  * Your [Account Billing](https://console.cloud.google.com/project/_/billing/enable) needs to enabled and tied with a Credit Card
   * You will need to enable `Geolocation API`, `Maps Embed API`, `Geocoding API` and `Maps JavaScript API`
 
 ### Get an Open Exchange Rate Account
