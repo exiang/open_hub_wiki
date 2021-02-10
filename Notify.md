@@ -42,5 +42,22 @@ public static function member_user_linkUserEmail($user, $user2email)
     return $return;
 }
 ```
-
 > We use `HUB::renderPartial` here but not `$this->renderPartial` in order for it to work correctly in CLI environment too
+
+The purpose of `NotifyMaker` is to keep all messaging compose in one single place for ease of management. However, base on situation, you may go for the shortcut:
+
+```php
+$notifMaker['title'] = Yii::t('notify', 'Please verify this email address');
+$notifMaker['message'] = Yii::t('notify', 'Please verify this email address.');
+
+$params['email'] = $user2email->user_email;
+$params['username'] = $user->username;
+$params['urlVerify'] = Yii::app()->createAbsoluteUrl('/cpanel/verifyUser2Email', array('email' => $user2email->user_email, 'key' => $user2email->verification_key));
+$params['urlDelete'] = Yii::app()->createAbsoluteUrl('/cpanel/cancelUser2Email', array('email' => $user2email->user_email, 'key' => $user2email->delete_key));
+
+// always start with views folder
+$notifMaker['content'] = HUB::renderPartial('/emails/_user_linkUserEmail', $params, true);
+
+$options['email']['receivers'][] = array('method' => 'cc', 'name' => $nameTeam, 'email' => $emailTeam);
+HUB::sendNotify('member', $submission->user->username, $notifMaker['message'], $notifMaker['title'], $notifMaker['content'], 3, $options);
+```
