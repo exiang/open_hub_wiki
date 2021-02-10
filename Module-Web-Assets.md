@@ -27,7 +27,7 @@ or
 public function getAssetsUrl()
 {
     if (null === $this->_assetsUrl) {
-        $this->_assetsUrl = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('ekyc.assets'));
+        $this->_assetsUrl = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('boilerplateStart.assets'));
     }
 
     return $this->_assetsUrl;
