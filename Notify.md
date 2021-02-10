@@ -1,6 +1,8 @@
 ## How it works
 Developer should not concern how user will get a notification message. It is handled by system automatically. Email are the default channel for sending a message; where user with verified mobile number will get additional SMS notification; same concept applied to push notification channel then.
 
+Outgoing message will also be recorded in database under `notify` table for references.
+
 ## sendNotify
 You can send a notification by calling `HUB::sendNotify`.
 
