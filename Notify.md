@@ -4,10 +4,13 @@ You can send a notification by calling `HUB::sendNotify`.
 ```php 
 sendNotify($userType, $username, $message, $title = '', $content = '', $priority = 3, $options = null) 
 ```
-* receiver user type: member, admin or organization
-* message can either be a string or a json payload
-* priority, default to 3, 1 is least important, 5 is most important
-* compose of title, message and content is the job of `NotifyMaker`
+* `$userType`: supported receiver user type can be either `member`, `admin` or `organization`
+* `$username`: `username` (email address) for member and admin; or `code` for organization
+* `$message`: Required field, either a string or a json payload, use for short messaging channel like SMS and Push notification (where `$content` will not be use)
+* `$title`: a string, mainly use for channel like Email
+* `$content`: a long string, HTML is supported and will be automatically adapt to plain text for alternative, mainly use for channel like Email
+* `$priority`: default to 3, 1 is least important, 5 is most important
+* `$options`: additional parameters can be pass in to control for each channel, like setting a CC in email for examaple
 
 ```php
 $notifyMaker = NotifyMaker::member_user_linkUserEmail($user, $user2email);
@@ -15,7 +18,7 @@ $options['email']['receivers'][] = array('method' => 'cc', 'name' => $nameTeam, 
 HUB::sendNotify('member', $submission->user->username, $notifMaker['message'], $notifMaker['title'], $notifMaker['content'], 3, $options);
 ```
 
-`NotifyMaker` function follow the following format: `NotifyMaker::receiverUserType_module_verbNouns`
+As you can see, compose of title, message and content is the job of `NotifyMaker` function and it follows the format of: `NotifyMaker::receiverUserType_module_verbNouns`
 
 ```php
 public static function member_user_linkUserEmail($user, $user2email)
