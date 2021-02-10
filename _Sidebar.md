@@ -30,6 +30,7 @@
   * [Default Features](Default-Features)
   * [Default Modules](Default-Modules)
   * [Cron](Cron-Commands)
+  * [Notify](Notify)
   * [Neo4J Database](Neo4J-Database)
   * [Multi Domains](Multi-Domains)
   * [Multilingual (i18n)](i18n)
