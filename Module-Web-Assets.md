@@ -22,7 +22,7 @@ public function beforeControllerAction($controller, $action)
 <?php echo Html::image($this->module->assetsUrl.'/images/photo1.png'); ?>
 ```
 
-or
+or add the following function in `BoilerplateStartModule`
 ```php
 public function getAssetsUrl()
 {
