@@ -21,3 +21,19 @@ public function beforeControllerAction($controller, $action)
 ```php
 <?php echo Html::image($this->module->assetsUrl.'/images/photo1.png'); ?>
 ```
+
+or
+```php
+public function getAssetsUrl()
+{
+    if (null === $this->_assetsUrl) {
+        $this->_assetsUrl = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('ekyc.assets'));
+    }
+
+    return $this->_assetsUrl;
+}
+```
+so you can do this in view:
+```php
+<?php echo Html::image($this->module->getAssetUrl().'/images/photo1.png'); ?>
+```
