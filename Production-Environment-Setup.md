@@ -178,7 +178,7 @@ Setup SMTP mail server. We recommend using transaction mail services from Mailch
 ### Get a Google API Account
 Google API account is required, use to translate address to lat long location etc. 
   * Your account needs to tied  with Credit Card
-  * You will need to enable `Geolocation API` and `Maps JavaScript API`
+  * You will need to enable `Geolocation API`, `Maps Embed API`, `Geocoding API` and `Maps JavaScript API`
 
 ### Get an Open Exchange Rate Account
 Required for currency conversion to works. All monetary value stored in database in USD. Get a free account here [https://openexchangerates.org/signup/free](https://openexchangerates.org/signup/free).
