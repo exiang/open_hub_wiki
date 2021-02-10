@@ -1,3 +1,6 @@
+## How it works
+Developer should not concern how user will get a notification message. It is handled by system automatically. Email are the default channel for sending a message; where user with verified mobile number will get additional SMS notification; same concept applied to push notification channel then.
+
 ## sendNotify
 You can send a notification by calling `HUB::sendNotify`.
 
@@ -18,7 +21,7 @@ $options['email']['receivers'][] = array('method' => 'cc', 'name' => $nameTeam, 
 HUB::sendNotify('member', $submission->user->username, $notifMaker['message'], $notifMaker['title'], $notifMaker['content'], 3, $options);
 ```
 
-As you can see, compose of title, message and content is the job of `NotifyMaker` function and it follows the format of: `NotifyMaker::receiverUserType_module_verbNouns`
+As you can see, compose of `title`, `message` and `content` is the job of `NotifyMaker` function and it follows the format of: `NotifyMaker::receiverUserType_module_verbNouns`
 
 ```php
 public static function member_user_linkUserEmail($user, $user2email)
