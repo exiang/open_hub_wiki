@@ -1,5 +1,8 @@
 Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php` to change how OpenHub core code works.
 
+
+* [getBackendAdvanceSearch](Module-Function-Hooks-getBackendAdvanceSearch)
+
 ### getOrganizationViewTabs
 
 ```php
@@ -185,29 +188,7 @@ public function getSharedAssets($forInterface = '*')
     return $return;
 }
 ```
-### getBackendAdvanceSearch
-```php
-public function getBackendAdvanceSearch($controller, $searchFormModel){}
-```
-You may like to list module records in backend search when admin search for a keyword. 
 
-```php
-public function getBackendAdvanceSearch($controller, $searchFormModel)
-{
-    $searchModel = new BoilerplateModel('search');
-    $result['boilerplateStart'] = $searchModel->searchAdvance($searchFormModel->keyword);
-
-    return array(
-        'boilerplateStart' => array(
-            'tabLabel' => Yii::t('backend', 'Boilerplate'),
-            'itemViewPath' => 'application.modules.boilerplateStart.views.backend._view-boilerplateStart-advanceSearch',
-            'result' => $result['boilerplateStart'],
-        ),
-    );
-}
-```
-
-> :info: This required modification to your model to implement `searchAdvance()` function
 
 ### doOrganizationsMerge
 ```php
