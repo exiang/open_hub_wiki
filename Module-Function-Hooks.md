@@ -207,6 +207,8 @@ public function getBackendAdvanceSearch($controller, $searchFormModel)
 }
 ```
 
+> :info: This required modification to your model to implement `searchAdvance()` function
+
 ### doOrganizationsMerge
 ```php
 public function doOrganizationsMerge($source, $target){}
