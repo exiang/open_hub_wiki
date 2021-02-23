@@ -9,3 +9,6 @@ Feel free to use the following template as a guide to ensure the completeness of
 | 5 | make sure all module public variables are exposed in `config/base.php` for convenience of admin to refer to | |
 | 6 | make sure`getAsService()` is implemented to expose functionality to member in cpanel (if your module is a service) | |
 | 7 | make sure `getDashboardViewTabs()` is implemented  to expose functionality to admin in backend dashboard page (if required) | |
+| 8 | make sure module do not edit any of the other core table (e.g. `organization`, `individual`, `event`) as well as others module tables structure. Use meta to extends. | |
+| 9 | make sure `Setting::setSetting()` is used to create and store configuration instead of using a custom table  | | 
+| 10 | make sure all static texts in module are `i18n` ready using `Yii::t('MODULE_CODE', 'Your text string here')` | |
