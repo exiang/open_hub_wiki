@@ -54,7 +54,7 @@ You may implement your advanceSearch partial view `/protected/modules/boilerplat
        Logo Image
     </div>
     <div class="media-body">
-        <a href="<?php echo $this->createUrl('/sample/sample/view', array('id' => $data->id)); ?>">
+        <a href="<?php echo $this->createUrl('/boilerplateStart/sample/view', array('id' => $data->id)); ?>">
         <h4 class="media-heading">
             Title
             <small><span class="text-muted">Sub Title</span></small>
