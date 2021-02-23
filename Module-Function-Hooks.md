@@ -20,6 +20,7 @@ Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php`
 * [getEventViewTabs](Module-Function-Hooks-%5C-getEventActions)
 
 ### Navigation
+* [getNavItems](Module-Function-Hooks-%5C-getNavItems)
 
 ### Dashboard
 * [getDashboardNotices](Module-Function-Hooks-%5C-getDashboardNotices)
