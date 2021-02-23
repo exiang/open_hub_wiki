@@ -65,3 +65,19 @@ $form->bsDateTextField($model, 'dateStart', array('options' => array(
     ),
 )); ?>
 ```
+
+## Html::activeThumb()
+This is a helper function to display thumbnail image for your active model in yee. 
+
+```php <?php echo Html::activeThumb($data, 'image_cover') ?>```
+
+<img width="423" alt="Screenshot 2021-02-24 at 2 59 47 AM" src="https://user-images.githubusercontent.com/5336690/108894286-0c8c1b00-764d-11eb-942a-7fb20ac2dad7.png">
+
+By default, activeThumb used `adaptiveResize` method to generate the thumbnail, which respect the original image ratio and try to show the entire image for completeness. The only drawback is this come with the TV box padding effect.
+
+### Resize method
+```php <?php echo Html::activeThumb($data, 'image_cover', array('method' => 'resize')) ?>```
+
+<img width="441" alt="Screenshot 2021-02-24 at 2 57 47 AM" src="https://user-images.githubusercontent.com/5336690/108894279-0ac25780-764d-11eb-8a41-a096564d9106.png">
+
+`resize` method will scale the image to fill up the output size, ignoring the ratio. 
