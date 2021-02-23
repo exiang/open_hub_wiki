@@ -9,6 +9,7 @@ OpenHub’s extensibility revolves around modules, which are small programs that
 * [Module Layout](Module-Layout)
 * [Module Web Assets](Module-Web-Assets)
 * [Module Web API](Module-Web-API)
+* [Module Checklist](Module-Checklist)
 
 ### Tutorial
 * [Step by Step Guide building a Todo Module](Step-by-step-Todo-module)
