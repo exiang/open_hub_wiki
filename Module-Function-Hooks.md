@@ -1,7 +1,7 @@
 Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php` to change how OpenHub core code works.
 
 
-* [getBackendAdvanceSearch](Module-Function-Hooks-getBackendAdvanceSearch)
+* [getBackendAdvanceSearch](Module-Function-Hooks-%5C-getBackendAdvanceSearch)
 
 ### getOrganizationViewTabs
 
