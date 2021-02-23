@@ -19,9 +19,13 @@ Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php`
 * [getEventActions](Module-Function-Hooks-%5C-getEventViewTabs)
 * [getEventViewTabs](Module-Function-Hooks-%5C-getEventActions)
 
-### Member Control Panel
+### Navigation
 
-### Backend
+### Dashboard
+* [getDashboardNotices](Module-Function-Hooks-%5C-getDashboardNotices)
+* [getDashboardViewTabs](Module-Function-Hooks-%5C-getDashboardViewTabs)
+
+### Backend only
 * [getBackendAdvanceSearch](Module-Function-Hooks-%5C-getBackendAdvanceSearch)
 
 
@@ -29,61 +33,6 @@ Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php`
 
 
 
-### getNavItems
-```php
-function getNavItems($controller, $forInterface){}
-```
-This function is called to all modules by initBackendMenu() in `protected/components/Controller.php`, to acquired navigation items. 
-
-Available `$forInterface` code:
-  * Backend
-    * **backendNavService**
-
-      add link under service menu
-      ![image](https://user-images.githubusercontent.com/5336690/71714621-8b226980-2e49-11ea-85ee-3c84f4719248.png)
-    * **backendNavDev**
-
-      add link under Dev (development) menu, only visible to developer role
-      ![image](https://user-images.githubusercontent.com/5336690/71714606-8067d480-2e49-11ea-971d-9680ea2b2f27.png)
-    * **backendNavUserService**
-
-      add link under user avatar menu
-      ![image](https://user-images.githubusercontent.com/5336690/71714577-63330600-2e49-11ea-921f-673471b66050.png)
-
-  * Event
-    * eventAdminSideNav
-  * Cpanel
-    * cpanelNavDashboard 
-    * cpanelNavSetting
-    * cpanelNavCompany
-    * cpanelNavCompanyInformation
-  * External modules
-    * MdecMSC
-      * mdecMscAdminSideNav
-
-``` php
-public function getNavItems($controller, $forInterface)
-{
-    switch ($forInterface) {
-        case 'backendNavService':
-
-            return array(
-                array(
-                    'label' => Yii::t('backend', 'Open Innovation Challenge'), 'url' => '#',
-                    'visible' => Yii::app()->user->getState('accessBackend') == true,
-                    'active' => $controller->activeMenuMain == 'challenge' ? true : false,
-                    'itemOptions' => array('class' => 'dropdown-submenu'), 'submenuOptions' => array('class' => 'dropdown-menu'),
-                    'linkOptions' => array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
-                    'items' => array(
-                        array('label' => Yii::t('app', 'Challenge Overview'), 'url' => array('/challenge/backend'), 'visible' => Yii::app()->user->getState('accessBackend') == true),
-                    ),
-                ),
-            );
-
-            break;
-    }
-}
-```
 
 ### getAsService
 ```php
@@ -123,59 +72,3 @@ public function getSharedAssets($forInterface = '*')
     return $return;
 }
 ```
-
-
-
-
-### getDashboardNotices
-For both cpanel and backend, display flash message on top of page.
-```php
-public function getDashboardNotices($model, $realm = 'backend')
-{
-    if($realm == 'cpanel'){
-        $notices[] = array('message' => 'Hello World', 'type' => Notice_WARNING);
-        return $notices;
-    }
-}
-```
-
-### getDashboardViewTabs
-Rendered as tabs in backend dashboard.
-
-```php
-public function getDashboardViewTabs($model, $realm = 'backend')
-{
-    $tabs = array();
-    if ($realm == 'backend') {
-        if (Yii::app()->user->accessBackend) {
-            $tabs['esLog'][] = array(
-                'key' => 'esLog',
-                'title' => 'Log',
-                'viewPath' => 'modules.esLog.views.backend._view-dashboard-esLog'
-            );
-        }
-    }
-
-    return $tabs;
-}
-```
-
-Rendered as block (flowing down) at cpanel.
-```php
-public function getDashboardViewTabs($model, $realm = 'backend')
-{
-    $tabs = array();
-    if ($realm == 'cpanel') {
-        $tabs['magicOps'][] = array(
-            'key' => 'magicOps',
-            'title' => 'Welcome',
-            'viewPath' => 'modules.magicOps.views.cpanel._view-dashboard-welcome',
-            'ordering' => -100,
-        );
-    }
-
-    return $tabs;
-}
-```
-
-### 
