@@ -4,6 +4,9 @@ public function getBackendAdvanceSearch($controller, $searchFormModel){}
 ```
 You may like to list module records in backend search when admin search for a keyword. 
 
+
+> :information_source: This required modification to your model to implement `searchAdvance()` function
+
 ```php
 public function getBackendAdvanceSearch($controller, $searchFormModel)
 {
@@ -19,5 +22,3 @@ public function getBackendAdvanceSearch($controller, $searchFormModel)
     );
 }
 ```
-
-> :information_source: This required modification to your model to implement `searchAdvance()` function
