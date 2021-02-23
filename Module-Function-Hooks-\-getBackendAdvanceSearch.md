@@ -43,3 +43,24 @@ public function searchAdvance($keyword)
     return $tmp;
 }
 ```
+
+### Implement Partial View
+You may implement your advanceSearch partial view `/protected/modules/boilerplateStart/views/backend/_view-boilerplateStart-advanceSearch.php` using the following code as template:
+
+```php
+<div class="viewCard col-sm-6 item-flex">
+    <div class="media margin-md">
+    <div class="media-left">
+       Logo Image
+    </div>
+    <div class="media-body">
+        <a href="<?php echo $this->createUrl('/sample/sample/view', array('id' => $data->id)); ?>">
+        <h4 class="media-heading">
+            Title
+            <small><span class="text-muted">Sub Title</span></small>
+        </h4></a>
+        <div>Short description</div>
+    </div>
+    </div>
+</div>
+```
