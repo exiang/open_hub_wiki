@@ -81,3 +81,24 @@ By default, activeThumb used `adaptiveResize` method to generate the thumbnail, 
 <img width="441" alt="Screenshot 2021-02-24 at 2 57 47 AM" src="https://user-images.githubusercontent.com/5336690/108894279-0ac25780-764d-11eb-8a41-a096564d9106.png">
 
 `resize` method will scale the image to fill up the output size, ignoring the ratio. 
+
+### How it works
+By default, recommended setting of OpenHub is to pre-generate thumbnail images. The alternative is to generate them on the fly.
+
+Thumbnails are pre-generated the moment user uploads images thru form, then upload and save to storage (AWS S3).
+
+`config/thumbnail.php` setting information feeds the application required information to generate into series of designated size thumbnail images.
+```php
+return array(
+	'challenge' => array(
+		'cover' => array('32x32', '80x80', '320x320'),
+		'header' => array('32x32', '80x80', '320x320'),
+	)
+);
+
+```
+
+You may pass in the `width` and `height` parameter and `Html::ativeThumb` is smart enough to auto-match with the closest pre-generated thumbnails.
+For example, code below will use the 320x320 thumbnail: 
+
+```php <?php echo Html::activeThumb($data, 'image_cover', array('width'=>300, 'height'=>'200)) ?>```
