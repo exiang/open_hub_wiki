@@ -1,40 +1,33 @@
 Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php` to change how OpenHub core code works.
 
+### Organization
 * [getOrganizationViewTabs](Module-Function-Hooks-%5C-getOrganizationViewTabs)
 * [getOrganizationActions](Module-Function-Hooks-%5C-getOrganizationActions)
+* [getOrganizationActFeed](Module-Function-Hooks-%5C-getOrganizationActFeed)
+* [doOrganizationsMerge](Module-Function-Hooks-%5C-doOrganizationsMerge)
+
+### Individual
+* [getIndividualViewTabs](Module-Function-Hooks-%5C-getIndividualViewTabs)
+* [getIndividuaActions](Module-Function-Hooks-%5C-getIndividuaActions)
+* [getIndividualActFeed](Module-Function-Hooks-%5C-getIndividualActFeed)
+* [doIndividualsMerge](Module-Function-Hooks-%5C-doIndividualsMerge)
+
+### User
+* [getUserActFeed](Module-Function-Hooks-%5C-getUserActFeed)
+
+### Event
+* [getEventActions](Module-Function-Hooks-%5C-getEventViewTabs)
+* [getEventViewTabs](Module-Function-Hooks-%5C-getEventActions)
+
+### Member Control Panel
+
+### Backend
 * [getBackendAdvanceSearch](Module-Function-Hooks-%5C-getBackendAdvanceSearch)
 
 
-### getOrganizationActFeed
-```php
-public function getOrganizationActFeed($organization, $year){}
-```
 
-Pass in Organization object and year (e.g. `getOrganizationActFeed($organization, '2020')`), this function is called by activity feed to list module records that associate with this organization for this year.
 
-### getIndividualViewTabs
-```php
-public function getIndividualViewTabs($model, $realm = 'backend'){}
-```
-This function hook allows you to inject an interface block to view Individual page in both cpanel and backend for your module.
 
-### getIndividuaActions
-```php
-public function getIndividuaActions($model, $realm = 'backend'){}
-```
-This function hook allows you to define list of action buttons in injected interface block to view Individual page in both cpanel and backend for your module (thru `getIndividualViewTabs()`).
-
-### getIndividualActFeed
-```php
-public function getIndividualActFeed($individual, $year){}
-```
-Pass in Individual object and year (e.g. `getIndividualActFeed($individual, '2020')`), this function is called by activity feed to list module records that associate with this individual for this year.
-
-### getUserActFeed
-```php
-public function getUserActFeed($user, $year){}
-```
-Pass in User object and year (e.g. `getUserActFeed($user, '2020')`), this function is called by activity feed to list module records that associate with this user for this year.
 
 ### getNavItems
 ```php
@@ -132,38 +125,7 @@ public function getSharedAssets($forInterface = '*')
 ```
 
 
-### doOrganizationsMerge
-```php
-public function doOrganizationsMerge($source, $target){}
-```
 
-Organization feature allows admin to merge duplicate from source to target records in backend. When this happens, module' records associate with the source organization needs to be transfer to the target organization. You will need to code the merging logic here. 
-
-Examples:
-```php
-public function doOrganizationsMerge($source, $target)
-{
-    $transaction = Yii::app()->db->beginTransaction();
-
-    // process challenge
-    $sql = sprintf("UPDATE challenge SET owner_organization_id='%s' WHERE owner_organization_id='%s'", $target->id, $source->id);
-    Yii::app()->db->createCommand($sql)->execute();
-
-    $transaction->commit();
-
-    return array($source, $target);
-}
-```
-
-### doIndividualsMerge
-```php
-public function doIndividualsMerge($source, $target){}
-```
-Individual feature allows admin to merge duplicate from source to target records in backend. When this happens, module' records associate with the source individual needs to be transfer to the target individual. You will need to code the merging logic here. 
-
-### getEventActions
-
-### getEventViewTabs
 
 ### getDashboardNotices
 For both cpanel and backend, display flash message on top of page.
