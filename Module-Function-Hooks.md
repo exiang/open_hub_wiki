@@ -1,4 +1,4 @@
-Implement these function hooks in `protected/modules/YOUR_MODULE/YourModule.php` to change how OpenHub core code works.
+Implement these function hooks in `/protected/modules/YOUR_MODULE/YourModule.php` to change how OpenHub core code works.
 
 ### Organization
 * [getOrganizationViewTabs](Module-Function-Hooks-%5C-getOrganizationViewTabs)
