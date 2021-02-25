@@ -37,5 +37,5 @@ public function getAssetsUrl()
 ```
 so you can do this in view:
 ```php
-<?php echo Html::image($this->module->getAssetUrl().'/images/photo1.png'); ?>
+<?php echo Html::image($this->module->getAssetsUrl().'/images/photo1.png'); ?>
 ```
