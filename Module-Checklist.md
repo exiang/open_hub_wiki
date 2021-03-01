@@ -12,3 +12,5 @@ Feel free to use the following template as a guide to ensure the completeness of
 | 8 | make sure module do not edit any of the other core table (e.g. `organization`, `individual`, `event`) as well as others module tables structure. Use meta to extends. | |
 | 9 | make sure `Setting::setSetting()` is used to create and store configuration instead of using a custom table  | | 
 | 10 | make sure all static texts in module are `i18n` ready using `Yii::t('MODULE_CODE', 'Your text string here')` | |
+| 11 | make sure module is well documented for both developer and end user | |
+| 12 | make sure module has an signed off UAT clearly listed all test item including this one as the subset | |
