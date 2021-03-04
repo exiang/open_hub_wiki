@@ -37,6 +37,7 @@
   * [DevOps](DevOps)
   * [Open Source Project Webpage](Project-Webpage)
   * [Access Control Limit](ACL)
+  * [Migration](Migration)
 * [API for Developers](API-for-Developers)
   * [WAPI & Swagger](API-for-Developers#wapi--swagger)
   * [Postman](API-for-Developers#Postman)
