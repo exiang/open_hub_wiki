@@ -50,7 +50,7 @@ OpenHub comes with built in function `MetaStructure::initMeta` to help you creat
 MetaStructure::initMeta('organization', 'sample', 'extraColumn1', 'boolean', 'Highlight in Sample', 'Is this organization a lighted sample?', '');
 ```
 
-This will create a `meta_structure` record with code `Organization-sample-extraColumn1` where `sample` is the module code name and `extraColumn1` is the variable name.
+This will create a `meta_structure` record with code `Organization-sample-extraColumn1` following naming convention where `sample` is the module code name and `extraColumn1` is the variable name. Failed to do this will introduce errors to another matching Model name on save.
 
 ## Get a meta structure
 As simple as:
