@@ -24,9 +24,13 @@ public function behaviors()
     // ...
 ```
 
-To translate geo data in mysql to human readable format:
+SQL to translate geo data in mysql to human readable format:
 ```sql
 SELECT ST_AsText(latlong_address)  FROM `organization` WHERE `id` = 2552
+```
+SQL to set geo data:
+```sql
+UPDATE organization SET latlong_address = Point(1.5492301,110.3508271) WHERE latlong_address IS NULL AND id=x
 ```
 
 ### json_extra method
