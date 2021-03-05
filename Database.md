@@ -6,6 +6,29 @@ OpenHub used traditional relationship database as the core data storage method. 
   * `json_extra` column
   * `meta_structure` table, please [refer here](Extending-Model-Meta).
 
+### geo location method
+OpenHub support geo location data type with spatial data.
+
+It has to be supported in model `bebehaviors()` to work.
+
+```php
+public function behaviors()
+{
+    $return = array(
+        'spatial' => array(
+            'class' => 'application.yeebase.components.behaviors.SpatialDataBehavior',
+            'spatialFields' => array(
+                'latlong_address',
+            ),
+        ),
+    // ...
+```
+
+To translate geo data in mysql to human readable format:
+```sql
+SELECT ST_AsText(latlong_address)  FROM `organization` WHERE `id` = 2552
+```
+
 ### json_extra method
 First, create variable name in camelCase in the model class.
 ```php
