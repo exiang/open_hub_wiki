@@ -2,9 +2,9 @@
 Please follow this [naming convention](Extending-Model-Meta) strictly.
 
 ## enum
-Enum for MySQL is devil. Use with care
+Enum for MySQL is devil. Use with care!
 
-**Make sure you add new enum item at the END OF LIST so it doesn't rerun indexing of the entire table. This is deadly for large table.**
+Make sure you add new enum item at the **END OF LIST** so it doesn't rerun indexing of the entire table. This is deadly for large table.
 
 ## geo location method
 OpenHub support geo location data type with spatial data.
