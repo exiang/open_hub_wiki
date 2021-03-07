@@ -1,12 +1,12 @@
 ## Create a new table
 Please follow this [naming convention](Extending-Model-Meta) strictly.
 
-## Flexible Schema
-OpenHub used traditional relationship database as the core data storage method. The development team has been creative to  achieve flexible schema with the following 2 methods:
-  * `json_extra` column
-  * `meta_structure` table, please [refer here](Extending-Model-Meta).
+## enum
+Enum for MySQL is devil. 
 
-### geo location method
+**Make sure you add new enum item at the END OF LIST so it doesn't rerun indexing of the entire table. This is deadly for large table. **
+
+## geo location method
 OpenHub support geo location data type with spatial data.
 
 It has to be supported in model `bebehaviors()` to work.
@@ -32,6 +32,12 @@ SQL to set geo data:
 ```sql
 UPDATE organization SET latlong_address = Point(1.5492301,110.3508271) WHERE latlong_address IS NULL AND id=x
 ```
+
+## Flexible Schema
+OpenHub used traditional relationship database as the core data storage method. The development team has been creative to  achieve flexible schema with the following 2 methods:
+  * `json_extra` column
+  * `meta_structure` table, please [refer here](Extending-Model-Meta).
+
 
 ### json_extra method
 First, create variable name in camelCase in the model class.
