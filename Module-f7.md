@@ -1254,14 +1254,14 @@ F7 support prefill value after the field has selected value
                             // field type: checkbox
                             "statusOrganization": {
                                 "Registered with MaGIC": { // value of the checkbox
-                                    "class": "ClassName", 
-                                    "method": "functionName"
+                                    "class": "HubSea", 
+                                    "method": "getRegisteredSeStatus"
                                 }
                             },
                             // field type: radio (booleanButton)
                             "registeredWithMagic": {
-                                "class": "ClassName", 
-                                "method": "functionName"
+                                "class": "HubSea", 
+                                "method": "getRegisteredSeStatus"
                             }
                         }
                     }
