@@ -1193,6 +1193,208 @@ There are circumstances where you like to hide this section, e.g. you had create
 
 ## Others
 ### Preset value from URL
+
+### Prefill value from Selected Information
+F7 support prefill value after the field has selected value
+``` javascript
+    "101": {
+        "tag": "group",
+        "prop": {
+            "css": ""
+        },
+        "members": [{
+                "tag": "label",
+                "prop": {
+                    "required": 1,
+                    "csv_label": "",
+                    "for": "startup",
+                    "hint": "",
+                    "value": "Select Organization",
+                    "value-ms": "Nama organisasi"
+                }
+            },
+            {
+                "tag": "list",
+                "prop": {
+                    "required": 1,
+                    "showinbackendlist": "1",
+                    "csv_label": "Organization Name",
+                    "hint": "",
+                    "hint-ms": "",
+                    "value": "",
+                    "name": "startup",
+                    "error": "Organization name is required",
+                    "error-ms": "Name organisasi diperlukan",
+                    "text": "choose your organization",
+                    "text-ms": "pilih organisasi",
+                    "items": "",
+                    "model_mapping": {
+                        "startup": "Organization",
+                        "modifier": {
+                            "hideCreateNew": 1
+                        }
+                    },
+                    "bind": {
+                        "event": "change", // in this case we use event change to trigger it
+                        "data": {
+
+                            // "fieldNameWithinSameForm": "fieldDerivedFromObject"
+
+                            // CASE 1: getting value from same object
+                            // field type: textbox
+                            "compRegNo": "companyNumber",
+                            
+                            // CASE 2: getting value from ONE-TO-MANY relation
+                            // field type: list
+                            // since it is Primary, so we choose first industry to prefill it
+                            // industries is a relation name
+                            "primaryIndustry": "industries.0.title",
+
+                            // CASE 3: getting value using function
+                            // field type: checkbox
+                            "statusOrganization": {
+                                "Registered with MaGIC": { // value of the checkbox
+                                    "class": "ClassName", 
+                                    "method": "functionName"
+                                }
+                            },
+                            // field type: radio (booleanButton)
+                            "registeredWithMagic": {
+                                "class": "ClassName", 
+                                "method": "functionName"
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "102": {
+        "tag": "group",
+        "prop": {
+            "css": ""
+        },
+        "members": [
+            {
+                "tag": "label",
+                "prop": {
+                    "required": 1,
+                    "for": "compRegNo",
+                    "value": "Company Registration No",
+                    "value-ms": "No Pendaftaran Syarikat"
+                }
+            },
+            {
+                "tag": "textbox",
+                "prop": {
+                    "required": 1,
+                    "showinbackendlist": 1,
+                    "csv_label": "Company Registration No",
+                    "hint": "",
+                    "name": "compRegNo",
+                    "error": "Company registration no is required",
+                    "error-ms": "No pendaftaran syarikat diperlukan"
+                }
+            }
+        ]
+    },
+    "103":{
+        "tag": "group",
+        "prop": {
+            "css": ""
+        },
+        "members": [{
+                "tag": "label",
+                "prop": {
+                    "required": 1,
+                    "for": "primaryIndustry",
+                    "value": "The industry your startup is in?",
+                    "value-ms": "Apakah industri syarikat anda?"
+                }
+            },
+            {
+                "tag": "list",
+                "prop": {
+                    "required": 1,
+                    "csv_label": "Industry",
+                    "hint": "",
+                    "name": "primaryIndustry",
+                    "text": "Select",
+                    "text-ms": "Pilih",
+                    "error": "Industry is required",
+                    "error-ms": "Industri diperlukan",
+                    "model_mapping": {
+                        "primaryIndustry": "industry"
+                    }
+                }
+            }
+        ]
+    },
+    "104": {
+        "tag": "group",
+        "prop": {
+            "css": ""
+        },
+        "members": [
+            {
+                "tag": "label",
+                "prop": {
+                    "required": 1,
+                    "for": "statusOrganization",
+                    "value": "Status of Your Organisation"
+                }
+            },
+            {
+                "tag": "checkbox",
+                "prop": {
+                    "required": 1,
+                    "isGroup": 1,
+                    "isInlineItems": 0,
+                    "showinbackendlist": "0",
+                    "csv_label": "Status Organization",
+                    "hint": "",
+                    "name": "statusOrganization",
+                    "error": "Please select the status of your organization",
+                    "items": [
+                        {
+                            "text": "Registered with MaGIC"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "105": {
+        "tag": "group",
+        "prop": {
+            "css": ""
+        },
+        "members": [
+            {
+                "tag": "label",
+                "prop": {
+                    "required": 1,
+                    "for": "registeredWithMagic",
+                    "value": "Registered with MaGIC"
+                }
+            },
+            {
+                "tag": "booleanButton",
+                "prop": {
+                    "required": 1,
+                    "isGroup": 1,
+                    "isInlineItems": 0,
+                    "showinbackendlist": "0",
+                    "csv_label": "Registered with MaGIC",
+                    "hint": "",
+                    "name": "registeredWithMagic",
+                    "error": "Please select Registered with MaGIC"
+                }
+            }
+        ]
+    }
+```
+
 ### Conditional form
 F7 support conditional 
 
