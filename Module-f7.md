@@ -506,6 +506,9 @@ Number is similar to `textbox` field component except it only take in number val
 ### Upload Component
 <img width="795" alt="Screenshot 2020-08-09 at 9 15 52 PM" src="https://user-images.githubusercontent.com/5336690/89733088-a4e1fa00-da85-11ea-8be0-5275ee787c5e.png">
 
+* `prop` > `accept` is an acceptable file format. for other format please refer [Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml)
+* `prop` > `css` is the class to check file size upon the file selection
+
 ```
  {
  	"tag": "upload",
@@ -515,7 +518,10 @@ Number is similar to `textbox` field component except it only take in number val
  		"hint": "Only PDF format and the file size must be less than 10Mb.",
  		"value": "",
  		"name": "uploadPitchdeck",
- 		"error": ""
+ 		"error": "",
+                "accept": ".pdf,application/pdf",
+                "max-file-size": "10485760",
+                "css": "checkUploadSize"
  	}
  }
 ```
