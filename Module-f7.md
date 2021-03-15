@@ -1238,7 +1238,7 @@ F7 support prefill value after the field has selected value
                         "event": "change", // in this case we use event change to trigger it
                         "data": {
 
-                            // "fieldNameWithinSameForm": "fieldDerivedFromObject"
+                            // "fieldNameWithinSameForm": "fieldDerivedFromToApiFunction"
 
                             // CASE 1: getting value from same object
                             // field type: textbox
