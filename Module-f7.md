@@ -1220,7 +1220,7 @@ There are circumstances where you like to hide this section, e.g. you had create
 ### Preset value from URL
 
 ### Prefill value from Selected Information
-F7 support prefill value after the field has selected value
+F7 support bind value (prefill) to the dependent fields once we have selected/keyed in the value.
 ``` javascript
     "101": {
         "tag": "group",
@@ -1274,6 +1274,10 @@ F7 support prefill value after the field has selected value
                             // since it is Primary, so we choose first industry to prefill it
                             // industries is a relation name
                             "primaryIndustry": "industries.0.title",
+
+                            // since record will return many individual record, if first individual not a founder 
+                            // then it will find and return first individual found with role as founder
+                            "businessOwnerName": "individualOrganizations.0.individual.fullName",
 
                             // CASE 3: getting value using function
                             // field type: checkbox
