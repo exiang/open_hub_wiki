@@ -1276,7 +1276,7 @@ F7 support bind value (prefill) to the dependent fields once we have selected/ke
                             "primaryIndustry": "industries.0.title",
 
                             // since record will return many individual record, if first individual not a founder 
-                            // then it will find and return first individual found with role as founder
+                            // then it will find and return first individual with role as founder
                             "businessOwnerName": "individualOrganizations.0.individual.fullName",
 
                             // CASE 3: getting value using function
