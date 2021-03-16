@@ -1150,7 +1150,7 @@ Please note that on each execution, system will automatically clear all target d
 ## Extra Settings
 Extra setting can be set at `Extra` field in form. It allow admin / developer to tweak F7 default behaviour.
 
-For `hooks` with `scenario`, some programme's owner might one to send custom email after update to certain stage. This will allow custom function to be called if fulfill the given scenario (combination of the status & stage). For some case, programme's owner might also want to send a note to the user, so `note` will be the attribute to be added into the structure.
+For `hooks` with `scenario`, some program's owner might one to send custom email after update to certain stage. This will allow custom function to be called if fulfill the given scenario (combination of the status & stage). For some case, program's owner might also want to send a note to the user, so `note` will be the attribute to be added into the structure.
 
 Some form might be custom built for a program. Use `is_integrated_form` to skip it being listed in `Activity Feed` to avoid any bugs or issue.
 
