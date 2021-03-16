@@ -1150,8 +1150,6 @@ Please note that on each execution, system will automatically clear all target d
 ## Extra Settings
 Extra setting can be set at `Extra` field in form. It allow admin / developer to tweak F7 default behaviour.
 
-For `hooks` with `scenario`, some program's owner might one to send custom email after update to certain stage. This will allow custom function to be called if fulfill the given scenario (combination of the status & stage). For some case, program's owner might also want to send a note to the user, so `note` will be the attribute to be added into the structure.
-
 Some form might be custom built for a program. Use `is_integrated_form` to skip it being listed in `Activity Feed` to avoid any bugs or issue.
 
 ### Sample:
@@ -1163,6 +1161,9 @@ Some form might be custom built for a program. Use `is_integrated_form` to skip 
 	}, {
 		"code": "onNotifyAfterChangedSubmit2Draft",
 		"call": "HubSim::hookNotifyAfterChangedSubmit2Draft"
+	}, {
+		"code":"onCopyDataFromDependantForm",
+		"call":"HubAtas::hookCopyDataFromDependantForm"
 	}, {
         	"code": "onNotifyAfterUpdateSubmission",
        		"scenario": [{
@@ -1201,6 +1202,17 @@ Some form might be custom built for a program. Use `is_integrated_form` to skip 
 }
 ```
 ### Hooks - `hooks`
+
+Example of 4 types of hooks which are:
+1. onNotifyAfterSubmitForm - will trigger the function after user `Submit` the form (notification)
+2. onNotifyAfterChangedSubmit2Draft - will trigger the funtion after user decide to `Edit` after has submitted the form (notification)
+3. onCopyDataFromDependantForm - will trigger for custom build form to copy data from previous form
+4. onNotifyAfterUpdateSubmission - will trigger the function after admin update the stage for the submission
+
+For `hooks` with `scenario`, some program's owner might one to send custom email after update to certain stage. This will allow custom function to be called if fulfill the given scenario (combination of the status & stage). For some case, program's owner might also want to send a note to the user, so `note` will be the attribute to be added into the structure.
+![Status - Draft and Stage - Processing](https://user-images.githubusercontent.com/55473894/111271892-cd118700-866c-11eb-8bf1-d5cbe048f7e7.png)
+
+![Status - Submitted and Stage - Accepted](https://user-images.githubusercontent.com/55473894/111271897-cf73e100-866c-11eb-8759-c962a0c5d549.png)
 
 ### View Controls - `viewControls`
 #### Hide user previous submissions
