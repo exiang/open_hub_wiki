@@ -1231,7 +1231,7 @@ There are circumstances where you like to hide this section, e.g. you had create
 
 ### Integrated Form - `is_integrated_form`
 
-Some form might be custom build for a program and have a preset value. Use `is_integrated_form` to skip it being listed in `Activity Feed` to avoid any bugs or issue. As user might use a call to action from the `Activity Feed` to access their form.
+Some form might be custom build for a program and have a preset value. Use `is_integrated_form` to skip it being listed in `Activity Feed` to avoid any bugs or issue as user might use a call to action from the `Activity Feed` to access their form. The only entry point is from the module view where it was integrated.
 
 
 ## Others
