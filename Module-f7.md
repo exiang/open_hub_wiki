@@ -1150,6 +1150,8 @@ Please note that on each execution, system will automatically clear all target d
 ## Extra Settings
 Extra setting can be set at `Extra` field in form. It allow admin / developer to tweak F7 default behaviour.
 
+For `hook` with `scenario`, some programme's owner might one to send custom email after update to certain stage. This will allow custom function to be called if fulfill the given scenario (combination of the status & stage). For some case, programme's owner might also want to send a note to the user, so `note` will be the attribute to be added into the structure.
+
 ### Sample:
 ```json
 {
@@ -1159,7 +1161,29 @@ Extra setting can be set at `Extra` field in form. It allow admin / developer to
 	}, {
 		"code": "onNotifyAfterChangedSubmit2Draft",
 		"call": "HubSim::hookNotifyAfterChangedSubmit2Draft"
-	}],
+	}, {
+        	"code": "onNotifyAfterUpdateSubmission",
+       		"scenario": [{
+                	"status": "draft",
+                	"stage": "processing",
+               		"note": "show",
+               		"code": "onNotifyAfterProcess",
+                	"call": "HubEpik::hookNotifyAfterProcess"
+                },
+                {
+                	"status": "submit",
+                	"stage": "accepted",
+                	"code": "onNotifyAfterValidated",
+                	"call": "HubEpik::hookNotifyAfterValidated"
+                },
+                {
+                	"status": "submit",
+                	"stage": "rejected",
+                	"note": "show",
+                	"code": "onNotifyAfterRejected",
+                	"call": "HubEpik::hookNotifyAfterRejected"
+                }]
+        }],
 	"viewControls": {
 		"hideMySubmissions": true,
 		"hideAvailableFormForIntake": true,
