@@ -1150,8 +1150,6 @@ Please note that on each execution, system will automatically clear all target d
 ## Extra Settings
 Extra setting can be set at `Extra` field in form. It allow admin / developer to tweak F7 default behaviour.
 
-Some form might be custom built for a program. Use `is_integrated_form` to skip it being listed in `Activity Feed` to avoid any bugs or issue.
-
 ### Sample:
 ```json
 {
@@ -1230,6 +1228,11 @@ There are circumstances where you like to hide this section, e.g. you had create
 
 #### Override OK button in view submission page
 `publishViewOkButton`
+
+### Integrated Form - `is_integrated_form`
+
+Some form might be custom build for a program and have a preset value. Use `is_integrated_form` to skip it being listed in `Activity Feed` to avoid any bugs or issue. As user might use a call to action from the `Activity Feed` to access their form.
+
 
 ## Others
 ### Preset value from URL
