@@ -1445,6 +1445,7 @@ F7 support bind value (prefill) to the dependent fields once we have selected/ke
 ### Conditional form
 F7 support conditional 
 
+#### Radio
 So there is this option selection where user can select between 'Food Lover' or 'Movie Lover'
 
 ``` javascript
@@ -1624,6 +1625,183 @@ It's all made possible with this chunk of code of javascript.
         ],
         "condition": {
             "check": "Movie Lover"
+        }
+    }
+]
+```
+
+#### List
+So there is this option selection when user select 'Registered with MaGIC', user need to fill up another field
+```JSON
+{
+    "tag": "group",
+    "prop": {
+        "css": ""
+    },
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 1,
+                "for": "statusOrganization1",
+                "value": "Status of Your Organisation"
+            }
+        },
+        {
+            "tag": "list",
+            "prop": {
+                "required": 1,
+                "showinbackendlist": "0",
+                "csv_label": "Status Organization",
+                "hint": "",
+                "name": "statusOrganization1",
+                "text": "select",
+                "text-ms": "pilih",
+                "error": "Please select the status of your organization (Dropdown)",
+                "items": [
+                    {
+                        "text": "Accredited by Ministry"
+                    },
+                    {
+                        "text": "Registered with MaGIC"
+                    }
+                ]
+            }
+        }
+    ]
+},
+{
+    "tag": "group",
+    "prop": {
+        "css": "cls-descAssessment1"
+    },
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 1,
+                "for": "descAssessment1",
+                "value": "Please describe the assessment you take",
+                "value-ms": ""
+            }
+        },
+        {
+            "tag": "textarea",
+            "prop": {
+                "required": 1,
+                "csv_label": "",
+                "hint": "This field will appear when selected option is Registered with MaGIC",
+                "value": "",
+                "rows": 2,
+                "name": "descAssessment1",
+                "error": "",
+                "error-ms": ""
+            }
+        }
+    ]
+}
+```
+
+This is the code for the javascript
+```JSON
+"jscripts": [
+    {
+        "caller": "statusOrganization1",
+        "action": "show",
+        "items": [
+            "descAssessment1",
+            "cls-descAssessment1"
+        ],
+        "condition": {
+            "select": "Registered with MaGIC"
+        }
+    }
+]
+```
+
+#### Checkbox
+So there is this option checkbox when user tick 'Registered with MaGIC', user need to fill up another field
+```JSON
+{
+    "tag": "group",
+    "prop": {
+        "css": ""
+    },
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 1,
+                "for": "statusOrganization",
+                "value": "Status of Your Organisation"
+            }
+        },
+        {
+            "tag": "checkbox",
+            "prop": {
+                "required": 1,
+                "isGroup": 1,
+                "isInlineItems": 0,
+                "showinbackendlist": "0",
+                "csv_label": "Status Organization",
+                "hint": "",
+                "name": "statusOrganization",
+                "error": "Please select the status of your organization",
+                "items": [
+                    {
+                        "text": "Accredited by Ministry"
+                    },
+                    {
+                        "text": "Registered with MaGIC"
+                    }
+                ]
+            }
+        }
+    ]
+},
+{
+    "tag": "group",
+    "prop": {
+        "css": ""
+    },
+    "members": [
+        {
+            "tag": "label",
+            "prop": {
+                "required": 1,
+                "for": "descAssessment",
+                "value": "Please describe the assessment you take",
+                "value-ms": ""
+            }
+        },
+        {
+            "tag": "textarea",
+            "prop": {
+                "required": 1,
+                "csv_label": "",
+                "hint": "This field will appear if one the the checked checkbox is Registered with MaGIC",
+                "value": "",
+                "rows": 2,
+                "name": "descAssessment",
+                "error": "",
+                "error-ms": ""
+            }
+        }
+    ]
+}
+```
+
+This is the code for the javascript
+```JSON
+"jscripts": [
+    {
+        "caller": "statusOrganization",
+        "action": "show",
+        "items": [
+            "descAssessment"
+        ],
+        "condition": {
+            "check": "Registered with MaGIC"
         }
     }
 ]
