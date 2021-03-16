@@ -951,7 +951,8 @@ If the participant do not have a organization profile to start with, he can crea
                     "text_oneliner": {
                         "label": "One liner",
                         "placeholder": "Insert one liner description here"
-                    }
+                    },
+                    "hideCreateNew": 0
                 }
             }
         }
