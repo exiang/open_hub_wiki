@@ -1,1 +1,1 @@
-https://app.gitbook.com/@exiang/s/yeebase/others/helpful-functions
+https://app.gitbook.com/@exiang/s/yeebase/
