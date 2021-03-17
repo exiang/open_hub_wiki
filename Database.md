@@ -1,12 +1,14 @@
 ## Create a new table
 Please follow this [naming convention](Extending-Model-Meta) strictly.
 
-## enum
+## Transaction
+
+## Enum
 Enum for MySQL is devil. Use with care!
 
 Make sure you add new enum item at the **END OF LIST** so it doesn't rerun indexing of the entire table. This is deadly for large table.
 
-## geo location method
+## Geo location method
 OpenHub support geo location data type with spatial data.
 
 It has to be supported in model `bebehaviors()` to work.
