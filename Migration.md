@@ -80,7 +80,7 @@ Setting::setSetting('sample-var1', 'Hello World 0.2', 'string');
 ```
 
 ## Set embed
-Remember: always prefix your embed with module (e.g. boilerplateStart,sample-) or context code (e.g. cpanel)
+Remember: always prefix your embed with module (e.g. `boilerplateStart-`, `sample-`) or context code (e.g. `cpanel-`)
 
 ```php
 $embed = Embed::setEmbed('ntis-signup-tncContent', array(
