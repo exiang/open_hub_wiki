@@ -79,3 +79,18 @@ Access::setAccessRole('ntis', 'BackendController', ['manageSolutionProvider'], [
 Setting::setSetting('sample-var1', 'Hello World 0.2', 'string');
 ```
 
+## Set embed
+Remember: always prefix your embed with module (e.g. boilerplateStart,sample-) or context code (e.g. cpanel)
+
+```php
+$embed = Embed::setEmbed('ntis-signup-tncContent', array(
+    'is_title_enabled' => true,
+    'is_text_description_enabled' => false,
+    'is_html_content_enabled' => true,
+    'is_image_main_enabled' => false,
+    'is_default' => true,
+    'title_en' => 'Terms and Conditions',
+    'html_content_en' => 'Hello Admin, please remember to update this terms and condition content inside Embed \ <b>#signup-tncContent</b>',
+));
+```
+
