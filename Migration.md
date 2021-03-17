@@ -1,5 +1,7 @@
 ## Init migration
-```php $migration = Yii::app()->db->createCommand();```
+```php 
+$migration = Yii::app()->db->createCommand();
+```
 
 ## Execute raw SQL
 ```php
