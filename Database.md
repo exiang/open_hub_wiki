@@ -157,10 +157,8 @@ $records = Organization::model()->findAllBySql($sql);
 
 Execute wtih params
 ```php
-$sql = "select u.user_id as ID, u.email as Email from User u where u.type = :type and u.join_date BETWEEN :start  AND :end";
-$rawData = Yii::app()->db->createCommand($sql);
-$rawData->bindParam(":type", 'x', PDO::PARAM_STR);
-$rawData->bindParam(":start", '2020-01-01', PDO::PARAM_STR);
-$rawData->bindParam(":end", '2020-12-31', PDO::PARAM_STR);
-$data = $rawData->queryAll();
+$sql = "select u.user_id as ID, u.email as Email from User u where u.type = :type";
+$command = Yii::app()->db->createCommand($sql);
+$command->bindValue(":type", 'x', PDO::PARAM_STR);
+$data = $command->queryAll();
 ```
