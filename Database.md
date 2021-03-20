@@ -154,3 +154,10 @@ Second method will return attribute in object format, e.g.  `$record->id`
 $sql = 'SELECT * FROM organization';
 $records = Organization::model()->findAllBySql($sql);
 ```
+
+Execute wtih params
+```php
+$sql = 'INSERT INTO news (news, display) values (:news, :display)';
+$params = array(':user_id'=>'', ':created' => date('Y-m-d H:i:s'));
+Yii::app()->db->createCommand($sql)->execute($params);
+```
