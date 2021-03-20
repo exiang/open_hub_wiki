@@ -158,6 +158,6 @@ $records = Organization::model()->findAllBySql($sql);
 Execute wtih params
 ```php
 $sql = 'INSERT INTO news (news, display) values (:news, :display)';
-$params = array(':user_id'=>'', ':created' => date('Y-m-d H:i:s'));
+$params = array(':news'=>'abc', ':display' => 'xyz');
 Yii::app()->db->createCommand($sql)->execute($params);
 ```
