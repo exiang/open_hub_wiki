@@ -24,6 +24,9 @@ try {
     $transaction->rollBack();
 }
 ```
+### Nested Transaction
+YeeBase used [Nested PDO](https://www.yiiframework.com/wiki/38/how-to-use-nested-db-transactions-mysql-5-postgresql) and nested transactions are auto handler for you.
+
 
 ## Enum
 Enum for MySQL is devil. Use with care!
