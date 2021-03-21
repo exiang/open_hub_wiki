@@ -2,6 +2,28 @@
 Please follow this [naming convention](Extending-Model-Meta) strictly.
 
 ## Transaction
+```php
+$transaction = Yii::app()->db->beginTransaction();
+try {
+    // sql1
+    // ...
+    if ($result != true) {
+        throw new Exception('SQL 1 failed');
+    }
+
+    // sql2
+    // ...
+    if ($result != true) {
+        throw new Exception('SQL 2 failed');
+    }
+    // ...
+    $transaction->commit();
+} catch (Exception $e) {
+    $exceptionMessage = $e->getMessage();
+    $result = false;
+    $transaction->rollBack();
+}
+```
 
 ## Enum
 Enum for MySQL is devil. Use with care!
