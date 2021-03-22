@@ -21,6 +21,9 @@
   * IDE - [Visual Studio Code](https://code.visualstudio.com/)
     * Recommended Plugins:
       * junstyle.php-cs-fixer
+      * ikappas.composer
+      * mikestead.dotenv
+      * bmewburn.vscode-intelephense-client
   * GIT Client - [Fork](https://git-fork.com/)
   * API Gateway - [TYK.io](https://tyk.io/)
   * OS - Apple Mac
