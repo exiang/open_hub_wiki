@@ -19,6 +19,8 @@
 ### Others Development Tools
   * [Docker](https://www.docker.com/)
   * IDE - [Visual Studio Code](https://code.visualstudio.com/)
+    * Recommended Plugins:
+      * junstyle.php-cs-fixer
   * GIT Client - [Fork](https://git-fork.com/)
   * API Gateway - [TYK.io](https://tyk.io/)
   * OS - Apple Mac
