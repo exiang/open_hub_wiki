@@ -2,9 +2,9 @@
 * [Get Started & Install](Basics)
   * [Introduction](Introduction)
   * [Installation](Installation)
-    *System Requirements
-    *Production Environment Setup
-    *Development Environment Setup
+    * [System Requirements](System-Requirement)
+    * [Production Environment Setup](Production-Environment-Setup)
+    * [Development Environment Setup](Development-Environment-Setup)
   * [Upgrade](Upgrade)
 * [Build a Module](Build-Module)
   * [Step by Step Guide](Step-by-step-Todo-module)
