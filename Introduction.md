@@ -19,7 +19,6 @@ This is the same principle as the Model > View > Controller (MVC) architecture, 
    * data processing
    * database interaction
    * etc.
-
 * It describes or contains the data that have been processed by the application. 
 * It manages this data and guarantees its integrity.
 
@@ -36,4 +35,4 @@ This is the same principle as the Model > View > Controller (MVC) architecture, 
 * In turn, the Model will notify the View that the data has been changed so that the View can update itself.
 
 ## Yii Framework
-Using a proven and popular open-source framework will allow us to focus on our core business code (managing startup, tracking founder activities, etc.) with greater efficiency, while enjoying the stability of a globally recognized framework. OpenHub is using the latest Yii 1.1.22 version.
+OpenHub is using the latest Yii 1.1.22 version. Using a proven and popular open-source framework allow us to focus on our core business code (managing startup, tracking founder activities, etc.) with greater efficiency while enjoying the stability of a globally recognized framework. 
