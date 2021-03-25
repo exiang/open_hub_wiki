@@ -19,12 +19,6 @@ public function getDashboardViewCards($model, $realm = 'backend')
                 'ordering' => -100,
             );
         }
-        /*$tabs['magicOps'][] = array(
-            'key' => 'magicOps',
-            'title' => 'Upcoming Events & Mentorships',
-            'viewPath' => 'modules.magicOps.views.cpanel._view-dashboard-upcoming',
-            'ordering' => 100,
-        );*/
     }
 
     return $cards;
