@@ -25,6 +25,7 @@ Implement these function hooks in `/protected/modules/YOUR_MODULE/YourModule.php
 ### Dashboard
 * [getDashboardNotices](Module-Function-Hooks-%5C-getDashboardNotices)
 * [getDashboardViewTabs](Module-Function-Hooks-%5C-getDashboardViewTabs)
+* [getDashboardViewCards](Module-Function-Hooks-%5C-getDashboardViewCards)
 
 ### Cpanel only
 * [getAsService](Module-Function-Hooks-%5C-getAsService)
