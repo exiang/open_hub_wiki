@@ -1,4 +1,4 @@
-## Method 1: Thru Web Backend
+## Method 1: Web Backend
 After login to backend dashboard, OpenHub module automatically notify you on available upgrade.
 ![](https://user-images.githubusercontent.com/5336690/82883167-aa46a280-9f74-11ea-8ff4-4a05c7c72dee.png)
 
@@ -6,7 +6,7 @@ Todo:
 - Upgrade page will show you changes of this version. Click confirm to proceed (one way ticket)
 - Wait for the upgrade to complete
 
-## Method 2: Thru OpenHub Command
+## Method 2: OpenHub Command
 ```
 cd /var/www/protected
 php yiic openhub upgrade
