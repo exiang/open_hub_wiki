@@ -24,3 +24,11 @@ public function getDashboardViewCards($model, $realm = 'backend')
     return $cards;
 }
 ```
+
+And for the view, is simply:
+
+```php
+<p>Showcase your portfolio on <?php echo Yii::app()->getModule('cv')->appName ?>, a digital platform where most our startups scout for co-founders and talents.</p>
+
+<p><a class="btn btn-white btn-outline btn-xs" href="<?php echo $this->createUrl('cv/cpanel') ?>">Start your adventure here!</a></p>
+```
