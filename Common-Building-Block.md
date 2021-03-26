@@ -9,6 +9,8 @@ Companies in the startup ecosystem are volatile. They formed over a weekend and 
   * [Startup Stages](Master-Data-Startup-Stages) - which stages this company is in if it is a startup, only one stage at a time.
   * [Legal Form](Master-Data-Legal-Form)
 
+Organization title is unique throughout the system, which means once taken, it is no longer available for others.
+
 ## Individual
 
 Individuals are person, they can founders of tech startups, or student aspiring to be an entrepreneurs. 
