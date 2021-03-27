@@ -1,6 +1,7 @@
 Master data is lookup table, they are one of the basic building block of OpenHub. 
 
   * [City](Master-Data-City) - List of world cities
+  * [Classification](Master-Data-Classification) - List of classification which serve as extensible categorization
   * [Cluster](Master-Data-Cluster) - List of cluster where the ecosystem like to focus on
   * [Country](Master-Data-Country) - List of countries
   * [Impact](Master-Data-Impact) - List of Social Impacts
