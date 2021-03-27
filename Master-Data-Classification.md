@@ -1,3 +1,4 @@
+Classification aim to be the ultimate categorization you need. Unlike `industry`, `persona`, `sdg`, `cluster`, `impact`, it is not hardcoded and can be extends infinitely thru group. 
 
 Query by group code:
 
