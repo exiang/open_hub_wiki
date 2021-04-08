@@ -38,12 +38,12 @@ public function getNavItems($controller, $forInterface)
             return array(
                 array(
                     'label' => Yii::t('backend', 'Open Innovation Challenge'), 'url' => '#',
-                    'visible' => Yii::app()->user->getState('accessBackend') == true,
+                    'visible' => HUB::roleCheckerAction(Yii::app()->user->getState('rolesAssigned'), (object)['id' => 'backend', 'action' => (object)array('id' => 'index'), 'module' => (object)array('id' => 'challenge')))),
                     'active' => $controller->activeMenuMain == 'challenge' ? true : false,
                     'itemOptions' => array('class' => 'dropdown-submenu'), 'submenuOptions' => array('class' => 'dropdown-menu'),
                     'linkOptions' => array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
                     'items' => array(
-                        array('label' => Yii::t('app', 'Challenge Overview'), 'url' => array('/challenge/backend'), 'visible' => Yii::app()->user->getState('accessBackend') == true),
+                        array('label' => Yii::t('app', 'Challenge Overview'), 'url' => array('/challenge/backend'), 'visible' => HUB::roleCheckerAction(Yii::app()->user->getState('rolesAssigned'), (object)array('id' => 'backend', 'action' => (object)array('id' => 'index'), 'module' => (object)array('id' => 'challenge')))),
                     ),
                 ),
             );
