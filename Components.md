@@ -15,6 +15,18 @@ YeeBase provide couples of add-on components:
 * UploadManager
 * StorageHelper
 
+### Widget
+* GridView
+* ListView
+* DetailView
+
+### Widget \ Selector
+* UserSelector
+* EventGroupSelector
+* EventSelector
+* OrganizationSelector
+* IndividualSelector
+* LangaugeSelector
 
 ### Secondary
 * AWSHelper
