@@ -88,6 +88,12 @@ True/False data column are name in convention of `is_xyz`. Use `tinyint(1)` form
 Plain text data column are name in convention of `text_xyz`. Use either `varchar(255)` or `longtext` format.
 ##### html
 Rich text (HTML) data column are name in convention of `html_xyz`. Use `longtext` format.
+##### url
+To store full URL value in convention of `url_website`. Use `varchar(255)` format.
+##### latlong
+To store spatial data value in convention of `latlong_residential_address`. Use `point` format.
+##### ordering
+Column to mark ordering of the record. As it only supports 1 level ordering, the column name is just `ordering`. Use  `double` format.
 ##### csv
 CSV (Comma separated Value) data column are name in convention of `csv_xyz`. Use `longtext` format.
 ##### date
