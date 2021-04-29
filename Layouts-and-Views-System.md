@@ -118,7 +118,7 @@ For more information on Yii framework theme system, please visit https://www.yii
 ## Javascript
 Javascript can be embedded inside view:
 
-``
+```
 <?php Yii::app()->clientScript->registerScript(
 'module-controller-action',
 <<<EOD
