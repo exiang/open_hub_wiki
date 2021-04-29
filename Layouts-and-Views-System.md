@@ -113,3 +113,17 @@ OpenHub used a modified inspinia theme, located in `public_html/themes/inspinia`
 Demo of inspinia integration to YeeBase is available thru URL `https://yourdomain.com/inspinia`.
 
 For more information on Yii framework theme system, please visit https://www.yiiframework.com/doc/guide/1.1/en/topics.theming
+
+
+## Javascript
+Javascript can be embedded inside view:
+
+``
+<?php Yii::app()->clientScript->registerScript(
+'module-controller-action',
+<<<EOD
+
+EOD
+); ?>
+
+```
