@@ -176,8 +176,8 @@ $records = $command->queryAll();
 
 Second method will return attribute in object format, e.g.  `$record->id`
 ```php
-$sql = 'SELECT * FROM organization';
-$records = Organization::model()->findAllBySql($sql);
+$sql = 'SELECT * FROM organization WHERE id=:id';
+$records = Organization::model()->findAllBySql($sql, array(':id'=>99));
 ```
 
 Execute wtih params
