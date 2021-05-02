@@ -19,3 +19,6 @@ public function doOrganizationsMerge($source, $target)
     return array($source, $target);
 }
 ```
+
+### Merge Preview
+To help admin performing the merge action understand which associate records will be affected, edit to populate the list at view file `/protected/modules/challenge/views/_organization/_getOrganizationNodes.php`.
