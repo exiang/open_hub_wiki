@@ -1702,7 +1702,7 @@ So there is this option selection when user select 'Registered with MaGIC', user
 }
 ```
 
-This is the code for the javascript
+This is the code for the javascript hide/show the field
 ```JSON
 "jscripts": [
     {
@@ -1711,6 +1711,49 @@ This is the code for the javascript
         "items": [
             "descAssessment1",
             "cls-descAssessment1"
+        ],
+        "condition": {
+            "select": "Registered with MaGIC"
+        }
+    }
+]
+```
+
+This is the code for the javascript to check if the field is required
+```JSON
+"jscripts": [
+    {
+        "caller": "statusOrganization1",
+        "action": "enable",
+        "items": [
+            "descAssessment1"
+        ],
+        "condition": {
+            "select": "Registered with MaGIC"
+        }
+    }
+]
+```
+
+This is the complete code for the javascript to make the dependent field with required tag functioning properly
+```JSON
+"jscripts": [
+    {
+        "caller": "statusOrganization1",
+        "action": "show",
+        "items": [
+            "descAssessment1",
+            "cls-descAssessment1"
+        ],
+        "condition": {
+            "select": "Registered with MaGIC"
+        }
+    },
+    {
+        "caller": "statusOrganization1",
+        "action": "enable",
+        "items": [
+            "descAssessment1"
         ],
         "condition": {
             "select": "Registered with MaGIC"
@@ -1762,7 +1805,7 @@ So there is this option checkbox when user tick 'Registered with MaGIC', user ne
 {
     "tag": "group",
     "prop": {
-        "css": ""
+        "css": "cls-descAssessment"
     },
     "members": [
         {
@@ -1797,6 +1840,50 @@ This is the code for the javascript
     {
         "caller": "statusOrganization",
         "action": "show",
+        "items": [
+            "descAssessment",
+            "cls-descAssessment"
+        ],
+        "condition": {
+            "check": "Registered with MaGIC"
+        }
+    }
+]
+```
+
+This is the code for the javascript to check if the field is required
+```JSON
+"jscripts": [
+    {
+        "caller": "statusOrganization1",
+        "action": "enable",
+        "items": [
+            "descAssessment"
+        ],
+        "condition": {
+            "check": "Registered with MaGIC"
+        }
+    }
+]
+```
+
+This is the complete code for the javascript to make the dependent field with required tag functioning properly
+```JSON
+"jscripts": [
+    {
+        "caller": "statusOrganization1",
+        "action": "show",
+        "items": [
+            "descAssessment",
+            "cls-descAssessment"
+        ],
+        "condition": {
+            "check": "Registered with MaGIC"
+        }
+    },
+    {
+        "caller": "statusOrganization1",
+        "action": "enable",
         "items": [
             "descAssessment"
         ],
