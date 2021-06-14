@@ -84,7 +84,9 @@ A standard editor
 
 Notes:
 As the Html Editor can take a long time to load, it is wise to disable the submit button before it is fully loaded.
-
+```php
+<?php echo $form->bsBtnSubmit(Yii::t('core', 'Submit'), array('id' => 'btn-submit', 'class' => 'disabled')); ?>
+```
 ```js
 <?php Yii::app()->clientScript->registerScript(
 'job-vacancy-process',
