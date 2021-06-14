@@ -82,7 +82,7 @@ A standard editor
 <?php echo $form->bsHtmlEditor($model['form'], 'htmlContent', array('someConfiguration' => 'Foo Bar')); ?>
 ```
 
-### Notes:
+Notes:
 As the Html Editor can take a long time to load, it is wise to disable the submit button before it is fully loaded.
 
 ```js
