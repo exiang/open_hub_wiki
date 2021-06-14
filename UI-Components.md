@@ -66,6 +66,22 @@ $form->bsDateTextField($model, 'dateStart', array('options' => array(
 )); ?>
 ```
 
+## Html Editor
+A mini editor with maximum 100 words
+
+![Screenshot 2021-06-14 at 5 21 40 PM](https://user-images.githubusercontent.com/5336690/121869834-05d8ff00-cd35-11eb-86a4-4299d79a6269.png)
+
+```php
+<?php echo $form->bsHtmlMiniEditor($model, 'html_solution', array('wordcount' => array('maxWordCount' => 100))); ?>
+```
+
+A standard editor
+```php
+<?php echo $form->bsHtmlEditor($model['form'], 'htmlContent', array('someConfiguration' => 'Foo Bar')); ?>
+```
+
+
+
 ## Html::activeThumb()
 This is a helper function to display thumbnail image for your active model in yee. 
 
