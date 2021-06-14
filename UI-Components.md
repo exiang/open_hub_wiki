@@ -67,6 +67,8 @@ $form->bsDateTextField($model, 'dateStart', array('options' => array(
 ```
 
 ## Html Editor
+Html Editor is wrap around an Yii extension called `NHCKEditor` which is base on `CKEditor` (https://ckeditor.com/).
+
 A mini editor with maximum 100 words
 
 ![Screenshot 2021-06-14 at 5 21 40 PM](https://user-images.githubusercontent.com/5336690/121869834-05d8ff00-cd35-11eb-86a4-4299d79a6269.png)
@@ -80,6 +82,19 @@ A standard editor
 <?php echo $form->bsHtmlEditor($model['form'], 'htmlContent', array('someConfiguration' => 'Foo Bar')); ?>
 ```
 
+### Notes:
+As the Html Editor can take a long time to load, it is wise to disable the submit button before it is fully loaded.
+
+```js
+<?php Yii::app()->clientScript->registerScript(
+'job-vacancy-process',
+<<<EOD
+CKEDITOR.on('instanceReady', function(){
+	$('#btn-submit').removeClass('disabled');
+})
+EOD
+); ?>
+```
 
 
 ## Html::activeThumb()
