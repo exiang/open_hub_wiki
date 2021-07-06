@@ -6,6 +6,7 @@
     * [Production Environment Setup](Production-Environment-Setup)
     * [Development Environment Setup](Development-Environment-Setup)
   * [Upgrade](Upgrade)
+  * [Troubleshoot](Troubleshoot)
 * [Build a Module](Build-Module)
   * [Step by Step Guide](Step-by-step-Todo-module)
   * [Modules Architecture](Modules-Architecture)
