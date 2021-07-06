@@ -1,7 +1,7 @@
 ### Upgrade Composer 1.x to 2.0
 The older version of OpenHub used composer 1.x for its dependency on [Wikimedia](https://github.com/wikimedia/composer-merge-plugin). You may want to update to composer 2.0 as wikimedia start to support it. Here's how you can do it:
 
-Open `/protected/composer.json` and edit to upgrade wikimedia version `"wikimedia/composer-merge-plugin": "^2.0",`
+Edit `/protected/composer.json` to update wikimedia version `"wikimedia/composer-merge-plugin": "^2.0",`
 
 In CLI
 
