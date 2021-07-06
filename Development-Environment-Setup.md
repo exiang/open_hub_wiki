@@ -87,4 +87,4 @@ sudo curl -s https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-Now, do `composer update` again and should be working fine now
+Now, do `composer update` again and should be working fine
