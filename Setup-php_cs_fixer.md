@@ -57,6 +57,8 @@
 
 7. Restart your vscode and test.
 
+8. Set .gitignore for the files so you don't commit to repo.
+
    
 
 
