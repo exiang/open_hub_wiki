@@ -56,6 +56,7 @@
   * [CORS Setting for S3 Bucket](AWS-S3-Bucket-CORS-Setting)
   * [Setting Up Kibana locally](https://github.com/mymagic/open_hub/wiki/Setting-up-Kibana-for-Amazon-Elasticsearch)
   * [Trigger](trigger)
+  * [php-cs-fixer](https://github.com/mymagic/open_hub/wiki/Setup-php_cs_fixer)
 * [Test](Test)
 * [Optimisation](Optimisation)
 * [Contribute](Contribute)
