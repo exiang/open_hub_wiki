@@ -16,7 +16,7 @@
 5. Cut, paste and save the following to .php_cs.dist
    [https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/3.0/.php_cs.dist](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/3.0/.php_cs.dist)
 
-6. Edit /magic_hub/vs.code-workspace. Pass in the following:
+6. Create your own workspace settings /magic_hub/edmond.code-workspace. You can name it according to your preference. eg anything.code.work-space. Paste in the following:
 ```
    # /magic_hub/vs.code-workspace
    {
@@ -55,9 +55,9 @@
 
    Replace "php-cs-fixer.executablePath" and "php-cs-fixer.config" with the absolute link inside your development environment.
 
-7. Restart your vscode and test.
+7. Restart your vscode using your newly created workspace and test. eg. "code edmond.work-space"
 
-8. Set .gitignore for the files so you don't commit to repo.
+8. Set .gitignore for the files so you don't commit your personal settings to the repo.
 
    
 
