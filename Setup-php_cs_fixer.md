@@ -1,8 +1,10 @@
 1. Go to your /magic_hub directory.
 
 2. Install php-cs-fixer like below:
+```
    $ mkdir --parents tools/php-cs-fixer
    $ composer require --working-dir=tools/php-cs-fixer friendsofphp/php-cs-fixer
+```
 
 3. In your /magic_hub directory, create two files:
    .php-cs-fixer.php
@@ -16,6 +18,7 @@
 
 6. Edit /magic_hub/vs.code-workspace. Pass in the following:
 ```
+   # /magic_hub/vs.code-workspace
    {
 	"folders": [
 		{
