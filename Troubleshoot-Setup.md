@@ -7,8 +7,8 @@ In CLI
 
 ```
 cd /var/www/protected
-su composer update
-su composer self-update --2
+sudo composer update
+sudo composer self-update --2
 ```
 
 You may get runtime error 'SHA384 is not supported by your openssl extension, could not verify the phar file integrity'
