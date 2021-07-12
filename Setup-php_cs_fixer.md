@@ -18,7 +18,7 @@
 
 6. Create your own workspace settings /magic_hub/edmond.code-workspace. You can name it according to your preference. eg anything.code.work-space. Paste in the following:
 ```
-   # /magic_hub/vs.code-workspace
+   # /magic_hub/edmond.code-workspace
    {
 	"folders": [
 		{
