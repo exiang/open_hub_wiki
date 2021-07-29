@@ -12,12 +12,15 @@ We highly recommend using this over the manual method. Use docker from repo: [hu
 Edit `sudo nano /home/ubuntu/repo/web-main.git/hooks/post-receive` and insert:
 
 ```
+#!/bin/sh
+GIT_WORK_TREE=/var/www git checkout -f
 rm -rf /var/www/public_html/assets/*
 cd /var/www/protected
 sudo mkdir /var/www/protected/vendor
-sudo chmod -R 777 /var/www/protected/vendor
+sudo chmod -R 755 /var/www/protected/vendor
 sudo chown -R ubuntu:www-data /var/www/protected/vendor
-sudo composer update
+sudo COMPOSER_ALLOW_SUPERUSER=1 composer update --lock --prefer-dist  --no-interaction --no-dev
+sudo find /var/www/protected/modules -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && sudo COMPOSER_ALLOW_SUPERUSER=1 composer update --lock --prefer-dist  --no-interaction --no-dev" \;
 cd /var/www/
 sudo git --git-dir=/home/ubuntu/repo/web-main.git --work-tree=/var/www submodule update --init --recursive --force
 sudo mkdir /var/www/protected/messages
@@ -35,13 +38,13 @@ sudo chown -R ubuntu:www-data /var/www/public_html/assets
 sudo mkdir /var/www/protected/data
 sudo chmod -R 777 /var/www/protected/data
 sudo chown -R ubuntu:www-data /var/www/protected/data
-sudo mkdir /var/www/protected/modules
 sudo chmod -R 777 /var/www/protected/modules
 sudo chown -R ubuntu:www-data /var/www/protected/modules
 cd /var/www/protected
 php yiic migrate --interactive=0
 php yiic message config/message.php
 sudo chmod u+x /var/www/_cron -R
+
 ```
 
 Script above basically do the following task for you automatically:
