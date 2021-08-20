@@ -29,6 +29,7 @@ $('.modal-backdrop').remove();
 ```
 
 ## Date Time picker
+For configuration details, please visit http://www.yiiframework.com/extension/datetimepicker/
 ```php
 $form->bsDateTextField($model, 'dateStart', array('options' => array(
     'dateFormat' => 'yy-mm-dd',
