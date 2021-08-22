@@ -59,7 +59,9 @@ Open Hub used submodule at `protected/yeebase` and `public_html/themes`, make su
 
 3. Update composer
 
-4. Create all the required dist folders and make sure they all have write permission:
+4. Run Yii migration to update changes
+
+5. Create all the required dist folders and make sure they all have write permission:
   * `protected/messages`
   * `protected/vendor`
   * `protected/overrides`
@@ -67,6 +69,15 @@ Open Hub used submodule at `protected/yeebase` and `public_html/themes`, make su
   * `public_html/assets`
   * `public_html/uploads`
 
-5. Run Yii migration to update changes
-
 Last, Complete the `protected/.env` files 
+
+### SUDO issue
+When post-receive called upon new git update, you may get error message in log window: 'remote: sudo: no tty present and no askpass program specified'.
+
+This is due to your current user required a password to run the SUDO command. A quick (UNSECURE) fix is to allow the user to use command without prompting for password. 
+
+```
+sudo visudo
+myuser  ALL=(ALL) NOPASSWD: ALL
+```
+
