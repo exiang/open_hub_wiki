@@ -41,7 +41,7 @@ sudo chown -R ubuntu:www-data /var/www/protected/data
 sudo chmod -R 777 /var/www/protected/modules
 sudo chown -R ubuntu:www-data /var/www/protected/modules
 sudo chmod -R 755 /var/www/_cron
-sudo chmod u+x /var/www/_cron -R
+sudo chmod -R u+r+x /var/www/_cron
 cd /var/www/protected
 php yiic migrate --interactive=0
 php yiic message config/message.php
