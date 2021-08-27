@@ -9,6 +9,7 @@ These are the default modules bundle with the package.
   * [Eventbrite](Module-eventbrite)
   * [F7](Module-f7) Form - Custom Form builder
   * [Interest](Module-interest) - 
+  * [Job](Module-job)
   * [Journey](Module-journey)
   * [OpenHub](Module-openHub) - 
   * [Recommendation](Module-recommendation) - 
