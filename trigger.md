@@ -56,27 +56,27 @@ public function triggerJobPublishJob($params)
 ### Common building blocks
 
 #### Organization
-* triggerHubOrganizationCreateOrganization(array('organization'=>$organization))
-* triggerHubOrganizationUpdateOrganization(array('organization'=>$organization))
+* triggerHubOrganizationCreateOrganization(['organization'=>$organization])
+* triggerHubOrganizationUpdateOrganization(['organization'=>$organization])
 
 #### Individual
-* triggerHubIndividualCreateIndividual(array('individual'=>$individual))
-* triggerHubIndividualUpdateIndividual(array('individual'=>$individual))
+* triggerHubIndividualCreateIndividual(['individual'=>$individual])
+* triggerHubIndividualUpdateIndividual(['individual'=>$individual])
 
 ### Event
-* triggerHubEventCreateEvent(array('event'=>$event))
-* triggerHubEventUpdateEvent(array('event'=>$event))
+* triggerHubEventCreateEvent(['event'=>$event])
+* triggerHubEventUpdateEvent(['event'=>$event])
 
 ### Default Modules
 #### Registry
-* triggerHubRegistrySet(array('registry'=>$registry))
+* triggerHubRegistrySet(['registry'=>$registry])
 
 #### CV
-* triggerCVEnablePortfolio(array('cvPortfolio'=>$cvPortfolio))
-* triggerCVDisablePortfolio(array('cvPortfolio'=>$cvPortfolio))
+* triggerCVEnablePortfolio(['cvPortfolio'=>$cvPortfolio])
+* triggerCVDisablePortfolio(['cvPortfolio'=>$cvPortfolio])
 
 #### Job
-* triggerJobSubmit(array('jobVacancy'=>$jobVacancy))
-* triggerJobPublishJob(array('jobVacancy'=>$jobVacancy))
-* triggerJobUnpublishJob(array('jobVacancy'=>$jobVacancy))
-* triggerJobApproveJob(array('jobVacancy'=>$jobVacancy))
+* triggerJobSubmit(['jobVacancy'=>$jobVacancy])
+* triggerJobPublishJob(['jobVacancy'=>$jobVacancy])
+* triggerJobUnpublishJob(['jobVacancy'=>$jobVacancy])
+* triggerJobApproveJob(['jobVacancy'=>$jobVacancy])
