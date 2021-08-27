@@ -34,7 +34,7 @@ $model->attachEventHandler('onApproveFailed', function ($event) {echo "Test mode
 Developers may built-in trigger to their module at model and controller level, for other modules to add on features to it.
 
 For example, `job` module cpanel `publishJob()` trigger this event upon job publishing successfully.
-````php
+```php
 HUB::triggerEvent($this->module, 'publishJob', array('jobVacancy' => $model));
 ```
 
@@ -53,9 +53,30 @@ public function triggerJobPublishJob($params)
 }
 ```
 
+### Common building blocks
 
-### Organization
-  * 
-### Individual
+#### Organization
+* triggerHubOrganizationCreateOrganization(array('organization'=>$organization))
+* triggerHubOrganizationUpdateOrganization(array('organization'=>$organization))
+
+#### Individual
+* triggerHubIndividualCreateIndividual(array('individual'=>$individual))
+* triggerHubIndividualUpdateIndividual(array('individual'=>$individual))
+
 ### Event
-### Registry
+* triggerHubEventCreateEvent(array('event'=>$event))
+* triggerHubEventUpdateEvent(array('event'=>$event))
+
+### Default Modules
+#### Registry
+* triggerHubRegistrySet(array('registry'=>$registry))
+
+#### CV
+* triggerCVEnablePortfolio(array('cvPortfolio'=>$cvPortfolio))
+* triggerCVDisablePortfolio(array('cvPortfolio'=>$cvPortfolio))
+
+#### Job
+* triggerJobSubmit(array('jobVacancy'=>$jobVacancy))
+* triggerJobPublishJob(array('jobVacancy'=>$jobVacancy))
+* triggerJobUnpublishJob(array('jobVacancy'=>$jobVacancy))
+* triggerJobApproveJob(array('jobVacancy'=>$jobVacancy))
