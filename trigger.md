@@ -80,3 +80,10 @@ public function triggerJobPublishJob($params)
 * triggerJobPublishJob(['jobVacancy'=>$jobVacancy])
 * triggerJobUnpublishJob(['jobVacancy'=>$jobVacancy])
 * triggerJobApproveJob(['jobVacancy'=>$jobVacancy])
+
+### Modules
+#### Challenge
+* triggerChallengeApprove(['challenge'=>$challenge])
+* triggerChallengeReject(['challenge'=>$challenge])
+* triggerChallengePublishChallenge(['challenge'=>$challenge])
+* triggerChallengeUnpublishChallenge(['challenge'=>$challenge])
