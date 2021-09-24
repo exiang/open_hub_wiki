@@ -65,7 +65,7 @@ HUB::sendNotify('member', $submission->user->username, $notifMaker['message'], $
 ```
 
 ## sendEmail
-For usecase where only email channel should be use to send a notification
+For usecase where only email channel should be use to send a notification. This is the same function called by `sendNotify` internally.
  
 ```php
 sendEmail($email, $name, $title, $content, $options = array())
