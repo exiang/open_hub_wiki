@@ -80,7 +80,7 @@ $options['headerLines']['X-Mailgun-Recipient-Variables'] = json_encode($recipien
 $options['headerLines']['To'] = '%recipient%';
 ```
 
-For mandrill, header `X-MC-PreserveRecipients` need to be set to `true`.
+For `mandrill` adapter, header `X-MC-PreserveRecipients` need to be set to `true`.
 Please refer here for more details: https://mailchimp.com/developer/transactional/docs/outbound-email/
 
 ```php
