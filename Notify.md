@@ -1,5 +1,7 @@
 ## How it works
-Developer should not concern how user will get a notification message. It is handled by system automatically. Email are the default channel for sending a message; where user with verified mobile number will get additional SMS notification; same concept applied to push notification channel then.
+`HUB::SendNotify()` take care of which channel to use to send out a notification message to user.
+
+Developer should not concern how user will get a notification message. It is handled by the system automatically. Email is the default channel for sending a message; where a user with verified mobile number will get additional SMS notification; the same concept applied to push notification channel then.
 
 Outgoing message will also be recorded in database under `notify` table for references.
 
@@ -61,3 +63,22 @@ $notifMaker['content'] = HUB::renderPartial('/_email/user_linkUserEmail', $param
 $options['email']['receivers'][] = array('method' => 'cc', 'name' => $nameTeam, 'email' => $emailTeam);
 HUB::sendNotify('member', $submission->user->username, $notifMaker['message'], $notifMaker['title'], $notifMaker['content'], 3, $options);
 ```
+
+## sendEmail
+For usecase where only email channel should be use to send a notification
+ 
+```php
+sendEmail($email, $name, $title, $content, $options = array())
+```
+
+## Send to multiple recipients seeing only their email but not others
+
+The following code works for `MailGun` adapter. 
+
+```php
+$options['headerLines']['X-Mailgun-Recipient-Variables'] = json_encode($recipientVariables, true);
+$options['headerLines']['To'] = '%recipient%';
+```
+
+For mandrill, header `X-MC-PreserveRecipients` need to be set.
+Please refer here for more details: https://mailchimp.com/developer/transactional/docs/outbound-email/
