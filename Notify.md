@@ -76,8 +76,18 @@ sendEmail($email, $name, $title, $content, $options = array())
 The following code works for `MailGun` adapter. 
 
 ```php
+foreach ($users as $user) {
+    $receivers[] = array('email' => $user->username, 'name' => $user->profile->full_name, 'method' => 'bcc');
+    $recipientVariables[$user->username] = array('fullname' => $user->profile->full_name);
+
+}
+
+$subject = 'Test multiple recipients';
+$message = 'Hello World';
 $options['headerLines']['X-Mailgun-Recipient-Variables'] = json_encode($recipientVariables, true);
 $options['headerLines']['To'] = '%recipient%';
+
+$result = HUB::sendEmail($receivers, $subject, $message, $options);
 ```
 
 For `mandrill` adapter, header `X-MC-PreserveRecipients` need to be set to `true`.
