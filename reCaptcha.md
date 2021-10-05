@@ -3,9 +3,29 @@ To prevent bots or automated scripts from automatically submitting requests, reC
 
 ## Setup Recaptcha
 ### Step 1
-Go to [https://www.google.com/recaptcha](https://www.google.com/recaptcha)
+Go to [https://www.google.com/recaptcha](https://www.google.com/recaptcha). Click "Admin Console".
 
 ![reCaptcha page](https://mymagic-misc.s3.ap-southeast-1.amazonaws.com/recaptcha_documentation/recaptcha+page.png)
+
+### Step 2
+Click Add
+
+![reCaptcha Console](https://mymagic-misc.s3.ap-southeast-1.amazonaws.com/recaptcha_documentation/recaptcha+console.png)
+
+### Step 3
+Fill up the fields. Domains have to match the domain reCaptcha is going to be implemented into. You may use multiple domains.
+
+![reCaptch create new](https://mymagic-misc.s3.ap-southeast-1.amazonaws.com/recaptcha_documentation/screencapture-google-recaptcha-admin-create-2021-10-04-18_16_32.png)
+
+### Step 4
+Copy site key and secret key.
+
+![reCaptcha key](https://mymagic-misc.s3.ap-southeast-1.amazonaws.com/recaptcha_documentation/recaptcha+key.png)
+
+### Step 5
+Paste the site key and secret key into /protected/.env
+
+![.env](https://mymagic-misc.s3.ap-southeast-1.amazonaws.com/recaptcha_documentation/recaptcha+in+dot+env.png)
 
 ## Using reCaptcha
 ### Step 1
