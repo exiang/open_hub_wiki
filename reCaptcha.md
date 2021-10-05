@@ -1,6 +1,13 @@
 ## Introduction
 To prevent bots or automated scripts from automatically submitting requests, reCaptcha can be used. This protects expensive resources like fetching SSM Reports Online. There are 3 parts to implement Google Recaptcha.
 
+## Setup Recaptcha
+### Step 1
+Go to [https://www.google.com/recaptcha](https://www.google.com/recaptcha)
+
+![reCaptcha page](https://mymagic-misc.s3.ap-southeast-1.amazonaws.com/recaptcha_documentation/recaptcha+page.png)
+
+## Using reCaptcha
 ### Step 1
 Add id to your submit button. Do not use '-'. Use only alphanumeric.
 example:
