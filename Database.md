@@ -164,17 +164,21 @@ Active data provider is yii specific feature to deal with a paginated list of da
 
 In controller:
 ```php
-$models = new CActiveDataProvider('Organization', array(
+$provider = new CActiveDataProvider('Organization', array(
 'criteria' => array(
     'select' => sprintf('t.*, MATCH(t.title, t.csv_keywords, t.text_short_description) AGAINST ("%s" IN BOOLEAN MODE) as relevance', $keyword),
     'condition' => sprintf('MATCH(t.title, t.csv_keywords, t.text_short_description) AGAINST ("%s" IN BOOLEAN MODE) AND t.is_active=1', $keyword),
 )));
+$provider->sort->defaultOrder = 'relevance DESC, t.score_listing DESC, t.title ASC';
+$provider->pagination->pageSize = $pageSize;
+$provider->pagination->itemCount = $provider->getTotalItemCount(); // make sure you set this explicitely or else $pagination->getPageCount() will always return 0
+$provider->pagination->pageVar = 'page';
 ```
 
 In view, using ListView widget:
 ```php
 <?php $this->widget('application.components.widgets.ListView', array(
-    'dataProvider' => $models,
+    'dataProvider' => $provider,
     'itemView' => '_organization-item',
     'ajaxUpdate' => false,
     'enablePagination' => true,
@@ -185,13 +189,29 @@ In view, using ListView widget:
 
 Correct way to get total items in database:
 ```php
-$ar->getTotalItemCount()
+$provider->getTotalItemCount()
+```
+
+To get the result as array, instead of dataprovider format:
+```php
+$provider->getData()
 ```
 
 Count on the `getData()` function will only return you with number not more than the page size (depends on returning result)
 ```php
-count($ar->getData())
+count($provider->getData())
 ```
+
+Get total pages
+```php
+$provider->getPageCount();
+```
+
+Get current page id (start with 0)
+```php
+$provider->getCurrentPage();
+```
+
 ## Updating Database structure
 > Todo: Automated build should auto generate `public_html/installer/protected/data/base.sql` removing manual work in step 2 below.
 Please follow this rule strictly:
