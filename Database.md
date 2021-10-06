@@ -177,7 +177,7 @@ $provider->pagination->pageVar = 'page';
 
 In view, using ListView widget:
 ```php
-<?php $this->widget('application.components.widgets.ListView', array(
+$this->widget('application.components.widgets.ListView', array(
     'dataProvider' => $provider,
     'itemView' => '_organization-item',
     'ajaxUpdate' => false,
@@ -194,6 +194,12 @@ $provider->getTotalItemCount()
 
 To get the result as array, instead of dataprovider format:
 ```php
+$provider->getData()
+```
+
+If you need to explicitly set the pagination to get the second page for examples (first page start with index 0):
+```php
+$provider->pagination->setCurrentPage(1);
 $provider->getData()
 ```
 
