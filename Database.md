@@ -183,11 +183,15 @@ In view, using ListView widget:
 )); ?>
 ```
 
-To get total items in database:
+Correct way to get total items in database:
 ```php
 $ar->getTotalItemCount()
 ```
 
+Count on the `getData()` function will only return you with number not more than the page size (depends on returning result)
+```php
+count($ar->getData())
+```
 ## Updating Database structure
 > Todo: Automated build should auto generate `public_html/installer/protected/data/base.sql` removing manual work in step 2 below.
 Please follow this rule strictly:
